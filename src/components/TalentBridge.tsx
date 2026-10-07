@@ -8,12 +8,13 @@ export const TalentBridge: React.FC = () => {
   const [bridgeData, setBridgeData] = useState<StateBridgeData | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const states = [
+  const states = Array.from(new Set([
     'CA', 'NY', 'TX', 'FL', 'IL', 'PA', 'OH', 'MI', 'NC', 'GA',
     'WA', 'VA', 'MA', 'CO', 'AZ', 'IN', 'TN', 'MO', 'MD', 'WI',
-    'MN', 'CO', 'AL', 'SC', 'LA', 'KY', 'OR', 'OK', 'CT', 'UT',
-    'ON', 'QC', 'BC', 'AB'
-  ].sort();
+    'MN', 'AL', 'SC', 'LA', 'KY', 'OR', 'OK', 'CT', 'UT',
+    'ON', 'QC', 'BC', 'AB',
+    'KA', 'MH', 'DL', 'TS', 'UP', 'WB', 'GJ', 'PB', 'HR'
+  ])).sort();
 
   useEffect(() => {
     let active = true;

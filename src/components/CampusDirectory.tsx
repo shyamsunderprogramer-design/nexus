@@ -78,9 +78,10 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
             }}
             className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-brand-500"
           >
-            <option value="ALL">All Countries (US & CA)</option>
+            <option value="ALL">All Countries (Global)</option>
             <option value="US">United States (6,035)</option>
             <option value="CA">Canada (209)</option>
+            <option value="IN">India (55+ Premier HEIs)</option>
           </select>
         </div>
 
@@ -184,6 +185,16 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                         {stemPct}% STEM
                       </span>
                     )}
+                    {u.nirf_rank ? (
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                        NIRF #{u.nirf_rank}
+                      </span>
+                    ) : null}
+                    {u.naac_grade ? (
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                        NAAC {u.naac_grade}
+                      </span>
+                    ) : null}
                     {u.h1b_exempt && (
                       <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">
                         H-1B Cap Exempt

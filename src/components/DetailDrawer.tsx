@@ -108,6 +108,24 @@ export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) =
                       <span>{entity.data.h1b_exempt ? 'Yes (Cap-Exempt)' : 'Standard'}</span>
                     </div>
                   </div>
+
+                  {entity.data.nirf_rank ? (
+                    <div>
+                      <span className="text-slate-400">NIRF Ranking:</span>
+                      <div className="text-amber-400 font-semibold font-mono flex items-center space-x-1 mt-0.5">
+                        <span>#{entity.data.nirf_rank} ({entity.data.nirf_category || 'National'})</span>
+                      </div>
+                    </div>
+                  ) : null}
+
+                  {entity.data.naac_grade ? (
+                    <div>
+                      <span className="text-slate-400">NAAC Grade:</span>
+                      <div className="text-blue-400 font-semibold font-mono flex items-center space-x-1 mt-0.5">
+                        <span>{entity.data.naac_grade}</span>
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
 
                 <div>
@@ -186,6 +204,20 @@ export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) =
                     <span className="text-slate-400">Exchange:</span>
                     <div className="text-white font-semibold mt-0.5">{entity.data.exchange || 'SEC EDGAR'}</div>
                   </div>
+
+                  {entity.data.cin ? (
+                    <div>
+                      <span className="text-slate-400">Corporate CIN:</span>
+                      <div className="text-brand-300 font-mono text-[11px] mt-0.5">{entity.data.cin}</div>
+                    </div>
+                  ) : null}
+
+                  {entity.data.market_cap_tier ? (
+                    <div>
+                      <span className="text-slate-400">Valuation / Tier:</span>
+                      <div className="text-emerald-400 font-semibold mt-0.5">{entity.data.market_cap_tier}</div>
+                    </div>
+                  ) : null}
                 </div>
 
                 <div>

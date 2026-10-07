@@ -1,7 +1,7 @@
 export interface University {
   id: string;
   name: string;
-  country: 'US' | 'CA';
+  country: 'US' | 'CA' | 'IN';
   state: string;
   city: string;
   sector: string;
@@ -20,6 +20,11 @@ export interface University {
   h1b_exempt: boolean;
   dli?: string;
   pgwp?: boolean;
+  nirf_rank?: number;
+  nirf_category?: string;
+  naac_grade?: string;
+  pincode?: string;
+  established?: number;
 }
 
 export interface Company {
@@ -38,6 +43,9 @@ export interface Company {
   founded?: string | number;
   grain?: string;
   org_type?: string;
+  cin?: string;
+  market_cap_tier?: string;
+  country?: 'US' | 'CA' | 'IN';
 }
 
 export interface StateBridgeData {

@@ -1,13 +1,27 @@
 {
-  "generated_at": "2026-10-06T12:00:00Z",
+  "generated_at": "2026-10-07T13:15:05.510770",
   "universities": {
     "us_total": 6035,
     "ca_total": 209,
-    "total": 6244,
-    "jobs_pages_confirmed": 3932,
-    "career_centers_confirmed": 2903,
-    "both_confirmed": 2427,
-    "hiring_systems_identified": {},
+    "in_total": 55,
+    "total": 6299,
+    "jobs_pages_confirmed": 3987,
+    "career_centers_confirmed": 2958,
+    "both_confirmed": 2482,
+    "hiring_systems_identified": {
+      "SAMARTH Portal": 3,
+      "IISc Recruitment Portal": 1,
+      "TIFR Portal": 1,
+      "IITM FacApp": 1,
+      "IITD Recruitment Portal": 1,
+      "IITB Portal": 1,
+      "DOFA Recruitment Portal": 1,
+      "ERP Career System": 1,
+      "IITR Careers Portal": 1,
+      "IITG Online Portal": 1,
+      "IITH Faculty Portal": 1,
+      "DOFA Portal": 1
+    },
     "sectors": {
       "Private not-for-profit 4-year": 1623,
       "Private for-profit less-than-2-year": 1386,
@@ -20,7 +34,8 @@
     }
   },
   "employers": {
-    "curated_total": 100368,
+    "curated_total": 100401,
+    "india_total": 33,
     "federal_total": 6274467,
     "verified_carriers_applied": 79571,
     "industries": {
@@ -88,5 +103,5 @@
       }
     ]
   },
-  "state_counts": 60
+  "state_counts": 76
 }

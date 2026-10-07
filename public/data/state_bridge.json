@@ -265,6 +265,24 @@
       }
     ]
   },
+  "AP": {
+    "state": "AP",
+    "universities_count": 1,
+    "total_students": 1600,
+    "stem_graduates_yearly": 450,
+    "h1b_exempt_campuses": 1,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Tirupati",
+        "city": "Tirupati",
+        "students": 1600,
+        "jobs_url": "https://www.iittp.ac.in/recruitment"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "AR": {
     "state": "AR",
     "universities_count": 80,
@@ -400,16 +418,28 @@
   },
   "AS": {
     "state": "AS",
-    "universities_count": 1,
-    "total_students": 909,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "universities_count": 3,
+    "total_students": 13709,
+    "stem_graduates_yearly": 3600,
+    "h1b_exempt_campuses": 2,
     "top_institutions": [
       {
         "name": "American Samoa Community College",
         "city": "Pago Pago",
         "students": 909,
         "jobs_url": null
+      },
+      {
+        "name": "Indian Institute of Technology Guwahati (IIT Guwahati)",
+        "city": "Guwahati",
+        "students": 8500,
+        "jobs_url": "https://www.iitg.ac.in/iitg_jobs"
+      },
+      {
+        "name": "National Institute of Technology Silchar",
+        "city": "Silchar",
+        "students": 4300,
+        "jobs_url": "http://www.nits.ac.in/recruitment.php"
       }
     ],
     "companies_curated_count": 8,
@@ -556,6 +586,24 @@
       }
     ]
   },
+  "BR": {
+    "state": "BR",
+    "universities_count": 1,
+    "total_students": 3100,
+    "stem_graduates_yearly": 890,
+    "h1b_exempt_campuses": 1,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Patna",
+        "city": "Patna",
+        "students": 3100,
+        "jobs_url": "https://www.iitp.ac.in/index.php/notice/recruitment"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "CA": {
     "state": "CA",
     "universities_count": 666,
@@ -688,6 +736,24 @@
         "careers_url": "https://www.abcadultschool.edu/career-training/"
       }
     ]
+  },
+  "CH": {
+    "state": "CH",
+    "universities_count": 1,
+    "total_students": 2400,
+    "stem_graduates_yearly": 650,
+    "h1b_exempt_campuses": 1,
+    "top_institutions": [
+      {
+        "name": "Postgraduate Institute of Medical Education and Research (PGIMER)",
+        "city": "Chandigarh",
+        "students": 2400,
+        "jobs_url": "https://pgimer.edu.in/PGIMER_PORTAL/AbstractFilePath?encparam=careers"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
   },
   "CO": {
     "state": "CO",
@@ -1221,6 +1287,79 @@
       }
     ]
   },
+  "DL": {
+    "state": "DL",
+    "universities_count": 6,
+    "total_students": 188800,
+    "stem_graduates_yearly": 39350,
+    "h1b_exempt_campuses": 6,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Delhi (IIT Delhi)",
+        "city": "New Delhi",
+        "students": 12500,
+        "jobs_url": "https://home.iitd.ac.in/jobs-iitd.php"
+      },
+      {
+        "name": "Indraprastha Institute of Information Technology Delhi (IIIT-D)",
+        "city": "New Delhi",
+        "students": 2600,
+        "jobs_url": "https://iiitd.ac.in/careers"
+      },
+      {
+        "name": "University of Delhi (Delhi University)",
+        "city": "New Delhi",
+        "students": 140000,
+        "jobs_url": "https://recrec.uod.ac.in/"
+      },
+      {
+        "name": "Jawaharlal Nehru University (JNU)",
+        "city": "New Delhi",
+        "students": 8500,
+        "jobs_url": "https://recruitment.jnu.ac.in/"
+      },
+      {
+        "name": "Jamia Millia Islamia (JMI)",
+        "city": "New Delhi",
+        "students": 22000,
+        "jobs_url": "https://recruitment.jmi.ac.in/"
+      },
+      {
+        "name": "All India Institute of Medical Sciences (AIIMS New Delhi)",
+        "city": "New Delhi",
+        "students": 3200,
+        "jobs_url": "https://www.aiims.edu/en/notices/recruitment.html"
+      }
+    ],
+    "companies_curated_count": 4,
+    "companies_verified_web": 4,
+    "top_employers": [
+      {
+        "name": "Bharti Airtel",
+        "cat": "Telecommunications",
+        "city": "New Delhi",
+        "careers_url": "https://www.airtel.in/careers/"
+      },
+      {
+        "name": "Maruti Suzuki India",
+        "cat": "Automotive & Manufacturing",
+        "city": "New Delhi",
+        "careers_url": "https://www.marutisuzuki.com/corporate/careers"
+      },
+      {
+        "name": "Oil and Natural Gas Corporation (ONGC)",
+        "cat": "Energy & Natural Resources",
+        "city": "New Delhi",
+        "careers_url": "https://www.ongcindia.com/web/eng/career"
+      },
+      {
+        "name": "NTPC Limited",
+        "cat": "Utilities & Power Generation",
+        "city": "New Delhi",
+        "careers_url": "https://www.ntpccareers.net/"
+      }
+    ]
+  },
   "FL": {
     "state": "FL",
     "universities_count": 331,
@@ -1505,6 +1644,30 @@
       }
     ]
   },
+  "GJ": {
+    "state": "GJ",
+    "universities_count": 2,
+    "total_students": 3900,
+    "stem_graduates_yearly": 750,
+    "h1b_exempt_campuses": 2,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Gandhinagar",
+        "city": "Gandhinagar",
+        "students": 2500,
+        "jobs_url": "https://www.iitgn.ac.in/careers"
+      },
+      {
+        "name": "Indian Institute of Management Ahmedabad (IIM-A)",
+        "city": "Ahmedabad",
+        "students": 1400,
+        "jobs_url": "https://www.iima.ac.in/careers"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "GU": {
     "state": "GU",
     "universities_count": 3,
@@ -1690,6 +1853,55 @@
         "cat": "Other Industries",
         "city": "Honolulu",
         "careers_url": "https://hmi.edu/careers/"
+      }
+    ]
+  },
+  "HP": {
+    "state": "HP",
+    "universities_count": 1,
+    "total_students": 2400,
+    "stem_graduates_yearly": 710,
+    "h1b_exempt_campuses": 1,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Mandi",
+        "city": "Mandi",
+        "students": 2400,
+        "jobs_url": "https://www.iitmandi.ac.in/careers"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
+  "HR": {
+    "state": "HR",
+    "universities_count": 2,
+    "total_students": 7900,
+    "stem_graduates_yearly": 1970,
+    "h1b_exempt_campuses": 2,
+    "top_institutions": [
+      {
+        "name": "National Institute of Technology Kurukshetra",
+        "city": "Kurukshetra",
+        "students": 5100,
+        "jobs_url": "https://nitkkr.ac.in/jobs/"
+      },
+      {
+        "name": "Ashoka University",
+        "city": "Sonipat / Delhi-NCR",
+        "students": 2800,
+        "jobs_url": "https://www.ashoka.edu.in/work-with-us/"
+      }
+    ],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Zomato",
+        "cat": "Consumer Internet & Quick Commerce",
+        "city": "Gurugram",
+        "careers_url": "https://www.zomato.com/careers"
       }
     ]
   },
@@ -2224,6 +2436,139 @@
         "careers_url": "https://www.bsu.edu/about/administrativeoffices/humanresources/jobs"
       }
     ]
+  },
+  "KA": {
+    "state": "KA",
+    "universities_count": 5,
+    "total_students": 41550,
+    "stem_graduates_yearly": 9450,
+    "h1b_exempt_campuses": 5,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Science (IISc)",
+        "city": "Bengaluru",
+        "students": 4600,
+        "jobs_url": "https://iisc.ac.in/positions-open/"
+      },
+      {
+        "name": "National Institute of Technology Karnataka (NIT Surathkal)",
+        "city": "Surathkal / Mangaluru",
+        "students": 6200,
+        "jobs_url": "https://recruitment.nitk.ac.in/"
+      },
+      {
+        "name": "International Institute of Information Technology Bangalore (IIIT-B)",
+        "city": "Bengaluru",
+        "students": 1400,
+        "jobs_url": "https://www.iiitb.ac.in/careers"
+      },
+      {
+        "name": "Indian Institute of Management Bangalore (IIM-B)",
+        "city": "Bengaluru",
+        "students": 1350,
+        "jobs_url": "https://www.iimb.ac.in/faculty/recruitment"
+      },
+      {
+        "name": "Manipal Academy of Higher Education (MAHE Manipal)",
+        "city": "Manipal",
+        "students": 28000,
+        "jobs_url": "https://manipal.edu/mu/careers.html"
+      }
+    ],
+    "companies_curated_count": 11,
+    "companies_verified_web": 11,
+    "top_employers": [
+      {
+        "name": "Infosys",
+        "cat": "Information Technology",
+        "city": "Bengaluru",
+        "careers_url": "https://www.infosys.com/careers/"
+      },
+      {
+        "name": "Wipro",
+        "cat": "Information Technology",
+        "city": "Bengaluru",
+        "careers_url": "https://careers.wipro.com/"
+      },
+      {
+        "name": "Flipkart",
+        "cat": "E-Commerce & Digital Marketplace",
+        "city": "Bengaluru",
+        "careers_url": "https://www.flipkartcareers.com/"
+      },
+      {
+        "name": "Swiggy",
+        "cat": "Consumer Internet & Quick Commerce",
+        "city": "Bengaluru",
+        "careers_url": "https://careers.swiggy.com/"
+      },
+      {
+        "name": "Razorpay",
+        "cat": "Fintech & Payments",
+        "city": "Bengaluru",
+        "careers_url": "https://razorpay.com/jobs/"
+      },
+      {
+        "name": "Zerodha",
+        "cat": "Fintech & Capital Markets",
+        "city": "Bengaluru",
+        "careers_url": "https://zerodha.com/careers"
+      },
+      {
+        "name": "PhonePe",
+        "cat": "Fintech & Payments",
+        "city": "Bengaluru",
+        "careers_url": "https://www.phonepe.com/careers/"
+      },
+      {
+        "name": "Zepto",
+        "cat": "Consumer Internet & Quick Commerce",
+        "city": "Bengaluru",
+        "careers_url": "https://www.zeptonow.com/careers"
+      },
+      {
+        "name": "Postman",
+        "cat": "Developer Tools & Cloud Infrastructure",
+        "city": "Bengaluru",
+        "careers_url": "https://www.postman.com/careers/"
+      },
+      {
+        "name": "Groww",
+        "cat": "Fintech & Wealth Management",
+        "city": "Bengaluru",
+        "careers_url": "https://groww.in/careers"
+      }
+    ]
+  },
+  "KL": {
+    "state": "KL",
+    "universities_count": 3,
+    "total_students": 8900,
+    "stem_graduates_yearly": 2200,
+    "h1b_exempt_campuses": 3,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Palakkad",
+        "city": "Palakkad",
+        "students": 1500,
+        "jobs_url": "https://facap.iitpkd.ac.in/"
+      },
+      {
+        "name": "National Institute of Technology Calicut (NIT Calicut)",
+        "city": "Kozhikode",
+        "students": 6300,
+        "jobs_url": "https://www.nitc.ac.in/recruitment"
+      },
+      {
+        "name": "Indian Institute of Management Kozhikode (IIM-K)",
+        "city": "Kozhikode",
+        "students": 1100,
+        "jobs_url": "https://www.iimk.ac.in/careers"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
   },
   "KS": {
     "state": "KS",
@@ -3025,21 +3370,106 @@
   },
   "MH": {
     "state": "MH",
-    "universities_count": 1,
-    "total_students": 1216,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "universities_count": 5,
+    "total_students": 45516,
+    "stem_graduates_yearly": 12600,
+    "h1b_exempt_campuses": 4,
     "top_institutions": [
       {
         "name": "College of the Marshall Islands",
         "city": "Majuro",
         "students": 1216,
         "jobs_url": null
+      },
+      {
+        "name": "Tata Institute of Fundamental Research (TIFR)",
+        "city": "Mumbai",
+        "students": 1100,
+        "jobs_url": "https://www.tifr.res.in/positions/"
+      },
+      {
+        "name": "Indian Institute of Technology Bombay (IIT Bombay)",
+        "city": "Mumbai",
+        "students": 13000,
+        "jobs_url": "https://www.iitb.ac.in/en/careers/faculty-recruitment"
+      },
+      {
+        "name": "Visvesvaraya National Institute of Technology Nagpur (VNIT Nagpur)",
+        "city": "Nagpur",
+        "students": 5200,
+        "jobs_url": "https://vnit.ac.in/recruitments/"
+      },
+      {
+        "name": "Savitribai Phule Pune University (SPPU)",
+        "city": "Pune",
+        "students": 25000,
+        "jobs_url": "http://www.unipune.ac.in/administration_files/careers.htm"
       }
     ],
-    "companies_curated_count": 0,
-    "companies_verified_web": 0,
-    "top_employers": []
+    "companies_curated_count": 12,
+    "companies_verified_web": 12,
+    "top_employers": [
+      {
+        "name": "Reliance Industries Limited",
+        "cat": "Conglomerate",
+        "city": "Mumbai",
+        "careers_url": "https://careers.ril.com/"
+      },
+      {
+        "name": "Tata Consultancy Services (TCS)",
+        "cat": "Information Technology",
+        "city": "Mumbai",
+        "careers_url": "https://www.tcs.com/careers"
+      },
+      {
+        "name": "HDFC Bank",
+        "cat": "Banking & Financial Services",
+        "city": "Mumbai",
+        "careers_url": "https://www.hdfcbank.com/personal/about-us/careers"
+      },
+      {
+        "name": "ICICI Bank",
+        "cat": "Banking & Financial Services",
+        "city": "Mumbai",
+        "careers_url": "https://www.icicicareers.com/"
+      },
+      {
+        "name": "State Bank of India (SBI)",
+        "cat": "Banking & Financial Services",
+        "city": "Mumbai",
+        "careers_url": "https://sbi.co.in/web/careers"
+      },
+      {
+        "name": "Larsen & Toubro (L&T)",
+        "cat": "Engineering & Construction",
+        "city": "Mumbai",
+        "careers_url": "https://www.larsentoubro.com/corporate/careers/"
+      },
+      {
+        "name": "Hindustan Unilever Limited (HUL)",
+        "cat": "Consumer Goods & FMCG",
+        "city": "Mumbai",
+        "careers_url": "https://www.hul.co.in/careers/"
+      },
+      {
+        "name": "Tech Mahindra",
+        "cat": "Information Technology",
+        "city": "Pune",
+        "careers_url": "https://careers.techmahindra.com/"
+      },
+      {
+        "name": "LTIMindtree",
+        "cat": "Information Technology",
+        "city": "Mumbai",
+        "careers_url": "https://www.ltimindtree.com/careers/"
+      },
+      {
+        "name": "BrowserStack",
+        "cat": "Developer Tools & Cloud Infrastructure",
+        "city": "Mumbai",
+        "careers_url": "https://www.browserstack.com/careers"
+      }
+    ]
   },
   "MI": {
     "state": "MI",
@@ -3442,16 +3872,22 @@
   },
   "MP": {
     "state": "MP",
-    "universities_count": 1,
-    "total_students": 1253,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "universities_count": 2,
+    "total_students": 4453,
+    "stem_graduates_yearly": 950,
+    "h1b_exempt_campuses": 1,
     "top_institutions": [
       {
         "name": "Northern Marianas College",
         "city": "Saipan",
         "students": 1253,
         "jobs_url": null
+      },
+      {
+        "name": "Indian Institute of Technology Indore (IIT Indore)",
+        "city": "Indore",
+        "students": 3200,
+        "jobs_url": "https://www.iiti.ac.in/careers"
       }
     ],
     "companies_curated_count": 17,
@@ -4795,6 +5231,30 @@
       }
     ]
   },
+  "OD": {
+    "state": "OD",
+    "universities_count": 2,
+    "total_students": 9900,
+    "stem_graduates_yearly": 2820,
+    "h1b_exempt_campuses": 2,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Bhubaneswar",
+        "city": "Bhubaneswar",
+        "students": 2800,
+        "jobs_url": "https://www.iitbbs.ac.in/recruitment.php"
+      },
+      {
+        "name": "National Institute of Technology Rourkela (NIT Rourkela)",
+        "city": "Rourkela",
+        "students": 7100,
+        "jobs_url": "https://nitrkl.ac.in/FacultyRecruitment"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "OH": {
     "state": "OH",
     "universities_count": 279,
@@ -5399,6 +5859,36 @@
       }
     ]
   },
+  "PB": {
+    "state": "PB",
+    "universities_count": 3,
+    "total_students": 15600,
+    "stem_graduates_yearly": 4020,
+    "h1b_exempt_campuses": 3,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Ropar",
+        "city": "Rupnagar",
+        "students": 2900,
+        "jobs_url": "https://www.iitrpr.ac.in/jobs"
+      },
+      {
+        "name": "Thapar Institute of Engineering and Technology",
+        "city": "Patiala",
+        "students": 11500,
+        "jobs_url": "https://www.thapar.edu/careers"
+      },
+      {
+        "name": "Plaksha University",
+        "city": "Mohali / Chandigarh",
+        "students": 1200,
+        "jobs_url": "https://plaksha.edu.in/careers"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "PR": {
     "state": "PR",
     "universities_count": 129,
@@ -5683,6 +6173,36 @@
       }
     ]
   },
+  "RJ": {
+    "state": "RJ",
+    "universities_count": 3,
+    "total_students": 26500,
+    "stem_graduates_yearly": 6750,
+    "h1b_exempt_campuses": 3,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Jodhpur",
+        "city": "Jodhpur",
+        "students": 3600,
+        "jobs_url": "https://www.iitj.ac.in/footer/jobs.php"
+      },
+      {
+        "name": "Malaviya National Institute of Technology Jaipur (MNIT Jaipur)",
+        "city": "Jaipur",
+        "students": 5400,
+        "jobs_url": "https://www.mnit.ac.in/careers/"
+      },
+      {
+        "name": "Birla Institute of Technology and Science (BITS Pilani)",
+        "city": "Pilani",
+        "students": 17500,
+        "jobs_url": "https://www.bits-pilani.ac.in/careers/"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
   "SC": {
     "state": "SC",
     "universities_count": 91,
@@ -5951,10 +6471,10 @@
   },
   "TN": {
     "state": "TN",
-    "universities_count": 144,
-    "total_students": 341448,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "universities_count": 148,
+    "total_students": 411248,
+    "stem_graduates_yearly": 20850,
+    "h1b_exempt_campuses": 4,
     "top_institutions": [
       {
         "name": "Academy of Allied Health Careers",
@@ -6017,8 +6537,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2072,
-    "companies_verified_web": 98,
+    "companies_curated_count": 2074,
+    "companies_verified_web": 100,
     "top_employers": [
       {
         "name": "Acadia Healthcare Company, Inc.",
@@ -6079,6 +6599,49 @@
         "cat": "Other Industries",
         "city": "Clarksville",
         "careers_url": "https://www.apsu.edu/human-resources/"
+      }
+    ]
+  },
+  "TS": {
+    "state": "TS",
+    "universities_count": 4,
+    "total_students": 19200,
+    "stem_graduates_yearly": 5600,
+    "h1b_exempt_campuses": 4,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Hyderabad (IIT Hyderabad)",
+        "city": "Sangareddy / Hyderabad",
+        "students": 5100,
+        "jobs_url": "https://faculty.recruitment.iith.ac.in/"
+      },
+      {
+        "name": "National Institute of Technology Warangal (NIT Warangal)",
+        "city": "Warangal",
+        "students": 6500,
+        "jobs_url": "https://www.nitw.ac.in/recruitment"
+      },
+      {
+        "name": "International Institute of Information Technology Hyderabad (IIIT-H)",
+        "city": "Hyderabad",
+        "students": 2200,
+        "jobs_url": "https://www.iiit.ac.in/careers/"
+      },
+      {
+        "name": "University of Hyderabad (UoH)",
+        "city": "Hyderabad",
+        "students": 5400,
+        "jobs_url": "https://uohyd.ac.in/careers/"
+      }
+    ],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Dr. Reddy's Laboratories",
+        "cat": "Healthcare & Pharmaceuticals",
+        "city": "Hyderabad",
+        "careers_url": "https://careers.drreddys.com/"
       }
     ]
   },
@@ -6212,6 +6775,79 @@
         "cat": "MedTech & Pharma",
         "city": "FORT WORTH",
         "careers_url": "https://www.alcon.com/careers/"
+      }
+    ]
+  },
+  "UK": {
+    "state": "UK",
+    "universities_count": 1,
+    "total_students": 9800,
+    "stem_graduates_yearly": 2800,
+    "h1b_exempt_campuses": 1,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Roorkee (IIT Roorkee)",
+        "city": "Roorkee",
+        "students": 9800,
+        "jobs_url": "https://www.iitr.ac.in/careers/"
+      }
+    ],
+    "companies_curated_count": 0,
+    "companies_verified_web": 0,
+    "top_employers": []
+  },
+  "UP": {
+    "state": "UP",
+    "universities_count": 6,
+    "total_students": 57600,
+    "stem_graduates_yearly": 14450,
+    "h1b_exempt_campuses": 6,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Kanpur (IIT Kanpur)",
+        "city": "Kanpur",
+        "students": 9200,
+        "jobs_url": "https://www.iitk.ac.in/dofa/recruitment"
+      },
+      {
+        "name": "Indian Institute of Technology (BHU) Varanasi",
+        "city": "Varanasi",
+        "students": 7200,
+        "jobs_url": "https://www.iitbhu.ac.in/dofa/recruitment"
+      },
+      {
+        "name": "Motilal Nehru National Institute of Technology Allahabad (MNNIT)",
+        "city": "Prayagraj",
+        "students": 5600,
+        "jobs_url": "https://www.mnnit.ac.in/index.php/jobs"
+      },
+      {
+        "name": "Indian Institute of Information Technology Allahabad (IIIT-A)",
+        "city": "Prayagraj",
+        "students": 2400,
+        "jobs_url": "https://www.iiita.ac.in/careers/"
+      },
+      {
+        "name": "Indian Institute of Management Lucknow (IIM-L)",
+        "city": "Lucknow",
+        "students": 1200,
+        "jobs_url": "https://www.iiml.ac.in/careers"
+      },
+      {
+        "name": "Banaras Hindu University (BHU)",
+        "city": "Varanasi",
+        "students": 32000,
+        "jobs_url": "https://www.bhu.ac.in/recruitment"
+      }
+    ],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "HCLTech",
+        "cat": "Information Technology",
+        "city": "Noida",
+        "careers_url": "https://www.hcltech.com/careers"
       }
     ]
   },
@@ -6775,6 +7411,43 @@
         "cat": "Mechanical & Manufacturing",
         "city": "SEATTLE",
         "careers_url": "https://aptevotherapeutics.com/contact-careers/"
+      }
+    ]
+  },
+  "WB": {
+    "state": "WB",
+    "universities_count": 3,
+    "total_students": 29300,
+    "stem_graduates_yearly": 7900,
+    "h1b_exempt_campuses": 3,
+    "top_institutions": [
+      {
+        "name": "Indian Institute of Technology Kharagpur (IIT Kharagpur)",
+        "city": "Kharagpur",
+        "students": 16000,
+        "jobs_url": "https://erp.iitkgp.ac.in/FacultyCareer/home.htm"
+      },
+      {
+        "name": "Indian Institute of Management Calcutta (IIM-C)",
+        "city": "Kolkata",
+        "students": 1300,
+        "jobs_url": "https://www.iimcal.ac.in/careers"
+      },
+      {
+        "name": "Jadavpur University",
+        "city": "Kolkata",
+        "students": 12000,
+        "jobs_url": "http://www.jaduniv.edu.in/announcement.php"
+      }
+    ],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "ITC Limited",
+        "cat": "Consumer Goods & Conglomerate",
+        "city": "Kolkata",
+        "careers_url": "https://www.itcportal.com/careers/"
       }
     ]
   },
