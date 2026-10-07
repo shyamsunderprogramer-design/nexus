@@ -11,15 +11,34 @@ declare global {
   }
 }
 
+const getBaseUrl = (): string => {
+  const base = import.meta.env.BASE_URL || '/';
+  return base.endsWith('/') ? base : `${base}/`;
+};
+
+let cachedStats: StatsResponse | null = null;
+let cachedUniversities: University[] | null = null;
+let cachedCompanies: Company[] | null = null;
+let cachedBridge: Record<string, StateBridgeData> | null = null;
+
 export const api = {
   async getStats(): Promise<StatsResponse> {
+    if (cachedStats) return cachedStats;
     try {
       const res = await fetch('/api/stats');
-      if (res.ok) return await res.json();
+      if (res.ok) {
+        cachedStats = await res.json();
+        return cachedStats!;
+      }
     } catch {}
-    if (window.NEXUS_DATA) return window.NEXUS_DATA.stats;
-    const res = await fetch('/data/stats.json');
-    return await res.json();
+    if (window.NEXUS_DATA?.stats) {
+      cachedStats = window.NEXUS_DATA.stats;
+      return cachedStats;
+    }
+    const base = getBaseUrl();
+    const res = await fetch(`${base}data/stats.json`);
+    cachedStats = await res.json();
+    return cachedStats!;
   },
 
   async getUniversities(params: {
@@ -50,13 +69,17 @@ export const api = {
     } catch {}
 
     // Fallback: Client-side filtration
-    let items = window.NEXUS_DATA?.universities || [];
-    if (!items.length) {
-      const res = await fetch('/data/universities.json');
-      items = await res.json();
+    if (!cachedUniversities) {
+      if (window.NEXUS_DATA?.universities?.length) {
+        cachedUniversities = window.NEXUS_DATA.universities;
+      } else {
+        const base = getBaseUrl();
+        const res = await fetch(`${base}data/universities.json`);
+        cachedUniversities = await res.json();
+      }
     }
 
-    let filtered = items;
+    let filtered = cachedUniversities || [];
     if (params.country && params.country !== 'ALL') {
       filtered = filtered.filter(u => u.country === params.country);
     }
@@ -113,13 +136,17 @@ export const api = {
     } catch {}
 
     // Fallback: Client-side filtration
-    let items = window.NEXUS_DATA?.companies || [];
-    if (!items.length) {
-      const res = await fetch('/data/companies_featured.json');
-      items = await res.json();
+    if (!cachedCompanies) {
+      if (window.NEXUS_DATA?.companies?.length) {
+        cachedCompanies = window.NEXUS_DATA.companies;
+      } else {
+        const base = getBaseUrl();
+        const res = await fetch(`${base}data/companies_featured.json`);
+        cachedCompanies = await res.json();
+      }
     }
 
-    let filtered = items;
+    let filtered = cachedCompanies || [];
     if (params.category && params.category !== 'ALL') {
       filtered = filtered.filter(c => c.category === params.category);
     }
@@ -150,11 +177,15 @@ export const api = {
       if (res.ok) return await res.json();
     } catch {}
 
-    if (window.NEXUS_DATA?.bridge) {
-      return window.NEXUS_DATA.bridge[state] || null;
+    if (!cachedBridge) {
+      if (window.NEXUS_DATA?.bridge) {
+        cachedBridge = window.NEXUS_DATA.bridge;
+      } else {
+        const base = getBaseUrl();
+        const res = await fetch(`${base}data/state_bridge.json`);
+        cachedBridge = await res.json();
+      }
     }
-    const res = await fetch('/data/state_bridge.json');
-    const data = await res.json();
-    return data[state] || null;
+    return (cachedBridge && cachedBridge[state]) || null;
   }
 };

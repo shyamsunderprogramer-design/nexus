@@ -5,7 +5,9 @@
 ---
 
 ## 🚀 1. The Full-Stack Platform: NEXUS
+- **Live Web App (Open from anywhere)**: [https://shyamsunderprogramer-design.github.io/nexus/](https://shyamsunderprogramer-design.github.io/nexus/)
 - **GitHub Repository**: [https://github.com/shyamsunderprogramer-design/nexus](https://github.com/shyamsunderprogramer-design/nexus)
+- **CI/CD Automation**: GitHub Actions workflow (`.github/workflows/deploy.yml`) automatically builds and deploys to GitHub Pages on every push.
 - **Local Directory**: `/Volumes/Storage/D Drive /Rep/nexus`
 - **Architecture**:
   - **Frontend**: React 19 + TypeScript + Vite + Tailwind CSS + Framer Motion + Lucide React.

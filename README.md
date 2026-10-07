@@ -5,6 +5,7 @@
 #### *Unified Campus to Corporate Talent Intelligence Platform*
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-emerald?style=for-the-badge&logo=shield)](https://github.com/shyamsunderprogramer-design/nexus)
+[![Live Demo](https://img.shields.io/badge/Live%20Web%20App-Open%20Anywhere-7c3aed?style=for-the-badge&logo=google-chrome)](https://shyamsunderprogramer-design.github.io/nexus/)
 [![Campuses](https://img.shields.io/badge/Campuses%20Indexed-6%2C244-8b5cf6?style=for-the-badge&logo=google-classroom)](https://github.com/shyamsunderprogramer-design/nexus)
 [![Employers](https://img.shields.io/badge/Employers%20Indexed-6.27M-06b6d4?style=for-the-badge&logo=instructure)](https://github.com/shyamsunderprogramer-design/nexus)
 [![Verified Links](https://img.shields.io/badge/Verified%20Career%20Portals-79%2C571-10b981?style=for-the-badge&logo=checkmarx)](https://github.com/shyamsunderprogramer-design/nexus)
@@ -17,7 +18,11 @@
   An ultra-modern, zero-dependency intelligence platform integrating <b>6,244 postsecondary institutions</b> across the US & Canada with <b>6,274,467 registered employers</b>, direct HR portal links, student career centers, STEM graduation pipelines, and regional talent matrices.
 </p>
 
-[Explore Web App](#-quick-start--how-to-run) • [Pin-to-Pin Feature Walkthrough](#-pin-to-pin-feature-walkthrough) • [Who Benefits & Why](#-who-benefits--why-it-matters) • [Architecture](#-modern-uxui--technical-architecture)
+<p align="center">
+  🌐 <b><a href="https://shyamsunderprogramer-design.github.io/nexus/">🚀 LAUNCH LIVE WEB APP: shyamsunderprogramer-design.github.io/nexus</a></b> 🌐
+</p>
+
+[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [Pin-to-Pin Feature Walkthrough](#-pin-to-pin-feature-walkthrough) • [Who Benefits & Why](#-who-benefits--why-it-matters) • [Architecture](#-modern-uxui--technical-architecture)
 
 </div>
 
