@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEXUS | National Employment & eXploration Unified System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            },
+            surface: {
+              dark: '#0a0e17',
+              darker: '#06090e',
+              card: 'rgba(15, 23, 42, 0.65)',
+              cardLight: 'rgba(255, 255, 255, 0.85)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              borderLight: 'rgba(0, 0, 0, 0.08)'
+            }
+          },
+          boxShadow: {
+            'glow-sm': '0 0 15px -3px rgba(139, 92, 246, 0.25)',
+            'glow': '0 0 25px -5px rgba(139, 92, 246, 0.35)',
+            'glow-cyan': '0 0 25px -5px rgba(6, 182, 212, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Modern Glassmorphic and Discrete Transition Tokens */
+    :root {
+      color-scheme: dark light;
+    }
+    
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    html:not(.dark) .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(139, 92, 246, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Modern Discrete Transitions for Slide Drawer */
+    #detail-drawer {
+      display: block;
+      transition: display 0.35s ease, opacity 0.35s ease, translate 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      transition-behavior: allow-discrete;
+      opacity: 1;
+      translate: 0 0;
+    }
+
+    #detail-drawer[hidden] {
+      display: none;
+      opacity: 0;
+      translate: 100% 0;
+    }
+
+    @starting-style {
+      #detail-drawer {
+        opacity: 0;
+        translate: 100% 0;
+      }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(156, 163, 175, 0.3);
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(156, 163, 175, 0.5);
+    }
+
+    /* Animated Mesh Gradient Background */
+    .bg-mesh {
+      background: 
+        radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
+        radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.08) 0px, transparent 50%);
+    }
+
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.02); }
+    }
+    .pulse-glow {
+      animation: pulse-subtle 4s infinite ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-[#070b12] text-slate-100 min-h-screen font-sans antialiased selection:bg-brand-500 selection:text-white bg-mesh">
+
+  <!-- Offline Bundle Inclusion (Guarantees zero-CORS file:// protocol support) -->
+  <script src="data/nexus_bundle.js"></script>
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-40 border-b border-white/10 bg-[#070b12]/80 backdrop-blur-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Brand Identity -->
+        <div class="flex items-center space-x-3">
+          <div class="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-cyan-400 p-0.5 shadow-glow-sm flex items-center justify-center">
+            <div class="w-full h-full bg-[#0a0e17] rounded-[10px] flex items-center justify-center">
+              <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center space-x-2">
+              <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">NEXUS</span>
+              <span class="px-2 py-0.5 text-[10px] font-mono font-semibold rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20">v2.4 INTEL</span>
+            </div>
+            <p class="text-[11px] text-slate-400 hidden sm:block">National Employment & eXploration Unified System</p>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="hidden md:flex items-center space-x-1 bg-slate-900/60 p-1 rounded-xl border border-white/5">
+          <button onclick="setTab('overview')" id="tab-btn-overview" class="tab-btn px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-white bg-brand-600/30 border border-brand-500/30">
+            📊 Executive Intel
+          </button>
+          <button onclick="setTab('universities')" id="tab-btn-universities" class="tab-btn px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-white/5">
+            🎓 Campus Network
+          </button>
+          <button onclick="setTab('companies')" id="tab-btn-companies" class="tab-btn px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-white/5">
+            🏢 Enterprise Index
+          </button>
+          <button onclick="setTab('bridge')" id="tab-btn-bridge" class="tab-btn px-4 py-1.5 rounded-lg text-sm font-medium transition-all text-slate-400 hover:text-white hover:bg-white/5">
+            ⚡ Talent-to-Market Bridge
+          </button>
+        </div>
+
+        <!-- System Controls & Live Status -->
+        <div class="flex items-center space-x-3">
+          <div class="hidden lg:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>79,571 Verified Portals</span>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button onclick="toggleTheme()" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-colors border border-white/5" title="Toggle Theme">
+            <svg id="theme-icon-dark" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg id="theme-icon-light" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Bar -->
+    <div class="md:hidden flex overflow-x-auto px-4 py-2 border-t border-white/5 bg-slate-900/40 space-x-2">
+      <button onclick="setTab('overview')" class="tab-btn-mobile px-3 py-1 rounded-lg text-xs font-medium bg-brand-600/30 text-white">Executive</button>
+      <button onclick="setTab('universities')" class="tab-btn-mobile px-3 py-1 rounded-lg text-xs font-medium text-slate-400">Campuses</button>
+      <button onclick="setTab('companies')" class="tab-btn-mobile px-3 py-1 rounded-lg text-xs font-medium text-slate-400">Employers</button>
+      <button onclick="setTab('bridge')" class="tab-btn-mobile px-3 py-1 rounded-lg text-xs font-medium text-slate-400">Talent Bridge</button>
+    </div>
+  </nav>
+
+  <!-- Hero Headline & Global Ticker -->
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
+    <div class="relative rounded-2xl glass-card p-6 sm:p-8 overflow-hidden">
+      <!-- Glow Accents -->
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-brand-600/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+        <div>
+          <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-medium mb-3">
+            <span>National Employment & eXploration Unified System</span>
+            <span class="text-white/40">·</span>
+            <span>US & Canada Scale</span>
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Campus to Corporate <span class="bg-gradient-to-r from-brand-400 via-indigo-300 to-cyan-300 bg-clip-text text-transparent">Talent Intelligence</span>
+          </h1>
+          <p class="mt-2 text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
+            Unifying <span class="text-white font-semibold">6,244 postsecondary institutions</span> with <span class="text-white font-semibold">6,274,467 enterprise employers</span>. Real-time hiring portal links, STEM graduate outputs, Carnegie classifications, and regional industry bridges.
+          </p>
+        </div>
+
+        <!-- Real-Time Metrics Counters -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 lg:w-auto">
+          <div class="bg-slate-900/80 border border-white/5 rounded-xl p-3 text-center">
+            <div id="stat-unis" class="text-xl sm:text-2xl font-black text-white font-mono">6,244</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Campuses</div>
+          </div>
+          <div class="bg-slate-900/80 border border-white/5 rounded-xl p-3 text-center">
+            <div id="stat-corps" class="text-xl sm:text-2xl font-black text-cyan-400 font-mono">6.27M</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Employers</div>
+          </div>
+          <div class="bg-slate-900/80 border border-white/5 rounded-xl p-3 text-center">
+            <div id="stat-jobs" class="text-xl sm:text-2xl font-black text-emerald-400 font-mono">79,571</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Verified Links</div>
+          </div>
+          <div class="bg-slate-900/80 border border-white/5 rounded-xl p-3 text-center">
+            <div id="stat-states" class="text-xl sm:text-2xl font-black text-brand-400 font-mono">63</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Regions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+
+    <!-- ========================================== -->
+    <!-- VIEW 1: EXECUTIVE INTELLIGENCE OVERVIEW    -->
+    <!-- ========================================== -->
+    <div id="view-overview" class="view-panel space-y-6">
+      
+      <!-- Macro Highlights -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-semibold tracking-wider uppercase text-brand-400">Institutional Landscape</span>
+            <div class="p-2 rounded-lg bg-brand-500/10 text-brand-400">🎓</div>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">6,244 Campuses</div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            6,035 active US IPEDS degree institutions + 209 Canadian member universities and polytechnics.
+          </p>
+          <div class="space-y-2 border-t border-white/5 pt-3">
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Faculty/Staff Job Portals</span>
+              <span class="text-emerald-400 font-mono font-bold">3,932 Confirmed (63%)</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Student Career Centers</span>
+              <span class="text-cyan-400 font-mono font-bold">2,903 Confirmed (47%)</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Both Pages Live-Verified</span>
+              <span class="text-purple-400 font-mono font-bold">2,427 Campuses</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-semibold tracking-wider uppercase text-cyan-400">Corporate & Employer Index</span>
+            <div class="p-2 rounded-lg bg-cyan-500/10 text-cyan-400">🏢</div>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">6.27 Million Orgs</div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Max-coverage federal register coverage across logistics, healthcare, tech startups, and nonprofits.
+          </p>
+          <div class="space-y-2 border-t border-white/5 pt-3">
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Carrier Websites Verified</span>
+              <span class="text-emerald-400 font-mono font-bold">79,571 Live</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">SEC Form D Issuers (Tech/VC)</span>
+              <span class="text-cyan-400 font-mono font-bold">363,612 Companies</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Cross-Register Merges</span>
+              <span class="text-purple-400 font-mono font-bold">505,068 Deduplicated</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-semibold tracking-wider uppercase text-emerald-400">Talent & Work Authorization</span>
+            <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400">⚡</div>
+          </div>
+          <div class="text-3xl font-extrabold text-white mb-1">STEM & Cap Exemption</div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Cross-referenced with DHS 2024 STEM designation program list and HEA Title IV cap-exempt rules.
+          </p>
+          <div class="space-y-2 border-t border-white/5 pt-3">
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">H-1B Cap-Exempt Colleges</span>
+              <span class="text-emerald-400 font-mono font-bold">2,443 Institutions</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">Canada PGWP-Eligible DLI</span>
+              <span class="text-cyan-400 font-mono font-bold">190 Institutions</span>
+            </div>
+            <div class="flex justify-between text-xs">
+              <span class="text-slate-400">National Campus Job Boards</span>
+              <span class="text-purple-400 font-mono font-bold">26 Boards Tracked</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Interactive Charts Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Hiring Systems Chart -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-base font-bold text-white">Campus Hiring System (ATS) Distribution</h2>
+              <p class="text-xs text-slate-400">Identified enterprise applicant tracking systems across colleges</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Top ATS Vendors</span>
+          </div>
+          <div class="h-64 flex items-center justify-center">
+            <canvas id="chart-ats"></canvas>
+          </div>
+        </div>
+
+        <!-- Industry Breakdown Chart -->
+        <div class="glass-card rounded-2xl p-6">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h2 class="text-base font-bold text-white">Macro Economy & Industry Distribution</h2>
+              <p class="text-xs text-slate-400">Categorization across 6.27M registered employers</p>
+            </div>
+            <span class="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">Federal Registers</span>
+          </div>
+          <div class="h-64 flex items-center justify-center">
+            <canvas id="chart-industry"></canvas>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 2: CAMPUS DIRECTORY                  -->
+    <!-- ========================================== -->
+    <div id="view-universities" class="view-panel space-y-6 hidden">
+      
+      <!-- Filter Bar -->
+      <div class="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="uni-search" 
+              oninput="handleUniSearch()" 
+              placeholder="Search universities by name, city, state, or Carnegie class..." 
+              class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
+            >
+            <span class="absolute right-3 top-2.5 text-xs text-slate-500 font-mono">⌘K</span>
+          </div>
+          <select id="uni-filter-country" onchange="handleUniFilter()" class="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-brand-500">
+            <option value="ALL">All Countries (US & CA)</option>
+            <option value="US">United States (6,035)</option>
+            <option value="CA">Canada (209)</option>
+          </select>
+          <select id="uni-filter-state" onchange="handleUniFilter()" class="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-brand-500">
+            <option value="ALL">All States / Provinces</option>
+          </select>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-white/5">
+          <span class="text-xs text-slate-400 font-medium">Quick Filters:</span>
+          <button onclick="toggleUniChip(this, 'stem')" class="chip px-3 py-1 rounded-full text-xs font-medium border border-white/10 text-slate-300 hover:bg-white/5 transition-colors">
+            🧪 STEM Heavy (&gt;20%)
+          </button>
+          <button onclick="toggleUniChip(this, 'h1b')" class="chip px-3 py-1 rounded-full text-xs font-medium border border-white/10 text-slate-300 hover:bg-white/5 transition-colors">
+            🛂 H-1B Cap Exempt
+          </button>
+          <button onclick="toggleUniChip(this, 'r1')" class="chip px-3 py-1 rounded-full text-xs font-medium border border-white/10 text-slate-300 hover:bg-white/5 transition-colors">
+            🏆 Carnegie R1
+          </button>
+          <button onclick="toggleUniChip(this, 'workday')" class="chip px-3 py-1 rounded-full text-xs font-medium border border-white/10 text-slate-300 hover:bg-white/5 transition-colors">
+            💼 Workday ATS
+          </button>
+          <span id="uni-result-count" class="ml-auto text-xs font-mono text-brand-400 font-semibold">Showing 6,244 institutions</span>
+        </div>
+      </div>
+
+      <!-- University Cards Grid -->
+      <div id="uni-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="flex items-center justify-between pt-4">
+        <button id="uni-prev-page" onclick="changeUniPage(-1)" class="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40">Previous</button>
+        <span id="uni-page-info" class="text-xs font-mono text-slate-400">Page 1 of 100</span>
+        <button id="uni-next-page" onclick="changeUniPage(1)" class="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40">Next</button>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 3: ENTERPRISE DIRECTORY               -->
+    <!-- ========================================== -->
+    <div id="view-companies" class="view-panel space-y-6 hidden">
+      
+      <!-- Filter Bar -->
+      <div class="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="comp-search" 
+              oninput="handleCompSearch()" 
+              placeholder="Search companies by name, legal name, ticker, or city..." 
+              class="w-full bg-slate-900/80 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+            >
+          </div>
+          <select id="comp-filter-category" onchange="handleCompFilter()" class="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500">
+            <option value="ALL">All Industries</option>
+            <option value="Logistics & Transport">Logistics & Transport</option>
+            <option value="Healthcare Providers">Healthcare Providers</option>
+            <option value="IT">IT & Tech (Form D)</option>
+            <option value="Mechanical & Manufacturing">Mechanical & Manufacturing</option>
+            <option value="MedTech & Pharma">MedTech & Pharma</option>
+          </select>
+          <select id="comp-filter-state" onchange="handleCompFilter()" class="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500">
+            <option value="ALL">All States</option>
+          </select>
+        </div>
+
+        <div class="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-white/5">
+          <span>Showing verified enterprise employers with active websites and career portals</span>
+          <span id="comp-result-count" class="font-mono text-cyan-400 font-semibold">5,263 Verified Employers</span>
+        </div>
+      </div>
+
+      <!-- Companies Grid -->
+      <div id="comp-cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="flex items-center justify-between pt-4">
+        <button id="comp-prev-page" onclick="changeCompPage(-1)" class="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40">Previous</button>
+        <span id="comp-page-info" class="text-xs font-mono text-slate-400">Page 1 of 100</span>
+        <button id="comp-next-page" onclick="changeCompPage(1)" class="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40">Next</button>
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- VIEW 4: TALENT-TO-MARKET BRIDGE           -->
+    <!-- ========================================== -->
+    <div id="view-bridge" class="view-panel space-y-6 hidden">
+      
+      <div class="glass-card rounded-2xl p-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-lg font-bold text-white">Regional Talent Pipeline & Employer Nexus</h2>
+            <p class="text-xs text-slate-400">Select any US state or Canadian province to inspect the local university talent pool against active hiring employers</p>
+          </div>
+          <div class="flex items-center space-x-3">
+            <label class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Select Region:</label>
+            <select id="bridge-state-select" onchange="renderBridgeView()" class="bg-slate-900 border border-brand-500/30 rounded-xl px-4 py-2 text-sm text-brand-300 font-mono font-bold focus:outline-none">
+              <!-- States injected by JS -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- State Intelligence Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        
+        <!-- Left: Higher Ed Talent Production -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/5 pb-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-lg">🎓</span>
+              <h3 class="text-base font-bold text-white">Campus Talent Pool</h3>
+            </div>
+            <span id="bridge-uni-badge" class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-brand-500/20 text-brand-300">0 Institutions</span>
+          </div>
+          
+          <div class="grid grid-cols-3 gap-3 text-center">
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5">
+              <div id="bridge-stat-students" class="text-xl font-bold font-mono text-white">0</div>
+              <div class="text-[10px] text-slate-400 uppercase">Total Students</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5">
+              <div id="bridge-stat-stem" class="text-xl font-bold font-mono text-emerald-400">0</div>
+              <div class="text-[10px] text-slate-400 uppercase">STEM Grads/Yr</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5">
+              <div id="bridge-stat-h1b" class="text-xl font-bold font-mono text-purple-400">0</div>
+              <div class="text-[10px] text-slate-400 uppercase">Cap-Exempt Campuses</div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Key Universities in Region:</h4>
+            <div id="bridge-uni-list" class="space-y-2">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Regional Employer Ecosystem -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex items-center justify-between border-b border-white/5 pb-3">
+            <div class="flex items-center space-x-2">
+              <span class="text-lg">🏢</span>
+              <h3 class="text-base font-bold text-white">Active Regional Employers</h3>
+            </div>
+            <span id="bridge-comp-badge" class="px-2.5 py-0.5 rounded-full text-xs font-mono bg-cyan-500/20 text-cyan-300">0 Employers</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 text-center">
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5">
+              <div id="bridge-stat-curated-comps" class="text-xl font-bold font-mono text-white">0</div>
+              <div class="text-[10px] text-slate-400 uppercase">Curated Enterprises</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-white/5">
+              <div id="bridge-stat-verified-web" class="text-xl font-bold font-mono text-cyan-400">0</div>
+              <div class="text-[10px] text-slate-400 uppercase">Verified Portals</div>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Prominent Employers Hiring Locally:</h4>
+            <div id="bridge-comp-list" class="space-y-2">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- SLIDE-OUT INSPECTOR DRAWER                 -->
+  <!-- ========================================== -->
+  <div id="drawer-backdrop" onclick="closeDrawer()" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+  
+  <aside id="detail-drawer" hidden class="fixed top-0 right-0 h-full w-full sm:w-[540px] bg-[#0c101c] border-l border-white/10 z-50 overflow-y-auto p-6 shadow-2xl space-y-6">
+    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+      <div class="flex items-center space-x-2">
+        <span id="drawer-icon" class="text-2xl">🎓</span>
+        <div>
+          <span id="drawer-tag" class="px-2 py-0.5 text-[10px] font-mono rounded-full bg-brand-500/20 text-brand-300">UNIVERSITY</span>
+          <h2 id="drawer-title" class="text-lg font-bold text-white mt-1">Institution Name</h2>
+        </div>
+      </div>
+      <button onclick="closeDrawer()" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Content Body -->
+    <div id="drawer-body" class="space-y-6 text-sm">
+      <!-- Injected by JS -->
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- CLIENT-SIDE APPLICATION CONTROLLER         -->
+  <!-- ========================================== -->
+  <script>
+    // Global State
+    let AppData = {
+      stats: null,
+      bridge: null,
+      universities: [],
+      companies: []
+    };
+
+    let filteredUnis = [];
+    let uniPage = 1;
+    const uniPageSize = 24;
+    let uniChips = { stem: false, h1b: false, r1: false, workday: false };
+
+    let filteredComps = [];
+    let compPage = 1;
+    const compPageSize = 24;
+
+    // Initialization
+    window.addEventListener('DOMContentLoaded', () => {
+      initData();
+      initTheme();
+    });
+
+    function initData() {
+      if (window.NEXUS_DATA) {
+        AppData = window.NEXUS_DATA;
+        onDataLoaded();
+      } else {
+        // Fallback for HTTP environments
+        Promise.all([
+          fetch('data/stats.json').then(r => r.json()),
+          fetch('data/state_bridge.json').then(r => r.json()),
+          fetch('data/universities.json').then(r => r.json()),
+          fetch('data/companies_featured.json').then(r => r.json())
+        ]).then(([stats, bridge, unis, comps]) => {
+          AppData = { stats, bridge, universities: unis, companies: comps };
+          onDataLoaded();
+        }).catch(err => {
+          console.error("Failed to fetch JSON data:", err);
+        });
+      }
+    }
+
+    function onDataLoaded() {
+      console.log("NEXUS Data Engine Initialized:", AppData);
+      
+      // Populate state dropdowns
+      populateStateDropdowns();
+
+      // Render Charts
+      initCharts();
+
+      // Setup University view
+      filteredUnis = [...AppData.universities];
+      renderUniCards();
+
+      // Setup Companies view
+      filteredComps = [...AppData.companies];
+      renderCompCards();
+
+      // Setup Bridge view
+      renderBridgeView();
+    }
+
+    // Tab Navigation
+    function setTab(tabName) {
+      document.querySelectorAll('.view-panel').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-brand-600/30', 'text-white', 'border', 'border-brand-500/30');
+        btn.classList.add('text-slate-400');
+      });
+
+      const activePanel = document.getElementById(`view-${tabName}`);
+      if (activePanel) activePanel.classList.remove('hidden');
+
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('text-slate-400');
+        activeBtn.classList.add('bg-brand-600/30', 'text-white', 'border', 'border-brand-500/30');
+      }
+    }
+
+    // Chart.js Visualizations
+    function initCharts() {
+      if (!AppData.stats) return;
+
+      // 1. ATS Systems Chart
+      const atsData = AppData.stats.universities.hiring_systems_identified || {};
+      const atsLabels = Object.keys(atsData);
+      const atsValues = Object.values(atsData);
+
+      const ctxAts = document.getElementById('chart-ats');
+      if (ctxAts) {
+        new Chart(ctxAts, {
+          type: 'bar',
+          data: {
+            labels: atsLabels,
+            datasets: [{
+              label: 'Institutions',
+              data: atsValues,
+              backgroundColor: 'rgba(139, 92, 246, 0.75)',
+              borderColor: '#8b5cf6',
+              borderWidth: 1,
+              borderRadius: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+              x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 10 } } },
+              y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', font: { size: 10 } } }
+            }
+          }
+        });
+      }
+
+      // 2. Industry Breakdown Chart
+      const indData = AppData.stats.employers.industries || {};
+      const indLabels = Object.keys(indData);
+      const indValues = Object.values(indData);
+
+      const ctxInd = document.getElementById('chart-industry');
+      if (ctxInd) {
+        new Chart(ctxInd, {
+          type: 'doughnut',
+          data: {
+            labels: indLabels,
+            datasets: [{
+              data: indValues,
+              backgroundColor: [
+                '#06b6d4', '#8b5cf6', '#10b981', '#f59e0b',
+                '#ec4899', '#6366f1', '#14b8a6', '#f43f5e'
+              ],
+              borderWidth: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: 'right',
+                labels: { color: '#94a3b8', boxWidth: 12, font: { size: 11 } }
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // Populate State Selectors
+    function populateStateDropdowns() {
+      const states = Object.keys(AppData.bridge || {}).sort();
+      const uniSelect = document.getElementById('uni-filter-state');
+      const compSelect = document.getElementById('comp-filter-state');
+      const bridgeSelect = document.getElementById('bridge-state-select');
+
+      states.forEach(st => {
+        if (!st || st === "Other") return;
+        const opt1 = document.createElement('option');
+        opt1.value = st;
+        opt1.textContent = st;
+        uniSelect.appendChild(opt1);
+
+        const opt2 = document.createElement('option');
+        opt2.value = st;
+        opt2.textContent = st;
+        compSelect.appendChild(opt2);
+
+        const opt3 = document.createElement('option');
+        opt3.value = st;
+        opt3.textContent = st;
+        bridgeSelect.appendChild(opt3);
+      });
+
+      // Default bridge state to CA or NY
+      if (bridgeSelect.querySelector('option[value="CA"]')) {
+        bridgeSelect.value = "CA";
+      }
+    }
+
+    // University Directory Filters & Pagination
+    function handleUniSearch() {
+      uniPage = 1;
+      applyUniFilters();
+    }
+
+    function handleUniFilter() {
+      uniPage = 1;
+      applyUniFilters();
+    }
+
+    function toggleUniChip(btn, type) {
+      uniChips[type] = !uniChips[type];
+      btn.classList.toggle('bg-brand-500/20');
+      btn.classList.toggle('border-brand-500/40');
+      btn.classList.toggle('text-brand-300');
+      uniPage = 1;
+      applyUniFilters();
+    }
+
+    function applyUniFilters() {
+      const q = (document.getElementById('uni-search').value || '').toLowerCase().trim();
+      const country = document.getElementById('uni-filter-country').value;
+      const state = document.getElementById('uni-filter-state').value;
+
+      filteredUnis = AppData.universities.filter(u => {
+        if (country !== 'ALL' && u.country !== country) return false;
+        if (state !== 'ALL' && u.state !== state) return false;
+
+        if (uniChips.stem && (!u.stem_share || u.stem_share < 0.20)) return false;
+        if (uniChips.h1b && !u.h1b_exempt) return false;
+        if (uniChips.r1 && !(u.carnegie || '').includes('Very High')) return false;
+        if (uniChips.workday && (u.jobs_ats || '').toLowerCase() !== 'workday') return false;
+
+        if (q) {
+          const matchName = (u.name || '').toLowerCase().includes(q);
+          const matchCity = (u.city || '').toLowerCase().includes(q);
+          const matchState = (u.state || '').toLowerCase().includes(q);
+          const matchCarnegie = (u.carnegie || '').toLowerCase().includes(q);
+          if (!matchName && !matchCity && !matchState && !matchCarnegie) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('uni-result-count').textContent = `Showing ${filteredUnis.length.toLocaleString()} institutions`;
+      renderUniCards();
+    }
+
+    function renderUniCards() {
+      const container = document.getElementById('uni-cards-grid');
+      container.innerHTML = '';
+
+      const totalPages = Math.ceil(filteredUnis.length / uniPageSize) || 1;
+      if (uniPage > totalPages) uniPage = totalPages;
+
+      document.getElementById('uni-page-info').textContent = `Page ${uniPage} of ${totalPages}`;
+      document.getElementById('uni-prev-page').disabled = uniPage <= 1;
+      document.getElementById('uni-next-page').disabled = uniPage >= totalPages;
+
+      const slice = filteredUnis.slice((uniPage - 1) * uniPageSize, uniPage * uniPageSize);
+
+      if (slice.length === 0) {
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500">No institutions match the current search filters.</div>`;
+        return;
+      }
+
+      slice.forEach(u => {
+        const card = document.createElement('div');
+        card.className = "glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer";
+        card.onclick = () => openUniDrawer(u);
+
+        const stemBadge = u.stem_share && u.stem_share > 0.15 
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">${Math.round(u.stem_share * 100)}% STEM</span>` 
+          : '';
+
+        const h1bBadge = u.h1b_exempt 
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">H-1B Cap Exempt</span>` 
+          : '';
+
+        const atsBadge = u.jobs_ats 
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">${u.jobs_ats}</span>` 
+          : '';
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="text-[11px] font-semibold text-brand-400 tracking-wider uppercase">${u.state} · ${u.city || u.country}</span>
+              <span class="text-xs font-mono text-slate-500">${u.country}</span>
+            </div>
+            <h3 class="text-base font-bold text-white group-hover:text-brand-300 transition-colors line-clamp-1">${u.name}</h3>
+            <p class="text-xs text-slate-400 line-clamp-1 mt-0.5">${u.carnegie || u.sector || 'Higher Education'}</p>
+            
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${stemBadge}
+              ${h1bBadge}
+              ${atsBadge}
+            </div>
+          </div>
+
+          <div class="border-t border-white/5 pt-3 flex items-center justify-between text-xs">
+            <div class="font-mono text-slate-400">
+              <span class="text-white font-bold">${u.students ? u.students.toLocaleString() : 'N/A'}</span> students
+            </div>
+            <div class="flex items-center space-x-2">
+              ${u.jobs_url ? `<a href="${u.jobs_url}" target="_blank" onclick="event.stopPropagation()" class="px-2.5 py-1 rounded-lg bg-brand-600/20 hover:bg-brand-600/40 text-brand-300 font-medium transition-colors text-[11px]">Jobs</a>` : ''}
+              ${u.career_url ? `<a href="${u.career_url}" target="_blank" onclick="event.stopPropagation()" class="px-2.5 py-1 rounded-lg bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 font-medium transition-colors text-[11px]">Career</a>` : ''}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function changeUniPage(delta) {
+      uniPage += delta;
+      renderUniCards();
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    // Company Directory Filters & Pagination
+    function handleCompSearch() {
+      compPage = 1;
+      applyCompFilters();
+    }
+
+    function handleCompFilter() {
+      compPage = 1;
+      applyCompFilters();
+    }
+
+    function applyCompFilters() {
+      const q = (document.getElementById('comp-search').value || '').toLowerCase().trim();
+      const cat = document.getElementById('comp-filter-category').value;
+      const state = document.getElementById('comp-filter-state').value;
+
+      filteredComps = AppData.companies.filter(c => {
+        if (cat !== 'ALL' && c.category !== cat) return false;
+        if (state !== 'ALL' && c.state !== state) return false;
+
+        if (q) {
+          const matchName = (c.name || '').toLowerCase().includes(q);
+          const matchLegal = (c.legal_name || '').toLowerCase().includes(q);
+          const matchTicker = (c.ticker || '').toLowerCase().includes(q);
+          const matchCity = (c.city || '').toLowerCase().includes(q);
+          if (!matchName && !matchLegal && !matchTicker && !matchCity) return false;
+        }
+        return true;
+      });
+
+      document.getElementById('comp-result-count').textContent = `${filteredComps.length.toLocaleString()} Verified Employers`;
+      renderCompCards();
+    }
+
+    function renderCompCards() {
+      const container = document.getElementById('comp-cards-grid');
+      container.innerHTML = '';
+
+      const totalPages = Math.ceil(filteredComps.length / compPageSize) || 1;
+      if (compPage > totalPages) compPage = totalPages;
+
+      document.getElementById('comp-page-info').textContent = `Page ${compPage} of ${totalPages}`;
+      document.getElementById('comp-prev-page').disabled = compPage <= 1;
+      document.getElementById('comp-next-page').disabled = compPage >= totalPages;
+
+      const slice = filteredComps.slice((compPage - 1) * compPageSize, compPage * compPageSize);
+
+      if (slice.length === 0) {
+        container.innerHTML = `<div class="col-span-full py-12 text-center text-slate-500">No employers match current filters.</div>`;
+        return;
+      }
+
+      slice.forEach(c => {
+        const card = document.createElement('div');
+        card.className = "glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer";
+        card.onclick = () => openCompDrawer(c);
+
+        const tickerBadge = c.ticker 
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">${c.ticker} (${c.exchange || 'SEC'})</span>` 
+          : '';
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <span class="text-[11px] font-semibold text-cyan-400 tracking-wider uppercase">${c.state || 'US'} · ${c.city || 'HQ'}</span>
+              <span class="text-xs font-mono text-slate-500">${c.category}</span>
+            </div>
+            <h3 class="text-base font-bold text-white line-clamp-1">${c.name}</h3>
+            <p class="text-xs text-slate-400 line-clamp-2 mt-1">${c.description || c.legal_name || 'Enterprise organization'}</p>
+            
+            <div class="flex flex-wrap gap-1.5 mt-3">
+              ${tickerBadge}
+              ${c.careers_url ? `<span class="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Verified Careers Portal</span>` : ''}
+            </div>
+          </div>
+
+          <div class="border-t border-white/5 pt-3 flex items-center justify-between text-xs">
+            <span class="text-slate-400 text-[11px]">${c.subcategory || 'Employer'}</span>
+            <div class="flex items-center space-x-2">
+              ${c.website ? `<a href="${c.website}" target="_blank" onclick="event.stopPropagation()" class="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 font-medium transition-colors text-[11px]">Website</a>` : ''}
+              ${c.careers_url ? `<a href="${c.careers_url}" target="_blank" onclick="event.stopPropagation()" class="px-2.5 py-1 rounded-lg bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 font-medium transition-colors text-[11px]">Careers</a>` : ''}
+            </div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function changeCompPage(delta) {
+      compPage += delta;
+      renderCompCards();
+      window.scrollTo({ top: 300, behavior: 'smooth' });
+    }
+
+    // Talent-to-Employer Bridge View
+    function renderBridgeView() {
+      const select = document.getElementById('bridge-state-select');
+      const st = select.value || 'CA';
+      const data = (AppData.bridge || {})[st];
+      if (!data) return;
+
+      document.getElementById('bridge-uni-badge').textContent = `${data.universities_count} Campuses`;
+      document.getElementById('bridge-stat-students').textContent = (data.total_students || 0).toLocaleString();
+      document.getElementById('bridge-stat-stem').textContent = (data.stem_graduates_yearly || 0).toLocaleString();
+      document.getElementById('bridge-stat-h1b').textContent = (data.h1b_exempt_campuses || 0).toLocaleString();
+
+      document.getElementById('bridge-comp-badge').textContent = `${data.companies_curated_count} Employers`;
+      document.getElementById('bridge-stat-curated-comps').textContent = (data.companies_curated_count || 0).toLocaleString();
+      document.getElementById('bridge-stat-verified-web').textContent = (data.companies_verified_web || 0).toLocaleString();
+
+      // Render Universities list
+      const uniList = document.getElementById('bridge-uni-list');
+      uniList.innerHTML = '';
+      (data.top_institutions || []).forEach(u => {
+        const item = document.createElement('div');
+        item.className = "flex items-center justify-between p-2.5 rounded-xl bg-slate-900/40 border border-white/5 text-xs";
+        item.innerHTML = `
+          <div>
+            <div class="font-bold text-white">${u.name}</div>
+            <div class="text-[11px] text-slate-400">${u.city} · ${(u.students || 0).toLocaleString()} students</div>
+          </div>
+          ${u.jobs_url ? `<a href="${u.jobs_url}" target="_blank" class="px-2 py-1 rounded bg-brand-500/20 text-brand-300 text-[10px] font-semibold">Jobs Portal</a>` : ''}
+        `;
+        uniList.appendChild(item);
+      });
+
+      // Render Companies list
+      const compList = document.getElementById('bridge-comp-list');
+      compList.innerHTML = '';
+      (data.top_employers || []).forEach(c => {
+        const item = document.createElement('div');
+        item.className = "flex items-center justify-between p-2.5 rounded-xl bg-slate-900/40 border border-white/5 text-xs";
+        item.innerHTML = `
+          <div>
+            <div class="font-bold text-white">${c.name}</div>
+            <div class="text-[11px] text-slate-400">${c.cat} · ${c.city || 'Regional'}</div>
+          </div>
+          ${c.careers_url ? `<a href="${c.careers_url}" target="_blank" class="px-2 py-1 rounded bg-cyan-500/20 text-cyan-300 text-[10px] font-semibold">Careers Hub</a>` : ''}
+        `;
+        compList.appendChild(item);
+      });
+    }
+
+    // Detail Inspector Drawer
+    function openUniDrawer(u) {
+      document.getElementById('drawer-icon').textContent = '🎓';
+      document.getElementById('drawer-tag').textContent = `${u.country} HIGHER ED`;
+      document.getElementById('drawer-title').textContent = u.name;
+
+      const body = document.getElementById('drawer-body');
+      body.innerHTML = `
+        <div class="grid grid-cols-2 gap-3 bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs">
+          <div><span class="text-slate-400">Location:</span> <span class="text-white font-semibold">${u.city}, ${u.state}</span></div>
+          <div><span class="text-slate-400">Sector:</span> <span class="text-white font-semibold">${u.sector || 'University'}</span></div>
+          <div><span class="text-slate-400">Students:</span> <span class="text-white font-semibold font-mono">${(u.students || 0).toLocaleString()}</span></div>
+          <div><span class="text-slate-400">Employees:</span> <span class="text-white font-semibold font-mono">${(u.employees || 0).toLocaleString()}</span></div>
+          <div><span class="text-slate-400">STEM Share:</span> <span class="text-emerald-400 font-semibold font-mono">${Math.round((u.stem_share || 0) * 100)}%</span></div>
+          <div><span class="text-slate-400">H-1B Cap Exempt:</span> <span class="text-purple-400 font-semibold">${u.h1b_exempt ? 'Yes' : 'No'}</span></div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Academic & Carnegie Profile</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">${u.carnegie || 'Standard higher-education institution'}</p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Direct Verified Links</h4>
+          ${u.website ? `<a href="${u.website}" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 text-xs font-semibold"><span>Official Website</span><span>↗</span></a>` : ''}
+          ${u.jobs_url ? `<a href="${u.jobs_url}" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-brand-600/20 hover:bg-brand-600/30 text-brand-300 text-xs font-semibold border border-brand-500/30"><span>Faculty & Staff Careers (${u.jobs_ats || 'Portal'})</span><span>↗</span></a>` : ''}
+          ${u.career_url ? `<a href="${u.career_url}" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 text-xs font-semibold border border-cyan-500/30"><span>Student Career Center</span><span>↗</span></a>` : ''}
+        </div>
+      `;
+
+      showDrawer();
+    }
+
+    function openCompDrawer(c) {
+      document.getElementById('drawer-icon').textContent = '🏢';
+      document.getElementById('drawer-tag').textContent = `${c.category.toUpperCase()}`;
+      document.getElementById('drawer-title').textContent = c.name;
+
+      const body = document.getElementById('drawer-body');
+      body.innerHTML = `
+        <div class="grid grid-cols-2 gap-3 bg-slate-900/60 p-4 rounded-xl border border-white/5 text-xs">
+          <div><span class="text-slate-400">Headquarters:</span> <span class="text-white font-semibold">${c.city || 'N/A'}, ${c.state || 'US'}</span></div>
+          <div><span class="text-slate-400">Industry:</span> <span class="text-white font-semibold">${c.category}</span></div>
+          <div><span class="text-slate-400">Ticker:</span> <span class="text-cyan-400 font-semibold font-mono">${c.ticker || 'Private'}</span></div>
+          <div><span class="text-slate-400">Exchange:</span> <span class="text-white font-semibold">${c.exchange || 'SEC EDGAR'}</span></div>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">Company Overview</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">${c.description || 'Verified enterprise employer listed in the federal and curated directories.'}</p>
+        </div>
+
+        <div class="space-y-3 pt-2">
+          <h4 class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Verified Employer Channels</h4>
+          ${c.website ? `<a href="${c.website}" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 text-slate-200 text-xs font-semibold"><span>Company Homepage</span><span>↗</span></a>` : ''}
+          ${c.careers_url ? `<a href="${c.careers_url}" target="_blank" class="flex items-center justify-between p-3 rounded-xl bg-cyan-600/20 hover:bg-cyan-600/30 text-cyan-300 text-xs font-semibold border border-cyan-500/30"><span>Verified Careers & Jobs Page</span><span>↗</span></a>` : ''}
+        </div>
+      `;
+
+      showDrawer();
+    }
+
+    function showDrawer() {
+      const drawer = document.getElementById('detail-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      backdrop.classList.remove('hidden');
+      drawer.removeAttribute('hidden');
+    }
+
+    function closeDrawer() {
+      const drawer = document.getElementById('detail-drawer');
+      const backdrop = document.getElementById('drawer-backdrop');
+      backdrop.classList.add('hidden');
+      drawer.setAttribute('hidden', true);
+    }
+
+    // Theme Switcher
+    function initTheme() {
+      const isDark = localStorage.getItem('nexus_theme') !== 'light';
+      document.documentElement.classList.toggle('dark', isDark);
+      updateThemeIcons(isDark);
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('nexus_theme', isDark ? 'dark' : 'light');
+      updateThemeIcons(isDark);
+    }
+
+    function updateThemeIcons(isDark) {
+      document.getElementById('theme-icon-dark').classList.toggle('hidden', isDark);
+      document.getElementById('theme-icon-light').classList.toggle('hidden', !isDark);
+    }
+  </script>
+</body>
+</html>

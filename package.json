@@ -1,0 +1,20 @@
+{
+  "name": "nexus-intelligence-platform",
+  "version": "2.4.0",
+  "description": "Unified Campus and Enterprise Talent Intelligence Platform integrating US/Canada Universities with American Employers Index.",
+  "scripts": {
+    "start": "python3 server.py",
+    "build:data": "python3 scripts/build_nexus_data.py",
+    "open": "open app/index.html"
+  },
+  "keywords": [
+    "talent-intelligence",
+    "universities",
+    "companies",
+    "campus-recruiting",
+    "higher-ed",
+    "stem-pipeline"
+  ],
+  "author": "Shyam Sunder Daggupati",
+  "license": "MIT"
+}
