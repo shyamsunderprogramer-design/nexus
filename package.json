@@ -1,20 +1,51 @@
 {
   "name": "nexus-intelligence-platform",
-  "version": "2.4.0",
-  "description": "Unified Campus and Enterprise Talent Intelligence Platform integrating US/Canada Universities with American Employers Index.",
+  "version": "3.0.0",
+  "description": "NEXUS: National Employment & eXploration Unified System — Enterprise Full-Stack React + TypeScript + Express Platform.",
+  "type": "module",
   "scripts": {
-    "start": "python3 server.py",
+    "dev": "concurrently -n \"API,WEB\" -c \"cyan,magenta\" \"npm run server\" \"npm run client\"",
+    "client": "vite",
+    "server": "tsx watch server/index.ts",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "tsx server/index.ts",
     "build:data": "python3 scripts/build_nexus_data.py",
-    "open": "open app/index.html"
+    "open:legacy": "open app/index.html"
   },
   "keywords": [
     "talent-intelligence",
     "universities",
     "companies",
-    "campus-recruiting",
-    "higher-ed",
-    "stem-pipeline"
+    "react",
+    "typescript",
+    "express",
+    "tailwindcss",
+    "framer-motion"
   ],
   "author": "Shyam Sunder Daggupati",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.6.1",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  }
 }

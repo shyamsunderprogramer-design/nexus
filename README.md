@@ -124,47 +124,63 @@ The platform was built with strict adherence to modern frontend engineering stan
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
-│                    NEXUS CLIENT ARCHITECTURE                │
+│                 NEXUS FULL-STACK ARCHITECTURE               │
 ├─────────────────────────────────────────────────────────────┤
-│  UI Framework      Tailwind CSS 3.x (Glassmorphic obsidian) │
-│  Typography        Plus Jakarta Sans & JetBrains Mono       │
-│  Transitions       CSS @starting-style (discrete exit/entry)│
-│  Visualizations    Chart.js 4.x Responsive Canvas Engine    │
-│  Data Delivery     Zero-CORS Dual-Mode (Bundle + JSON API)  │
-│  State Engine      Pure Vanilla JS (Sub-10ms virtual slice) │
+│  Frontend Engine   React 19 + TypeScript + Vite             │
+│  UI & Styling      Tailwind CSS 3.x (Glassmorphic obsidian) │
+│  Motion & Physics  Framer Motion 12.x (Spring transitions)  │
+│  Iconography       Lucide React 1.x (Crisp SVG vector pack) │
+│  Backend API       Node.js / Express REST API (TypeScript)  │
+│  Endpoints         /api/stats, /api/universities,           │
+│                    /api/companies, /api/bridge, /api/search │
+│  Data Delivery     Dual-Mode (Express REST API + Offline)   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 - **Obsidian Dark Palette**: `#070b12` background accented with animated radial mesh gradients (`rgba(124, 58, 237, 0.12)`).
 - **Glassmorphic Cards**: `backdrop-filter: blur(16px)` with hairline borders (`rgba(255, 255, 255, 0.08)`) and hover micro-elevations.
 - **Persistent Theme Toggle**: Seamless light/dark mode switcher stored in `localStorage`.
-- **Zero-CORS Dual Execution**:
-  - **HTTP Server Mode**: Standard REST-ready JSON streaming.
-  - **Offline File Mode**: Bundled inside `data/nexus_bundle.js` allowing users to double-click and launch `app/index.html` directly from Finder/Explorer without requiring a web server or facing CORS browser blocks.
+- **Dual Execution Modes**:
+  - **Full-Stack Mode**: Express REST API on port 3001 proxied to React 19 frontend on port 3000.
+  - **Standalone Offline Mode**: Bundled inside `app/data/nexus_bundle.js` allowing users to double-click and launch `app/index.html` directly from Finder/Explorer without requiring a web server or facing CORS browser blocks.
 
 ---
 
 ## 🚀 Quick Start & How to Run
 
-### Option 1: Local Development Server (Recommended)
-Clone the repository and run the zero-dependency Python server:
+### Option 1: Full-Stack React + Express Development Server (Recommended)
+Clone the repository and launch both the Express REST API and Vite React client with hot module reloading:
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/shyamsunderprogramer-design/nexus.git
 cd nexus
 
-# 2. Launch the application
-python3 server.py
-# or if you use npm:
-npm start
+# 2. Install dependencies
+npm install
+
+# 3. Launch concurrent Full-Stack development environment (API + Web)
+npm run dev
 ```
 Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+- **Frontend**: `http://localhost:3000` (Vite Hot Module Reloading)
+- **REST API**: `http://localhost:3001/api/stats`
 
 ---
 
-### Option 2: Instant Browser Launch (Zero-Setup, 100% Offline)
-No Node.js or Python required. Simply open the HTML file:
+### Option 2: Production Build & Run
+```bash
+# Compile TypeScript and build production bundle
+npm run build
+
+# Start production server
+npm start
+```
+
+---
+
+### Option 3: Instant Browser Launch (Zero-Setup, 100% Offline)
+No Node.js or build steps required. Simply open the standalone bundle:
 
 ```bash
 # macOS
@@ -200,18 +216,33 @@ This script:
 
 ```text
 nexus/
-├── app/
-│   ├── index.html               # Main Web Application (Modern UX/UI SPA)
-│   └── data/
-│       ├── nexus_bundle.js      # Self-contained bundle for offline zero-CORS launch
-│       ├── stats.json           # Macro KPIs and Chart.js distribution datasets
-│       ├── state_bridge.json    # State-by-state talent and employer matrix
-│       ├── universities.json    # 6,244 cleaned campus records (US & Canada)
-│       └── companies_featured.json # 5,263 verified enterprise employer records
+├── src/                         # Full-Stack React 19 Frontend
+│   ├── components/              # Modular UI Components
+│   │   ├── Navbar.tsx           # Brand navigation & theme switch
+│   │   ├── Hero.tsx             # Animated KPI banner
+│   │   ├── ExecutiveDashboard.tsx # Macro market analytics & ATS charts
+│   │   ├── CampusDirectory.tsx  # Filterable 6,244 university network
+│   │   ├── EnterpriseDirectory.tsx # Filterable 6.27M corporate index
+│   │   ├── TalentBridge.tsx     # State-by-state talent & hiring nexus
+│   │   └── DetailDrawer.tsx     # Framer Motion slide-out inspector
+│   ├── services/
+│   │   └── api.ts               # Dual-mode API service layer
+│   ├── types/
+│   │   └── index.ts             # Strict TypeScript models & contracts
+│   ├── App.tsx                  # Root application component
+│   ├── main.tsx                 # React DOM mount point
+│   └── index.css                # Tailwind directives & glassmorphic tokens
+├── server/                      # Full-Stack Express REST API
+│   └── index.ts                 # /api/stats, /api/universities, /api/companies, /api/bridge
+├── app/                         # Standalone Zero-Dependency SPA Edition
+│   ├── index.html               # Self-contained browser application
+│   └── data/                    # Pre-aggregated data payloads
 ├── scripts/
 │   └── build_nexus_data.py      # Automated data extraction, merging, and bundling
-├── server.py                    # Lightweight Python HTTP server with CORS headers
-├── package.json                 # NPM scripts (npm start, npm run build:data)
+├── vite.config.ts               # Vite configuration with React & API proxy
+├── tsconfig.json                # TypeScript compiler configuration
+├── tailwind.config.js           # Tailwind CSS theme extension
+├── package.json                 # NPM scripts (npm run dev, npm run build, npm start)
 ├── .gitignore                   # Clean exclusion rules
 ├── LICENSE                      # MIT Open Source License
 └── README.md                    # Comprehensive Project Documentation

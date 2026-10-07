@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-10-06T12:00:00Z",
+  "universities": {
+    "us_total": 6035,
+    "ca_total": 209,
+    "total": 6244,
+    "jobs_pages_confirmed": 3932,
+    "career_centers_confirmed": 2903,
+    "both_confirmed": 2427,
+    "hiring_systems_identified": {},
+    "sectors": {
+      "Private not-for-profit 4-year": 1623,
+      "Private for-profit less-than-2-year": 1386,
+      "Public 2-year": 868,
+      "Public 4-year": 820,
+      "Private for-profit 2-year": 519,
+      "Private for-profit 4-year": 326,
+      "Public less-than-2-year": 232,
+      "Private not-for-profit 2-year": 131
+    }
+  },
+  "employers": {
+    "curated_total": 100368,
+    "federal_total": 6274467,
+    "verified_carriers_applied": 79571,
+    "industries": {
+      "Healthcare Providers": 35449,
+      "Mechanical & Manufacturing": 34708,
+      "MedTech & Pharma": 13424,
+      "Other Industries": 13120,
+      "Not verified": 1930,
+      "IT": 648,
+      "Other Engineering": 530,
+      "Logistics & Transport": 237,
+      "Data Centers & Cloud": 170,
+      "Civil & Construction": 152
+    },
+    "federal_industries": [
+      {
+        "ind": "Other Industries",
+        "slug": "other",
+        "count": 2340344
+      },
+      {
+        "ind": "Logistics & Transport",
+        "slug": "logistics",
+        "count": 2078739
+      },
+      {
+        "ind": "Healthcare Providers",
+        "slug": "healthcare",
+        "count": 1760961
+      },
+      {
+        "ind": "IT",
+        "slug": "it",
+        "count": 37819
+      },
+      {
+        "ind": "Mechanical & Manufacturing",
+        "slug": "manufacturing",
+        "count": 34680
+      },
+      {
+        "ind": "MedTech & Pharma",
+        "slug": "medtech",
+        "count": 19152
+      },
+      {
+        "ind": "Not verified",
+        "slug": "unverified",
+        "count": 1930
+      },
+      {
+        "ind": "Other Engineering",
+        "slug": "engineering",
+        "count": 520
+      },
+      {
+        "ind": "Data Centers & Cloud",
+        "slug": "datacenters",
+        "count": 170
+      },
+      {
+        "ind": "Civil & Construction",
+        "slug": "construction",
+        "count": 152
+      }
+    ]
+  },
+  "state_counts": 60
+}
