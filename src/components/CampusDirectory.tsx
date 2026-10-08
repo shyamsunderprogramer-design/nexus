@@ -79,9 +79,9 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
             className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-brand-500"
           >
             <option value="ALL">All Countries (Global)</option>
-            <option value="US">United States (6,035)</option>
-            <option value="CA">Canada (209)</option>
-            <option value="IN">India (55+ Premier HEIs)</option>
+            <option value="US">🇺🇸 United States (6,035)</option>
+            <option value="CA">🇨🇦 Canada (209)</option>
+            <option value="IN">🇮🇳 India (55+ Premier HEIs)</option>
           </select>
         </div>
 

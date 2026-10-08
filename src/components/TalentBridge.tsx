@@ -8,13 +8,43 @@ export const TalentBridge: React.FC = () => {
   const [bridgeData, setBridgeData] = useState<StateBridgeData | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const states = Array.from(new Set([
-    'CA', 'NY', 'TX', 'FL', 'IL', 'PA', 'OH', 'MI', 'NC', 'GA',
-    'WA', 'VA', 'MA', 'CO', 'AZ', 'IN', 'TN', 'MO', 'MD', 'WI',
-    'MN', 'AL', 'SC', 'LA', 'KY', 'OR', 'OK', 'CT', 'UT',
-    'ON', 'QC', 'BC', 'AB',
-    'KA', 'MH', 'DL', 'TS', 'UP', 'WB', 'GJ', 'PB', 'HR'
-  ])).sort();
+  const REGION_GROUPS = {
+    '🇮🇳 India Hubs': [
+      { code: 'KA', name: 'KA · Karnataka (Bengaluru Tech Capital)' },
+      { code: 'MH', name: 'MH · Maharashtra (Mumbai Financial & Pune)' },
+      { code: 'DL', name: 'DL · Delhi-NCR (National Capital Region)' },
+      { code: 'TS', name: 'TS · Telangana (Hyderabad Cyberabad)' },
+      { code: 'TN', name: 'TN · Tamil Nadu (Chennai SaaS & Auto Hub)' },
+      { code: 'UP', name: 'UP · Uttar Pradesh (Noida & IIT Kanpur)' },
+      { code: 'WB', name: 'WB · West Bengal (Kolkata & Kharagpur)' },
+      { code: 'GJ', name: 'GJ · Gujarat (Ahmedabad & Gandhinagar)' },
+      { code: 'HR', name: 'HR · Haryana (Gurugram Tech Hub)' },
+      { code: 'PB', name: 'PB · Punjab (Chandigarh & Mohali)' }
+    ],
+    '🇺🇸 United States': [
+      { code: 'CA', name: 'CA · California (Silicon Valley)' },
+      { code: 'NY', name: 'NY · New York (Finance & Media)' },
+      { code: 'TX', name: 'TX · Texas (Austin Tech & Energy)' },
+      { code: 'WA', name: 'WA · Washington (Cloud & Aerospace)' },
+      { code: 'MA', name: 'MA · Massachusetts (Biotech & AI)' },
+      { code: 'FL', name: 'FL · Florida' },
+      { code: 'IL', name: 'IL · Illinois (Chicago Enterprise)' },
+      { code: 'PA', name: 'PA · Pennsylvania' },
+      { code: 'NC', name: 'NC · North Carolina (Research Triangle)' },
+      { code: 'GA', name: 'GA · Georgia (Fintech)' },
+      { code: 'OH', name: 'OH · Ohio' },
+      { code: 'MI', name: 'MI · Michigan (Auto Engineering)' },
+      { code: 'VA', name: 'VA · Virginia (Data Centers)' },
+      { code: 'CO', name: 'CO · Colorado' },
+      { code: 'AZ', name: 'AZ · Arizona (Semiconductors)' }
+    ],
+    '🇨🇦 Canada': [
+      { code: 'ON', name: 'ON · Ontario (Toronto & Waterloo)' },
+      { code: 'BC', name: 'BC · British Columbia (Vancouver)' },
+      { code: 'QC', name: 'QC · Quebec (Montreal AI)' },
+      { code: 'AB', name: 'AB · Alberta (Calgary & Edmonton)' }
+    ]
+  };
 
   useEffect(() => {
     let active = true;
@@ -41,7 +71,7 @@ export const TalentBridge: React.FC = () => {
               <h2 className="text-lg font-bold text-white">Regional Talent Pipeline & Employer Nexus</h2>
             </div>
             <p className="text-xs text-slate-400 mt-1">
-              Select any state or province to cross-reference academic degree outputs with active hiring demand
+              Select any state, province, or tech hub to cross-reference academic degree outputs with active hiring demand
             </p>
           </div>
 
@@ -50,12 +80,16 @@ export const TalentBridge: React.FC = () => {
             <select
               value={selectedState}
               onChange={(e) => setSelectedState(e.target.value)}
-              className="bg-slate-900 border border-brand-500/30 rounded-xl px-4 py-2 text-sm text-brand-300 font-mono font-bold focus:outline-none"
+              className="bg-slate-900 border border-brand-500/30 rounded-xl px-4 py-2 text-sm text-brand-300 font-bold focus:outline-none"
             >
-              {states.map((st) => (
-                <option key={st} value={st}>
-                  {st}
-                </option>
+              {Object.entries(REGION_GROUPS).map(([group, list]) => (
+                <optgroup key={group} label={group} className="bg-slate-950 text-white font-sans">
+                  {list.map((r) => (
+                    <option key={r.code} value={r.code} className="bg-slate-900 text-slate-200">
+                      {r.name}
+                    </option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           </div>

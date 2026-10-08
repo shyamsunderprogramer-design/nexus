@@ -120,6 +120,7 @@ export const api = {
     q?: string;
     category?: string;
     state?: string;
+    country?: string;
     page?: number;
     limit?: number;
   }): Promise<{ total: number; page: number; totalPages: number; data: Company[] }> {
@@ -127,6 +128,7 @@ export const api = {
     if (params.q) query.set('q', params.q);
     if (params.category && params.category !== 'ALL') query.set('category', params.category);
     if (params.state && params.state !== 'ALL') query.set('state', params.state);
+    if (params.country && params.country !== 'ALL') query.set('country', params.country);
     if (params.page) query.set('page', String(params.page));
     if (params.limit) query.set('limit', String(params.limit));
 
@@ -147,6 +149,15 @@ export const api = {
     }
 
     let filtered = cachedCompanies || [];
+    if (params.country && params.country !== 'ALL') {
+      if (params.country === 'IN') {
+        filtered = filtered.filter(c => c.country === 'IN');
+      } else if (params.country === 'US') {
+        filtered = filtered.filter(c => !c.country || c.country === 'US');
+      } else if (params.country === 'CA') {
+        filtered = filtered.filter(c => c.country === 'CA');
+      }
+    }
     if (params.category && params.category !== 'ALL') {
       filtered = filtered.filter(c => c.category === params.category);
     }

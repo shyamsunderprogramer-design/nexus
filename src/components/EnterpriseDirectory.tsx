@@ -13,6 +13,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('ALL');
   const [state, setState] = useState('ALL');
+  const [country, setCountry] = useState('ALL');
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
@@ -24,6 +25,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
         q: search,
         category,
         state,
+        country,
         page,
         limit: 24,
       });
@@ -39,7 +41,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
 
   useEffect(() => {
     fetchCompanies();
-  }, [search, category, state, page]);
+  }, [search, category, state, country, page]);
 
   return (
     <div className="space-y-6">
@@ -61,6 +63,19 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
           </div>
 
           <select
+            value={country}
+            onChange={(e) => {
+              setCountry(e.target.value);
+              setPage(1);
+            }}
+            className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500"
+          >
+            <option value="ALL">All Countries (Global)</option>
+            <option value="US">🇺🇸 United States (6.27M+)</option>
+            <option value="IN">🇮🇳 India (NIFTY & Tech Giants)</option>
+          </select>
+
+          <select
             value={category}
             onChange={(e) => {
               setCategory(e.target.value);
@@ -69,11 +84,13 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500"
           >
             <option value="ALL">All Industries</option>
+            <option value="Information Technology">Information Technology & Software</option>
+            <option value="Banking & Financial Services">Banking & Financial Services</option>
+            <option value="Fintech & Payments">Fintech & Payments</option>
             <option value="Logistics & Transport">Logistics & Transport</option>
             <option value="Healthcare Providers">Healthcare Providers</option>
-            <option value="IT">IT & Tech (Form D)</option>
-            <option value="Mechanical & Manufacturing">Mechanical & Manufacturing</option>
-            <option value="MedTech & Pharma">MedTech & Pharma</option>
+            <option value="Automotive & Manufacturing">Automotive & Manufacturing</option>
+            <option value="Conglomerate">Conglomerates & Diversified</option>
           </select>
         </div>
 

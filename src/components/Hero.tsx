@@ -24,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ stats }) => {
             <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs font-medium mb-3">
               <span>National Employment & eXploration Unified System</span>
               <span className="text-white/40">·</span>
-              <span>US & Canada Scale</span>
+              <span>🇺🇸 US · 🇨🇦 Canada · 🇮🇳 India Global Coverage</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
@@ -36,8 +36,20 @@ export const Hero: React.FC<HeroProps> = ({ stats }) => {
             
             <p className="mt-2 text-slate-300 text-sm sm:text-base max-w-2xl leading-relaxed">
               Unifying <span className="text-white font-semibold">{uniCount.toLocaleString()} postsecondary institutions</span> with{' '}
-              <span className="text-white font-semibold">6,274,467 enterprise employers</span>. Real-time hiring portal links, STEM graduate outputs, Carnegie classifications, and regional industry bridges.
+              <span className="text-white font-semibold">6,274,467+ enterprise employers</span> across the US, Canada, and India. Real-time hiring portal links, STEM graduate outputs, and regional industry bridges.
             </p>
+
+            <div className="flex flex-wrap items-center gap-2 mt-3.5">
+              <span className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-900/80 border border-white/10 text-slate-300">
+                🇺🇸 United States (6,035 Campuses · 6.27M Employers)
+              </span>
+              <span className="px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-900/80 border border-white/10 text-slate-300">
+                🇨🇦 Canada (209 Campuses)
+              </span>
+              <span className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-brand-500/10 border border-brand-500/30 text-brand-300">
+                🇮🇳 India (55+ Premier HEIs · NIFTY 50 Blue-Chips)
+              </span>
+            </div>
           </div>
 
           {/* Metric Counters Grid */}
