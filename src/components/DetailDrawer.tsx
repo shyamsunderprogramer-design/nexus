@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { InspectorEntity } from '../types';
-import { X, ExternalLink, GraduationCap, Building2, MapPin, Users, Briefcase, Shield, Cpu } from 'lucide-react';
+import { X, ExternalLink, GraduationCap, Building2, MapPin, Users, Briefcase, Shield, Cpu, Copy } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useToast } from './Toast';
 
 interface DetailDrawerProps {
   entity: InspectorEntity | null;
@@ -9,7 +10,29 @@ interface DetailDrawerProps {
 }
 
 export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) => {
+  const { showToast } = useToast();
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    if (entity) {
+      window.addEventListener('keydown', handleKeyDown);
+    }
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [entity, onClose]);
+
   if (!entity) return null;
+
+  const handleCopyLink = () => {
+    const url = entity.type === 'university'
+      ? (entity.data.jobs_url || entity.data.website || window.location.href)
+      : (entity.data.careers_url || entity.data.website || window.location.href);
+    navigator.clipboard.writeText(url);
+    showToast(`Copied ${entity.data.name} link to clipboard!`, 'success');
+  };
 
   return (
     <AnimatePresence>
@@ -52,12 +75,23 @@ export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) =
                 </div>
               </div>
 
-              <button
-                onClick={onClose}
-                className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
+              <div className="flex items-center space-x-1">
+                <button
+                  onClick={handleCopyLink}
+                  title="Copy link to clipboard"
+                  className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                  aria-label="Copy portal link"
+                >
+                  <Copy className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={onClose}
+                  className="p-2 rounded-lg text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                  aria-label="Close drawer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
             </div>
 
             {/* University Profile */}

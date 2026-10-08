@@ -35,7 +35,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Card 1: Universities */}
-        <div className="glass-card rounded-2xl p-6 transition-colors">
+        <div className="glass-card rounded-2xl p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-500/30">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold tracking-wider uppercase text-brand-600 dark:text-brand-400">
               Institutional Landscape
@@ -67,7 +67,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
         </div>
 
         {/* Card 2: Employers */}
-        <div className="glass-card rounded-2xl p-6 transition-colors">
+        <div className="glass-card rounded-2xl p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-cyan-500/30">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold tracking-wider uppercase text-cyan-600 dark:text-cyan-400">
               Corporate & Employer Index
@@ -97,7 +97,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
         </div>
 
         {/* Card 3: Talent & Visa Authorization */}
-        <div className="glass-card rounded-2xl p-6 transition-colors">
+        <div className="glass-card rounded-2xl p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-emerald-500/30">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold tracking-wider uppercase text-emerald-600 dark:text-emerald-400">
               Talent & Work Authorization

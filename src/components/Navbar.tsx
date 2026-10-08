@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface NavbarProps {
   activeTab: ActiveTab;
@@ -9,6 +10,7 @@ interface NavbarProps {
   onToggleTheme: () => void;
   accentColor: ThemeColor;
   onChangeAccentColor: (color: ThemeColor) => void;
+  onOpenCommandPalette?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -27,6 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onToggleTheme,
   accentColor,
   onChangeAccentColor,
+  onOpenCommandPalette,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
 
@@ -43,8 +46,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="flex items-center justify-between h-16">
           
           {/* Brand Identity */}
-          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => onTabChange('overview')}>
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-cyan-400 p-0.5 shadow-glow-sm flex items-center justify-center">
+          <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => onTabChange('overview')}>
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-cyan-400 p-0.5 shadow-glow-sm flex items-center justify-center group-hover:scale-105 transition-transform">
               <div className="w-full h-full bg-white dark:bg-[#0a0e17] rounded-[10px] flex items-center justify-center">
                 <Zap className="w-5 h-5 text-brand-500" />
               </div>
@@ -64,20 +67,27 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </div>
 
-          {/* Desktop Navigation Tabs */}
-          <div className="hidden md:flex items-center space-x-1 bg-slate-100 dark:bg-slate-900/60 p-1 rounded-xl border border-slate-200 dark:border-white/5">
+          {/* Desktop Navigation Tabs with Sliding Layout Animation */}
+          <div className="hidden md:flex items-center space-x-1 bg-slate-100 dark:bg-slate-900/60 p-1 rounded-xl border border-slate-200 dark:border-white/5 relative">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
                 <button
                   key={tab.id}
                   onClick={() => onTabChange(tab.id)}
-                  className={`flex items-center space-x-2 px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                  className={`relative flex items-center space-x-2 px-3.5 py-1.5 rounded-lg text-sm font-semibold transition-colors z-10 ${
                     isActive
-                      ? 'bg-brand-500 text-white shadow-sm'
-                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/5'
+                      ? 'text-white'
+                      : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
                   }`}
                 >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeNavTab"
+                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      className="absolute inset-0 bg-brand-500 rounded-lg shadow-sm -z-10"
+                    />
+                  )}
                   {tab.icon}
                   <span>{tab.label}</span>
                 </button>
@@ -85,9 +95,24 @@ export const Navbar: React.FC<NavbarProps> = ({
             })}
           </div>
 
-          {/* Controls: Theme & Color Palette Switcher */}
+          {/* Controls: Quick Search, Theme & Color Palette Switcher */}
           <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="hidden lg:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
+            {/* Omni-Search Trigger Button (Cmd+K) */}
+            {onOpenCommandPalette && (
+              <button
+                onClick={onOpenCommandPalette}
+                className="flex items-center space-x-2 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-900/60 text-slate-500 dark:text-slate-400 hover:border-brand-500/50 hover:text-slate-800 dark:hover:text-slate-200 transition-all text-xs group"
+                aria-label="Open global search (Command+K)"
+              >
+                <Search className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-500 transition-colors" />
+                <span className="hidden sm:inline">Search...</span>
+                <kbd className="hidden sm:inline-block font-mono text-[10px] bg-white dark:bg-white/10 px-1.5 py-0.5 rounded border border-slate-200 dark:border-white/10 text-slate-400 group-hover:text-brand-500">
+                  ⌘K
+                </kbd>
+              </button>
+            )}
+
+            <div className="hidden xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>79,600+ Portals</span>
             </div>
@@ -98,6 +123,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setShowPaletteMenu(!showPaletteMenu)}
                 className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors flex items-center space-x-1.5"
                 title="Change accent color theme"
+                aria-label="Change color palette"
               >
                 <Palette className="w-4 h-4 text-brand-500" />
                 <span
@@ -140,6 +166,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={onToggleTheme}
               className="p-2 rounded-xl border border-slate-200 dark:border-white/10 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
               title={isDark ? "Switch to Daylight Mode" : "Switch to Dark Mode"}
+              aria-label="Toggle dark/light theme"
             >
               {isDark ? (
                 <Sun className="w-5 h-5 text-amber-400" />

@@ -1,12 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { StateBridgeData } from '../types';
 import { api } from '../services/api';
-import { GraduationCap, Building2, Zap, ArrowRight, ExternalLink } from 'lucide-react';
+import { GraduationCap, Building2, Zap, ArrowRight, ExternalLink, Copy } from 'lucide-react';
+import { useToast } from './Toast';
 
 export const TalentBridge: React.FC = () => {
   const [selectedState, setSelectedState] = useState('CA');
   const [bridgeData, setBridgeData] = useState<StateBridgeData | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const { showToast } = useToast();
+
+  const handleCopy = (e: React.MouseEvent, text: string, name: string) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(text);
+    showToast(`Copied ${name} portal URL`, 'success');
+  };
 
   const REGION_GROUPS = {
     '🇮🇳 India Hubs': [
@@ -63,7 +72,7 @@ export const TalentBridge: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Region Selector Bar */}
-      <div className="glass-card rounded-2xl p-6">
+      <div className="glass-card rounded-2xl p-6 space-y-4">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
             <div className="flex items-center space-x-2">
@@ -93,6 +102,33 @@ export const TalentBridge: React.FC = () => {
               ))}
             </select>
           </div>
+        </div>
+
+        {/* Quick Hub Jump Pills */}
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-white/5">
+          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Top Tech Hubs:</span>
+          {[
+            { code: 'KA', label: '🇮🇳 Bengaluru (KA)' },
+            { code: 'CA', label: '🇺🇸 Silicon Valley (CA)' },
+            { code: 'MH', label: '🇮🇳 Mumbai & Pune (MH)' },
+            { code: 'TX', label: '🇺🇸 Austin & Texas (TX)' },
+            { code: 'ON', label: '🇨🇦 Toronto (ON)' },
+            { code: 'TS', label: '🇮🇳 Hyderabad (TS)' },
+            { code: 'WA', label: '🇺🇸 Seattle (WA)' },
+            { code: 'DL', label: '🇮🇳 Delhi-NCR (DL)' },
+          ].map((hub) => (
+            <button
+              key={hub.code}
+              onClick={() => setSelectedState(hub.code)}
+              className={`px-2.5 py-1 rounded-full text-xs font-semibold transition-all ${
+                selectedState === hub.code
+                  ? 'bg-brand-500 text-white shadow-sm'
+                  : 'bg-slate-100 dark:bg-slate-900/80 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/10 border border-slate-200 dark:border-white/5'
+              }`}
+            >
+              {hub.label}
+            </button>
+          ))}
         </div>
       </div>
 
@@ -148,7 +184,7 @@ export const TalentBridge: React.FC = () => {
               {bridgeData.top_institutions.map((inst, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-white/5 text-xs"
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-white/5 text-xs hover:border-brand-500/30 transition-colors"
                 >
                   <div>
                     <div className="font-bold text-slate-900 dark:text-white">{inst.name}</div>
@@ -158,15 +194,24 @@ export const TalentBridge: React.FC = () => {
                   </div>
 
                   {inst.jobs_url && (
-                    <a
-                      href={inst.jobs_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-2.5 py-1 rounded bg-brand-500/10 hover:bg-brand-500/20 dark:bg-brand-500/20 dark:hover:bg-brand-500/30 text-brand-700 dark:text-brand-300 text-[10px] font-semibold flex items-center space-x-1 border border-brand-500/20"
-                    >
-                      <span>Jobs Portal</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                    <div className="flex items-center space-x-1.5">
+                      <button
+                        onClick={(e) => handleCopy(e, inst.jobs_url!, inst.name)}
+                        title="Copy jobs URL"
+                        className="p-1 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                      >
+                        <Copy className="w-3 h-3" />
+                      </button>
+                      <a
+                        href={inst.jobs_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2.5 py-1 rounded bg-brand-500/10 hover:bg-brand-500/20 dark:bg-brand-500/20 dark:hover:bg-brand-500/30 text-brand-700 dark:text-brand-300 text-[10px] font-semibold flex items-center space-x-1 border border-brand-500/20"
+                      >
+                        <span>Jobs Portal</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
                   )}
                 </div>
               ))}
@@ -211,7 +256,7 @@ export const TalentBridge: React.FC = () => {
               {bridgeData.top_employers.map((comp, i) => (
                 <div
                   key={i}
-                  className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-white/5 text-xs"
+                  className="flex items-center justify-between p-3 rounded-xl bg-slate-50 dark:bg-slate-900/40 border border-slate-100 dark:border-white/5 text-xs hover:border-cyan-500/30 transition-colors"
                 >
                   <div>
                     <div className="font-bold text-slate-900 dark:text-white">{comp.name}</div>
@@ -221,15 +266,24 @@ export const TalentBridge: React.FC = () => {
                   </div>
 
                   {comp.careers_url && (
-                    <a
-                      href={comp.careers_url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="px-2.5 py-1 rounded bg-cyan-500/10 hover:bg-cyan-500/20 dark:bg-cyan-500/20 dark:hover:bg-cyan-500/30 text-cyan-700 dark:text-cyan-300 text-[10px] font-semibold flex items-center space-x-1 border border-cyan-500/20"
-                    >
-                      <span>Careers Hub</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                    <div className="flex items-center space-x-1.5">
+                      <button
+                        onClick={(e) => handleCopy(e, comp.careers_url!, comp.name)}
+                        title="Copy careers URL"
+                        className="p-1 rounded text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                      >
+                        <Copy className="w-3 h-3" />
+                      </button>
+                      <a
+                        href={comp.careers_url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="px-2.5 py-1 rounded bg-cyan-500/10 hover:bg-cyan-500/20 dark:bg-cyan-500/20 dark:hover:bg-cyan-500/30 text-cyan-700 dark:text-cyan-300 text-[10px] font-semibold flex items-center space-x-1 border border-cyan-500/20"
+                      >
+                        <span>Careers Hub</span>
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
                   )}
                 </div>
               ))}
