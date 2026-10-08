@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { University } from '../types';
 import { api } from '../services/api';
-import { Search, ExternalLink, GraduationCap, Users, Shield, Cpu } from 'lucide-react';
+import { Search, ExternalLink, Users, Shield, Cpu } from 'lucide-react';
 
 interface CampusDirectoryProps {
   onSelectUniversity: (u: University) => void;
@@ -54,10 +54,10 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
   return (
     <div className="space-y-6">
       {/* Search & Filter Header Card */}
-      <div className="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
+      <div className="glass-card rounded-2xl p-4 sm:p-6 space-y-4 transition-colors">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-500" />
+            <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-400" />
             <input
               type="text"
               value={search}
@@ -65,8 +65,8 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                 setSearch(e.target.value);
                 setPage(1);
               }}
-              placeholder="Search universities by name, city, state, or Carnegie class..."
-              className="w-full bg-slate-900/80 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"
+              placeholder="Search universities by name, city, state, or Carnegie / NIRF class..."
+              className="w-full bg-white dark:bg-slate-900/80 border border-slate-300 dark:border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
             />
           </div>
 
@@ -76,7 +76,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
               setCountry(e.target.value);
               setPage(1);
             }}
-            className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-brand-500"
+            className="bg-white dark:bg-slate-900/80 border border-slate-300 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-200 focus:outline-none focus:border-brand-500 transition-colors"
           >
             <option value="ALL">All Countries (Global)</option>
             <option value="US">🇺🇸 United States (6,035)</option>
@@ -86,57 +86,56 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
         </div>
 
         {/* Filter Chips Bar */}
-        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-white/5">
-          <span className="text-xs text-slate-400 font-medium">Quick Filters:</span>
+        <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-200 dark:border-white/5">
+          <span className="text-xs text-slate-600 dark:text-slate-400 font-semibold">Quick Filters:</span>
           
           <button
             onClick={() => toggleChip('stem')}
-            className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors flex items-center space-x-1.5 ${
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
               chips.stem
-                ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40'
-                : 'border-white/10 text-slate-300 hover:bg-white/5'
+                ? 'bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border-emerald-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
             }`}
           >
-            <Cpu className="w-3 h-3" />
+            <Cpu className="w-3 h-3 text-emerald-500" />
             <span>STEM Heavy (&gt;20%)</span>
           </button>
 
           <button
             onClick={() => toggleChip('h1b')}
-            className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors flex items-center space-x-1.5 ${
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
               chips.h1b
-                ? 'bg-purple-500/20 text-purple-300 border-purple-500/40'
-                : 'border-white/10 text-slate-300 hover:bg-white/5'
+                ? 'bg-purple-500/20 text-purple-700 dark:text-purple-300 border-purple-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
             }`}
           >
-            <Shield className="w-3 h-3" />
+            <Shield className="w-3 h-3 text-purple-500" />
             <span>H-1B Cap Exempt</span>
           </button>
 
           <button
             onClick={() => toggleChip('r1')}
-            className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors flex items-center space-x-1.5 ${
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
               chips.r1
-                ? 'bg-brand-500/20 text-brand-300 border-brand-500/40'
-                : 'border-white/10 text-slate-300 hover:bg-white/5'
+                ? 'bg-brand-500/20 text-brand-700 dark:text-brand-300 border-brand-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
             }`}
           >
-            <GraduationCap className="w-3 h-3" />
-            <span>Carnegie R1</span>
+            <span>Carnegie R1 / NIRF</span>
           </button>
 
           <button
             onClick={() => toggleChip('workday')}
-            className={`px-3 py-1 rounded-full text-xs font-medium border transition-colors flex items-center space-x-1.5 ${
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
               chips.workday
-                ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40'
-                : 'border-white/10 text-slate-300 hover:bg-white/5'
+                ? 'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 border-cyan-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
             }`}
           >
             <span>Workday ATS</span>
           </button>
 
-          <span className="ml-auto text-xs font-mono text-brand-400 font-semibold">
+          <span className="ml-auto text-xs font-mono text-brand-600 dark:text-brand-400 font-bold">
             {totalCount.toLocaleString()} institutions found
           </span>
         </div>
@@ -146,7 +145,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="glass-card rounded-xl p-5 h-48 animate-pulse bg-slate-900/40" />
+            <div key={i} className="glass-card rounded-xl p-5 h-48 animate-pulse bg-slate-100/50 dark:bg-slate-900/40" />
           ))}
         </div>
       ) : universities.length === 0 ? (
@@ -161,55 +160,55 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
               <div
                 key={u.id}
                 onClick={() => onSelectUniversity(u)}
-                className="glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group"
+                className="glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group transition-all"
               >
                 <div>
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <span className="text-[11px] font-semibold text-brand-400 tracking-wider uppercase">
+                    <span className="text-[11px] font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                       {u.state} · {u.city || u.country}
                     </span>
-                    <span className="text-xs font-mono text-slate-500">{u.country}</span>
+                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">{u.country}</span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white group-hover:text-brand-300 transition-colors line-clamp-1">
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1">
                     {u.name}
                   </h3>
                   
-                  <p className="text-xs text-slate-400 line-clamp-1 mt-0.5">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-1 mt-0.5">
                     {u.carnegie || u.sector || 'Higher Education'}
                   </p>
 
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {stemPct > 15 && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
                         {stemPct}% STEM
                       </span>
                     )}
                     {u.nirf_rank ? (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/30 font-semibold">
                         NIRF #{u.nirf_rank}
                       </span>
                     ) : null}
                     {u.naac_grade ? (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/30 font-semibold">
                         NAAC {u.naac_grade}
                       </span>
                     ) : null}
                     {u.h1b_exempt && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 font-semibold">
                         H-1B Cap Exempt
                       </span>
                     )}
                     {u.jobs_ats && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-500/20 font-semibold">
                         {u.jobs_ats}
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-3 flex items-center justify-between text-xs">
-                  <div className="flex items-center space-x-1.5 font-mono text-slate-400">
+                <div className="border-t border-slate-200 dark:border-white/5 pt-3 flex items-center justify-between text-xs">
+                  <div className="flex items-center space-x-1.5 font-mono text-slate-600 dark:text-slate-400">
                     <Users className="w-3.5 h-3.5 text-slate-500" />
                     <span>{u.students ? u.students.toLocaleString() : 'N/A'} students</span>
                   </div>
@@ -221,7 +220,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                         target="_blank"
                         rel="noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="px-2.5 py-1 rounded-lg bg-brand-600/20 hover:bg-brand-600/40 text-brand-300 font-medium transition-colors text-[11px] flex items-center space-x-1"
+                        className="px-2.5 py-1 rounded-lg bg-brand-500/15 hover:bg-brand-500/25 text-brand-700 dark:text-brand-300 border border-brand-500/30 font-semibold transition-colors text-[11px] flex items-center space-x-1"
                       >
                         <span>Jobs</span>
                         <ExternalLink className="w-3 h-3" />
@@ -233,7 +232,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                         target="_blank"
                         rel="noreferrer"
                         onClick={(e) => e.stopPropagation()}
-                        className="px-2.5 py-1 rounded-lg bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 font-medium transition-colors text-[11px] flex items-center space-x-1"
+                        className="px-2.5 py-1 rounded-lg bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-700 dark:text-cyan-300 border border-cyan-500/30 font-semibold transition-colors text-[11px] flex items-center space-x-1"
                       >
                         <span>Career</span>
                         <ExternalLink className="w-3 h-3" />
@@ -252,17 +251,17 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
         <button
           disabled={page <= 1}
           onClick={() => setPage((p) => Math.max(1, p - 1))}
-          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40"
+          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
         >
           Previous
         </button>
-        <span className="text-xs font-mono text-slate-400">
+        <span className="text-xs font-mono text-slate-600 dark:text-slate-400">
           Page {page} of {totalPages}
         </span>
         <button
           disabled={page >= totalPages}
           onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40"
+          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
         >
           Next
         </button>

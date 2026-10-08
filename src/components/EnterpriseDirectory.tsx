@@ -49,7 +49,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
       <div className="glass-card rounded-2xl p-4 sm:p-6 space-y-4">
         <div className="flex flex-col sm:flex-row gap-3">
           <div className="relative flex-1">
-            <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-500" />
+            <Search className="absolute left-3.5 top-3 w-4 h-4 text-slate-400 dark:text-slate-500" />
             <input
               type="text"
               value={search}
@@ -58,7 +58,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
                 setPage(1);
               }}
               placeholder="Search companies by name, legal entity, ticker, or city..."
-              className="w-full bg-slate-900/80 border border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
+              className="w-full bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl pl-10 pr-4 py-2.5 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors"
             />
           </div>
 
@@ -68,7 +68,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
               setCountry(e.target.value);
               setPage(1);
             }}
-            className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500"
+            className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
             <option value="ALL">All Countries (Global)</option>
             <option value="US">🇺🇸 United States (6.27M+)</option>
@@ -81,7 +81,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
               setCategory(e.target.value);
               setPage(1);
             }}
-            className="bg-slate-900/80 border border-white/10 rounded-xl px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-cyan-500"
+            className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
             <option value="ALL">All Industries</option>
             <option value="Information Technology">Information Technology & Software</option>
@@ -94,9 +94,9 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
           </select>
         </div>
 
-        <div className="flex items-center justify-between text-xs text-slate-400 pt-2 border-t border-white/5">
+        <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 pt-2 border-t border-slate-100 dark:border-white/5">
           <span>Showing verified enterprise employers with active websites and career portals</span>
-          <span className="font-mono text-cyan-400 font-semibold">
+          <span className="font-mono text-brand-600 dark:text-brand-400 font-semibold">
             {totalCount.toLocaleString()} Verified Employers
           </span>
         </div>
@@ -106,11 +106,11 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className="glass-card rounded-xl p-5 h-48 animate-pulse bg-slate-900/40" />
+            <div key={i} className="glass-card rounded-xl p-5 h-48 animate-pulse bg-slate-100/50 dark:bg-slate-900/40" />
           ))}
         </div>
       ) : companies.length === 0 ? (
-        <div className="text-center py-16 text-slate-500 glass-card rounded-2xl">
+        <div className="text-center py-16 text-slate-600 dark:text-slate-400 glass-card rounded-2xl">
           No employers matched your search criteria.
         </div>
       ) : (
@@ -123,37 +123,37 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             >
               <div>
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="text-[11px] font-semibold text-cyan-400 tracking-wider uppercase">
+                  <span className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                     {c.state || 'US'} · {c.city || 'HQ'}
                   </span>
-                  <span className="text-xs font-mono text-slate-500">{c.category}</span>
+                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{c.category}</span>
                 </div>
 
-                <h3 className="text-base font-bold text-white group-hover:text-cyan-300 transition-colors line-clamp-1">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1">
                   {c.name}
                 </h3>
 
-                <p className="text-xs text-slate-400 line-clamp-2 mt-1">
+                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mt-1">
                   {c.description || c.legal_name || 'Enterprise organization'}
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {c.ticker && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 flex items-center space-x-1">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-brand-500/10 text-brand-700 dark:text-brand-400 border border-brand-500/20 flex items-center space-x-1">
                       <TrendingUp className="w-3 h-3" />
                       <span>{c.ticker} ({c.exchange || 'SEC'})</span>
                     </span>
                   )}
                   {c.careers_url && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20">
                       Verified Careers Portal
                     </span>
                   )}
                 </div>
               </div>
 
-              <div className="border-t border-white/5 pt-3 flex items-center justify-between text-xs">
-                <span className="text-slate-400 text-[11px]">{c.subcategory || 'Employer'}</span>
+              <div className="border-t border-slate-100 dark:border-white/5 pt-3 flex items-center justify-between text-xs">
+                <span className="text-slate-500 dark:text-slate-400 text-[11px]">{c.subcategory || 'Employer'}</span>
 
                 <div className="flex items-center space-x-2">
                   {c.website && (
@@ -162,7 +162,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="px-2.5 py-1 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 font-medium transition-colors text-[11px]"
+                      className="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 text-slate-700 dark:text-slate-300 font-medium transition-colors text-[11px]"
                     >
                       Website
                     </a>
@@ -173,7 +173,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
                       target="_blank"
                       rel="noreferrer"
                       onClick={(e) => e.stopPropagation()}
-                      className="px-2.5 py-1 rounded-lg bg-cyan-600/20 hover:bg-cyan-600/40 text-cyan-300 font-medium transition-colors text-[11px] flex items-center space-x-1"
+                      className="px-2.5 py-1 rounded-lg bg-brand-500/10 hover:bg-brand-500/20 text-brand-700 dark:text-brand-300 font-medium transition-colors text-[11px] flex items-center space-x-1 border border-brand-500/20"
                     >
                       <span>Careers</span>
                       <ExternalLink className="w-3 h-3" />
@@ -191,17 +191,17 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
         <button
           disabled={page <= 1}
           onClick={() => setPage((p) => Math.max(1, p - 1))}
-          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40"
+          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
         >
           Previous
         </button>
-        <span className="text-xs font-mono text-slate-400">
+        <span className="text-xs font-mono text-slate-600 dark:text-slate-400">
           Page {page} of {totalPages}
         </span>
         <button
           disabled={page >= totalPages}
           onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-300 hover:text-white disabled:opacity-40"
+          className="px-4 py-2 rounded-xl glass-card text-xs font-semibold text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white disabled:opacity-40"
         >
           Next
         </button>

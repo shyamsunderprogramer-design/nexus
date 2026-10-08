@@ -94,6 +94,8 @@ export interface StatsResponse {
 
 export type ActiveTab = 'overview' | 'universities' | 'companies' | 'bridge';
 
+export type ThemeColor = 'violet' | 'cyan' | 'emerald' | 'amber' | 'rose' | 'blue';
+
 export type InspectorEntity = 
   | { type: 'university'; data: University }
   | { type: 'company'; data: Company };

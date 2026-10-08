@@ -2,45 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === ACCENT COLOR THEME PALETTES === */
+
+/* 1. Electric Violet (Default) */
+:root, html.theme-violet {
+  --brand-50: #f5f3ff;
+  --brand-100: #ede9fe;
+  --brand-200: #ddd6fe;
+  --brand-300: #c4b5fd;
+  --brand-400: #a78bfa;
+  --brand-500: #8b5cf6;
+  --brand-600: #7c3aed;
+  --brand-700: #6d28d9;
+  --brand-800: #5b21b6;
+  --brand-900: #4c1d95;
+  --brand-glow: rgba(139, 92, 246, 0.35);
+}
+
+/* 2. Cyber Cyan */
+html.theme-cyan {
+  --brand-50: #ecfeff;
+  --brand-100: #cffafe;
+  --brand-200: #a5f3fc;
+  --brand-300: #67e8f9;
+  --brand-400: #22d3ee;
+  --brand-500: #06b6d4;
+  --brand-600: #0891b2;
+  --brand-700: #0e7490;
+  --brand-800: #155e75;
+  --brand-900: #164e63;
+  --brand-glow: rgba(6, 182, 212, 0.35);
+}
+
+/* 3. Emerald Mint */
+html.theme-emerald {
+  --brand-50: #ecfdf5;
+  --brand-100: #d1fae5;
+  --brand-200: #a7f3d0;
+  --brand-300: #6ee7b7;
+  --brand-400: #34d399;
+  --brand-500: #10b981;
+  --brand-600: #059669;
+  --brand-700: #047857;
+  --brand-800: #065f46;
+  --brand-900: #064e3b;
+  --brand-glow: rgba(16, 185, 129, 0.35);
+}
+
+/* 4. Sunset Amber */
+html.theme-amber {
+  --brand-50: #fffbeb;
+  --brand-100: #fef3c7;
+  --brand-200: #fde68a;
+  --brand-300: #fcd34d;
+  --brand-400: #fbbf24;
+  --brand-500: #f59e0b;
+  --brand-600: #d97706;
+  --brand-700: #b45309;
+  --brand-800: #92400e;
+  --brand-900: #78350f;
+  --brand-glow: rgba(245, 158, 11, 0.35);
+}
+
+/* 5. Crimson Rose */
+html.theme-rose {
+  --brand-50: #fff1f2;
+  --brand-100: #ffe4e6;
+  --brand-200: #fecdd3;
+  --brand-300: #fda4af;
+  --brand-400: #fb7185;
+  --brand-500: #f43f5e;
+  --brand-600: #e11d48;
+  --brand-700: #be123c;
+  --brand-800: #9f1239;
+  --brand-900: #881337;
+  --brand-glow: rgba(244, 63, 94, 0.35);
+}
+
+/* 6. Ocean Blue */
+html.theme-blue {
+  --brand-50: #eff6ff;
+  --brand-100: #dbeafe;
+  --brand-200: #bfdbfe;
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
+  --brand-800: #1e40af;
+  --brand-900: #1e3a8a;
+  --brand-glow: rgba(59, 130, 246, 0.35);
+}
+
+/* === BASE STYLES === */
+
 :root {
-  color-scheme: dark light;
+  color-scheme: light dark;
 }
 
 body {
-  background-color: #070b12;
-  color: #f8fafc;
   min-height: 100vh;
   font-family: "Plus Jakarta Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-.glass-card {
-  background: rgba(15, 23, 42, 0.7);
+/* === GLASS CARD SPECIFICATION === */
+
+/* Dark Mode Glass Card */
+html.dark .glass-card {
+  background: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-html:not(.dark) .glass-card {
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
-  color: #0f172a;
-}
-
-.glass-card:hover {
-  border-color: rgba(139, 92, 246, 0.35);
+html.dark .glass-card:hover {
+  border-color: var(--brand-glow, rgba(139, 92, 246, 0.4));
   transform: translateY(-2px);
 }
 
-.bg-mesh {
+/* Light / Daylight Mode Glass Card */
+html:not(.dark) .glass-card {
+  background: #ffffff;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+html:not(.dark) .glass-card:hover {
+  border-color: var(--brand-500, #8b5cf6);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Background Gradients */
+html.dark .bg-mesh {
   background: 
-    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, var(--brand-glow, rgba(124, 58, 237, 0.15)) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.12) 0px, transparent 50%),
     radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.08) 0px, transparent 50%);
 }
 
+html:not(.dark) .bg-mesh {
+  background: 
+    radial-gradient(at 0% 0%, var(--brand-100, #ede9fe) 0px, transparent 60%),
+    radial-gradient(at 100% 0%, #cffafe 0px, transparent 60%),
+    radial-gradient(at 50% 100%, #fef3c7 0px, transparent 60%),
+    #ffffff;
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
