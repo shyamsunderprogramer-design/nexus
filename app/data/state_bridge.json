@@ -586,6 +586,24 @@
       }
     ]
   },
+  "BC": {
+    "state": "BC",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Hootsuite",
+        "cat": "Information Technology",
+        "city": "Vancouver",
+        "careers_url": "https://careers.hootsuite.com/"
+      }
+    ]
+  },
   "BR": {
     "state": "BR",
     "universities_count": 1,
@@ -672,8 +690,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 6150,
-    "companies_verified_web": 463,
+    "companies_curated_count": 6203,
+    "companies_verified_web": 516,
     "top_employers": [
       {
         "name": "10x Genomics",
@@ -823,8 +841,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1998,
-    "companies_verified_web": 114,
+    "companies_curated_count": 1999,
+    "companies_verified_web": 115,
     "top_employers": [
       {
         "name": "5Star Bank",
@@ -956,8 +974,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1602,
-    "companies_verified_web": 112,
+    "companies_curated_count": 1603,
+    "companies_verified_web": 113,
     "top_employers": [
       {
         "name": "Acme United CORP",
@@ -1464,8 +1482,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 4666,
-    "companies_verified_web": 151,
+    "companies_curated_count": 4667,
+    "companies_verified_web": 152,
     "top_employers": [
       {
         "name": ".Decimal, Inc.",
@@ -1615,8 +1633,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2444,
-    "companies_verified_web": 110,
+    "companies_curated_count": 2445,
+    "companies_verified_web": 111,
     "top_employers": [
       {
         "name": "AB&T",
@@ -2221,8 +2239,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 596,
-    "companies_verified_web": 44,
+    "companies_curated_count": 597,
+    "companies_verified_web": 45,
     "top_employers": [
       {
         "name": "Austin Kade Academy",
@@ -2354,8 +2372,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 4113,
-    "companies_verified_web": 140,
+    "companies_curated_count": 4115,
+    "companies_verified_web": 142,
     "top_employers": [
       {
         "name": "1NB Bank",
@@ -3152,8 +3170,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2910,
-    "companies_verified_web": 185,
+    "companies_curated_count": 2915,
+    "companies_verified_web": 190,
     "top_employers": [
       {
         "name": "42 North Private Bank",
@@ -3285,8 +3303,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1629,
-    "companies_verified_web": 95,
+    "companies_curated_count": 1630,
+    "companies_verified_web": 96,
     "top_employers": [
       {
         "name": "AGNC Investment Corp.",
@@ -4882,8 +4900,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2424,
-    "companies_verified_web": 120,
+    "companies_curated_count": 2425,
+    "companies_verified_web": 121,
     "top_employers": [
       {
         "name": "1st Bank of Sea Isle City",
@@ -5281,8 +5299,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3835,
-    "companies_verified_web": 249,
+    "companies_curated_count": 3842,
+    "companies_verified_web": 256,
     "top_employers": [
       {
         "name": "1stdibs.com, Inc.",
@@ -5571,8 +5589,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1859,
-    "companies_verified_web": 73,
+    "companies_curated_count": 1860,
+    "companies_verified_web": 74,
     "top_employers": [
       {
         "name": "1st Bank in Hominy",
@@ -5909,8 +5927,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3484,
-    "companies_verified_web": 136,
+    "companies_curated_count": 3486,
+    "companies_verified_web": 138,
     "top_employers": [
       {
         "name": "1st Summit Bank",
@@ -6852,8 +6870,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 5575,
-    "companies_verified_web": 242,
+    "companies_curated_count": 5578,
+    "companies_verified_web": 245,
     "top_employers": [
       {
         "name": "ABBOTT MEDICAL",
@@ -7039,14 +7057,20 @@
     "stem_graduates_yearly": 0,
     "h1b_exempt_campuses": 0,
     "top_institutions": [],
-    "companies_curated_count": 1,
-    "companies_verified_web": 1,
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
     "top_employers": [
       {
         "name": "Coinbase",
         "cat": "Information Technology",
         "city": "Remote",
         "careers_url": "https://www.coinbase.com/careers"
+      },
+      {
+        "name": "Supabase",
+        "cat": "Information Technology",
+        "city": "Remote",
+        "careers_url": "https://supabase.com/careers"
       }
     ]
   },
@@ -7251,8 +7275,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2134,
-    "companies_verified_web": 128,
+    "companies_curated_count": 2135,
+    "companies_verified_web": 129,
     "top_employers": [
       {
         "name": "Advance Auto Parts",
@@ -7548,8 +7572,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1719,
-    "companies_verified_web": 114,
+    "companies_curated_count": 1725,
+    "companies_verified_web": 120,
     "top_employers": [
       {
         "name": "1st Security Bank of Washington",
