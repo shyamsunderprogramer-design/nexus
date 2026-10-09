@@ -34,22 +34,22 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
 
   const tabs: Array<{ id: ActiveTab; label: string; icon: React.ReactNode }> = [
-    { id: 'overview', label: 'Executive Intel', icon: <Sparkles className="w-4 h-4 text-brand-500" /> },
-    { id: 'universities', label: 'Campus Network', icon: <GraduationCap className="w-4 h-4 text-purple-500" /> },
-    { id: 'companies', label: 'Enterprise Index', icon: <Building2 className="w-4 h-4 text-cyan-500" /> },
-    { id: 'bridge', label: 'Talent Bridge', icon: <Zap className="w-4 h-4 text-emerald-500" /> },
+    { id: 'overview', label: 'Executive Intel', icon: <Sparkles className="w-4 h-4 text-brand-400" /> },
+    { id: 'universities', label: 'Campus Network', icon: <GraduationCap className="w-4 h-4 text-purple-400" /> },
+    { id: 'companies', label: 'Enterprise Index', icon: <Building2 className="w-4 h-4 text-cyan-400" /> },
+    { id: 'bridge', label: 'Talent Bridge', icon: <Zap className="w-4 h-4 text-emerald-400" /> },
   ];
 
   return (
-    <nav className="sticky top-0 z-40 border-b border-slate-200 dark:border-white/10 bg-white/90 dark:bg-[#070b12]/90 backdrop-blur-xl transition-colors duration-200">
+    <nav className="sticky top-0 z-40 border-b border-slate-200/80 dark:border-white/[0.08] bg-white/85 dark:bg-[#070b12]/85 backdrop-blur-2xl transition-all duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* Brand Identity */}
           <div className="flex items-center space-x-3 cursor-pointer group" onClick={() => onTabChange('overview')}>
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-cyan-400 p-0.5 shadow-glow-sm flex items-center justify-center group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-white dark:bg-[#0a0e17] rounded-[10px] flex items-center justify-center">
-                <Zap className="w-5 h-5 text-brand-500" />
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-brand-500 via-cyan-400 to-emerald-400 p-[1.5px] shadow-glow-sm flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+              <div className="w-full h-full bg-white dark:bg-[#090d16] rounded-[10px] flex items-center justify-center shadow-inner">
+                <Zap className="w-5 h-5 text-brand-500 group-hover:rotate-6 transition-transform" />
               </div>
             </div>
             <div>
@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           </div>
 
           {/* Desktop Navigation Tabs with Sliding Layout Animation */}
-          <div className="hidden md:flex items-center space-x-1 bg-slate-100 dark:bg-slate-900/60 p-1 rounded-xl border border-slate-200 dark:border-white/5 relative">
+          <div className="hidden md:flex items-center space-x-1 bg-slate-100/90 dark:bg-slate-900/70 p-1 rounded-xl border border-slate-200/80 dark:border-white/[0.08] relative">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
@@ -84,8 +84,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   {isActive && (
                     <motion.div
                       layoutId="activeNavTab"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                      className="absolute inset-0 bg-brand-500 rounded-lg shadow-sm -z-10"
+                      transition={{ type: 'spring', stiffness: 450, damping: 32 }}
+                      className="absolute inset-0 bg-gradient-to-r from-brand-600 to-brand-500 rounded-lg shadow-sm border border-brand-400/30 -z-10"
                     />
                   )}
                   {tab.icon}
@@ -101,19 +101,19 @@ export const Navbar: React.FC<NavbarProps> = ({
             {onOpenCommandPalette && (
               <button
                 onClick={onOpenCommandPalette}
-                className="flex items-center space-x-2 px-3 py-1.5 rounded-xl border border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-slate-900/60 text-slate-500 dark:text-slate-400 hover:border-brand-500/50 hover:text-slate-800 dark:hover:text-slate-200 transition-all text-xs group"
+                className="flex items-center space-x-2 px-3 py-1.5 rounded-xl border border-slate-200/90 dark:border-white/10 bg-slate-100/80 dark:bg-slate-900/80 text-slate-600 dark:text-slate-400 hover:border-brand-500/50 hover:text-slate-900 dark:hover:text-slate-200 transition-all text-xs group shadow-sm"
                 aria-label="Open global search (Command+K)"
               >
                 <Search className="w-3.5 h-3.5 text-slate-400 group-hover:text-brand-500 transition-colors" />
-                <span className="hidden sm:inline">Search...</span>
-                <kbd className="hidden sm:inline-block font-mono text-[10px] bg-white dark:bg-white/10 px-1.5 py-0.5 rounded border border-slate-200 dark:border-white/10 text-slate-400 group-hover:text-brand-500">
+                <span className="hidden sm:inline font-medium">Search...</span>
+                <kbd className="hidden sm:inline-block font-mono text-[10px] font-bold bg-white dark:bg-white/10 px-1.5 py-0.5 rounded shadow-inner border border-slate-200/80 dark:border-white/10 text-slate-500 dark:text-slate-400 group-hover:text-brand-500">
                   ⌘K
                 </kbd>
               </button>
             )}
 
             <div className="hidden xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>79,600+ Portals</span>
             </div>
 
@@ -127,7 +127,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <Palette className="w-4 h-4 text-brand-500" />
                 <span
-                  className="w-2.5 h-2.5 rounded-full"
+                  className="w-2.5 h-2.5 rounded-full ring-2 ring-white/20"
                   style={{ backgroundColor: PALETTES.find(p => p.id === accentColor)?.hex || '#8b5cf6' }}
                 />
               </button>

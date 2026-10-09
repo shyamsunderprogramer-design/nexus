@@ -8,10 +8,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
+        obsidian: {
+          void: '#06090e',
+          surface: '#0a0f1c',
+          card: '#0f172a',
+          elevated: '#141d33',
+        },
         brand: {
           50: 'var(--brand-50, #f5f3ff)',
           100: 'var(--brand-100, #ede9fe)',
@@ -36,8 +42,14 @@ export default {
       },
       boxShadow: {
         'glow-sm': '0 0 15px -3px var(--brand-glow, rgba(139, 92, 246, 0.25))',
-        'glow': '0 0 25px -5px var(--brand-glow, rgba(139, 92, 246, 0.35))',
-        'glow-cyan': '0 0 25px -5px rgba(6, 182, 212, 0.35)',
+        'glow': '0 0 30px -5px var(--brand-glow, rgba(139, 92, 246, 0.40))',
+        'glow-cyan': '0 0 30px -5px rgba(6, 182, 212, 0.40)',
+        'glow-emerald': '0 0 30px -5px rgba(16, 185, 129, 0.40)',
+        'specular': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.15)',
+        'hud': '0 20px 50px -10px rgba(0, 0, 0, 0.6)',
+      },
+      animation: {
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       }
     },
   },

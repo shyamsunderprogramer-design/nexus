@@ -58,6 +58,15 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       const atsLabels = Object.keys(atsData);
       const atsValues = Object.values(atsData);
 
+      const ctx = atsCanvasRef.current.getContext('2d');
+      let barFill: string | CanvasGradient = 'rgba(139, 92, 246, 0.75)';
+      if (ctx) {
+        const gradient = ctx.createLinearGradient(0, 0, 0, 240);
+        gradient.addColorStop(0, 'rgba(139, 92, 246, 0.95)');
+        gradient.addColorStop(1, 'rgba(139, 92, 246, 0.3)');
+        barFill = gradient;
+      }
+
       atsChartInstance.current = new Chart(atsCanvasRef.current, {
         type: 'bar',
         data: {
@@ -65,10 +74,10 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
           datasets: [{
             label: 'Institutions',
             data: atsValues,
-            backgroundColor: 'rgba(139, 92, 246, 0.75)',
+            backgroundColor: barFill,
             borderColor: '#8b5cf6',
-            borderWidth: 1,
-            borderRadius: 6,
+            borderWidth: 1.5,
+            borderRadius: 8,
           }],
         },
         options: {
@@ -131,6 +140,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
         options: {
           responsive: true,
           maintainAspectRatio: false,
+          cutout: '72%',
           plugins: {
             legend: {
               position: 'right',
@@ -171,6 +181,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       title: 'Institutional Landscape',
       icon: GraduationCap,
       color: 'brand',
+      gradient: 'from-brand-500 to-transparent',
       metric: `${totalCampuses.toLocaleString()} Campuses`,
       desc: 'Tri-national directory across US IPEDS (6,035), Canadian colleges (209), and India premier HEIs (55+).',
       stats: [
@@ -183,6 +194,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       title: 'Corporate & Employer Index',
       icon: Building2,
       color: 'cyan',
+      gradient: 'from-cyan-500 to-transparent',
       metric: '6.27 Million Orgs',
       desc: 'Max-coverage federal register coverage across logistics, healthcare, tech startups, and NIFTY 50 leaders.',
       stats: [
@@ -195,6 +207,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       title: 'Talent & Work Authorization',
       icon: ShieldCheck,
       color: 'emerald',
+      gradient: 'from-emerald-500 to-transparent',
       metric: 'STEM & Cap Exemption',
       desc: 'Cross-referenced with DHS 2024 STEM designation program list, HEA Title IV, and NIRF / NAAC rosters.',
       stats: [
@@ -214,8 +227,9 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
           return (
             <div 
               key={card.title} 
-              className={`glass-card rounded-2xl p-6 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-${card.color}-500/30`}
+              className={`relative overflow-hidden glass-card rounded-2xl p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:border-${card.color}-500/40`}
             >
+              <div className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${card.gradient}`} />
               <div className="flex items-center justify-between mb-4">
                 <span className={`text-xs font-bold tracking-wider uppercase text-${card.color}-600 dark:text-${card.color}-400`}>
                   {card.title}
@@ -224,7 +238,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
                   <Icon className="w-5 h-5" />
                 </div>
               </div>
-              <div className="text-3xl font-extrabold text-slate-900 dark:text-white mb-1">
+              <div className="text-3xl font-extrabold text-slate-900 dark:text-white mb-1 font-mono tracking-tight">
                 {card.metric}
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">

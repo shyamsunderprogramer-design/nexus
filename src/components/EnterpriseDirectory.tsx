@@ -185,34 +185,36 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             <div
               key={c.oid}
               onClick={() => onSelectCompany(c)}
-              className="glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-500/40"
+              className="relative overflow-hidden glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-brand-500/40"
             >
               <div>
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <span className="text-[11px] font-semibold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
+                  <span className="text-[10px] font-mono font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                     {c.state || 'US'} · {c.city || 'HQ'}
                   </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{c.category}</span>
+                  <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
+                    {c.category}
+                  </span>
                 </div>
 
-                <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1 tracking-tight">
                   {c.name}
                 </h3>
 
-                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mt-1">
+                <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 mt-1 leading-relaxed">
                   {c.description || c.legal_name || 'Enterprise organization'}
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mt-3">
                   {c.ticker && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-brand-500/10 text-brand-700 dark:text-brand-400 border border-brand-500/20 flex items-center space-x-1">
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-brand-500/10 text-brand-700 dark:text-brand-400 border border-brand-500/25 flex items-center space-x-1 font-semibold">
                       <TrendingUp className="w-3 h-3" />
                       <span>{c.ticker} ({c.exchange || 'SEC'})</span>
                     </span>
                   )}
                   {c.careers_url && (
-                    <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
-                      Verified Careers Portal
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-semibold">
+                      ✓ Careers Portal
                     </span>
                   )}
                 </div>

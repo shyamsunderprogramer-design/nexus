@@ -224,17 +224,19 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
               <div
                 key={u.id}
                 onClick={() => onSelectUniversity(u)}
-                className="glass-card rounded-xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group transition-all hover:-translate-y-0.5 hover:shadow-lg hover:border-brand-500/40"
+                className="relative overflow-hidden glass-card rounded-2xl p-5 flex flex-col justify-between space-y-4 cursor-pointer group transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:border-brand-500/40"
               >
                 <div>
                   <div className="flex items-start justify-between gap-2 mb-2">
-                    <span className="text-[11px] font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
+                    <span className="text-[10px] font-mono font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                       {u.state} · {u.city || u.country}
                     </span>
-                    <span className="text-xs font-mono font-semibold text-slate-500 dark:text-slate-400">{u.country}</span>
+                    <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
+                      {u.country}
+                    </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1">
+                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1 tracking-tight">
                     {u.name}
                   </h3>
                   
@@ -244,28 +246,28 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
 
                   <div className="flex flex-wrap gap-1.5 mt-3">
                     {stemPct > 15 && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 font-semibold">
-                        {stemPct}% STEM
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-semibold">
+                        ⚡ {stemPct}% STEM
                       </span>
                     )}
                     {u.nirf_rank ? (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/30 font-semibold">
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-amber-500/10 text-amber-700 dark:text-amber-300 border border-amber-500/30 font-semibold">
                         NIRF #{u.nirf_rank}
                       </span>
                     ) : null}
                     {u.naac_grade ? (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/30 font-semibold">
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/30 font-semibold">
                         NAAC {u.naac_grade}
                       </span>
                     ) : null}
                     {u.h1b_exempt && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/20 font-semibold">
-                        H-1B Cap Exempt
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-500/25 font-semibold">
+                        🛡️ H-1B EXEMPT
                       </span>
                     )}
                     {u.jobs_ats && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-500/20 font-semibold">
-                        {u.jobs_ats}
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-cyan-500/10 text-cyan-700 dark:text-cyan-400 border border-cyan-500/25 font-semibold">
+                        {u.jobs_ats} ATS
                       </span>
                     )}
                   </div>
