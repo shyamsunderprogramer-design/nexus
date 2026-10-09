@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T13:16:54.420051",
+  "generated_at": "2026-10-09T17:02:34.543641",
   "universities": {
     "us_total": 6035,
     "ca_total": 209,
@@ -103,5 +103,5 @@
       }
     ]
   },
-  "state_counts": 76
+  "state_counts": 77
 }

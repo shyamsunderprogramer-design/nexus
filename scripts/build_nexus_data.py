@@ -42,6 +42,14 @@ with open(comp_file, "r", encoding="utf-8") as f:
     curated_companies = json.load(f)
 print(f"Loaded {len(curated_companies):,} curated companies.")
 
+print("3c. Loading US IT Companies...")
+us_it_file = os.path.join(DATA_DIR, "companies", "data", "us", "companies_it_us.json")
+us_it_companies = []
+if os.path.exists(us_it_file):
+    with open(us_it_file, "r", encoding="utf-8") as f:
+        us_it_companies = json.load(f)
+print(f"Loaded {len(us_it_companies):,} US IT enterprises.")
+
 print("3b. Loading India Companies...")
 in_comp_file = os.path.join(DATA_DIR, "companies", "data", "india", "companies_india.json")
 in_companies = []
@@ -235,6 +243,39 @@ for comp in curated_companies:
     if is_verified:
         verified_comps.append(item)
     
+    s = state_comp_stats[st]
+    s["count"] += 1
+    if is_verified:
+        s["verified_web"] += 1
+    if len(s["companies"]) < 10 and is_verified:
+        s["companies"].append({"name": item["name"], "cat": cat, "city": item["city"], "careers_url": careers or web})
+
+for comp in us_it_companies:
+    st = comp.get("state") or "Other"
+    cat = comp.get("category") or "General"
+    industry_counter[cat] += 1
+    
+    web = comp.get("website")
+    careers = comp.get("careers_url")
+    is_verified = bool(web or careers or comp.get("ats"))
+    
+    item = {
+        "name": comp.get("name") or comp.get("legal_name"),
+        "legal_name": comp.get("legal_name"),
+        "category": cat,
+        "subcategory": comp.get("subcategory"),
+        "website": web,
+        "careers_url": careers,
+        "ats": comp.get("ats"),
+        "city": comp.get("city"),
+        "state": st,
+        "ticker": comp.get("ticker"),
+        "description": comp.get("description"),
+        "employees": comp.get("employees"),
+        "country": "US"
+    }
+    
+    verified_comps.insert(0, item)
     s = state_comp_stats[st]
     s["count"] += 1
     if is_verified:

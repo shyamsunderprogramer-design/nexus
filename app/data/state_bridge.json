@@ -672,8 +672,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 6113,
-    "companies_verified_web": 426,
+    "companies_curated_count": 6150,
+    "companies_verified_web": 463,
     "top_employers": [
       {
         "name": "10x Genomics",
@@ -823,8 +823,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1997,
-    "companies_verified_web": 113,
+    "companies_curated_count": 1998,
+    "companies_verified_web": 114,
     "top_employers": [
       {
         "name": "5Star Bank",
@@ -3152,8 +3152,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2909,
-    "companies_verified_web": 184,
+    "companies_curated_count": 2910,
+    "companies_verified_web": 185,
     "top_employers": [
       {
         "name": "42 North Private Bank",
@@ -4217,8 +4217,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 428,
-    "companies_verified_web": 60,
+    "companies_curated_count": 429,
+    "companies_verified_web": 61,
     "top_employers": [
       {
         "name": "Aaniiih Nakoda College",
@@ -4350,8 +4350,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2332,
-    "companies_verified_web": 111,
+    "companies_curated_count": 2333,
+    "companies_verified_web": 112,
     "top_employers": [
       {
         "name": "374Water Inc.",
@@ -5281,8 +5281,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3833,
-    "companies_verified_web": 247,
+    "companies_curated_count": 3835,
+    "companies_verified_web": 249,
     "top_employers": [
       {
         "name": "1stdibs.com, Inc.",
@@ -6852,8 +6852,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 5571,
-    "companies_verified_web": 238,
+    "companies_curated_count": 5575,
+    "companies_verified_web": 242,
     "top_employers": [
       {
         "name": "ABBOTT MEDICAL",
@@ -7029,6 +7029,24 @@
         "cat": "Electronics & Hardware Manufacturing",
         "city": "Noida",
         "careers_url": "https://dixoninfo.com/careers.php"
+      }
+    ]
+  },
+  "US": {
+    "state": "US",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Coinbase",
+        "cat": "Information Technology",
+        "city": "Remote",
+        "careers_url": "https://www.coinbase.com/careers"
       }
     ]
   },
@@ -7530,8 +7548,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1717,
-    "companies_verified_web": 112,
+    "companies_curated_count": 1719,
+    "companies_verified_web": 114,
     "top_employers": [
       {
         "name": "1st Security Bank of Washington",
