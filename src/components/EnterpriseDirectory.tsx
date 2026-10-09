@@ -113,12 +113,28 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
           >
             <option value="ALL">All Industries</option>
             <option value="Information Technology">Information Technology & Software</option>
+            <option value="Software & Cloud Services">Cloud & Enterprise SaaS</option>
             <option value="Banking & Financial Services">Banking & Financial Services</option>
             <option value="Fintech & Payments">Fintech & Payments</option>
-            <option value="Logistics & Transport">Logistics & Transport</option>
-            <option value="Healthcare Providers">Healthcare Providers</option>
-            <option value="Automotive & Manufacturing">Automotive & Manufacturing</option>
+            <option value="Consumer Internet">E-Commerce & Quick Commerce</option>
+            <option value="Automotive & Manufacturing">Automotive, EV & Manufacturing</option>
+            <option value="Healthcare & Pharmaceuticals">Healthcare & Pharmaceuticals</option>
             <option value="Conglomerate">Conglomerates & Diversified</option>
+            <option value="Energy & Natural Resources">Energy, Oil & Gas</option>
+            <option value="Utilities & Power Generation">Utilities & Power Generation</option>
+            <option value="Aerospace & Defence">Aerospace & Defence</option>
+            <option value="Metals & Mining">Metals, Mining & Steel</option>
+            <option value="Chemicals & Materials">Chemicals, Paints & Materials</option>
+            <option value="Consumer Goods & FMCG">FMCG & Consumer Goods</option>
+            <option value="Logistics & Supply Chain">Logistics & Supply Chain</option>
+            <option value="Infrastructure & Real Estate">Infrastructure & Real Estate</option>
+            <option value="Telecommunications">Telecommunications & 5G</option>
+            <option value="Aviation & Airlines">Aviation & Airlines</option>
+            <option value="Media, Gaming & Entertainment">Media, Gaming & Entertainment</option>
+            <option value="Education & EdTech">Education & EdTech</option>
+            <option value="Electronics & Hardware Manufacturing">Electronics & Hardware (EMS)</option>
+            <option value="Hospitality & Leisure">Hospitality & Leisure</option>
+            <option value="Retail & Fashion Apparel">Retail, Fashion & Supermarkets</option>
           </select>
         </div>
 

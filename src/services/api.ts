@@ -159,7 +159,11 @@ export const api = {
       }
     }
     if (params.category && params.category !== 'ALL') {
-      filtered = filtered.filter(c => c.category === params.category);
+      const catQuery = params.category.toLowerCase();
+      filtered = filtered.filter(c => 
+        (c.category || '').toLowerCase().includes(catQuery) ||
+        (c.subcategory || '').toLowerCase().includes(catQuery)
+      );
     }
     if (params.state && params.state !== 'ALL') {
       filtered = filtered.filter(c => c.state === params.state);
@@ -169,7 +173,10 @@ export const api = {
       filtered = filtered.filter(c => 
         (c.name || '').toLowerCase().includes(q) ||
         (c.legal_name || '').toLowerCase().includes(q) ||
-        (c.ticker || '').toLowerCase().includes(q)
+        (c.ticker || '').toLowerCase().includes(q) ||
+        (c.city || '').toLowerCase().includes(q) ||
+        (c.category || '').toLowerCase().includes(q) ||
+        (c.subcategory || '').toLowerCase().includes(q)
       );
     }
 

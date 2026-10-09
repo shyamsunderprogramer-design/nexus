@@ -1331,14 +1331,14 @@
         "jobs_url": "https://www.aiims.edu/en/notices/recruitment.html"
       }
     ],
-    "companies_curated_count": 4,
-    "companies_verified_web": 4,
+    "companies_curated_count": 12,
+    "companies_verified_web": 12,
     "top_employers": [
       {
-        "name": "Bharti Airtel",
-        "cat": "Telecommunications",
+        "name": "Punjab National Bank (PNB)",
+        "cat": "Banking & Financial Services",
         "city": "New Delhi",
-        "careers_url": "https://www.airtel.in/careers/"
+        "careers_url": "https://www.pnbindia.in/recruitment.aspx"
       },
       {
         "name": "Maruti Suzuki India",
@@ -1347,16 +1347,52 @@
         "careers_url": "https://www.marutisuzuki.com/corporate/careers"
       },
       {
+        "name": "Hero MotoCorp",
+        "cat": "Automotive & Manufacturing",
+        "city": "New Delhi",
+        "careers_url": "https://www.heromotocorp.com/en-in/careers.html"
+      },
+      {
+        "name": "Eicher Motors (Royal Enfield)",
+        "cat": "Automotive & Manufacturing",
+        "city": "New Delhi",
+        "careers_url": "https://www.royalenfield.com/in/en/careers/"
+      },
+      {
+        "name": "Max Healthcare",
+        "cat": "Healthcare & Pharmaceuticals",
+        "city": "New Delhi",
+        "careers_url": "https://www.maxhealthcare.in/careers"
+      },
+      {
+        "name": "Mankind Pharma",
+        "cat": "Healthcare & Pharmaceuticals",
+        "city": "New Delhi",
+        "careers_url": "https://www.mankindpharma.com/careers"
+      },
+      {
         "name": "Oil and Natural Gas Corporation (ONGC)",
         "cat": "Energy & Natural Resources",
         "city": "New Delhi",
-        "careers_url": "https://www.ongcindia.com/web/eng/career"
+        "careers_url": "https://www.ongcindia.com/wps/wcm/connect/en/career/"
       },
       {
         "name": "NTPC Limited",
         "cat": "Utilities & Power Generation",
         "city": "New Delhi",
         "careers_url": "https://www.ntpccareers.net/"
+      },
+      {
+        "name": "Indian Oil Corporation (IOCL)",
+        "cat": "Energy & Natural Resources",
+        "city": "New Delhi",
+        "careers_url": "https://iocl.com/careers"
+      },
+      {
+        "name": "Bharti Airtel",
+        "cat": "Telecommunications",
+        "city": "New Delhi",
+        "careers_url": "https://www.airtel.in/careers/"
       }
     ]
   },
@@ -1664,9 +1700,34 @@
         "jobs_url": "https://www.iima.ac.in/careers"
       }
     ],
-    "companies_curated_count": 0,
-    "companies_verified_web": 0,
-    "top_employers": []
+    "companies_curated_count": 4,
+    "companies_verified_web": 4,
+    "top_employers": [
+      {
+        "name": "Adani Enterprises",
+        "cat": "Conglomerate",
+        "city": "Ahmedabad",
+        "careers_url": "https://www.adani.com/careers"
+      },
+      {
+        "name": "Bank of Baroda",
+        "cat": "Banking & Financial Services",
+        "city": "Vadodara",
+        "careers_url": "https://www.bankofbaroda.in/career"
+      },
+      {
+        "name": "Adani Green Energy",
+        "cat": "Renewables & Cleantech",
+        "city": "Ahmedabad",
+        "careers_url": "https://www.adani.com/careers"
+      },
+      {
+        "name": "Adani Ports and SEZ",
+        "cat": "Infrastructure & Real Estate",
+        "city": "Ahmedabad",
+        "careers_url": "https://www.adani.com/careers"
+      }
+    ]
   },
   "GU": {
     "state": "GU",
@@ -1894,14 +1955,68 @@
         "jobs_url": "https://www.ashoka.edu.in/work-with-us/"
       }
     ],
-    "companies_curated_count": 1,
-    "companies_verified_web": 1,
+    "companies_curated_count": 12,
+    "companies_verified_web": 12,
     "top_employers": [
+      {
+        "name": "Policybazaar (PB Fintech)",
+        "cat": "Fintech & Insurtech",
+        "city": "Gurugram",
+        "careers_url": "https://www.policybazaar.com/careers/"
+      },
       {
         "name": "Zomato",
         "cat": "Consumer Internet & Quick Commerce",
         "city": "Gurugram",
         "careers_url": "https://www.zomato.com/careers"
+      },
+      {
+        "name": "MakeMyTrip",
+        "cat": "Consumer Internet & Travel Tech",
+        "city": "Gurugram",
+        "careers_url": "https://careers.makemytrip.com/"
+      },
+      {
+        "name": "Urban Company",
+        "cat": "Consumer Internet & Home Services",
+        "city": "Gurugram",
+        "careers_url": "https://www.urbancompany.com/careers"
+      },
+      {
+        "name": "Power Grid Corporation of India",
+        "cat": "Utilities & Power Generation",
+        "city": "Gurugram",
+        "careers_url": "https://www.powergrid.in/careers"
+      },
+      {
+        "name": "Nestle India",
+        "cat": "Consumer Goods & FMCG",
+        "city": "Gurugram",
+        "careers_url": "https://www.nestle.in/jobs"
+      },
+      {
+        "name": "InterGlobe Aviation (IndiGo)",
+        "cat": "Aviation & Airlines",
+        "city": "Gurugram",
+        "careers_url": "https://www.goindigo.in/careers.html"
+      },
+      {
+        "name": "Air India",
+        "cat": "Aviation & Airlines",
+        "city": "Gurugram",
+        "careers_url": "https://www.airindia.com/in/en/careers.html"
+      },
+      {
+        "name": "Delhivery",
+        "cat": "Logistics & Supply Chain",
+        "city": "Gurugram",
+        "careers_url": "https://www.delhivery.com/careers/"
+      },
+      {
+        "name": "SRF Limited",
+        "cat": "Chemicals & Materials",
+        "city": "Gurugram",
+        "careers_url": "https://www.srf.com/careers/"
       }
     ]
   },
@@ -2475,14 +2590,14 @@
         "jobs_url": "https://manipal.edu/mu/careers.html"
       }
     ],
-    "companies_curated_count": 11,
-    "companies_verified_web": 11,
+    "companies_curated_count": 21,
+    "companies_verified_web": 21,
     "top_employers": [
       {
         "name": "Infosys",
         "cat": "Information Technology",
         "city": "Bengaluru",
-        "careers_url": "https://www.infosys.com/careers/"
+        "careers_url": "https://www.infosys.com/careers.html"
       },
       {
         "name": "Wipro",
@@ -2491,16 +2606,22 @@
         "careers_url": "https://careers.wipro.com/"
       },
       {
-        "name": "Flipkart",
-        "cat": "E-Commerce & Digital Marketplace",
+        "name": "Mphasis",
+        "cat": "Information Technology",
         "city": "Bengaluru",
-        "careers_url": "https://www.flipkartcareers.com/"
+        "careers_url": "https://careers.mphasis.com/"
       },
       {
-        "name": "Swiggy",
-        "cat": "Consumer Internet & Quick Commerce",
+        "name": "Tata Elxsi",
+        "cat": "Information Technology",
         "city": "Bengaluru",
-        "careers_url": "https://careers.swiggy.com/"
+        "careers_url": "https://www.tataelxsi.com/careers"
+      },
+      {
+        "name": "Postman",
+        "cat": "Software & Cloud Services",
+        "city": "Bengaluru",
+        "careers_url": "https://www.postman.com/company/careers/"
       },
       {
         "name": "Razorpay",
@@ -2509,34 +2630,28 @@
         "careers_url": "https://razorpay.com/jobs/"
       },
       {
-        "name": "Zerodha",
-        "cat": "Fintech & Capital Markets",
-        "city": "Bengaluru",
-        "careers_url": "https://zerodha.com/careers"
-      },
-      {
         "name": "PhonePe",
         "cat": "Fintech & Payments",
         "city": "Bengaluru",
         "careers_url": "https://www.phonepe.com/careers/"
       },
       {
-        "name": "Zepto",
-        "cat": "Consumer Internet & Quick Commerce",
+        "name": "Zerodha",
+        "cat": "Fintech & Capital Markets",
         "city": "Bengaluru",
-        "careers_url": "https://www.zeptonow.com/careers"
-      },
-      {
-        "name": "Postman",
-        "cat": "Developer Tools & Cloud Infrastructure",
-        "city": "Bengaluru",
-        "careers_url": "https://www.postman.com/careers/"
+        "careers_url": "https://zerodha.com/careers"
       },
       {
         "name": "Groww",
         "cat": "Fintech & Wealth Management",
         "city": "Bengaluru",
         "careers_url": "https://groww.in/careers"
+      },
+      {
+        "name": "CRED",
+        "cat": "Fintech & Payments",
+        "city": "Bengaluru",
+        "careers_url": "https://cred.club/careers"
       }
     ]
   },
@@ -3406,8 +3521,8 @@
         "jobs_url": "http://www.unipune.ac.in/administration_files/careers.htm"
       }
     ],
-    "companies_curated_count": 12,
-    "companies_verified_web": 12,
+    "companies_curated_count": 50,
+    "companies_verified_web": 50,
     "top_employers": [
       {
         "name": "Reliance Industries Limited",
@@ -3416,28 +3531,10 @@
         "careers_url": "https://careers.ril.com/"
       },
       {
-        "name": "Tata Consultancy Services (TCS)",
-        "cat": "Information Technology",
+        "name": "Tata Sons (Tata Group)",
+        "cat": "Conglomerate",
         "city": "Mumbai",
-        "careers_url": "https://www.tcs.com/careers"
-      },
-      {
-        "name": "HDFC Bank",
-        "cat": "Banking & Financial Services",
-        "city": "Mumbai",
-        "careers_url": "https://www.hdfcbank.com/personal/about-us/careers"
-      },
-      {
-        "name": "ICICI Bank",
-        "cat": "Banking & Financial Services",
-        "city": "Mumbai",
-        "careers_url": "https://www.icicicareers.com/"
-      },
-      {
-        "name": "State Bank of India (SBI)",
-        "cat": "Banking & Financial Services",
-        "city": "Mumbai",
-        "careers_url": "https://sbi.co.in/web/careers"
+        "careers_url": "https://www.tata.com/careers"
       },
       {
         "name": "Larsen & Toubro (L&T)",
@@ -3446,10 +3543,28 @@
         "careers_url": "https://www.larsentoubro.com/corporate/careers/"
       },
       {
-        "name": "Hindustan Unilever Limited (HUL)",
-        "cat": "Consumer Goods & FMCG",
+        "name": "Aditya Birla Group",
+        "cat": "Conglomerate",
         "city": "Mumbai",
-        "careers_url": "https://www.hul.co.in/careers/"
+        "careers_url": "https://careers.adityabirla.com/"
+      },
+      {
+        "name": "Mahindra & Mahindra",
+        "cat": "Automotive & Manufacturing",
+        "city": "Mumbai",
+        "careers_url": "https://careers.mahindra.com/"
+      },
+      {
+        "name": "Godrej Industries (Godrej Group)",
+        "cat": "Conglomerate",
+        "city": "Mumbai",
+        "careers_url": "https://www.godrejcareers.com/"
+      },
+      {
+        "name": "Tata Consultancy Services (TCS)",
+        "cat": "Information Technology",
+        "city": "Mumbai",
+        "careers_url": "https://www.tcs.com/careers"
       },
       {
         "name": "Tech Mahindra",
@@ -3464,10 +3579,10 @@
         "careers_url": "https://www.ltimindtree.com/careers/"
       },
       {
-        "name": "BrowserStack",
-        "cat": "Developer Tools & Cloud Infrastructure",
-        "city": "Mumbai",
-        "careers_url": "https://www.browserstack.com/careers"
+        "name": "Persistent Systems",
+        "cat": "Information Technology",
+        "city": "Pune",
+        "careers_url": "https://careers.persistent.com/"
       }
     ]
   },
@@ -6537,8 +6652,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2074,
-    "companies_verified_web": 100,
+    "companies_curated_count": 2079,
+    "companies_verified_web": 105,
     "top_employers": [
       {
         "name": "Acadia Healthcare Company, Inc.",
@@ -6634,14 +6749,38 @@
         "jobs_url": "https://uohyd.ac.in/careers/"
       }
     ],
-    "companies_curated_count": 1,
-    "companies_verified_web": 1,
+    "companies_curated_count": 5,
+    "companies_verified_web": 5,
     "top_employers": [
+      {
+        "name": "Cyient",
+        "cat": "Information Technology",
+        "city": "Hyderabad",
+        "careers_url": "https://careers.cyient.com/"
+      },
+      {
+        "name": "Darwinbox",
+        "cat": "Software & Cloud Services",
+        "city": "Hyderabad",
+        "careers_url": "https://darwinbox.com/careers.php"
+      },
       {
         "name": "Dr. Reddy's Laboratories",
         "cat": "Healthcare & Pharmaceuticals",
         "city": "Hyderabad",
         "careers_url": "https://careers.drreddys.com/"
+      },
+      {
+        "name": "Divi's Laboratories",
+        "cat": "Healthcare & Pharmaceuticals",
+        "city": "Hyderabad",
+        "careers_url": "https://www.divislabs.com/careers/"
+      },
+      {
+        "name": "Bharat Dynamics Limited (BDL)",
+        "cat": "Aerospace & Defence",
+        "city": "Hyderabad",
+        "careers_url": "https://bdl-india.in/careers"
       }
     ]
   },
@@ -6840,14 +6979,56 @@
         "jobs_url": "https://www.bhu.ac.in/recruitment"
       }
     ],
-    "companies_curated_count": 1,
-    "companies_verified_web": 1,
+    "companies_curated_count": 8,
+    "companies_verified_web": 8,
     "top_employers": [
       {
         "name": "HCLTech",
         "cat": "Information Technology",
         "city": "Noida",
         "careers_url": "https://www.hcltech.com/careers"
+      },
+      {
+        "name": "Coforge",
+        "cat": "Information Technology",
+        "city": "Noida",
+        "careers_url": "https://www.coforge.com/careers"
+      },
+      {
+        "name": "Paytm (One97 Communications)",
+        "cat": "Fintech & Payments",
+        "city": "Noida",
+        "careers_url": "https://paytm.com/careers"
+      },
+      {
+        "name": "Pine Labs",
+        "cat": "Fintech & Payments",
+        "city": "Noida",
+        "careers_url": "https://www.pinelabs.com/careers"
+      },
+      {
+        "name": "Dabur India",
+        "cat": "Consumer Goods & FMCG",
+        "city": "Ghaziabad",
+        "careers_url": "https://www.dabur.com/careers"
+      },
+      {
+        "name": "Jubilant FoodWorks",
+        "cat": "Consumer Services & Food",
+        "city": "Noida",
+        "careers_url": "https://www.jubilantfoodworks.com/careers"
+      },
+      {
+        "name": "PhysicsWallah (PW)",
+        "cat": "Education & EdTech",
+        "city": "Noida",
+        "careers_url": "https://www.pw.live/careers"
+      },
+      {
+        "name": "Dixon Technologies",
+        "cat": "Electronics & Hardware Manufacturing",
+        "city": "Noida",
+        "careers_url": "https://dixoninfo.com/careers.php"
       }
     ]
   },
@@ -7440,14 +7621,20 @@
         "jobs_url": "http://www.jaduniv.edu.in/announcement.php"
       }
     ],
-    "companies_curated_count": 1,
-    "companies_verified_web": 1,
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
     "top_employers": [
       {
         "name": "ITC Limited",
         "cat": "Consumer Goods & Conglomerate",
         "city": "Kolkata",
         "careers_url": "https://www.itcportal.com/careers/"
+      },
+      {
+        "name": "Coal India Limited",
+        "cat": "Energy & Natural Resources",
+        "city": "Kolkata",
+        "careers_url": "https://www.coalindia.in/career/"
       }
     ]
   },

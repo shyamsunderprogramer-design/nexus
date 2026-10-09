@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-07T13:15:05.510770",
+  "generated_at": "2026-10-09T13:16:54.420051",
   "universities": {
     "us_total": 6035,
     "ca_total": 209,
@@ -34,8 +34,8 @@
     }
   },
   "employers": {
-    "curated_total": 100401,
-    "india_total": 33,
+    "curated_total": 100489,
+    "india_total": 121,
     "federal_total": 6274467,
     "verified_carriers_applied": 79571,
     "industries": {
