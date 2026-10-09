@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T17:37:08.894733",
+  "generated_at": "2026-10-09T17:42:41.232643",
   "universities": {
     "us_total": 6035,
     "ca_total": 209,
@@ -41,14 +41,14 @@
     "industries": {
       "Healthcare Providers": 35449,
       "Mechanical & Manufacturing": 34708,
+      "Information Technology": 15151,
       "MedTech & Pharma": 13424,
       "Other Industries": 13120,
       "Not verified": 1930,
       "IT": 648,
       "Other Engineering": 530,
       "Logistics & Transport": 237,
-      "Data Centers & Cloud": 170,
-      "Civil & Construction": 152
+      "Data Centers & Cloud": 170
     },
     "federal_industries": [
       {
@@ -103,5 +103,5 @@
       }
     ]
   },
-  "state_counts": 78
+  "state_counts": 132
 }

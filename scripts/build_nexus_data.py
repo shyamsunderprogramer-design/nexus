@@ -42,6 +42,7 @@ with open(comp_file, "r", encoding="utf-8") as f:
     curated_companies = json.load(f)
 print(f"Loaded {len(curated_companies):,} curated companies.")
 
+
 print("3c. Loading US IT Companies...")
 us_it_file = os.path.join(DATA_DIR, "companies", "data", "us", "companies_it_us.json")
 us_it_companies = []
@@ -49,6 +50,14 @@ if os.path.exists(us_it_file):
     with open(us_it_file, "r", encoding="utf-8") as f:
         us_it_companies = json.load(f)
 print(f"Loaded {len(us_it_companies):,} US IT enterprises.")
+
+print("3d. Loading US Grassroots IT Startups...")
+grass_it_file = os.path.join(DATA_DIR, "companies", "data", "us", "companies_grassroots_it.json")
+if os.path.exists(grass_it_file):
+    with open(grass_it_file, "r", encoding="utf-8") as f:
+        grass_it_companies = json.load(f)
+    us_it_companies.extend(grass_it_companies)
+    print(f"Appended {len(grass_it_companies):,} grassroots IT startups.")
 
 print("3b. Loading India Companies...")
 in_comp_file = os.path.join(DATA_DIR, "companies", "data", "india", "companies_india.json")
@@ -376,9 +385,9 @@ print(f"Saving app/data/universities.json ({len(unis_clean):,} records)...")
 with open(os.path.join(APP_DATA, "universities.json"), "w", encoding="utf-8") as f:
     json.dump(unis_clean, f, separators=(',', ':'))
 
-print("Saving app/data/companies_featured.json (" + str(len(verified_comps[:15000])) + " verified records)...")
+print("Saving app/data/companies_featured.json (" + str(len(verified_comps[:30000])) + " verified records)...")
 with open(os.path.join(APP_DATA, "companies_featured.json"), "w", encoding="utf-8") as f:
-    json.dump(verified_comps[:15000], f, separators=(',', ':'))
+    json.dump(verified_comps[:30000], f, separators=(',', ':'))
 
 print("Generating app/data/nexus_bundle.js for offline file:// zero-CORS compatibility...")
 bundle_path = os.path.join(APP_DATA, "nexus_bundle.js")
@@ -387,7 +396,7 @@ with open(bundle_path, "w", encoding="utf-8") as f:
     f.write("  stats: " + json.dumps(stats, separators=(',', ':')) + ",\n")
     f.write("  bridge: " + json.dumps(state_bridge, separators=(',', ':')) + ",\n")
     f.write("  universities: " + json.dumps(unis_clean, separators=(',', ':')) + ",\n")
-    f.write("  companies: " + json.dumps(verified_comps[:15000], separators=(',', ':')) + "\n")
+    f.write("  companies: " + json.dumps(verified_comps[:30000], separators=(',', ':')) + "\n")
     f.write("};\n")
     f.write("console.log('Nexus bundle loaded successfully:', Object.keys(window.NEXUS_DATA));\n")
 

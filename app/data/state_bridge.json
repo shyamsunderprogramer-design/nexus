@@ -1,4 +1,514 @@
 {
+  "1A": {
+    "state": "1A",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Shoal Games Ltd.",
+        "cat": "Information Technology",
+        "city": "The Valley",
+        "careers_url": null
+      }
+    ]
+  },
+  "2M": {
+    "state": "2M",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Knowable, Co.",
+        "cat": "Information Technology",
+        "city": "Berlin",
+        "careers_url": null
+      }
+    ]
+  },
+  "2Q": {
+    "state": "2Q",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 8,
+    "companies_verified_web": 8,
+    "top_employers": [
+      {
+        "name": "Numerex Corp /Pa/",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      },
+      {
+        "name": "PrimeRevenue Inc",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      },
+      {
+        "name": "American BioSurgical, LLC",
+        "cat": "Information Technology",
+        "city": "Norcross",
+        "careers_url": null
+      },
+      {
+        "name": "Company.com Corp.",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      },
+      {
+        "name": "Revegy, Inc.",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      },
+      {
+        "name": "Manager Insights, LLC",
+        "cat": "Information Technology",
+        "city": "Marietta",
+        "careers_url": null
+      },
+      {
+        "name": "Egos Ventures LLC",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      },
+      {
+        "name": "Trustfuel, LLC",
+        "cat": "Information Technology",
+        "city": "Atlanta",
+        "careers_url": null
+      }
+    ]
+  },
+  "A0": {
+    "state": "A0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 26,
+    "companies_verified_web": 26,
+    "top_employers": [
+      {
+        "name": "Sembiosys Genetics Inc",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "Pure Technologies Ltd",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "Radient Technologies Inc.",
+        "cat": "Information Technology",
+        "city": "Edmonton",
+        "careers_url": null
+      },
+      {
+        "name": "Genoil Inc",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "SafeBrain Systems, Inc.",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "Sylogist Ltd",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "Resverlogix Corp.",
+        "cat": "Information Technology",
+        "city": "Calgary, Alberta",
+        "careers_url": null
+      },
+      {
+        "name": "Zaio Corp",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "FLYHT Aerospace Solutions Ltd.",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      },
+      {
+        "name": "1441163 Alberta Ltd.",
+        "cat": "Information Technology",
+        "city": "Calgary",
+        "careers_url": null
+      }
+    ]
+  },
+  "A1": {
+    "state": "A1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 109,
+    "companies_verified_web": 109,
+    "top_employers": [
+      {
+        "name": "Nanotech Security Corp/Fi",
+        "cat": "Information Technology",
+        "city": "Burnaby",
+        "careers_url": null
+      },
+      {
+        "name": "Achieve Life Sciences, Inc.",
+        "cat": "Information Technology",
+        "city": "Vancouver",
+        "careers_url": null
+      },
+      {
+        "name": "Advanced Proteome Therapeutics CORP",
+        "cat": "Information Technology",
+        "city": "Burnaby",
+        "careers_url": null
+      },
+      {
+        "name": "Northstar Electronics Inc",
+        "cat": "Information Technology",
+        "city": "Vancouver Bc Canada",
+        "careers_url": null
+      },
+      {
+        "name": "Carmanah Technologies Corp",
+        "cat": "Information Technology",
+        "city": "Victoria",
+        "careers_url": null
+      },
+      {
+        "name": "Whispering Oaks International Inc",
+        "cat": "Information Technology",
+        "city": "Richmond",
+        "careers_url": null
+      },
+      {
+        "name": "Hyperstealth Biotechnology Corp",
+        "cat": "Information Technology",
+        "city": "Maple Ridge",
+        "careers_url": null
+      },
+      {
+        "name": "Destiny Media Technologies Inc",
+        "cat": "Information Technology",
+        "city": "Vancouver",
+        "careers_url": null
+      },
+      {
+        "name": "Oculus Visiontech Inc.",
+        "cat": "Information Technology",
+        "city": "Vancouver",
+        "careers_url": null
+      },
+      {
+        "name": "Syntec Biofuel Inc",
+        "cat": "Information Technology",
+        "city": "Vancouver",
+        "careers_url": null
+      }
+    ]
+  },
+  "A2": {
+    "state": "A2",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 4,
+    "companies_verified_web": 4,
+    "top_employers": [
+      {
+        "name": "Kane Biotech Inc.",
+        "cat": "Information Technology",
+        "city": "Winnipeg",
+        "careers_url": null
+      },
+      {
+        "name": "Blue Diamond Technologies Ltd.",
+        "cat": "Information Technology",
+        "city": "Winnipeg",
+        "careers_url": null
+      },
+      {
+        "name": "Miraculins Inc",
+        "cat": "Information Technology",
+        "city": "Winnipeg",
+        "careers_url": null
+      },
+      {
+        "name": "Farmers Edge INC",
+        "cat": "Information Technology",
+        "city": "Winnipeg",
+        "careers_url": null
+      }
+    ]
+  },
+  "A3": {
+    "state": "A3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "Soricimed Biopharma Inc.",
+        "cat": "Information Technology",
+        "city": "Moncton",
+        "careers_url": null
+      },
+      {
+        "name": "Smart Skin Technologies Inc.",
+        "cat": "Information Technology",
+        "city": "Fredericton",
+        "careers_url": null
+      }
+    ]
+  },
+  "A5": {
+    "state": "A5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 6,
+    "companies_verified_web": 6,
+    "top_employers": [
+      {
+        "name": "Meta Materials Inc.",
+        "cat": "Information Technology",
+        "city": "Dartmouth",
+        "careers_url": null
+      },
+      {
+        "name": "Unique Solutions Design Ltd.",
+        "cat": "Information Technology",
+        "city": "Dartmouth",
+        "careers_url": null
+      },
+      {
+        "name": "CarbonCure Technologies Inc.",
+        "cat": "Information Technology",
+        "city": "Dartmouth",
+        "careers_url": null
+      },
+      {
+        "name": "Novawise Inc.",
+        "cat": "Information Technology",
+        "city": "Halifax",
+        "careers_url": null
+      },
+      {
+        "name": "LEADSIFT Inc",
+        "cat": "Information Technology",
+        "city": "Halifax",
+        "careers_url": null
+      },
+      {
+        "name": "Boondoc Technologies Inc",
+        "cat": "Information Technology",
+        "city": "Bedford",
+        "careers_url": null
+      }
+    ]
+  },
+  "A6": {
+    "state": "A6",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 128,
+    "companies_verified_web": 128,
+    "top_employers": [
+      {
+        "name": "My Screen Mobile, Inc.",
+        "cat": "Information Technology",
+        "city": "Toronto",
+        "careers_url": null
+      },
+      {
+        "name": "Lorus Therapeutics Inc",
+        "cat": "Information Technology",
+        "city": "Toronto",
+        "careers_url": null
+      },
+      {
+        "name": "Graph Blockchain Inc",
+        "cat": "Information Technology",
+        "city": "Toronto",
+        "careers_url": null
+      },
+      {
+        "name": "Open Text Corp",
+        "cat": "Information Technology",
+        "city": "Ontario Canada",
+        "careers_url": null
+      },
+      {
+        "name": "RTN Stealth Software Inc.",
+        "cat": "Information Technology",
+        "city": "Mississauga",
+        "careers_url": null
+      },
+      {
+        "name": "Ztest Electronics Inc /Fi",
+        "cat": "Information Technology",
+        "city": "North York",
+        "careers_url": null
+      },
+      {
+        "name": "Micromem Technologies Inc",
+        "cat": "Information Technology",
+        "city": "Toronto",
+        "careers_url": null
+      },
+      {
+        "name": "CardioGenics Holdings Inc.",
+        "cat": "Information Technology",
+        "city": "Mississauga",
+        "careers_url": null
+      },
+      {
+        "name": "Bewhere Holdings Inc",
+        "cat": "Information Technology",
+        "city": "Mississauga",
+        "careers_url": null
+      },
+      {
+        "name": "Dragonwave Inc",
+        "cat": "Information Technology",
+        "city": "Ottawa",
+        "careers_url": null
+      }
+    ]
+  },
+  "A8": {
+    "state": "A8",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 27,
+    "companies_verified_web": 27,
+    "top_employers": [
+      {
+        "name": "Sand Technology Inc",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      },
+      {
+        "name": "Exfo Inc.",
+        "cat": "Information Technology",
+        "city": "Quebec City",
+        "careers_url": null
+      },
+      {
+        "name": "BELLUS Health Inc.",
+        "cat": "Information Technology",
+        "city": "Laval",
+        "careers_url": null
+      },
+      {
+        "name": "Trustifi Inc.",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      },
+      {
+        "name": "Tti Turner Technology Instruments Inc",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      },
+      {
+        "name": "Liminal BioSciences Inc.",
+        "cat": "Information Technology",
+        "city": "Laval",
+        "careers_url": null
+      },
+      {
+        "name": "A5 Laboratories Inc.",
+        "cat": "Information Technology",
+        "city": "Lachine",
+        "careers_url": null
+      },
+      {
+        "name": "Vantrix (US) Corp",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      },
+      {
+        "name": "Enobia Pharma Corp",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      },
+      {
+        "name": "Micropharma Ltd",
+        "cat": "Information Technology",
+        "city": "Montreal",
+        "careers_url": null
+      }
+    ]
+  },
+  "A9": {
+    "state": "A9",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "NetSecure Innovations Inc.",
+        "cat": "Information Technology",
+        "city": "Regina",
+        "careers_url": null
+      }
+    ]
+  },
   "AK": {
     "state": "AK",
     "universities_count": 11,
@@ -67,8 +577,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 284,
-    "companies_verified_web": 16,
+    "companies_curated_count": 289,
+    "companies_verified_web": 21,
     "top_employers": [
       {
         "name": "Alaska Bible College",
@@ -200,8 +710,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1674,
-    "companies_verified_web": 69,
+    "companies_curated_count": 1727,
+    "companies_verified_web": 122,
     "top_employers": [
       {
         "name": "22nd State Banking Company",
@@ -351,8 +861,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1477,
-    "companies_verified_web": 68,
+    "companies_curated_count": 1522,
+    "companies_verified_web": 113,
     "top_employers": [
       {
         "name": "Anstaff Bank",
@@ -521,8 +1031,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1712,
-    "companies_verified_web": 81,
+    "companies_curated_count": 1898,
+    "companies_verified_web": 267,
     "top_employers": [
       {
         "name": "Alaska Silver Corp.",
@@ -622,6 +1132,186 @@
     "companies_verified_web": 0,
     "top_employers": []
   },
+  "C1": {
+    "state": "C1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 4,
+    "companies_verified_web": 4,
+    "top_employers": [
+      {
+        "name": "Dineromail, Inc.",
+        "cat": "Information Technology",
+        "city": "Capital Federal",
+        "careers_url": null
+      },
+      {
+        "name": "Restorando, Inc.",
+        "cat": "Information Technology",
+        "city": "Ciudad De Buenos Aires",
+        "careers_url": null
+      },
+      {
+        "name": "Eventioz, Inc.",
+        "cat": "Information Technology",
+        "city": "Mendoza",
+        "careers_url": null
+      },
+      {
+        "name": "Avenida Inc.",
+        "cat": "Information Technology",
+        "city": "Vicente Lopez, Buenos Aires",
+        "careers_url": null
+      }
+    ]
+  },
+  "C3": {
+    "state": "C3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 21,
+    "companies_verified_web": 21,
+    "top_employers": [
+      {
+        "name": "Kazia Therapeutics Ltd",
+        "cat": "Information Technology",
+        "city": "Sydney Nsw",
+        "careers_url": null
+      },
+      {
+        "name": "Bionomics Limited/Fi",
+        "cat": "Information Technology",
+        "city": "Thebarton",
+        "careers_url": null
+      },
+      {
+        "name": "Mawson Infrastructure Group Inc.",
+        "cat": "Information Technology",
+        "city": "North Sydney Nsw",
+        "careers_url": null
+      },
+      {
+        "name": "Universal Biosensors Inc",
+        "cat": "Information Technology",
+        "city": "Victoria",
+        "careers_url": null
+      },
+      {
+        "name": "Alchemia LTD",
+        "cat": "Information Technology",
+        "city": "Eight Mile Plains",
+        "careers_url": null
+      },
+      {
+        "name": "Mesoblast Ltd",
+        "cat": "Information Technology",
+        "city": "Melbourne, Victoria",
+        "careers_url": null
+      },
+      {
+        "name": "Avega Systems Inc",
+        "cat": "Information Technology",
+        "city": "North Sydney",
+        "careers_url": null
+      },
+      {
+        "name": "Relevare Pharmaceuticals Inc",
+        "cat": "Information Technology",
+        "city": "Brisbane Queenland",
+        "careers_url": null
+      },
+      {
+        "name": "Guvera Ltd",
+        "cat": "Information Technology",
+        "city": "Robina, Queensland",
+        "careers_url": null
+      },
+      {
+        "name": "IMMUTEP Ltd",
+        "cat": "Information Technology",
+        "city": "Sydney, Nsw",
+        "careers_url": null
+      }
+    ]
+  },
+  "C4": {
+    "state": "C4",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "Ams Ag",
+        "cat": "Information Technology",
+        "city": "Premstaetten",
+        "careers_url": null
+      },
+      {
+        "name": "Smapper Technologies Inc.",
+        "cat": "Information Technology",
+        "city": "Kufstein",
+        "careers_url": null
+      }
+    ]
+  },
+  "C5": {
+    "state": "C5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "IP Solutions International, Ltd.",
+        "cat": "Information Technology",
+        "city": "Nassau",
+        "careers_url": null
+      }
+    ]
+  },
+  "C9": {
+    "state": "C9",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 3,
+    "companies_verified_web": 3,
+    "top_employers": [
+      {
+        "name": "Mabcure Inc.",
+        "cat": "Information Technology",
+        "city": "Hasselt",
+        "careers_url": null
+      },
+      {
+        "name": "Checkthis Corp",
+        "cat": "Information Technology",
+        "city": "Brussels",
+        "careers_url": null
+      },
+      {
+        "name": "TiGenix NV",
+        "cat": "Information Technology",
+        "city": "Leuven",
+        "careers_url": null
+      }
+    ]
+  },
   "CA": {
     "state": "CA",
     "universities_count": 666,
@@ -690,8 +1380,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 6203,
-    "companies_verified_web": 516,
+    "companies_curated_count": 10320,
+    "companies_verified_web": 4633,
     "top_employers": [
       {
         "name": "10x Genomics",
@@ -841,8 +1531,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1999,
-    "companies_verified_web": 115,
+    "companies_curated_count": 2525,
+    "companies_verified_web": 641,
     "top_employers": [
       {
         "name": "5Star Bank",
@@ -974,8 +1664,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1603,
-    "companies_verified_web": 113,
+    "companies_curated_count": 1792,
+    "companies_verified_web": 302,
     "top_employers": [
       {
         "name": "Acme United CORP",
@@ -1036,6 +1726,156 @@
         "cat": "Other Industries",
         "city": "Guilford",
         "careers_url": "https://ascend.bank/career-center/life-at-ascend/"
+      }
+    ]
+  },
+  "D0": {
+    "state": "D0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 5,
+    "companies_verified_web": 5,
+    "top_employers": [
+      {
+        "name": "Spectrum Mobile Ltd.",
+        "cat": "Information Technology",
+        "city": "Hamilton Hmii",
+        "careers_url": null
+      },
+      {
+        "name": "RPost Communications Ltd",
+        "cat": "Information Technology",
+        "city": "Hamilton",
+        "careers_url": null
+      },
+      {
+        "name": "When U Wish LTD",
+        "cat": "Information Technology",
+        "city": "Hamilton",
+        "careers_url": null
+      },
+      {
+        "name": "Friend Media Technology Systems Ltd",
+        "cat": "Information Technology",
+        "city": "Hamilton Hm 11",
+        "careers_url": null
+      },
+      {
+        "name": "Afiniti, Ltd.",
+        "cat": "Information Technology",
+        "city": "Hamilton",
+        "careers_url": null
+      }
+    ]
+  },
+  "D5": {
+    "state": "D5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 7,
+    "companies_verified_web": 7,
+    "top_employers": [
+      {
+        "name": "Printi LLC",
+        "cat": "Information Technology",
+        "city": "Itaim Bibi, Sao Paulo/Sp, Cep",
+        "careers_url": null
+      },
+      {
+        "name": "Nu Pagamentos S.A.",
+        "cat": "Information Technology",
+        "city": "Sao Paulo, Sp",
+        "careers_url": null
+      },
+      {
+        "name": "Beleza.Com Ltd.",
+        "cat": "Information Technology",
+        "city": "Sao Paulo",
+        "careers_url": null
+      },
+      {
+        "name": "4Vets LLC",
+        "cat": "Information Technology",
+        "city": "Sao Paulo",
+        "careers_url": null
+      },
+      {
+        "name": "Galena, Ltd.",
+        "cat": "Information Technology",
+        "city": "Sao Paulo, Sp",
+        "careers_url": null
+      },
+      {
+        "name": "Quintoandar Ltd",
+        "cat": "Information Technology",
+        "city": "Sao Paulo",
+        "careers_url": null
+      },
+      {
+        "name": "Quinhentos LLC",
+        "cat": "Information Technology",
+        "city": "Sao Paulo",
+        "careers_url": null
+      }
+    ]
+  },
+  "D8": {
+    "state": "D8",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 7,
+    "companies_verified_web": 7,
+    "top_employers": [
+      {
+        "name": "AlphaTON Capital Corp",
+        "cat": "Information Technology",
+        "city": "Road Town, Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "Upaid Systems Ltd",
+        "cat": "Information Technology",
+        "city": "Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "H&H Energy Co",
+        "cat": "Information Technology",
+        "city": "Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "Tribe Mobile, Inc.",
+        "cat": "Information Technology",
+        "city": "Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "Scrybe Corp.",
+        "cat": "Information Technology",
+        "city": "Road Town, Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "ContaAzul International Holdings Corp",
+        "cat": "Information Technology",
+        "city": "Road Town, Tortola",
+        "careers_url": null
+      },
+      {
+        "name": "Idis Technologies Investments, Ltd",
+        "cat": "Information Technology",
+        "city": "Tortola",
+        "careers_url": null
       }
     ]
   },
@@ -1107,8 +1947,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 380,
-    "companies_verified_web": 56,
+    "companies_curated_count": 459,
+    "companies_verified_web": 135,
     "top_employers": [
       {
         "name": "American University",
@@ -1240,8 +2080,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 443,
-    "companies_verified_web": 49,
+    "companies_curated_count": 489,
+    "companies_verified_web": 95,
     "top_employers": [
       {
         "name": "Academy of Massage and Bodywork",
@@ -1414,6 +2254,210 @@
       }
     ]
   },
+  "E0": {
+    "state": "E0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Telerik AD",
+        "cat": "Information Technology",
+        "city": "Sofia",
+        "careers_url": null
+      }
+    ]
+  },
+  "E9": {
+    "state": "E9",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 27,
+    "companies_verified_web": 27,
+    "top_employers": [
+      {
+        "name": "Vobile Co Ltd",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Dali Systems Co. Ltd.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Pops Worldwide",
+        "cat": "Information Technology",
+        "city": "Grand Cayman, Ky1-1104",
+        "careers_url": null
+      },
+      {
+        "name": "Vaccine Technologies International Ltd.",
+        "cat": "Information Technology",
+        "city": "George Town, Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Op40 Holdings, Inc.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Eden, Ltd.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Property Data Holdings, L.P.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "MobJoy, Ltd.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Oppa Ltd.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      },
+      {
+        "name": "Elo 7, Ltd.",
+        "cat": "Information Technology",
+        "city": "Grand Cayman",
+        "careers_url": null
+      }
+    ]
+  },
+  "F4": {
+    "state": "F4",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 21,
+    "companies_verified_web": 21,
+    "top_employers": [
+      {
+        "name": "Verisilicon Holdings Co Ltd",
+        "cat": "Information Technology",
+        "city": "Shanghai",
+        "careers_url": null
+      },
+      {
+        "name": "Kongzhong Corp",
+        "cat": "Information Technology",
+        "city": "Beijing",
+        "careers_url": null
+      },
+      {
+        "name": "99Bill Corp",
+        "cat": "Information Technology",
+        "city": "Shanghai",
+        "careers_url": null
+      },
+      {
+        "name": "Focaltech Systems Inc",
+        "cat": "Information Technology",
+        "city": "Shenzhen, Guangdong, Prc",
+        "careers_url": null
+      },
+      {
+        "name": "Miartech Inc",
+        "cat": "Information Technology",
+        "city": "Shanghi",
+        "careers_url": null
+      },
+      {
+        "name": "ChinaNet Online Holdings, Inc.",
+        "cat": "Information Technology",
+        "city": "Haidan District, Beijing",
+        "careers_url": null
+      },
+      {
+        "name": "Sinobiopharma, Inc.",
+        "cat": "Information Technology",
+        "city": "Nantong City",
+        "careers_url": null
+      },
+      {
+        "name": "Sinohub, Inc.",
+        "cat": "Information Technology",
+        "city": "Shenzhen",
+        "careers_url": null
+      },
+      {
+        "name": "China Power Equipment, Inc.",
+        "cat": "Information Technology",
+        "city": "Xi'An",
+        "careers_url": null
+      },
+      {
+        "name": "Perpetual Technologies, Inc.",
+        "cat": "Information Technology",
+        "city": "Foshan City,Guangdong Province",
+        "careers_url": null
+      }
+    ]
+  },
+  "F5": {
+    "state": "F5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 5,
+    "companies_verified_web": 5,
+    "top_employers": [
+      {
+        "name": "Acer Inc",
+        "cat": "Information Technology",
+        "city": "New Taipei City 221",
+        "careers_url": null
+      },
+      {
+        "name": "Prime View International Co., Ltd.",
+        "cat": "Information Technology",
+        "city": "Hsinchu",
+        "careers_url": null
+      },
+      {
+        "name": "GeneTex International Corp",
+        "cat": "Information Technology",
+        "city": "Hsninchu City",
+        "careers_url": null
+      },
+      {
+        "name": "Focaltech Corporation, Ltd.",
+        "cat": "Information Technology",
+        "city": "Hsinchu",
+        "careers_url": null
+      },
+      {
+        "name": "Voltafield Technology Corp",
+        "cat": "Information Technology",
+        "city": "Jhubei City",
+        "careers_url": null
+      }
+    ]
+  },
   "FL": {
     "state": "FL",
     "universities_count": 331,
@@ -1482,8 +2526,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 4667,
-    "companies_verified_web": 152,
+    "companies_curated_count": 5169,
+    "companies_verified_web": 654,
     "top_employers": [
       {
         "name": ".Decimal, Inc.",
@@ -1565,6 +2609,42 @@
     "companies_verified_web": 0,
     "top_employers": []
   },
+  "G4": {
+    "state": "G4",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Wikimart Ltd.",
+        "cat": "Information Technology",
+        "city": "Limassol",
+        "careers_url": null
+      }
+    ]
+  },
+  "G7": {
+    "state": "G7",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Trunk Images A/S",
+        "cat": "Information Technology",
+        "city": "Copenhagen",
+        "careers_url": null
+      }
+    ]
+  },
   "GA": {
     "state": "GA",
     "universities_count": 140,
@@ -1633,8 +2713,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2445,
-    "companies_verified_web": 111,
+    "companies_curated_count": 2747,
+    "companies_verified_web": 413,
     "top_employers": [
       {
         "name": "AB&T",
@@ -1802,6 +2882,48 @@
       }
     ]
   },
+  "H9": {
+    "state": "H9",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 5,
+    "companies_verified_web": 5,
+    "top_employers": [
+      {
+        "name": "Bioretec Ltd",
+        "cat": "Information Technology",
+        "city": "Tampere",
+        "careers_url": null
+      },
+      {
+        "name": "Biotie Therapies Corp.",
+        "cat": "Information Technology",
+        "city": "Turku",
+        "careers_url": null
+      },
+      {
+        "name": "Next Games Oy",
+        "cat": "Information Technology",
+        "city": "Helsinki",
+        "careers_url": null
+      },
+      {
+        "name": "Nexstim Plc",
+        "cat": "Information Technology",
+        "city": "Helsinki",
+        "careers_url": null
+      },
+      {
+        "name": "Shark Punch, Inc.",
+        "cat": "Information Technology",
+        "city": "Helsinki",
+        "careers_url": null
+      }
+    ]
+  },
   "HI": {
     "state": "HI",
     "universities_count": 23,
@@ -1870,8 +2992,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 288,
-    "companies_verified_web": 28,
+    "companies_curated_count": 313,
+    "companies_verified_web": 53,
     "top_employers": [
       {
         "name": "American Savings Bank, National Association",
@@ -2038,6 +3160,72 @@
       }
     ]
   },
+  "I0": {
+    "state": "I0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 9,
+    "companies_verified_web": 9,
+    "top_employers": [
+      {
+        "name": "Infovista Sa",
+        "cat": "Information Technology",
+        "city": "Les Ulis",
+        "careers_url": null
+      },
+      {
+        "name": "Cegedim Sa",
+        "cat": "Information Technology",
+        "city": "Boulogne Billancourt Cedex",
+        "careers_url": null
+      },
+      {
+        "name": "Sequans Communications",
+        "cat": "Information Technology",
+        "city": "Colombes",
+        "careers_url": null
+      },
+      {
+        "name": "Neolane SA",
+        "cat": "Information Technology",
+        "city": "Arcueil",
+        "careers_url": null
+      },
+      {
+        "name": "Erytech Pharma S.A.",
+        "cat": "Information Technology",
+        "city": "Lyon",
+        "careers_url": null
+      },
+      {
+        "name": "Cerenis Therapeutics Holding S.A.",
+        "cat": "Information Technology",
+        "city": "Labege",
+        "careers_url": null
+      },
+      {
+        "name": "Gensight Biologics S.A.",
+        "cat": "Information Technology",
+        "city": "Paris",
+        "careers_url": null
+      },
+      {
+        "name": "Cegid Group S.A.",
+        "cat": "Information Technology",
+        "city": "Lyon Cedex 09",
+        "careers_url": null
+      },
+      {
+        "name": "Theraclion",
+        "cat": "Information Technology",
+        "city": "Malakoff",
+        "careers_url": null
+      }
+    ]
+  },
   "IA": {
     "state": "IA",
     "universities_count": 75,
@@ -2106,8 +3294,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1822,
-    "companies_verified_web": 72,
+    "companies_curated_count": 1869,
+    "companies_verified_web": 119,
     "top_employers": [
       {
         "name": "Allen College",
@@ -2239,8 +3427,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 597,
-    "companies_verified_web": 45,
+    "companies_curated_count": 630,
+    "companies_verified_web": 78,
     "top_employers": [
       {
         "name": "Austin Kade Academy",
@@ -2372,8 +3560,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 4115,
-    "companies_verified_web": 142,
+    "companies_curated_count": 4477,
+    "companies_verified_web": 504,
     "top_employers": [
       {
         "name": "1NB Bank",
@@ -2505,8 +3693,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2308,
-    "companies_verified_web": 83,
+    "companies_curated_count": 2452,
+    "companies_verified_web": 227,
     "top_employers": [
       {
         "name": "1st Source Bank",
@@ -2567,6 +3755,144 @@
         "cat": "Mechanical & Manufacturing",
         "city": "MUNCIE",
         "careers_url": "https://www.bsu.edu/about/administrativeoffices/humanresources/jobs"
+      }
+    ]
+  },
+  "J1": {
+    "state": "J1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "Wave Crest Holdings Ltd",
+        "cat": "Information Technology",
+        "city": "Gibraltar",
+        "careers_url": null
+      },
+      {
+        "name": "Wave Crest Group Ltd",
+        "cat": "Information Technology",
+        "city": "N/A",
+        "careers_url": null
+      }
+    ]
+  },
+  "K3": {
+    "state": "K3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 13,
+    "companies_verified_web": 13,
+    "top_employers": [
+      {
+        "name": "MOQIZONE HOLDING Corp",
+        "cat": "Information Technology",
+        "city": "Hong Kong",
+        "careers_url": null
+      },
+      {
+        "name": "Value Exchange International, Inc.",
+        "cat": "Information Technology",
+        "city": "Hong Kong",
+        "careers_url": null
+      },
+      {
+        "name": "Genetic Finance Holdings Ltd",
+        "cat": "Information Technology",
+        "city": "Wanchai",
+        "careers_url": null
+      },
+      {
+        "name": "Intuitive Automata Inc.",
+        "cat": "Information Technology",
+        "city": "Shaitin, New Territories",
+        "careers_url": null
+      },
+      {
+        "name": "WI2BE Ltd",
+        "cat": "Information Technology",
+        "city": "Tsimshatsui, Kowloon",
+        "careers_url": null
+      },
+      {
+        "name": "Six Waves Inc.",
+        "cat": "Information Technology",
+        "city": "Causeway Bay",
+        "careers_url": null
+      },
+      {
+        "name": "Lenddo International",
+        "cat": "Information Technology",
+        "city": "Central, Hong Kong",
+        "careers_url": null
+      },
+      {
+        "name": "Alive, Inc.",
+        "cat": "Information Technology",
+        "city": "Kwun Tong, Kowloon",
+        "careers_url": null
+      },
+      {
+        "name": "Aessense Holding Ltd.",
+        "cat": "Information Technology",
+        "city": "Kowloon",
+        "careers_url": null
+      },
+      {
+        "name": "Macarne Ltd",
+        "cat": "Information Technology",
+        "city": "Hong Kong",
+        "careers_url": null
+      }
+    ]
+  },
+  "K6": {
+    "state": "K6",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "CCP hf.",
+        "cat": "Information Technology",
+        "city": "Reykjavik",
+        "careers_url": null
+      }
+    ]
+  },
+  "K7": {
+    "state": "K7",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "ETOWN INDIA SERVICES PRIVATE Ltd",
+        "cat": "Information Technology",
+        "city": "Kovilpatti",
+        "careers_url": null
+      },
+      {
+        "name": "DATAGLEN Inc.",
+        "cat": "Information Technology",
+        "city": "Bangalore",
+        "careers_url": null
       }
     ]
   },
@@ -2771,8 +4097,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1747,
-    "companies_verified_web": 73,
+    "companies_curated_count": 1824,
+    "companies_verified_web": 150,
     "top_employers": [
       {
         "name": "Allen County Community College",
@@ -2904,8 +4230,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1665,
-    "companies_verified_web": 71,
+    "companies_curated_count": 1731,
+    "companies_verified_web": 137,
     "top_employers": [
       {
         "name": "1st Trust Bank, Inc.",
@@ -2966,6 +4292,156 @@
         "cat": "Other Industries",
         "city": "Cadiz",
         "careers_url": "https://www.bankofcadiz.com"
+      }
+    ]
+  },
+  "L2": {
+    "state": "L2",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 8,
+    "companies_verified_web": 8,
+    "top_employers": [
+      {
+        "name": "Seagate Technology plc",
+        "cat": "Information Technology",
+        "city": "Dublin 2",
+        "careers_url": null
+      },
+      {
+        "name": "ECTG, Ltd",
+        "cat": "Information Technology",
+        "city": "Co. Tipperary",
+        "careers_url": null
+      },
+      {
+        "name": "Hibernia Group ehf",
+        "cat": "Information Technology",
+        "city": "Dublin",
+        "careers_url": null
+      },
+      {
+        "name": "Velti plc",
+        "cat": "Information Technology",
+        "city": "Dublin 2",
+        "careers_url": null
+      },
+      {
+        "name": "Prothena Corp plc",
+        "cat": "Information Technology",
+        "city": "Dun Laoghaire, Co. Dublin",
+        "careers_url": null
+      },
+      {
+        "name": "Eircap Ltd",
+        "cat": "Information Technology",
+        "city": "Dublin",
+        "careers_url": null
+      },
+      {
+        "name": "Nabriva Therapeutics plc",
+        "cat": "Information Technology",
+        "city": "Dublin 1",
+        "careers_url": null
+      },
+      {
+        "name": "Alexo Therapeutics Ltd",
+        "cat": "Information Technology",
+        "city": "Dublin 2",
+        "careers_url": null
+      }
+    ]
+  },
+  "L3": {
+    "state": "L3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 63,
+    "companies_verified_web": 63,
+    "top_employers": [
+      {
+        "name": "Viewbix Inc.",
+        "cat": "Information Technology",
+        "city": "Tel Aviv",
+        "careers_url": null
+      },
+      {
+        "name": "Magic Software Enterprises Ltd",
+        "cat": "Information Technology",
+        "city": "Or Yehuda Israel",
+        "careers_url": null
+      },
+      {
+        "name": "Ezchip Semiconductor Ltd",
+        "cat": "Information Technology",
+        "city": "Yokneam",
+        "careers_url": null
+      },
+      {
+        "name": "Attunity Ltd",
+        "cat": "Information Technology",
+        "city": "Kfar Saba",
+        "careers_url": null
+      },
+      {
+        "name": "Bos Better Online Solutions Ltd",
+        "cat": "Information Technology",
+        "city": "Rishon Lezion",
+        "careers_url": null
+      },
+      {
+        "name": "Vocaltec Communications Ltd",
+        "cat": "Information Technology",
+        "city": "Netanya",
+        "careers_url": null
+      },
+      {
+        "name": "Radcom Ltd",
+        "cat": "Information Technology",
+        "city": "Tel Aviv",
+        "careers_url": null
+      },
+      {
+        "name": "Orckit Communications Ltd",
+        "cat": "Information Technology",
+        "city": "Tel Aviv",
+        "careers_url": null
+      },
+      {
+        "name": "Top Image Systems Ltd",
+        "cat": "Information Technology",
+        "city": "Ramat Gan 52573",
+        "careers_url": null
+      },
+      {
+        "name": "Rit Technologies Ltd",
+        "cat": "Information Technology",
+        "city": "Tel Aviv",
+        "careers_url": null
+      }
+    ]
+  },
+  "L6": {
+    "state": "L6",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Twof Inc",
+        "cat": "Information Technology",
+        "city": "Povo",
+        "careers_url": null
       }
     ]
   },
@@ -3037,8 +4513,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1846,
-    "companies_verified_web": 62,
+    "companies_curated_count": 1881,
+    "companies_verified_web": 97,
     "top_employers": [
       {
         "name": "Abbeville Building & Loan (A State-Chartered Savings Bank)",
@@ -3099,6 +4575,72 @@
         "cat": "Other Industries",
         "city": "Baton Rouge",
         "careers_url": "https://www.b1bank.com/careers"
+      }
+    ]
+  },
+  "M0": {
+    "state": "M0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 3,
+    "companies_verified_web": 3,
+    "top_employers": [
+      {
+        "name": "Murata Manufacturing Co Ltd",
+        "cat": "Information Technology",
+        "city": "Kyoto",
+        "careers_url": null
+      },
+      {
+        "name": "DeNA Co., Ltd",
+        "cat": "Information Technology",
+        "city": "Tokyo",
+        "careers_url": null
+      },
+      {
+        "name": "Nexon Co, Ltd",
+        "cat": "Information Technology",
+        "city": "Tokyo",
+        "careers_url": null
+      }
+    ]
+  },
+  "M3": {
+    "state": "M3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Kopo Kopo Inc.",
+        "cat": "Information Technology",
+        "city": "Nairobi",
+        "careers_url": null
+      }
+    ]
+  },
+  "M5": {
+    "state": "M5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Fluenty Inc.",
+        "cat": "Information Technology",
+        "city": "Seoul",
+        "careers_url": null
       }
     ]
   },
@@ -3170,8 +4712,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2915,
-    "companies_verified_web": 190,
+    "companies_curated_count": 3964,
+    "companies_verified_web": 1239,
     "top_employers": [
       {
         "name": "42 North Private Bank",
@@ -3303,8 +4845,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1630,
-    "companies_verified_web": 96,
+    "companies_curated_count": 1944,
+    "companies_verified_web": 410,
     "top_employers": [
       {
         "name": "AGNC Investment Corp.",
@@ -3436,8 +4978,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 565,
-    "companies_verified_web": 55,
+    "companies_curated_count": 597,
+    "companies_verified_web": 87,
     "top_employers": [
       {
         "name": "Androscoggin Savings Bank",
@@ -3672,8 +5214,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2843,
-    "companies_verified_web": 96,
+    "companies_curated_count": 2983,
+    "companies_verified_web": 236,
     "top_employers": [
       {
         "name": "1st State Bank",
@@ -3805,8 +5347,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2422,
-    "companies_verified_web": 106,
+    "companies_curated_count": 2643,
+    "companies_verified_web": 327,
     "top_employers": [
       {
         "name": "21st Century Bank",
@@ -3938,8 +5480,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2234,
-    "companies_verified_web": 84,
+    "companies_curated_count": 2325,
+    "companies_verified_web": 175,
     "top_employers": [
       {
         "name": "1st Advantage Bank",
@@ -4102,8 +5644,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1415,
-    "companies_verified_web": 57,
+    "companies_curated_count": 1438,
+    "companies_verified_web": 80,
     "top_employers": [
       {
         "name": "Alcorn State University",
@@ -4235,8 +5777,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 429,
-    "companies_verified_web": 61,
+    "companies_curated_count": 453,
+    "companies_verified_web": 85,
     "top_employers": [
       {
         "name": "Aaniiih Nakoda College",
@@ -4297,6 +5839,78 @@
         "cat": "Other Industries",
         "city": "Belt",
         "careers_url": "https://www.beltvalleybank.com/"
+      }
+    ]
+  },
+  "N4": {
+    "state": "N4",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 12,
+    "companies_verified_web": 12,
+    "top_employers": [
+      {
+        "name": "Magnachip Semiconductor Llc",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Ses S.A.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Tyco Electronics Group S.A.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Skype Global S.a r.l.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "LogicNow S.A.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "MIV Greeneden LP Holding SCA",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Globant S.A.",
+        "cat": "Information Technology",
+        "city": "N/A",
+        "careers_url": null
+      },
+      {
+        "name": "Atento S.A.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Metamorphlux S.a r.l.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
+      },
+      {
+        "name": "Spotify Technology S.A.",
+        "cat": "Information Technology",
+        "city": "Luxembourg",
+        "careers_url": null
       }
     ]
   },
@@ -4368,8 +5982,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2333,
-    "companies_verified_web": 112,
+    "companies_curated_count": 2635,
+    "companies_verified_web": 414,
     "top_employers": [
       {
         "name": "374Water Inc.",
@@ -4501,8 +6115,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 526,
-    "companies_verified_web": 57,
+    "companies_curated_count": 538,
+    "companies_verified_web": 69,
     "top_employers": [
       {
         "name": "Alerus Financial, National Association",
@@ -4634,8 +6248,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1109,
-    "companies_verified_web": 73,
+    "companies_curated_count": 1151,
+    "companies_verified_web": 115,
     "top_employers": [
       {
         "name": "Access Bank",
@@ -4767,8 +6381,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 728,
-    "companies_verified_web": 51,
+    "companies_curated_count": 808,
+    "companies_verified_web": 131,
     "top_employers": [
       {
         "name": "Agamatrix, Inc.",
@@ -4900,8 +6514,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2425,
-    "companies_verified_web": 121,
+    "companies_curated_count": 2674,
+    "companies_verified_web": 370,
     "top_employers": [
       {
         "name": "1st Bank of Sea Isle City",
@@ -5033,8 +6647,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 739,
-    "companies_verified_web": 61,
+    "companies_curated_count": 791,
+    "companies_verified_web": 113,
     "top_employers": [
       {
         "name": "A Better U Beauty Barber Academy",
@@ -5166,8 +6780,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1029,
-    "companies_verified_web": 66,
+    "companies_curated_count": 1163,
+    "companies_verified_web": 200,
     "top_employers": [
       {
         "name": "Academy of Hair Design-Las Vegas",
@@ -5299,8 +6913,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3842,
-    "companies_verified_web": 256,
+    "companies_curated_count": 5228,
+    "companies_verified_web": 1642,
     "top_employers": [
       {
         "name": "1stdibs.com, Inc.",
@@ -5361,6 +6975,42 @@
         "cat": "Other Industries",
         "city": "Garden City",
         "careers_url": "https://www.adelphi.edu/career-center/"
+      }
+    ]
+  },
+  "O1": {
+    "state": "O1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "WIN Advanced Systems Ltd",
+        "cat": "Information Technology",
+        "city": "Valletta",
+        "careers_url": null
+      }
+    ]
+  },
+  "O5": {
+    "state": "O5",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Satelites Mexicanos Sa De Cv",
+        "cat": "Information Technology",
+        "city": "Mexico, D.F.",
+        "careers_url": null
       }
     ]
   },
@@ -5456,8 +7106,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3896,
-    "companies_verified_web": 127,
+    "companies_curated_count": 4087,
+    "companies_verified_web": 318,
     "top_employers": [
       {
         "name": "1st National Bank",
@@ -5589,8 +7239,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1860,
-    "companies_verified_web": 74,
+    "companies_curated_count": 1887,
+    "companies_verified_web": 101,
     "top_employers": [
       {
         "name": "1st Bank in Hominy",
@@ -5722,8 +7372,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1368,
-    "companies_verified_web": 52,
+    "companies_curated_count": 1572,
+    "companies_verified_web": 256,
     "top_employers": [
       {
         "name": "Acumed, LLC",
@@ -5794,8 +7444,8 @@
     "stem_graduates_yearly": 0,
     "h1b_exempt_campuses": 0,
     "top_institutions": [],
-    "companies_curated_count": 5253,
-    "companies_verified_web": 444,
+    "companies_curated_count": 5254,
+    "companies_verified_web": 445,
     "top_employers": [
       {
         "name": "3DX Industries, Inc.",
@@ -5856,6 +7506,48 @@
         "cat": "Not verified",
         "city": null,
         "careers_url": "https://www.accelevation.com/careers"
+      }
+    ]
+  },
+  "P7": {
+    "state": "P7",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 5,
+    "companies_verified_web": 5,
+    "top_employers": [
+      {
+        "name": "Sapiens International Corp N V",
+        "cat": "Information Technology",
+        "city": "Willemstad, Curacao",
+        "careers_url": null
+      },
+      {
+        "name": "Triposo, Inc,",
+        "cat": "Information Technology",
+        "city": "Amersfoort",
+        "careers_url": null
+      },
+      {
+        "name": "Prosensa Holding N.V.",
+        "cat": "Information Technology",
+        "city": "Leiden",
+        "careers_url": null
+      },
+      {
+        "name": "Merus N.V.",
+        "cat": "Information Technology",
+        "city": "3584 Cm Utrecht",
+        "careers_url": null
+      },
+      {
+        "name": "Stealth Software Holding BV",
+        "cat": "Information Technology",
+        "city": "Kerkrade",
+        "careers_url": null
       }
     ]
   },
@@ -5927,8 +7619,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 3486,
-    "companies_verified_web": 138,
+    "companies_curated_count": 3896,
+    "companies_verified_web": 548,
     "top_employers": [
       {
         "name": "1st Summit Bank",
@@ -6090,8 +7782,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 767,
-    "companies_verified_web": 28,
+    "companies_curated_count": 771,
+    "companies_verified_web": 32,
     "top_employers": [
       {
         "name": "Academia Serrant Inc",
@@ -6173,6 +7865,84 @@
     "companies_verified_web": 0,
     "top_employers": []
   },
+  "Q2": {
+    "state": "Q2",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 4,
+    "companies_verified_web": 4,
+    "top_employers": [
+      {
+        "name": "Living Cell Technologies Ltd",
+        "cat": "Information Technology",
+        "city": "Auckland",
+        "careers_url": null
+      },
+      {
+        "name": "International Telematics Holdings Ltd",
+        "cat": "Information Technology",
+        "city": "Auckland",
+        "careers_url": null
+      },
+      {
+        "name": "Arria NLG PLC",
+        "cat": "Information Technology",
+        "city": "Wellington",
+        "careers_url": null
+      },
+      {
+        "name": "Xero Ltd",
+        "cat": "Information Technology",
+        "city": "Wellington",
+        "careers_url": null
+      }
+    ]
+  },
+  "Q8": {
+    "state": "Q8",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "Opera Software ASA",
+        "cat": "Information Technology",
+        "city": "Oslo",
+        "careers_url": null
+      },
+      {
+        "name": "Thin Film Electronics ASA",
+        "cat": "Information Technology",
+        "city": "Oslo",
+        "careers_url": null
+      }
+    ]
+  },
+  "R1": {
+    "state": "R1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Centennial Towers Holding Lp",
+        "cat": "Information Technology",
+        "city": "San Francisco",
+        "careers_url": null
+      }
+    ]
+  },
   "RI": {
     "state": "RI",
     "universities_count": 21,
@@ -6241,8 +8011,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 620,
-    "companies_verified_web": 36,
+    "companies_curated_count": 646,
+    "companies_verified_web": 62,
     "top_employers": [
       {
         "name": "Bally's Corp",
@@ -6404,8 +8174,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1523,
-    "companies_verified_web": 75,
+    "companies_curated_count": 1592,
+    "companies_verified_web": 144,
     "top_employers": [
       {
         "name": "1st Federal Savings Bank of SC, Inc.",
@@ -6537,8 +8307,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 555,
-    "companies_verified_web": 58,
+    "companies_curated_count": 566,
+    "companies_verified_web": 69,
     "top_employers": [
       {
         "name": "1st Financial Bank USA",
@@ -6599,6 +8369,24 @@
         "cat": "Other Industries",
         "city": "Spearfish",
         "careers_url": "https://yourfuture.sdbor.edu/postings/search?query=&query_v0_posted_at_date=&435=&query_organizational_tier_1_id%5B%5D=1252&225=&commit=Search"
+      }
+    ]
+  },
+  "T2": {
+    "state": "T2",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Siam Media Inc.",
+        "cat": "Information Technology",
+        "city": "Victoria",
+        "careers_url": null
       }
     ]
   },
@@ -6670,8 +8458,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2079,
-    "companies_verified_web": 105,
+    "companies_curated_count": 2213,
+    "companies_verified_web": 239,
     "top_employers": [
       {
         "name": "Acadia Healthcare Company, Inc.",
@@ -6870,8 +8658,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 5578,
-    "companies_verified_web": 245,
+    "companies_curated_count": 6359,
+    "companies_verified_web": 1026,
     "top_employers": [
       {
         "name": "ABBOTT MEDICAL",
@@ -6932,6 +8720,96 @@
         "cat": "MedTech & Pharma",
         "city": "FORT WORTH",
         "careers_url": "https://www.alcon.com/careers/"
+      }
+    ]
+  },
+  "U0": {
+    "state": "U0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 8,
+    "companies_verified_web": 8,
+    "top_employers": [
+      {
+        "name": "Amaru Inc",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "Horizon Fuel Cell Technologies Pte Ltd",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "TechMedia Advertising, Inc.",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "Inventure International (Pte.) Ltd",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "Frontiir Pte. Ltd.",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "FingerMotion, Inc.",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "Profit Velocity Solutions Pte Ltd",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      },
+      {
+        "name": "Yumzy Pte Ltd",
+        "cat": "Information Technology",
+        "city": "Singapore",
+        "careers_url": null
+      }
+    ]
+  },
+  "U3": {
+    "state": "U3",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 3,
+    "companies_verified_web": 3,
+    "top_employers": [
+      {
+        "name": "Telvent Git S A",
+        "cat": "Information Technology",
+        "city": "Madrid",
+        "careers_url": null
+      },
+      {
+        "name": "Open Source Security Information Management, S.L.",
+        "cat": "Information Technology",
+        "city": "Madrid",
+        "careers_url": null
+      },
+      {
+        "name": "Maxi Mobility, Inc.",
+        "cat": "Information Technology",
+        "city": "Madrid",
+        "careers_url": null
       }
     ]
   },
@@ -7142,8 +9020,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1318,
-    "companies_verified_web": 84,
+    "companies_curated_count": 1524,
+    "companies_verified_web": 290,
     "top_employers": [
       {
         "name": "Ally Bank",
@@ -7204,6 +9082,72 @@
         "cat": "Other Industries",
         "city": "Logan",
         "careers_url": "https://secure7.saashr.com/ta/6211822.careers?CareersSearch=&lang=en-US"
+      }
+    ]
+  },
+  "V7": {
+    "state": "V7",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 6,
+    "companies_verified_web": 6,
+    "top_employers": [
+      {
+        "name": "Neonode Inc.",
+        "cat": "Information Technology",
+        "city": "Stockholm",
+        "careers_url": null
+      },
+      {
+        "name": "Artimplant AB",
+        "cat": "Information Technology",
+        "city": "Vastra Frolunda",
+        "careers_url": null
+      },
+      {
+        "name": "NCAB Holding AB",
+        "cat": "Information Technology",
+        "city": "Bromma",
+        "careers_url": null
+      },
+      {
+        "name": "Tictail, Inc.",
+        "cat": "Information Technology",
+        "city": "Stockholm",
+        "careers_url": null
+      },
+      {
+        "name": "Mindroute Incentive AB",
+        "cat": "Information Technology",
+        "city": "Malmo",
+        "careers_url": null
+      },
+      {
+        "name": "Tobii AB (publ)",
+        "cat": "Information Technology",
+        "city": "Danderyd",
+        "careers_url": null
+      }
+    ]
+  },
+  "V8": {
+    "state": "V8",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "Addex Therapeutics Ltd.",
+        "cat": "Information Technology",
+        "city": "Geneva",
+        "careers_url": null
       }
     ]
   },
@@ -7275,8 +9219,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2135,
-    "companies_verified_web": 129,
+    "companies_curated_count": 2473,
+    "companies_verified_web": 467,
     "top_employers": [
       {
         "name": "Advance Auto Parts",
@@ -7354,8 +9298,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 29,
-    "companies_verified_web": 2,
+    "companies_curated_count": 30,
+    "companies_verified_web": 3,
     "top_employers": [
       {
         "name": "Merchants Commercial Bank",
@@ -7368,6 +9312,12 @@
         "cat": "Other Industries",
         "city": "Charlotte Amalie",
         "careers_url": "https://careers.uvi.edu/"
+      },
+      {
+        "name": "Havensight Capital",
+        "cat": "Information Technology",
+        "city": "Christiansted",
+        "careers_url": null
       }
     ]
   },
@@ -7439,8 +9389,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 247,
-    "companies_verified_web": 29,
+    "companies_curated_count": 272,
+    "companies_verified_web": 54,
     "top_employers": [
       {
         "name": "Advanced Welding Institute",
@@ -7501,6 +9451,24 @@
         "cat": "Other Industries",
         "city": "Norwich",
         "careers_url": "https://www.ledyard.bank/careers"
+      }
+    ]
+  },
+  "W1": {
+    "state": "W1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 1,
+    "companies_verified_web": 1,
+    "top_employers": [
+      {
+        "name": "IWEB, Inc.",
+        "cat": "Information Technology",
+        "city": "Suan Luang, Bangkok",
+        "careers_url": null
       }
     ]
   },
@@ -7572,8 +9540,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1725,
-    "companies_verified_web": 120,
+    "companies_curated_count": 2490,
+    "companies_verified_web": 885,
     "top_employers": [
       {
         "name": "1st Security Bank of Washington",
@@ -7748,8 +9716,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 2018,
-    "companies_verified_web": 97,
+    "companies_curated_count": 2126,
+    "companies_verified_web": 205,
     "top_employers": [
       {
         "name": "AbbyBank",
@@ -7881,8 +9849,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 1051,
-    "companies_verified_web": 57,
+    "companies_curated_count": 1061,
+    "companies_verified_web": 67,
     "top_employers": [
       {
         "name": "American Public University System",
@@ -8014,8 +9982,8 @@
         "jobs_url": null
       }
     ],
-    "companies_curated_count": 478,
-    "companies_verified_web": 36,
+    "companies_curated_count": 490,
+    "companies_verified_web": 48,
     "top_employers": [
       {
         "name": "2unifi Bank",
@@ -8076,6 +10044,198 @@
         "cat": "MedTech & Pharma",
         "city": "Teton Village",
         "careers_url": "https://chief.com/careers"
+      }
+    ]
+  },
+  "X0": {
+    "state": "X0",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 68,
+    "companies_verified_web": 68,
+    "top_employers": [
+      {
+        "name": "Dna Dynamics Inc",
+        "cat": "Information Technology",
+        "city": "Leamington Spa, Warwickshire",
+        "careers_url": null
+      },
+      {
+        "name": "Sage Group Plc",
+        "cat": "Information Technology",
+        "city": "Newcastle Upon Tyne",
+        "careers_url": null
+      },
+      {
+        "name": "Sopheon Plc",
+        "cat": "Information Technology",
+        "city": "Guildford",
+        "careers_url": null
+      },
+      {
+        "name": "Picochip Inc",
+        "cat": "Information Technology",
+        "city": "Bath",
+        "careers_url": null
+      },
+      {
+        "name": "Icera Inc.",
+        "cat": "Information Technology",
+        "city": "Bristol",
+        "careers_url": null
+      },
+      {
+        "name": "Mirics Inc.",
+        "cat": "Information Technology",
+        "city": "United Kingdom",
+        "careers_url": null
+      },
+      {
+        "name": "Senior Plc",
+        "cat": "Information Technology",
+        "city": "Rickmansworth",
+        "careers_url": null
+      },
+      {
+        "name": "Voiceserve Inc",
+        "cat": "Information Technology",
+        "city": "Middlesex",
+        "careers_url": null
+      },
+      {
+        "name": "Ultra Electronics Holdings Plc",
+        "cat": "Information Technology",
+        "city": "Greenford, Middlesex",
+        "careers_url": null
+      },
+      {
+        "name": "Imaginatik Plc",
+        "cat": "Information Technology",
+        "city": "London",
+        "careers_url": null
+      }
+    ]
+  },
+  "X1": {
+    "state": "X1",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 41,
+    "companies_verified_web": 41,
+    "top_employers": [
+      {
+        "name": "Sequenom Inc",
+        "cat": "Information Technology",
+        "city": "San Diego",
+        "careers_url": null
+      },
+      {
+        "name": "Immunic, Inc.",
+        "cat": "Information Technology",
+        "city": "New York",
+        "careers_url": null
+      },
+      {
+        "name": "Exodus Payment Systems, LLC",
+        "cat": "Information Technology",
+        "city": "Blackshear",
+        "careers_url": null
+      },
+      {
+        "name": "Squidbid, LLC",
+        "cat": "Information Technology",
+        "city": "Marietta",
+        "careers_url": null
+      },
+      {
+        "name": "Mobile Promotions Network, Llc",
+        "cat": "Information Technology",
+        "city": "Coral Gables",
+        "careers_url": null
+      },
+      {
+        "name": "MyEdu Corp",
+        "cat": "Information Technology",
+        "city": "Austin",
+        "careers_url": null
+      },
+      {
+        "name": "Debitext, Inc.",
+        "cat": "Information Technology",
+        "city": "Foster City",
+        "careers_url": null
+      },
+      {
+        "name": "VolunteerSpot, Inc.",
+        "cat": "Information Technology",
+        "city": "Austin",
+        "careers_url": null
+      },
+      {
+        "name": "Allosteros Therapeutics Inc.",
+        "cat": "Information Technology",
+        "city": "Palo Alto",
+        "careers_url": null
+      },
+      {
+        "name": "PathCentral, Inc.",
+        "cat": "Information Technology",
+        "city": "Irvine",
+        "careers_url": null
+      }
+    ]
+  },
+  "Y9": {
+    "state": "Y9",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "O3B NETWORKS Ltd",
+        "cat": "Information Technology",
+        "city": "St. Helier",
+        "careers_url": null
+      },
+      {
+        "name": "WorldVu Satellites Ltd",
+        "cat": "Information Technology",
+        "city": "St. Helier",
+        "careers_url": null
+      }
+    ]
+  },
+  "Z4": {
+    "state": "Z4",
+    "universities_count": 0,
+    "total_students": 0,
+    "stem_graduates_yearly": 0,
+    "h1b_exempt_campuses": 0,
+    "top_institutions": [],
+    "companies_curated_count": 2,
+    "companies_verified_web": 2,
+    "top_employers": [
+      {
+        "name": "CannTrust Inc.",
+        "cat": "Information Technology",
+        "city": "Vaughan",
+        "careers_url": null
+      },
+      {
+        "name": "Dream Payments Corp.",
+        "cat": "Information Technology",
+        "city": "Toronto",
+        "careers_url": null
       }
     ]
   }
