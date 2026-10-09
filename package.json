@@ -26,6 +26,7 @@
   "author": "Shyam Sunder Daggupati",
   "license": "MIT",
   "dependencies": {
+    "chart.js": "^4.5.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "framer-motion": "^12.40.0",
