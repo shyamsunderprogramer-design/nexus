@@ -190,20 +190,51 @@ export const api = {
       filtered = cachedCompanies || [];
     }
     if (params.country && params.country !== 'ALL') {
-      if (params.country === 'IN') {
-        filtered = filtered.filter(c => c.country === 'IN');
-      } else if (params.country === 'US') {
-        filtered = filtered.filter(c => !c.country || c.country === 'US');
-      } else if (params.country === 'CA') {
-        filtered = filtered.filter(c => c.country === 'CA');
-      }
+      const targetCountry = params.country.toUpperCase();
+      filtered = filtered.filter(c => {
+        const cCountry = (c.country || 'US').toUpperCase();
+        if (targetCountry === 'US') {
+          return cCountry === 'US' || cCountry === 'UNITED STATES';
+        } else if (targetCountry === 'IN') {
+          return cCountry === 'IN' || cCountry === 'INDIA';
+        } else if (targetCountry === 'CA') {
+          return cCountry === 'CA' || cCountry === 'CANADA';
+        } else if (targetCountry === 'GB') {
+          return cCountry === 'GB' || cCountry === 'UNITED KINGDOM' || cCountry === 'UK';
+        } else if (targetCountry === 'DE') {
+          return cCountry === 'DE' || cCountry === 'GERMANY';
+        } else if (targetCountry === 'AU') {
+          return cCountry === 'AU' || cCountry === 'AUSTRALIA';
+        } else if (targetCountry === 'FR') {
+          return cCountry === 'FR' || cCountry === 'FRANCE';
+        }
+        return cCountry.includes(targetCountry);
+      });
     }
-    if (params.category && params.category !== 'ALL') {
+
+    if (params.category && params.category !== 'ALL' && params.category !== 'All Tech Grassroots') {
       const catQuery = params.category.toLowerCase();
-      filtered = filtered.filter(c => 
-        (c.category || '').toLowerCase().includes(catQuery) ||
-        (c.subcategory || '').toLowerCase().includes(catQuery)
-      );
+      if (params.category === 'Information Technology') {
+        filtered = filtered.filter(c => 
+          (c.category || '').toLowerCase().includes('information technology') ||
+          (c.category || '').toLowerCase().includes('software') ||
+          (c.subcategory || '').toLowerCase().includes('software') ||
+          (c.subcategory || '').toLowerCase().includes('technology')
+        );
+      } else if (params.category === 'Software & Cloud Services') {
+        filtered = filtered.filter(c => 
+          (c.category || '').toLowerCase().includes('software') ||
+          (c.category || '').toLowerCase().includes('cloud') ||
+          (c.subcategory || '').toLowerCase().includes('software') ||
+          (c.subcategory || '').toLowerCase().includes('cloud') ||
+          (c.subcategory || '').toLowerCase().includes('internet')
+        );
+      } else {
+        filtered = filtered.filter(c => 
+          (c.category || '').toLowerCase().includes(catQuery) ||
+          (c.subcategory || '').toLowerCase().includes(catQuery)
+        );
+      }
     }
     if (params.state && params.state !== 'ALL') {
       filtered = filtered.filter(c => c.state === params.state);

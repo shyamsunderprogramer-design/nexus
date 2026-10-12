@@ -158,8 +158,9 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
               </button>
             )}
           </div>
-          <span className="font-mono text-brand-600 dark:text-brand-400 font-semibold">
-            {totalCount.toLocaleString()} Verified Employers
+          <span className="font-mono text-brand-600 dark:text-brand-400 font-semibold flex items-center space-x-1.5">
+            {loading && <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />}
+            <span>{loading ? 'Scanning 932k+ Registry...' : `${totalCount.toLocaleString()} Verified Employers`}</span>
           </span>
         </div>
       </div>
