@@ -98,9 +98,14 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             }}
             className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
-            <option value="ALL">All Countries (Global)</option>
-            <option value="US">🇺🇸 United States (6.27M+)</option>
-            <option value="IN">🇮🇳 India (NIFTY & Tech Giants)</option>
+            <option value="ALL">All Countries (7.17M+ Global)</option>
+            <option value="US">🇺🇸 United States (2.2M+)</option>
+            <option value="GB">🇬🇧 United Kingdom (510k+)</option>
+            <option value="CA">🇨🇦 Canada (185k+)</option>
+            <option value="IN">🇮🇳 India (144k+)</option>
+            <option value="DE">🇩🇪 Germany (118k+)</option>
+            <option value="AU">🇦🇺 Australia (117k+)</option>
+            <option value="FR">🇫🇷 France (114k+)</option>
           </select>
 
           <select

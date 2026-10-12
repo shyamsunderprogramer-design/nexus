@@ -107,29 +107,60 @@ app.get('/api/companies', (req: Request, res: Response) => {
     let whereClause = 'WHERE 1=1';
     const params: any[] = [];
     
+    // Intelligent category mapping for Kaggle dataset
     if (category !== 'ALL') {
-      whereClause += ' AND category LIKE ?';
-      params.push(`%${category}%`);
-    }
-    if (state !== 'ALL') {
-      whereClause += ' AND state = ?';
-      params.push(state);
-    }
-    if (country !== 'ALL') {
-      if (country === 'US') {
-        whereClause += " AND (country = 'United States' OR country = 'us' OR country IS NULL)";
-      } else if (country === 'IN') {
-        whereClause += " AND (country = 'India' OR country = 'in')";
-      } else if (country === 'CA') {
-        whereClause += " AND (country = 'Canada' OR country = 'ca')";
+      const catLower = category.toLowerCase();
+      if (catLower.includes('information technology') || catLower.includes('software')) {
+        whereClause += " AND (category LIKE '%information technology%' OR category LIKE '%computer software%' OR category LIKE '%internet%')";
+      } else if (catLower.includes('financial') || catLower.includes('banking') || catLower.includes('fintech')) {
+        whereClause += " AND (category LIKE '%financial%' OR category LIKE '%banking%' OR category LIKE '%insurance%')";
+      } else if (catLower.includes('health') || catLower.includes('pharma')) {
+        whereClause += " AND (category LIKE '%health%' OR category LIKE '%hospital%' OR category LIKE '%pharma%')";
+      } else if (catLower.includes('automotive') || catLower.includes('manufacturing')) {
+        whereClause += " AND (category LIKE '%automotive%' OR category LIKE '%manufacturing%' OR category LIKE '%engineering%')";
+      } else if (catLower.includes('telecom')) {
+        whereClause += " AND (category LIKE '%telecommunications%' OR category LIKE '%wireless%')";
+      } else if (catLower.includes('media') || catLower.includes('entertainment')) {
+        whereClause += " AND (category LIKE '%entertainment%' OR category LIKE '%media%' OR category LIKE '%broadcast%')";
+      } else if (catLower.includes('education')) {
+        whereClause += " AND (category LIKE '%education%' OR category LIKE '%e-learning%')";
+      } else if (catLower.includes('retail')) {
+        whereClause += " AND (category LIKE '%retail%' OR category LIKE '%apparel%')";
       } else {
-        whereClause += ' AND country = ?';
-        params.push(country);
+        whereClause += ' AND category LIKE ?';
+        params.push(`%${category}%`);
       }
     }
+
+    if (state !== 'ALL') {
+      whereClause += ' AND (state LIKE ? OR locality LIKE ?)';
+      params.push(`%${state}%`, `%${state}%`);
+    }
+
+    if (country !== 'ALL') {
+      if (country === 'US') {
+        whereClause += " AND (country = 'united states' OR country = 'United States' OR country = 'us' OR country IS NULL)";
+      } else if (country === 'IN') {
+        whereClause += " AND (country = 'india' OR country = 'India' OR country = 'in')";
+      } else if (country === 'GB') {
+        whereClause += " AND (country = 'united kingdom' OR country = 'United Kingdom' OR country = 'uk' OR country = 'gb')";
+      } else if (country === 'CA') {
+        whereClause += " AND (country = 'canada' OR country = 'Canada' OR country = 'ca')";
+      } else if (country === 'DE') {
+        whereClause += " AND (country = 'germany' OR country = 'Germany' OR country = 'de')";
+      } else if (country === 'AU') {
+        whereClause += " AND (country = 'australia' OR country = 'Australia' OR country = 'au')";
+      } else if (country === 'FR') {
+        whereClause += " AND (country = 'france' OR country = 'France' OR country = 'fr')";
+      } else {
+        whereClause += ' AND country LIKE ?';
+        params.push(`%${country}%`);
+      }
+    }
+
     if (q) {
-      whereClause += ' AND (name LIKE ? OR category LIKE ? OR city LIKE ?)';
-      params.push(`%${q}%`, `%${q}%`, `%${q}%`);
+      whereClause += ' AND (name LIKE ? OR category LIKE ? OR city LIKE ? OR domain LIKE ?)';
+      params.push(`%${q}%`, `%${q}%`, `%${q}%`, `%${q}%`);
     }
 
     try {
@@ -143,8 +174,25 @@ app.get('/api/companies', (req: Request, res: Response) => {
         ORDER BY total_employee_estimate DESC NULLS LAST 
         LIMIT ? OFFSET ?
       `);
-      const data = dataStmt.all(...params, limit, offset);
+      const rawRows = dataStmt.all(...params, limit, offset);
       
+      const data = rawRows.map((r: any) => ({
+        oid: `kg_${r.id}`,
+        name: r.name ? (r.name.length <= 4 ? r.name.toUpperCase() : r.name.charAt(0).toUpperCase() + r.name.slice(1)) : 'Enterprise Entity',
+        legal_name: r.name,
+        category: r.category ? r.category.split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : 'Enterprise & Technology',
+        subcategory: r.industry ? r.industry.split(' ').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') : (r.domain || 'Corporate Entity'),
+        city: r.city ? r.city.charAt(0).toUpperCase() + r.city.slice(1) : '',
+        state: r.state ? r.state.toUpperCase() : '',
+        country: r.country ? (r.country.toLowerCase() === 'united states' ? 'US' : r.country.toUpperCase()) : 'US',
+        website: r.domain ? (r.domain.startsWith('http') ? r.domain : `https://${r.domain}`) : undefined,
+        careers_url: r.domain ? (r.domain.startsWith('http') ? r.domain : `https://${r.domain}`) : (r.linkedin_url ? `https://${r.linkedin_url}` : undefined),
+        employees_approx: r.total_employee_estimate || r.current_employee_estimate || 0,
+        description: `${r.category ? r.category.charAt(0).toUpperCase() + r.category.slice(1) : 'Enterprise'} organization${r.total_employee_estimate ? ` employing ~${Number(r.total_employee_estimate).toLocaleString()} professionals` : ''}${r.year_founded && !isNaN(Number(r.year_founded)) ? `, founded in ${Math.round(Number(r.year_founded))}` : ''}.`,
+        verified: true,
+        source: 'Kaggle Global Register'
+      }));
+
       const totalPages = Math.ceil(total / limit) || 1;
       
       return res.json({ total, page, totalPages, limit, data });
