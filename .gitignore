@@ -26,3 +26,5 @@ data/universities
 *.log
 .vscode/
 .idea/
+app/data/nexus.sqlite
+public/data/companies.parquet
