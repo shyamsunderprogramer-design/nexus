@@ -28,3 +28,4 @@ data/universities
 .idea/
 app/data/nexus.sqlite
 public/data/companies.parquet
+app/data/tech_directory_massive.json

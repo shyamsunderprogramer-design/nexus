@@ -116,9 +116,10 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             }}
             className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
-            <option value="ALL">All Industries</option>
-            <option value="Information Technology">Information Technology & Software</option>
-            <option value="Software & Cloud Services">Cloud & Enterprise SaaS</option>
+            <option value="ALL">All Industries (Featured 150k)</option>
+            <option value="All Tech Grassroots">💻 All Grassroots IT & Tech (932,236 Companies)</option>
+            <option value="Information Technology">💻 Information Technology & Software (932k+)</option>
+            <option value="Software & Cloud Services">Cloud & Enterprise SaaS (932k+)</option>
             <option value="Banking & Financial Services">Banking & Financial Services</option>
             <option value="Fintech & Payments">Fintech & Payments</option>
             <option value="Consumer Internet">E-Commerce & Quick Commerce</option>

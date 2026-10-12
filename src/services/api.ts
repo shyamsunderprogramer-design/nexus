@@ -21,6 +21,32 @@ let cachedUniversities: University[] | null = null;
 let cachedCompanies: Company[] | null = null;
 let cachedBridge: Record<string, StateBridgeData> | null = null;
 
+let cachedTechCompanies: Company[] | null = null;
+
+const loadTechCompanies = async (): Promise<Company[]> => {
+  if (cachedTechCompanies) return cachedTechCompanies;
+  const base = getBaseUrl();
+  const res = await fetch(`${base}data/tech_directory_massive.json`);
+  const rawData: any[][] = await res.json();
+  cachedTechCompanies = rawData.map((r, idx) => ({
+    oid: `kg_tech_${idx}`,
+    name: r[0],
+    legal_name: r[0],
+    category: 'Information Technology',
+    subcategory: r[5] || 'Software & Services',
+    city: r[2] || '',
+    state: r[3] || '',
+    country: r[4] || 'US',
+    website: r[1] ? `https://${r[1]}` : undefined,
+    careers_url: r[1] ? `https://${r[1]}` : undefined,
+    employees_approx: r[6] || 10,
+    description: `${r[5] || 'Information Technology'} organization${r[6] ? ` employing ~${Number(r[6]).toLocaleString()} professionals` : ''}${r[7] ? `, founded in ${r[7]}` : ''}.`,
+    verified: true,
+    source: 'Kaggle Grassroots Tech Register'
+  }));
+  return cachedTechCompanies;
+};
+
 export const api = {
   async getStats(): Promise<StatsResponse> {
     if (cachedStats) return cachedStats;
@@ -138,17 +164,31 @@ export const api = {
     } catch {}
 
     // Fallback: Client-side filtration
-    if (!cachedCompanies) {
-      if (window.NEXUS_DATA?.companies?.length) {
-        cachedCompanies = window.NEXUS_DATA.companies;
-      } else {
-        const base = getBaseUrl();
-        const res = await fetch(`${base}data/companies_featured.json`);
-        cachedCompanies = await res.json();
+    let filtered: Company[] = [];
+    const isTechSearch = params.category === 'Information Technology' || 
+                         params.category === 'All Tech Grassroots' || 
+                         params.category === 'Software & Cloud Services';
+
+    if (isTechSearch) {
+      try {
+        filtered = await loadTechCompanies();
+      } catch (err) {
+        console.error('Failed to load tech directory, falling back to featured:', err);
       }
     }
 
-    let filtered = cachedCompanies || [];
+    if (filtered.length === 0) {
+      if (!cachedCompanies) {
+        if (window.NEXUS_DATA?.companies?.length) {
+          cachedCompanies = window.NEXUS_DATA.companies;
+        } else {
+          const base = getBaseUrl();
+          const res = await fetch(`${base}data/companies_featured.json`);
+          cachedCompanies = await res.json();
+        }
+      }
+      filtered = cachedCompanies || [];
+    }
     if (params.country && params.country !== 'ALL') {
       if (params.country === 'IN') {
         filtered = filtered.filter(c => c.country === 'IN');
