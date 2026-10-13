@@ -61,7 +61,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
     showToast(`Copied ${name} careers URL`, 'success');
   };
 
-  const hasActiveFilters = search || category !== 'ALL' || country !== 'ALL';
+  const hasActiveFilters = search || category !== 'ALL' || country !== 'ALL' || state !== 'ALL';
 
   return (
     <div className="space-y-6">
@@ -94,20 +94,23 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             value={country}
             onChange={(e) => {
               setCountry(e.target.value);
+              setState('ALL');
               setPage(1);
             }}
             className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
             <option value="ALL">All Countries (Global)</option>
-            <option value="US">🇺🇸 United States (122k+)</option>
-            <option value="GB">🇬🇧 United Kingdom (53k+ Tech)</option>
-            <option value="IN">🇮🇳 India (37k+ Tech)</option>
-            <option value="CA">🇨🇦 Canada (22k+ Tech)</option>
-            <option value="ES">🇪🇸 Spain (20k+ Tech)</option>
-            <option value="FR">🇫🇷 France (19k+ Tech)</option>
-            <option value="DE">🇩🇪 Germany (18k+ Tech)</option>
-            <option value="BR">🇧🇷 Brazil (17k+ Tech)</option>
-            <option value="AU">🇦🇺 Australia (11k+ Tech)</option>
+            <option value="US">🇺🇸 United States (1.7M+ Verified)</option>
+            <option value="GB">🇬🇧 United Kingdom (385k+)</option>
+            <option value="IN">🇮🇳 India (356k+)</option>
+            <option value="CA">🇨🇦 Canada (200k+)</option>
+            <option value="DE">🇩🇪 Germany (170k+)</option>
+            <option value="IT">🇮🇹 Italy (128k+)</option>
+            <option value="NL">🇳🇱 Netherlands (128k+)</option>
+            <option value="AU">🇦🇺 Australia (123k+)</option>
+            <option value="BR">🇧🇷 Brazil (99k+)</option>
+            <option value="FR">🇫🇷 France (96k+)</option>
+            <option value="ES">🇪🇸 Spain (27k+)</option>
           </select>
 
           {(country === 'US' || country === 'ALL') && (
@@ -120,32 +123,57 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
               className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
             >
               <option value="ALL">All US States (Nationwide)</option>
-              <option value="CA">California (41,473 Tech)</option>
-              <option value="TX">Texas (17,234 Tech)</option>
-              <option value="NY">New York (15,782 Tech)</option>
-              <option value="FL">Florida (13,871 Tech)</option>
-              <option value="IL">Illinois (8,619 Tech)</option>
-              <option value="VA">Virginia (8,387 Tech)</option>
-              <option value="GA">Georgia (7,757 Tech)</option>
-              <option value="MA">Massachusetts (7,443 Tech)</option>
-              <option value="NJ">New Jersey (7,386 Tech)</option>
-              <option value="PA">Pennsylvania (6,569 Tech)</option>
-              <option value="WA">Washington (6,367 Tech)</option>
-              <option value="CO">Colorado (5,926 Tech)</option>
-              <option value="OH">Ohio (5,797 Tech)</option>
-              <option value="NC">North Carolina (5,567 Tech)</option>
-              <option value="MI">Michigan (4,683 Tech)</option>
-              <option value="MD">Maryland (4,670 Tech)</option>
-              <option value="AZ">Arizona (3,914 Tech)</option>
-              <option value="MN">Minnesota (3,846 Tech)</option>
-              <option value="OR">Oregon (2,935 Tech)</option>
-              <option value="MO">Missouri (2,954 Tech)</option>
-              <option value="WI">Wisconsin (2,840 Tech)</option>
-              <option value="TN">Tennessee (2,642 Tech)</option>
-              <option value="UT">Utah (2,609 Tech)</option>
-              <option value="CT">Connecticut (2,429 Tech)</option>
-              <option value="NV">Nevada (1,925 Tech)</option>
-              <option value="DC">Washington D.C. (1,462 Tech)</option>
+              <option value="CA">California (269,046)</option>
+              <option value="TX">Texas (132,776)</option>
+              <option value="NY">New York (130,249)</option>
+              <option value="FL">Florida (119,542)</option>
+              <option value="IL">Illinois (75,406)</option>
+              <option value="PA">Pennsylvania (61,212)</option>
+              <option value="OH">Ohio (55,634)</option>
+              <option value="GA">Georgia (55,272)</option>
+              <option value="MA">Massachusetts (54,906)</option>
+              <option value="NJ">New Jersey (50,064)</option>
+              <option value="CO">Colorado (48,093)</option>
+              <option value="NC">North Carolina (48,021)</option>
+              <option value="VA">Virginia (46,776)</option>
+              <option value="WA">Washington (45,576)</option>
+              <option value="MI">Michigan (45,322)</option>
+              <option value="MN">Minnesota (35,096)</option>
+              <option value="AZ">Arizona (34,396)</option>
+              <option value="MD">Maryland (32,516)</option>
+              <option value="WI">Wisconsin (30,345)</option>
+              <option value="MO">Missouri (28,222)</option>
+              <option value="IN">Indiana (28,143)</option>
+              <option value="TN">Tennessee (26,814)</option>
+              <option value="OR">Oregon (26,682)</option>
+              <option value="CT">Connecticut (22,375)</option>
+              <option value="UT">Utah (18,409)</option>
+              <option value="SC">South Carolina (17,160)</option>
+              <option value="LA">Louisiana (15,489)</option>
+              <option value="NV">Nevada (15,021)</option>
+              <option value="AL">Alabama (14,674)</option>
+              <option value="DC">Washington D.C. (14,141)</option>
+              <option value="OK">Oklahoma (13,179)</option>
+              <option value="KS">Kansas (13,077)</option>
+              <option value="KY">Kentucky (13,022)</option>
+              <option value="IA">Iowa (11,888)</option>
+              <option value="NH">New Hampshire (9,815)</option>
+              <option value="NE">Nebraska (8,808)</option>
+              <option value="AR">Arkansas (8,111)</option>
+              <option value="ID">Idaho (7,660)</option>
+              <option value="ME">Maine (6,918)</option>
+              <option value="NM">New Mexico (6,821)</option>
+              <option value="RI">Rhode Island (6,125)</option>
+              <option value="MS">Mississippi (5,791)</option>
+              <option value="DE">Delaware (5,536)</option>
+              <option value="HI">Hawaii (5,345)</option>
+              <option value="MT">Montana (4,750)</option>
+              <option value="VT">Vermont (4,661)</option>
+              <option value="WV">West Virginia (3,747)</option>
+              <option value="AK">Alaska (3,445)</option>
+              <option value="SD">South Dakota (3,193)</option>
+              <option value="ND">North Dakota (2,878)</option>
+              <option value="WY">Wyoming (2,831)</option>
             </select>
           )}
 
@@ -189,7 +217,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
           </div>
           <span className="font-mono text-brand-600 dark:text-brand-400 font-semibold flex items-center space-x-1.5">
             {loading && <span className="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse" />}
-            <span>{loading ? 'Scanning 932k+ Registry...' : `${totalCount.toLocaleString()} Verified Employers`}</span>
+            <span>{loading ? 'Scanning 3.5M+ Verified Registry...' : `${totalCount.toLocaleString()} Verified Employers`}</span>
           </span>
         </div>
       </div>

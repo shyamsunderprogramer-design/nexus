@@ -20,8 +20,20 @@ let cachedStats: StatsResponse | null = null;
 let cachedUniversities: University[] | null = null;
 let cachedCompanies: Company[] | null = null;
 let cachedBridge: Record<string, StateBridgeData> | null = null;
-
-
+export const STANDARD_CATEGORIES = [
+  'Information Technology',
+  'Banking & Financial Services',
+  'Healthcare & Pharmaceuticals',
+  'Education & EdTech',
+  'Retail & Fashion Apparel',
+  'Automotive & Manufacturing',
+  'Infrastructure & Real Estate',
+  'Energy & Natural Resources',
+  'Media, Gaming & Entertainment',
+  'Telecommunications',
+  'Logistics & Supply Chain',
+  'Other Industries',
+];
 
 const shardCache = new Map<string, Company[]>();
 
@@ -34,22 +46,29 @@ const fetchShard = async (shardKey: string): Promise<Company[]> => {
     const res = await fetch(`${base}data/shards/${shardKey}.json`);
     if (!res.ok) return [];
     const rawData: any[][] = await res.json();
-    const parsed: Company[] = rawData.map((r, idx) => ({
-      oid: `sh_${shardKey}_${idx}`,
-      name: r[0],
-      legal_name: r[0],
-      category: 'Information Technology',
-      subcategory: r[5] || 'Software & Services',
-      city: r[2] || 'HQ',
-      state: r[3] || '',
-      country: r[4] || 'US',
-      website: r[1] ? `https://${r[1]}` : undefined,
-      careers_url: r[1] ? `https://${r[1]}` : undefined,
-      employees_approx: r[6] || 10,
-      description: `${r[5] || 'Technology'} company in ${r[2] ? `${r[2]}, ` : ''}${r[3] || r[4]}${r[6] ? ` employing ~${Number(r[6]).toLocaleString()} professionals` : ''}${r[7] ? `, founded in ${r[7]}` : ''}.`,
-      verified: true,
-      source: 'Regional Grassroots Tech Registry'
-    }));
+    const parsed: Company[] = rawData.map((r, idx) => {
+      const rawCat = r[5];
+      const cat = typeof rawCat === 'number'
+        ? (STANDARD_CATEGORIES[rawCat] || 'Other Industries')
+        : (typeof rawCat === 'string' && rawCat ? rawCat : 'Other Industries');
+
+      return {
+        oid: `sh_${shardKey}_${idx}`,
+        name: r[0],
+        legal_name: r[0],
+        category: cat,
+        subcategory: r[6] || cat || 'Enterprise',
+        city: r[2] || 'HQ',
+        state: r[3] || '',
+        country: r[4] || 'US',
+        website: r[1] ? `https://${r[1]}` : undefined,
+        careers_url: r[1] ? `https://${r[1]}` : undefined,
+        employees_approx: r[7] || 10,
+        description: `${r[6] || cat} organization in ${r[2] ? `${r[2]}, ` : ''}${r[3] || r[4]}${r[7] ? ` employing ~${Number(r[7]).toLocaleString()} professionals` : ''}${r[8] ? `, founded in ${r[8]}` : ''}.`,
+        verified: true,
+        source: 'Verified Enterprise Registry'
+      };
+    });
     shardCache.set(shardKey, parsed);
     return parsed;
   } catch (e) {
@@ -185,21 +204,23 @@ export const api = {
     // Fallback: Client-side filtration
     let filtered: Company[] = [];
 
-    // On-demand regional shard loading for targeted tech queries
-    if (params.category === 'Information Technology') {
-      let shardKey = '';
-      if (params.state && params.state !== 'ALL') {
-        shardKey = `us_${params.state.toLowerCase()}`;
-      } else if (params.country && params.country !== 'ALL' && params.country !== 'US') {
-        shardKey = params.country.toLowerCase();
-      }
+    // On-demand regional shard loading whenever user specifies a state OR a non-US country
+    let shardKey = '';
+    if (params.state && params.state !== 'ALL') {
+      shardKey = `us_${params.state.toLowerCase()}`;
+    } else if (params.country && params.country !== 'ALL' && params.country !== 'US') {
+      shardKey = params.country.toLowerCase();
+    }
 
-      if (shardKey) {
-        filtered = await fetchShard(shardKey);
+    if (shardKey) {
+      filtered = await fetchShard(shardKey);
+      if (params.category && params.category !== 'ALL') {
+        const targetCat = params.category;
+        filtered = filtered.filter(c => (c.category || '') === targetCat);
       }
     }
 
-    if (filtered.length === 0) {
+    if (filtered.length === 0 && !shardKey) {
       if (!cachedCompanies) {
         if (window.NEXUS_DATA?.companies?.length) {
           cachedCompanies = window.NEXUS_DATA.companies;
