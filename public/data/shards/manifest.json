@@ -1,0 +1,312 @@
+{
+  "us_ny": {
+    "file": "us_ny.json",
+    "count": 15782,
+    "size_kb": 1466.1
+  },
+  "global_other": {
+    "file": "global_other.json",
+    "count": 164181,
+    "size_kb": 17649.5
+  },
+  "us_ca": {
+    "file": "us_ca.json",
+    "count": 41473,
+    "size_kb": 3948.4
+  },
+  "in": {
+    "file": "in.json",
+    "count": 37323,
+    "size_kb": 3983.0
+  },
+  "us_wa": {
+    "file": "us_wa.json",
+    "count": 6367,
+    "size_kb": 607.1
+  },
+  "us_tx": {
+    "file": "us_tx.json",
+    "count": 17234,
+    "size_kb": 1597.8
+  },
+  "us_nj": {
+    "file": "us_nj.json",
+    "count": 7386,
+    "size_kb": 745.0
+  },
+  "fr": {
+    "file": "fr.json",
+    "count": 19302,
+    "size_kb": 1829.8
+  },
+  "gb": {
+    "file": "gb.json",
+    "count": 53184,
+    "size_kb": 5226.2
+  },
+  "us_va": {
+    "file": "us_va.json",
+    "count": 8387,
+    "size_kb": 844.4
+  },
+  "us_ct": {
+    "file": "us_ct.json",
+    "count": 2429,
+    "size_kb": 243.6
+  },
+  "us_general": {
+    "file": "us_general.json",
+    "count": 304306,
+    "size_kb": 23509.9
+  },
+  "us_ks": {
+    "file": "us_ks.json",
+    "count": 1317,
+    "size_kb": 129.1
+  },
+  "us_ma": {
+    "file": "us_ma.json",
+    "count": 7443,
+    "size_kb": 734.7
+  },
+  "es": {
+    "file": "es.json",
+    "count": 20696,
+    "size_kb": 1919.4
+  },
+  "ca": {
+    "file": "ca.json",
+    "count": 22510,
+    "size_kb": 2188.1
+  },
+  "au": {
+    "file": "au.json",
+    "count": 11311,
+    "size_kb": 1200.0
+  },
+  "us_pa": {
+    "file": "us_pa.json",
+    "count": 6569,
+    "size_kb": 676.2
+  },
+  "us_md": {
+    "file": "us_md.json",
+    "count": 4670,
+    "size_kb": 477.1
+  },
+  "nl": {
+    "file": "nl.json",
+    "count": 16814,
+    "size_kb": 1604.1
+  },
+  "us_ga": {
+    "file": "us_ga.json",
+    "count": 7757,
+    "size_kb": 749.8
+  },
+  "us_mo": {
+    "file": "us_mo.json",
+    "count": 2954,
+    "size_kb": 290.7
+  },
+  "us_fl": {
+    "file": "us_fl.json",
+    "count": 13871,
+    "size_kb": 1350.7
+  },
+  "de": {
+    "file": "de.json",
+    "count": 17827,
+    "size_kb": 1780.4
+  },
+  "us_la": {
+    "file": "us_la.json",
+    "count": 1254,
+    "size_kb": 124.0
+  },
+  "us_il": {
+    "file": "us_il.json",
+    "count": 8619,
+    "size_kb": 836.9
+  },
+  "us_wi": {
+    "file": "us_wi.json",
+    "count": 2840,
+    "size_kb": 280.3
+  },
+  "us_nc": {
+    "file": "us_nc.json",
+    "count": 5567,
+    "size_kb": 572.7
+  },
+  "us_mi": {
+    "file": "us_mi.json",
+    "count": 4683,
+    "size_kb": 460.1
+  },
+  "us_wv": {
+    "file": "us_wv.json",
+    "count": 392,
+    "size_kb": 41.1
+  },
+  "us_co": {
+    "file": "us_co.json",
+    "count": 5926,
+    "size_kb": 572.5
+  },
+  "us_id": {
+    "file": "us_id.json",
+    "count": 742,
+    "size_kb": 67.1
+  },
+  "br": {
+    "file": "br.json",
+    "count": 17684,
+    "size_kb": 1938.3
+  },
+  "us_ky": {
+    "file": "us_ky.json",
+    "count": 1242,
+    "size_kb": 122.7
+  },
+  "us_oh": {
+    "file": "us_oh.json",
+    "count": 5797,
+    "size_kb": 545.2
+  },
+  "us_az": {
+    "file": "us_az.json",
+    "count": 3914,
+    "size_kb": 372.2
+  },
+  "us_ne": {
+    "file": "us_ne.json",
+    "count": 897,
+    "size_kb": 84.6
+  },
+  "us_nv": {
+    "file": "us_nv.json",
+    "count": 1925,
+    "size_kb": 179.8
+  },
+  "us_ar": {
+    "file": "us_ar.json",
+    "count": 766,
+    "size_kb": 75.2
+  },
+  "us_tn": {
+    "file": "us_tn.json",
+    "count": 2642,
+    "size_kb": 261.8
+  },
+  "us_or": {
+    "file": "us_or.json",
+    "count": 2935,
+    "size_kb": 269.8
+  },
+  "us_ut": {
+    "file": "us_ut.json",
+    "count": 2609,
+    "size_kb": 235.0
+  },
+  "us_al": {
+    "file": "us_al.json",
+    "count": 1547,
+    "size_kb": 149.9
+  },
+  "us_ri": {
+    "file": "us_ri.json",
+    "count": 588,
+    "size_kb": 59.2
+  },
+  "us_in": {
+    "file": "us_in.json",
+    "count": 2830,
+    "size_kb": 280.9
+  },
+  "us_mn": {
+    "file": "us_mn.json",
+    "count": 3846,
+    "size_kb": 383.7
+  },
+  "us_dc": {
+    "file": "us_dc.json",
+    "count": 1462,
+    "size_kb": 163.7
+  },
+  "us_nh": {
+    "file": "us_nh.json",
+    "count": 1307,
+    "size_kb": 131.4
+  },
+  "us_sc": {
+    "file": "us_sc.json",
+    "count": 1554,
+    "size_kb": 162.8
+  },
+  "us_wy": {
+    "file": "us_wy.json",
+    "count": 313,
+    "size_kb": 29.5
+  },
+  "us_ms": {
+    "file": "us_ms.json",
+    "count": 550,
+    "size_kb": 54.1
+  },
+  "us_ok": {
+    "file": "us_ok.json",
+    "count": 1316,
+    "size_kb": 127.4
+  },
+  "us_ak": {
+    "file": "us_ak.json",
+    "count": 270,
+    "size_kb": 26.3
+  },
+  "us_nm": {
+    "file": "us_nm.json",
+    "count": 703,
+    "size_kb": 69.4
+  },
+  "us_ia": {
+    "file": "us_ia.json",
+    "count": 1065,
+    "size_kb": 100.7
+  },
+  "us_me": {
+    "file": "us_me.json",
+    "count": 570,
+    "size_kb": 54.0
+  },
+  "us_mt": {
+    "file": "us_mt.json",
+    "count": 447,
+    "size_kb": 42.3
+  },
+  "us_hi": {
+    "file": "us_hi.json",
+    "count": 518,
+    "size_kb": 48.4
+  },
+  "us_nd": {
+    "file": "us_nd.json",
+    "count": 288,
+    "size_kb": 29.0
+  },
+  "us_de": {
+    "file": "us_de.json",
+    "count": 1094,
+    "size_kb": 105.5
+  },
+  "us_vt": {
+    "file": "us_vt.json",
+    "count": 403,
+    "size_kb": 38.3
+  },
+  "us_sd": {
+    "file": "us_sd.json",
+    "count": 290,
+    "size_kb": 28.8
+  }
+}

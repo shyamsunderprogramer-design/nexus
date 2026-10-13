@@ -98,15 +98,56 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             }}
             className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
-            <option value="ALL">All Countries (7.17M+ Global)</option>
-            <option value="US">🇺🇸 United States (2.2M+)</option>
-            <option value="GB">🇬🇧 United Kingdom (510k+)</option>
-            <option value="CA">🇨🇦 Canada (185k+)</option>
-            <option value="IN">🇮🇳 India (144k+)</option>
-            <option value="DE">🇩🇪 Germany (118k+)</option>
-            <option value="AU">🇦🇺 Australia (117k+)</option>
-            <option value="FR">🇫🇷 France (114k+)</option>
+            <option value="ALL">All Countries (Global)</option>
+            <option value="US">🇺🇸 United States (122k+)</option>
+            <option value="GB">🇬🇧 United Kingdom (53k+ Tech)</option>
+            <option value="IN">🇮🇳 India (37k+ Tech)</option>
+            <option value="CA">🇨🇦 Canada (22k+ Tech)</option>
+            <option value="ES">🇪🇸 Spain (20k+ Tech)</option>
+            <option value="FR">🇫🇷 France (19k+ Tech)</option>
+            <option value="DE">🇩🇪 Germany (18k+ Tech)</option>
+            <option value="BR">🇧🇷 Brazil (17k+ Tech)</option>
+            <option value="AU">🇦🇺 Australia (11k+ Tech)</option>
           </select>
+
+          {(country === 'US' || country === 'ALL') && (
+            <select
+              value={state}
+              onChange={(e) => {
+                setState(e.target.value);
+                setPage(1);
+              }}
+              className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
+            >
+              <option value="ALL">All US States (Nationwide)</option>
+              <option value="CA">California (41,473 Tech)</option>
+              <option value="TX">Texas (17,234 Tech)</option>
+              <option value="NY">New York (15,782 Tech)</option>
+              <option value="FL">Florida (13,871 Tech)</option>
+              <option value="IL">Illinois (8,619 Tech)</option>
+              <option value="VA">Virginia (8,387 Tech)</option>
+              <option value="GA">Georgia (7,757 Tech)</option>
+              <option value="MA">Massachusetts (7,443 Tech)</option>
+              <option value="NJ">New Jersey (7,386 Tech)</option>
+              <option value="PA">Pennsylvania (6,569 Tech)</option>
+              <option value="WA">Washington (6,367 Tech)</option>
+              <option value="CO">Colorado (5,926 Tech)</option>
+              <option value="OH">Ohio (5,797 Tech)</option>
+              <option value="NC">North Carolina (5,567 Tech)</option>
+              <option value="MI">Michigan (4,683 Tech)</option>
+              <option value="MD">Maryland (4,670 Tech)</option>
+              <option value="AZ">Arizona (3,914 Tech)</option>
+              <option value="MN">Minnesota (3,846 Tech)</option>
+              <option value="OR">Oregon (2,935 Tech)</option>
+              <option value="MO">Missouri (2,954 Tech)</option>
+              <option value="WI">Wisconsin (2,840 Tech)</option>
+              <option value="TN">Tennessee (2,642 Tech)</option>
+              <option value="UT">Utah (2,609 Tech)</option>
+              <option value="CT">Connecticut (2,429 Tech)</option>
+              <option value="NV">Nevada (1,925 Tech)</option>
+              <option value="DC">Washington D.C. (1,462 Tech)</option>
+            </select>
+          )}
 
           <select
             value={category}
