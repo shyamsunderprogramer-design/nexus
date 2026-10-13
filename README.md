@@ -25,7 +25,7 @@
   🌐 <b><a href="https://shyamsunderprogramer-design.github.io/nexus/">🚀 LAUNCH LIVE WEB APP: shyamsunderprogramer-design.github.io/nexus</a></b> 🌐
 </p>
 
-[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [🎥 Video Walkthrough](#-live-interactive-preview--video-walkthrough) • [⭐ Support & Star](#-support-open-source-talent-intelligence--star-this-repo) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
+[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [🖥️ Platform Tour](#-live-interactive-platform-showcase) • [⭐ Support & Star](#-support-open-source-talent-intelligence--star-this-repo) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
 
 </div>
 
@@ -41,29 +41,29 @@
 
 ---
 
-## 🎥 Live Interactive Preview & Video Walkthrough
+## 🖥️ Live Interactive Platform Showcase
 
 <div align="center">
   <a href="https://shyamsunderprogramer-design.github.io/nexus/">
-    <img src="public/preview-banner.svg" alt="NEXUS Video Walkthrough & Interactive Demo" width="100%" />
+    <img src="public/preview-banner.svg" alt="NEXUS Live Interactive Platform Showcase" width="100%" />
   </a>
   <br/>
   <p align="center">
-    <b>▶️ <a href="https://shyamsunderprogramer-design.github.io/nexus/">Click here to launch the Live Cockpit &amp; Interactive Demo</a></b><br/>
+    <b>🚀 <a href="https://shyamsunderprogramer-design.github.io/nexus/">Click here to launch the Live Interactive Cockpit</a></b><br/>
     <i>Sub-millisecond query performance • Zero sign-up • 100% Free &amp; Open Source</i>
   </p>
 </div>
 
-### ⏱️ Video Walkthrough & Feature Chapters
+### 🧭 Interactive Platform Modules & Tour
 
-| Timestamp | Feature | Description |
-|:---:|:---|:---|
-| `00:00` | **⚡ Cockpit Omni-Search (`⌘K`)** | Sub-millisecond indexed lookup across 6,299 campuses & 7.17M enterprise records |
-| `00:45` | **📊 Executive Macro Analytics** | Live ATS distribution (Workday, PeopleAdmin, NEOGOV) & 12 industry breakdowns |
-| `01:30` | **🎓 Campus & Talent Directory** | Filter by Carnegie R1, STEM Heavy (>20%), H-1B Cap Exempt, and Handshake hubs |
-| `02:15` | **🏢 Enterprise Employer Index** | 3.51M+ verified portals across all 12 industries with direct HR deep-links |
-| `03:00` | **🌉 Regional Talent-to-Market Bridge** | Dual-column matrix matching regional graduation pipelines with local employer hiring demand |
-| `03:45` | **🔍 Slide-Out Inspector Drawer** | Glassmorphic deep-dive drawer with regulatory citations & ATS telemetry |
+| Cockpit Module | Key Capabilities | Intelligence Scope |
+|:---|:---|:---|
+| **⚡ Cockpit Omni-Search (`⌘K`)** | Sub-millisecond indexed lookup across institutions, employers, and cities | 6,299 campuses & 7.17M enterprise records |
+| **📊 Executive Macro Analytics** | Live ATS distribution (Workday, PeopleAdmin, NEOGOV) & 12 industry breakdowns | Real-time interactive charts & verified ratios |
+| **🎓 Campus & Talent Directory** | Multi-criteria filtering by Carnegie R1/NIRF, STEM share (>20%), H-1B Cap Exempt | 3,987 direct job portals & 2,958 career centers |
+| **🏢 Enterprise Employer Index** | On-demand regional shard streaming across all 12 industries | 3.51M+ verified portals with active corporate URLs |
+| **🌉 Regional Talent-to-Market Bridge** | Dual-column matrix matching regional graduation pipelines with corporate hiring | State-by-state student output vs employer demand |
+| **🔍 Slide-Out Inspector Drawer** | Glassmorphic deep-dive drawer with regulatory citations & ATS telemetry | Full institutional profiles, SEC tickers & addresses |
 
 ---
 
@@ -355,7 +355,7 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for more informa
 ---
 
 <div align="center">
-  <sub>Developed with ❤️ by <b>Shyam Sunder Daggupati</b> • Built for campus career advisors, students, and talent leaders worldwide.</sub>
+  <sub>Developed with ❤️ by <b>Shyam Sunder</b> • Built for campus career advisors, students, and talent leaders worldwide.</sub>
   <br/><br/>
   <a href="https://github.com/shyamsunderprogramer-design/nexus/stargazers">
     <img src="https://img.shields.io/badge/%E2%AD%90%20Star%20on%20GitHub-NEXUS-eab308?style=for-the-badge&logo=github" alt="Star on GitHub" />

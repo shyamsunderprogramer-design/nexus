@@ -23,7 +23,7 @@
     "tailwindcss",
     "framer-motion"
   ],
-  "author": "Shyam Sunder Daggupati",
+  "author": "Shyam Sunder",
   "license": "MIT",
   "dependencies": {
     "better-sqlite3": "^13.0.3",

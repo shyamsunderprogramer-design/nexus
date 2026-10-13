@@ -120,7 +120,7 @@ export const App: React.FC = () => {
               <span className="font-bold text-slate-800 dark:text-slate-300">NEXUS</span> — National Employment & eXploration Unified System
             </div>
             <div className="flex items-center space-x-2">
-              <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder Daggupati</span> · Open Source (MIT)</span>
+              <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
               <span className="text-slate-400">·</span>
               <button
                 onClick={() => setIsCommandPaletteOpen(true)}
