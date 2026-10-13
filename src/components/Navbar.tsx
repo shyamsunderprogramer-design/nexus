@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
             <div className="hidden xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>79,600+ Portals</span>
+              <span>3.51M+ Portals</span>
             </div>
 
             {/* Accent Palette Dropdown */}

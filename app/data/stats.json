@@ -34,10 +34,10 @@
     }
   },
   "employers": {
-    "curated_total": 100489,
+    "curated_total": 180000,
     "india_total": 121,
-    "federal_total": 6274467,
-    "verified_carriers_applied": 79571,
+    "federal_total": 7173426,
+    "verified_carriers_applied": 3512235,
     "industries": {
       "Healthcare Providers": 35449,
       "Mechanical & Manufacturing": 34708,

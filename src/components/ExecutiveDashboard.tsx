@@ -206,12 +206,12 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
       icon: Building2,
       color: 'cyan',
       gradient: 'from-cyan-500 to-transparent',
-      metric: '6.27 Million Orgs',
-      desc: 'Max-coverage federal register coverage across logistics, healthcare, tech startups, and NIFTY 50 leaders.',
+      metric: '7.17 Million Orgs',
+      desc: 'Comprehensive multi-industry registry across tech, healthcare, finance, infrastructure, and global leaders.',
       stats: [
-        { label: 'Carrier Websites Verified', val: '79,600+ Live', color: 'emerald' },
-        { label: 'SEC Form D Issuers (Tech/VC)', val: '363,612 Companies', color: 'cyan' },
-        { label: 'Cross-Register Merges', val: '505,068 Deduplicated', color: 'purple' },
+        { label: 'Carrier Websites Verified', val: '3.51M+ Live', color: 'emerald' },
+        { label: 'Featured Curated Records', val: '180,000 Companies', color: 'cyan' },
+        { label: 'Total Enterprise Registry', val: '7,173,426 Organizations', color: 'purple' },
       ],
     },
     {
@@ -299,7 +299,7 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
                 Macro Economy & Industry Distribution
               </h2>
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Categorization across 6.27M registered employers
+                Categorization across 7.17M registered employers
               </p>
             </div>
             <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-white/5">

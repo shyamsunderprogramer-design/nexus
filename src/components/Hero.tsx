@@ -10,9 +10,9 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPalette }) => {
   const uniCount = stats?.universities.total || 6299;
-  const compCount = stats ? (stats.employers.federal_total / 1000000).toFixed(2) + 'M' : '6.27M';
-  const linksCount = (79600).toLocaleString();
-  const regionsCount = stats?.state_counts || 74;
+  const compCount = stats ? (stats.employers.federal_total / 1000000).toFixed(2) + 'M' : '7.17M';
+  const linksCount = stats ? (stats.employers.verified_carriers_applied / 1000000).toFixed(2) + 'M+' : '3.51M+';
+  const regionsCount = stats?.state_counts || 132;
 
   return (
     <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
@@ -32,11 +32,11 @@ export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPal
               </span>
               <span className="text-slate-400 dark:text-white/30">|</span>
               <span className="text-slate-700 dark:text-slate-300 text-[11px] font-mono">
-                🇺🇸 US · 🇨🇦 CA · 🇮🇳 IN
+                🇺🇸 US · 🇬🇧 UK · 🇮🇳 IN · 🇨🇦 CA · 🇪🇺 GLOBAL
               </span>
               <span className="hidden sm:inline text-slate-400 dark:text-white/30">|</span>
               <span className="hidden sm:inline text-emerald-600 dark:text-emerald-400 text-[11px] font-mono">
-                79,600+ Portals Live
+                {linksCount} Portals Live
               </span>
             </div>
             
@@ -50,7 +50,7 @@ export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPal
             
             <p className="mt-3 text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
               Unifying <strong className="text-slate-900 dark:text-white font-semibold">{uniCount.toLocaleString()} postsecondary institutions</strong> with{' '}
-              <strong className="text-slate-900 dark:text-white font-semibold">6.27M+ enterprise employers</strong> across the US, Canada, and India. Real-time hiring portal links, STEM graduate outputs, and regional industry bridges.
+              <strong className="text-slate-900 dark:text-white font-semibold">{compCount}+ enterprise employers</strong> across all 12 industries worldwide ({linksCount} verified portals with real-time links).
             </p>
 
             {/* Quick Interactive Intelligence Actions */}
