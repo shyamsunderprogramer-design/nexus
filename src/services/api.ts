@@ -157,10 +157,15 @@ export const api = {
       filtered = filtered.filter(u => u.h1b_exempt);
     }
     if (params.r1) {
-      filtered = filtered.filter(u => (u.carnegie || '').includes('Very High'));
+      filtered = filtered.filter(u => 
+        (u.carnegie || '').includes('Very High') ||
+        (u.carnegie || '').toLowerCase().includes('r1') ||
+        Boolean(u.nirf_rank && u.nirf_rank <= 50)
+      );
     }
     if (params.ats) {
-      filtered = filtered.filter(u => (u.jobs_ats || '').toLowerCase() === params.ats?.toLowerCase());
+      const targetAts = params.ats.toLowerCase();
+      filtered = filtered.filter(u => (u.jobs_ats || '').toLowerCase().includes(targetAts));
     }
     if (params.q) {
       const q = params.q.toLowerCase();

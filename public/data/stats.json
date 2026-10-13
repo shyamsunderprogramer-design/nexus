@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-09T17:42:41.232643",
+  "generated_at": "2026-10-13T15:51:20.567493",
   "universities": {
     "us_total": 6035,
     "ca_total": 209,
@@ -9,18 +9,18 @@
     "career_centers_confirmed": 2958,
     "both_confirmed": 2482,
     "hiring_systems_identified": {
-      "SAMARTH Portal": 3,
-      "IISc Recruitment Portal": 1,
-      "TIFR Portal": 1,
-      "IITM FacApp": 1,
-      "IITD Recruitment Portal": 1,
-      "IITB Portal": 1,
-      "DOFA Recruitment Portal": 1,
-      "ERP Career System": 1,
-      "IITR Careers Portal": 1,
-      "IITG Online Portal": 1,
-      "IITH Faculty Portal": 1,
-      "DOFA Portal": 1
+      "NEOGOV": 91,
+      "PeopleAdmin": 51,
+      "Workday": 48,
+      "Paycom": 34,
+      "ADP": 34,
+      "UKG": 15,
+      "Oracle Cloud HCM": 14,
+      "SmartRecruiters": 13,
+      "Paylocity": 12,
+      "Greenhouse": 11,
+      "iCIMS": 8,
+      "BambooHR": 4
     },
     "sectors": {
       "Private not-for-profit 4-year": 1623,
@@ -41,10 +41,11 @@
     "industries": {
       "Healthcare Providers": 35449,
       "Mechanical & Manufacturing": 34708,
-      "Information Technology": 15799,
+      "Information Technology": 15151,
       "MedTech & Pharma": 13424,
       "Other Industries": 13120,
       "Not verified": 1930,
+      "IT": 648,
       "Other Engineering": 530,
       "Logistics & Transport": 237,
       "Data Centers & Cloud": 170
@@ -66,8 +67,8 @@
         "count": 1760961
       },
       {
-        "ind": "Information Technology",
-        "slug": "information-technology",
+        "ind": "IT",
+        "slug": "it",
         "count": 37819
       },
       {

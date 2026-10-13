@@ -76,8 +76,8 @@ app.get('/api/universities', (req: Request, res: Response) => {
   if (state !== 'ALL') results = results.filter((u: any) => u.state === state);
   if (stem) results = results.filter((u: any) => u.stem_share && u.stem_share >= 0.20);
   if (h1b) results = results.filter((u: any) => u.h1b_exempt);
-  if (r1) results = results.filter((u: any) => (u.carnegie || '').includes('Very High'));
-  if (ats) results = results.filter((u: any) => (u.jobs_ats || '').toLowerCase() === ats);
+  if (r1) results = results.filter((u: any) => (u.carnegie || '').includes('Very High') || (u.carnegie || '').toLowerCase().includes('r1') || Boolean(u.nirf_rank && u.nirf_rank <= 50));
+  if (ats) results = results.filter((u: any) => (u.jobs_ats || '').toLowerCase().includes(ats));
   if (q) {
     results = results.filter((u: any) => 
       (u.name || '').toLowerCase().includes(q) ||

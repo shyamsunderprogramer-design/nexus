@@ -513,8 +513,8 @@
     "state": "AK",
     "universities_count": 11,
     "total_students": 23356,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 704,
+    "h1b_exempt_campuses": 8,
     "top_institutions": [
       {
         "name": "Alaska Bible College",
@@ -526,7 +526,7 @@
         "name": "Alaska Career College",
         "city": "Anchorage",
         "students": 255,
-        "jobs_url": null
+        "jobs_url": "https://www.alaskacareercollege.edu/careers"
       },
       {
         "name": "Alaska Christian College",
@@ -538,19 +538,19 @@
         "name": "Alaska Pacific University",
         "city": "Anchorage",
         "students": 578,
-        "jobs_url": null
+        "jobs_url": "https://www.alaskapacific.edu/about/employment/"
       },
       {
         "name": "Alaska Vocational Technical Center",
         "city": "Seward",
         "students": 452,
-        "jobs_url": null
+        "jobs_url": "https://avtec.edu/careers/"
       },
       {
         "name": "Charter College",
         "city": "Anchorage",
         "students": 2277,
-        "jobs_url": null
+        "jobs_url": "https://chartercollege.edu/jobs/"
       },
       {
         "name": "Ilisagvik College",
@@ -562,7 +562,7 @@
         "name": "University of Alaska Anchorage",
         "city": "Anchorage",
         "students": 10796,
-        "jobs_url": null
+        "jobs_url": "https://careers.alaska.edu"
       },
       {
         "name": "University of Alaska Fairbanks",
@@ -574,7 +574,7 @@
         "name": "University of Alaska Southeast",
         "city": "Juneau",
         "students": 1918,
-        "jobs_url": null
+        "jobs_url": "https://careers.alaska.edu/jobs/search/staff-jobs?page=1&cities%5B%5D=Juneau&cities%5B%5D=Ketchikan&cities%5B%5D=Sitka&query="
       }
     ],
     "companies_curated_count": 289,
@@ -646,20 +646,20 @@
     "state": "AL",
     "universities_count": 77,
     "total_students": 306276,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 15115,
+    "h1b_exempt_campuses": 57,
     "top_institutions": [
       {
         "name": "Alabama A & M University",
         "city": "Normal",
         "students": 6614,
-        "jobs_url": null
+        "jobs_url": "https://www.aamu.edu/about/administrative-offices/human-resources/employment-opportunities.html"
       },
       {
         "name": "Alabama College of Osteopathic Medicine",
         "city": "Dothan",
         "students": 798,
-        "jobs_url": null
+        "jobs_url": "https://www.acom.edu/careers/"
       },
       {
         "name": "Alabama School of Nail Technology & Cosmetology",
@@ -671,37 +671,37 @@
         "name": "Alabama State University",
         "city": "Montgomery",
         "students": 3870,
-        "jobs_url": null
+        "jobs_url": "https://alasu.edu/administration/business-and-finance/human-resources/index.php"
       },
       {
         "name": "Amridge University",
         "city": "Montgomery",
         "students": 636,
-        "jobs_url": null
+        "jobs_url": "https://www.amridgeuniversity.edu/about/employment/"
       },
       {
         "name": "Athens State University",
         "city": "Athens",
         "students": 2955,
-        "jobs_url": null
+        "jobs_url": "https://www.athens.edu/about/offices/human-resources/employment-opportunities/"
       },
       {
         "name": "Auburn University",
         "city": "Auburn",
         "students": 33015,
-        "jobs_url": null
+        "jobs_url": "https://jobs.auburn.edu/auburn-careers-home/"
       },
       {
         "name": "Auburn University at Montgomery",
         "city": "Montgomery",
         "students": 5189,
-        "jobs_url": null
+        "jobs_url": "https://jobs.aum.edu/aum-careers-home/"
       },
       {
         "name": "Bevill State Community College",
         "city": "Jasper",
         "students": 3946,
-        "jobs_url": null
+        "jobs_url": "https://bscc.edu/about/employment-opportunities"
       },
       {
         "name": "Birmingham-Southern College",
@@ -797,8 +797,8 @@
     "state": "AR",
     "universities_count": 80,
     "total_students": 158475,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 7433,
+    "h1b_exempt_campuses": 54,
     "top_institutions": [
       {
         "name": "Academy of Professional Cosmetology",
@@ -834,31 +834,31 @@
         "name": "Arkansas Colleges of Health Education",
         "city": "Fort Smith",
         "students": 826,
-        "jobs_url": null
+        "jobs_url": "https://achehealth.edu/employment-opportunities/"
       },
       {
         "name": "Arkansas Northeastern College",
         "city": "Blytheville",
         "students": 1451,
-        "jobs_url": null
+        "jobs_url": "https://www.anc.edu/jobs"
       },
       {
         "name": "Arkansas State University",
         "city": "Jonesboro",
         "students": 14032,
-        "jobs_url": null
+        "jobs_url": "https://www.astate.edu/jobs/index.html"
       },
       {
         "name": "Arkansas State University Mid-South",
         "city": "West Memphis",
         "students": 1021,
-        "jobs_url": null
+        "jobs_url": "https://asumidsouth.edu/about/careers/"
       },
       {
         "name": "Arkansas State University System",
         "city": "Little Rock",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://asusystem.edu/higher-education-college-job-opportunities-arkansas/"
       }
     ],
     "companies_curated_count": 1522,
@@ -930,8 +930,8 @@
     "state": "AS",
     "universities_count": 3,
     "total_students": 13709,
-    "stem_graduates_yearly": 3600,
-    "h1b_exempt_campuses": 2,
+    "stem_graduates_yearly": 3628,
+    "h1b_exempt_campuses": 3,
     "top_institutions": [
       {
         "name": "American Samoa Community College",
@@ -967,8 +967,8 @@
     "state": "AZ",
     "universities_count": 106,
     "total_students": 659673,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 30178,
+    "h1b_exempt_campuses": 39,
     "top_institutions": [
       {
         "name": "Allen School-Phoenix",
@@ -992,43 +992,43 @@
         "name": "Arizona Board of Regents",
         "city": "Phoenix",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://azregents.edu/career-opportunities"
       },
       {
         "name": "Arizona Christian University",
         "city": "Glendale",
         "students": 1233,
-        "jobs_url": null
+        "jobs_url": "https://azcu.edu/careers/"
       },
       {
         "name": "Arizona College of Nursing-Phoenix",
         "city": "Phoenix",
         "students": 1062,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Arizona College of Nursing-Tempe",
         "city": "Tempe",
         "students": 1246,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Arizona College of Nursing-Tucson",
         "city": "Tucson",
         "students": 566,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Arizona College-Glendale",
         "city": "Glendale",
         "students": 306,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Arizona College-Mesa",
         "city": "Mesa",
         "students": 133,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       }
     ],
     "companies_curated_count": 1898,
@@ -1316,8 +1316,8 @@
     "state": "CA",
     "universities_count": 666,
     "total_students": 2681309,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 152113,
+    "h1b_exempt_campuses": 332,
     "top_institutions": [
       {
         "name": "ABC Adult School",
@@ -1353,7 +1353,7 @@
         "name": "Academy of Art University",
         "city": "San Francisco",
         "students": 6320,
-        "jobs_url": null
+        "jobs_url": "https://academyofartuniversity.wd5.myworkdayjobs.com/Academy_of_Art"
       },
       {
         "name": "Academy of Chinese Culture and Health Sciences",
@@ -1467,8 +1467,8 @@
     "state": "CO",
     "universities_count": 86,
     "total_students": 371627,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 20252,
+    "h1b_exempt_campuses": 42,
     "top_institutions": [
       {
         "name": "Academy of Natural Therapy Inc",
@@ -1480,13 +1480,13 @@
         "name": "Adams State University",
         "city": "Alamosa",
         "students": 2950,
-        "jobs_url": null
+        "jobs_url": "https://www.adams.edu/hr/employment/"
       },
       {
         "name": "Aims Community College",
         "city": "Greeley",
         "students": 7529,
-        "jobs_url": null
+        "jobs_url": "https://www.aims.edu/careers"
       },
       {
         "name": "Apex College of Veterinary Technology",
@@ -1504,13 +1504,13 @@
         "name": "Arizona College of Nursing-Aurora",
         "city": "Aurora",
         "students": 212,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Auguste Escoffier School of Culinary Arts-Boulder",
         "city": "Boulder",
         "students": 8571,
-        "jobs_url": null
+        "jobs_url": "https://recruiting.paylocity.com/recruiting/jobs/All/3837aaa9-e344-4c38-a9cc-c5013bbe0c94/Auguste-Escoffier-School-of-Culinary-Arts"
       },
       {
         "name": "Avalon Institute-Aurora",
@@ -1522,13 +1522,13 @@
         "name": "Aveda Institute-Denver",
         "city": "Denver",
         "students": 316,
-        "jobs_url": null
+        "jobs_url": "https://avedainspiregreatness.com/careers/"
       },
       {
         "name": "Bel-Rea Institute of Animal Technology",
         "city": "Denver",
         "students": 161,
-        "jobs_url": null
+        "jobs_url": "https://www.belrea.edu/jobs-listing/"
       }
     ],
     "companies_curated_count": 2525,
@@ -1600,8 +1600,8 @@
     "state": "CT",
     "universities_count": 55,
     "total_students": 202208,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 11990,
+    "h1b_exempt_campuses": 31,
     "top_institutions": [
       {
         "name": "Academy Di Capelli-School of Cosmetology",
@@ -1613,7 +1613,7 @@
         "name": "Albertus Magnus College",
         "city": "New Haven",
         "students": 1161,
-        "jobs_url": null
+        "jobs_url": "https://www.albertus.edu/employment/"
       },
       {
         "name": "American Institute of Healthcare & Technology",
@@ -1625,7 +1625,7 @@
         "name": "American Institute-West Hartford",
         "city": "West Hartford",
         "students": 396,
-        "jobs_url": null
+        "jobs_url": "https://job-boards.greenhouse.io/americaninstitute"
       },
       {
         "name": "Belle Academy of Cosmetology LLC",
@@ -1655,13 +1655,13 @@
         "name": "Central Connecticut State University",
         "city": "New Britain",
         "students": 9712,
-        "jobs_url": null
+        "jobs_url": "https://www.ccsu.edu/hr/job-opportunities"
       },
       {
         "name": "Charter Oak State College",
         "city": "New Britain",
         "students": 1766,
-        "jobs_url": null
+        "jobs_url": "https://www.charteroak.edu/aboutus/employment.php"
       }
     ],
     "companies_curated_count": 1792,
@@ -1883,14 +1883,14 @@
     "state": "DC",
     "universities_count": 22,
     "total_students": 100557,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 6191,
+    "h1b_exempt_campuses": 15,
     "top_institutions": [
       {
         "name": "American University",
         "city": "Washington",
         "students": 13019,
-        "jobs_url": null
+        "jobs_url": "https://american.edu/hr/"
       },
       {
         "name": "Bennett Career Institute",
@@ -1902,31 +1902,31 @@
         "name": "Career Technical Institute",
         "city": "Washington",
         "students": 383,
-        "jobs_url": null
+        "jobs_url": "https://advanced.edu/careers/"
       },
       {
         "name": "Gallaudet University",
         "city": "Washington",
         "students": 1364,
-        "jobs_url": null
+        "jobs_url": "https://gallaudet.edu/human-resources/"
       },
       {
         "name": "George Washington University",
         "city": "Washington",
         "students": 25568,
-        "jobs_url": null
+        "jobs_url": "https://careers.gwu.edu/?utm_medium=link&utm_campaign=gwhomepage-footer&utm_source=careers"
       },
       {
         "name": "Georgetown University",
         "city": "Washington",
         "students": 20392,
-        "jobs_url": null
+        "jobs_url": "https://careers.georgetown.edu/"
       },
       {
         "name": "Howard University",
         "city": "Washington",
         "students": 13416,
-        "jobs_url": null
+        "jobs_url": "https://hr.howard.edu/careers"
       },
       {
         "name": "Institute of World Politics",
@@ -1944,7 +1944,7 @@
         "name": "NewU University",
         "city": "Washington",
         "students": 34,
-        "jobs_url": null
+        "jobs_url": "https://newu.university/careers/"
       }
     ],
     "companies_curated_count": 459,
@@ -2016,8 +2016,8 @@
     "state": "DE",
     "universities_count": 17,
     "total_students": 60988,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 3420,
+    "h1b_exempt_campuses": 7,
     "top_institutions": [
       {
         "name": "Academy of Massage and Bodywork",
@@ -2035,7 +2035,7 @@
         "name": "Dawn Career Institute LLC",
         "city": "Newark",
         "students": 385,
-        "jobs_url": null
+        "jobs_url": "https://dawncareerinstitute.edu/submit-employment-opportunities/"
       },
       {
         "name": "Delaware College of Art and Design",
@@ -2047,37 +2047,37 @@
         "name": "Delaware Learning Institute of Cosmetology",
         "city": "Dagsboro",
         "students": 73,
-        "jobs_url": null
+        "jobs_url": "https://www.tspadelaware.com/join-our-team/"
       },
       {
         "name": "Delaware State University",
         "city": "Dover",
         "students": 5828,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/desu"
       },
       {
         "name": "Delaware Technical Community College-Central Office",
         "city": "Dover",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://www.dtcc.edu/about/employment/"
       },
       {
         "name": "Delaware Technical Community College-Terry",
         "city": "Dover",
         "students": 13231,
-        "jobs_url": null
+        "jobs_url": "https://www.dtcc.edu/about/employment/"
       },
       {
         "name": "Goldey-Beacom College",
         "city": "Wilmington",
         "students": 1074,
-        "jobs_url": null
+        "jobs_url": "https://www.gbc.edu/human-resources/"
       },
       {
         "name": "Hair Academy School of Barbering & Beauty",
         "city": "Newark",
         "students": 25,
-        "jobs_url": null
+        "jobs_url": "https://www.hairacademysbb.edu/about-5"
       }
     ],
     "companies_curated_count": 489,
@@ -2462,14 +2462,14 @@
     "state": "FL",
     "universities_count": 331,
     "total_students": 1052571,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 54361,
+    "h1b_exempt_campuses": 126,
     "top_institutions": [
       {
         "name": "Academy for Five Element Acupuncture",
         "city": "Gainesville",
         "students": 55,
-        "jobs_url": null
+        "jobs_url": "https://acupuncturist.edu/employment/"
       },
       {
         "name": "Academy for Nursing and Health Occupations",
@@ -2511,13 +2511,13 @@
         "name": "AdventHealth University",
         "city": "Orlando",
         "students": 1692,
-        "jobs_url": null
+        "jobs_url": "https://jobs.adventhealth.com/our-locations/adventhealth-university/"
       },
       {
         "name": "Albizu University-Miami",
         "city": "Miami",
         "students": 787,
-        "jobs_url": null
+        "jobs_url": "https://www.albizu.edu/career/"
       },
       {
         "name": "American Academy of Cosmetology",
@@ -2595,14 +2595,14 @@
     "state": "FM",
     "universities_count": 1,
     "total_students": 1740,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 54,
+    "h1b_exempt_campuses": 1,
     "top_institutions": [
       {
         "name": "College of Micronesia-FSM",
         "city": "Pohnpei",
         "students": 1740,
-        "jobs_url": null
+        "jobs_url": "https://comfsm.fm/jobs/"
       }
     ],
     "companies_curated_count": 0,
@@ -2649,20 +2649,20 @@
     "state": "GA",
     "universities_count": 140,
     "total_students": 570159,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 35230,
+    "h1b_exempt_campuses": 90,
     "top_institutions": [
       {
         "name": "Abraham Baldwin Agricultural College",
         "city": "Tifton",
         "students": 3768,
-        "jobs_url": null
+        "jobs_url": "https://www.abac.edu/about/administration/human-resources.html"
       },
       {
         "name": "Agnes Scott College",
         "city": "Decatur",
         "students": 1077,
-        "jobs_url": null
+        "jobs_url": "https://www.agnesscott.edu/careers/index.html"
       },
       {
         "name": "Albany Beauty Academy",
@@ -2674,13 +2674,13 @@
         "name": "Albany State University",
         "city": "Albany",
         "students": 6544,
-        "jobs_url": null
+        "jobs_url": "https://asurams.edu/human-resources/index.php"
       },
       {
         "name": "Albany Technical College",
         "city": "Albany",
         "students": 2761,
-        "jobs_url": null
+        "jobs_url": "https://www.albanytech.edu/human-resources"
       },
       {
         "name": "American InterContinental University-Atlanta",
@@ -2692,25 +2692,25 @@
         "name": "Andrew College",
         "city": "Cuthbert",
         "students": 294,
-        "jobs_url": null
+        "jobs_url": "https://www.andrewcollege.edu/employment-opportunities/"
       },
       {
         "name": "Athens Technical College",
         "city": "Athens",
         "students": 4169,
-        "jobs_url": null
+        "jobs_url": "https://athenstech.edu/about/employment/"
       },
       {
         "name": "Atlanta Institute of Music and Media",
         "city": "Duluth",
         "students": 264,
-        "jobs_url": null
+        "jobs_url": "https://aimm.edu/about-aimm/careers/"
       },
       {
         "name": "Atlanta Metropolitan State College",
         "city": "Atlanta",
         "students": 1551,
-        "jobs_url": null
+        "jobs_url": "https://www.atlm.edu/administration/human-resources.aspx"
       }
     ],
     "companies_curated_count": 2747,
@@ -2831,26 +2831,26 @@
     "state": "GU",
     "universities_count": 3,
     "total_students": 4400,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 152,
+    "h1b_exempt_campuses": 3,
     "top_institutions": [
       {
         "name": "Guam Community College",
         "city": "Mangilao",
         "students": 1450,
-        "jobs_url": null
+        "jobs_url": "https://www.guamcc.edu/about-us/career-opportunities"
       },
       {
         "name": "Pacific Islands University",
         "city": "Mangilao",
         "students": 55,
-        "jobs_url": null
+        "jobs_url": "https://www.piu.edu/careers/"
       },
       {
         "name": "University of Guam",
         "city": "Mangilao",
         "students": 2895,
-        "jobs_url": null
+        "jobs_url": "https://www.uog.edu/administration/administration-finance/human-resources/job-opportunities"
       }
     ],
     "companies_curated_count": 41,
@@ -2928,20 +2928,20 @@
     "state": "HI",
     "universities_count": 23,
     "total_students": 59786,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 2136,
+    "h1b_exempt_campuses": 16,
     "top_institutions": [
       {
         "name": "Brigham Young University-Hawaii",
         "city": "Laie",
         "students": 2836,
-        "jobs_url": null
+        "jobs_url": "https://hr.byuh.edu/"
       },
       {
         "name": "Chaminade University of Honolulu",
         "city": "Honolulu",
         "students": 2602,
-        "jobs_url": null
+        "jobs_url": "https://chaminade.edu/employment-opportunities/"
       },
       {
         "name": "Hawaii Community College",
@@ -2959,25 +2959,25 @@
         "name": "Hawaii Medical College",
         "city": "Honolulu",
         "students": 217,
-        "jobs_url": null
+        "jobs_url": "https://hmi.edu/careers/"
       },
       {
         "name": "Hawaii Pacific University",
         "city": "Honolulu",
         "students": 4748,
-        "jobs_url": null
+        "jobs_url": "https://hpu.edu/hpu-careers/job-listings.html"
       },
       {
         "name": "Hawaii Tokai International College",
         "city": "Kapolei",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://jobs.dayforcehcm.com/htic/CANDIDATEPORTAL"
       },
       {
         "name": "Honolulu Community College",
         "city": "Honolulu",
         "students": 3204,
-        "jobs_url": null
+        "jobs_url": "https://www.honolulu.hawaii.edu/jobs/"
       },
       {
         "name": "IBS School of Cosmetology and Massage",
@@ -3230,14 +3230,14 @@
     "state": "IA",
     "universities_count": 75,
     "total_students": 206064,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 10137,
+    "h1b_exempt_campuses": 53,
     "top_institutions": [
       {
         "name": "Allen College",
         "city": "Waterloo",
         "students": 489,
-        "jobs_url": null
+        "jobs_url": "https://www.allencollege.edu/about-us/career-opportunities"
       },
       {
         "name": "American Hair Academy",
@@ -3261,13 +3261,13 @@
         "name": "Briar Cliff University",
         "city": "Sioux City",
         "students": 940,
-        "jobs_url": null
+        "jobs_url": "https://www.briarcliff.edu/about/our-employees/careers"
       },
       {
         "name": "Buena Vista University",
         "city": "Storm Lake",
         "students": 1951,
-        "jobs_url": null
+        "jobs_url": "https://www.bvu.edu/en/resources/human-resources/"
       },
       {
         "name": "Capri College-Cedar Rapids",
@@ -3363,8 +3363,8 @@
     "state": "ID",
     "universities_count": 34,
     "total_students": 130339,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 5036,
+    "h1b_exempt_campuses": 13,
     "top_institutions": [
       {
         "name": "Austin Kade Academy",
@@ -3376,13 +3376,13 @@
         "name": "Aveda Institute-Boise",
         "city": "Boise",
         "students": 93,
-        "jobs_url": null
+        "jobs_url": "https://www.avedaidaho.com/about-us/careers/"
       },
       {
         "name": "Aveda Institute-Twin Falls",
         "city": "Twin Falls",
         "students": 93,
-        "jobs_url": null
+        "jobs_url": "https://www.avedaidaho.com/about-us/careers/"
       },
       {
         "name": "Boise Barber College",
@@ -3400,13 +3400,13 @@
         "name": "Boise State University",
         "city": "Boise",
         "students": 26670,
-        "jobs_url": null
+        "jobs_url": "https://www.boisestate.edu/jobs/"
       },
       {
         "name": "Brigham Young University-Idaho",
         "city": "Rexburg",
         "students": 42996,
-        "jobs_url": null
+        "jobs_url": "https://www.byui.edu/human-resources/"
       },
       {
         "name": "Carrington College-Boise",
@@ -3418,13 +3418,13 @@
         "name": "College of Eastern Idaho",
         "city": "Idaho Falls",
         "students": 2565,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/cei"
       },
       {
         "name": "College of Southern Idaho",
         "city": "Twin Falls",
         "students": 8775,
-        "jobs_url": null
+        "jobs_url": "https://wbl.csi.edu/eagle-jobs/?utm_source=careerscsiedu&utm_campaign=domainredirect"
       }
     ],
     "companies_curated_count": 630,
@@ -3496,14 +3496,14 @@
     "state": "IL",
     "universities_count": 239,
     "total_students": 707715,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 50820,
+    "h1b_exempt_campuses": 145,
     "top_institutions": [
       {
         "name": "Adler University",
         "city": "Chicago",
         "students": 1674,
-        "jobs_url": null
+        "jobs_url": "https://www.adler.edu/about/careers/"
       },
       {
         "name": "Ambria College of Nursing",
@@ -3521,7 +3521,7 @@
         "name": "American Islamic College",
         "city": "Chicago",
         "students": 14,
-        "jobs_url": null
+        "jobs_url": "https://aicusa.edu/about/employment"
       },
       {
         "name": "Americare Technical School",
@@ -3533,7 +3533,7 @@
         "name": "Augustana College",
         "city": "Rock Island",
         "students": 2484,
-        "jobs_url": null
+        "jobs_url": "https://augustana.edu/about-us/offices/hr/employment"
       },
       {
         "name": "Aurora University",
@@ -3551,7 +3551,7 @@
         "name": "Aviation Institute of Maintenance-Chicago",
         "city": "Chicago",
         "students": 221,
-        "jobs_url": null
+        "jobs_url": "https://aviationmaintenance.edu/about/join-our-team/"
       },
       {
         "name": "Bell Mar Beauty College",
@@ -3629,26 +3629,26 @@
     "state": "IN",
     "universities_count": 105,
     "total_students": 474184,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 29528,
+    "h1b_exempt_campuses": 59,
     "top_institutions": [
       {
         "name": "American College of Education",
         "city": "Indianapolis",
         "students": 11961,
-        "jobs_url": null
+        "jobs_url": "https://ace.edu/about/careers/"
       },
       {
         "name": "Anabaptist Mennonite Biblical Seminary",
         "city": "Elkhart",
         "students": 147,
-        "jobs_url": null
+        "jobs_url": "https://ambs.edu/employment/"
       },
       {
         "name": "Anderson University",
         "city": "Anderson",
         "students": 1255,
-        "jobs_url": null
+        "jobs_url": "https://www.paycomonline.net/v4/ats/web.php/portal/0599C8DFE7F84A296ACBCB979BD3BB27/career-page"
       },
       {
         "name": "Artisan Academy of Cosmetology",
@@ -3660,37 +3660,37 @@
         "name": "Aveda Fredric's Institute-Indianapolis",
         "city": "Carmel",
         "students": 266,
-        "jobs_url": null
+        "jobs_url": "https://avedafi.edu/careers"
       },
       {
         "name": "Aviation Institute of Maintenance-Indianapolis",
         "city": "Indianapolis",
         "students": 160,
-        "jobs_url": null
+        "jobs_url": "https://aviationmaintenance.edu/about/join-our-team/"
       },
       {
         "name": "Ball State University",
         "city": "Muncie",
         "students": 20440,
-        "jobs_url": null
+        "jobs_url": "https://bsu.edu/about/administrativeoffices/humanresources/jobs"
       },
       {
         "name": "Bethany Theological Seminary",
         "city": "Richmond",
         "students": 66,
-        "jobs_url": null
+        "jobs_url": "https://bethanyseminary.edu/about/employment/"
       },
       {
         "name": "Bethel University",
         "city": "Mishawaka",
         "students": 1222,
-        "jobs_url": null
+        "jobs_url": "https://betheluniversity.edu/about/employment/"
       },
       {
         "name": "Butler University",
         "city": "Indianapolis",
         "students": 5763,
-        "jobs_url": null
+        "jobs_url": "https://www.butler.edu/human-resources/work-at-butler/"
       }
     ],
     "companies_curated_count": 2452,
@@ -4033,32 +4033,32 @@
     "state": "KS",
     "universities_count": 77,
     "total_students": 193009,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 8797,
+    "h1b_exempt_campuses": 58,
     "top_institutions": [
       {
         "name": "Allen County Community College",
         "city": "Iola",
         "students": 1817,
-        "jobs_url": null
+        "jobs_url": "https://www.allencc.edu/contact/careers/opportunities"
       },
       {
         "name": "Baker University",
         "city": "Baldwin City",
         "students": 1945,
-        "jobs_url": null
+        "jobs_url": "https://www.bakeru.edu/about-baker/careers-baker"
       },
       {
         "name": "Barclay College",
         "city": "Haviland",
         "students": 187,
-        "jobs_url": null
+        "jobs_url": "https://www.barclaycollege.edu/about/employment/"
       },
       {
         "name": "Barton County Community College",
         "city": "Great Bend",
         "students": 4393,
-        "jobs_url": null
+        "jobs_url": "https://www.bartonccc.edu/aboutbarton/employment"
       },
       {
         "name": "Bellus Academy",
@@ -4070,31 +4070,31 @@
         "name": "Benedictine College",
         "city": "Atchison",
         "students": 2465,
-        "jobs_url": null
+        "jobs_url": "https://www.benedictine.edu/jobs"
       },
       {
         "name": "Bethany College",
         "city": "Lindsborg",
         "students": 637,
-        "jobs_url": null
+        "jobs_url": "https://bethanylb.edu/employment"
       },
       {
         "name": "Bethel College-North Newton",
         "city": "North Newton",
         "students": 502,
-        "jobs_url": null
+        "jobs_url": "https://www.bethelks.edu/about-bethel/career-opportunities/"
       },
       {
         "name": "Butler Community College",
         "city": "El Dorado",
         "students": 6552,
-        "jobs_url": null
+        "jobs_url": "https://employment.butlercc.edu/"
       },
       {
         "name": "Central Christian College of Kansas",
         "city": "McPherson",
         "students": 455,
-        "jobs_url": null
+        "jobs_url": "https://centralchristian.edu/about-ccck/employment/"
       }
     ],
     "companies_curated_count": 1824,
@@ -4166,8 +4166,8 @@
     "state": "KY",
     "universities_count": 86,
     "total_students": 280868,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 14713,
+    "h1b_exempt_campuses": 51,
     "top_institutions": [
       {
         "name": "Alice Lloyd College",
@@ -4203,19 +4203,19 @@
         "name": "Asbury Theological Seminary",
         "city": "Wilmore",
         "students": 1715,
-        "jobs_url": null
+        "jobs_url": "https://asburyseminary.edu/info/employment/"
       },
       {
         "name": "Asbury University",
         "city": "Wilmore",
         "students": 1942,
-        "jobs_url": null
+        "jobs_url": "https://www.asbury.edu/offices/human-resources/job-postings/"
       },
       {
         "name": "Ashland Community and Technical College",
         "city": "Ashland",
         "students": 2559,
-        "jobs_url": null
+        "jobs_url": "https://careers.kctcs.edu/Ashland"
       },
       {
         "name": "ATA College",
@@ -4449,8 +4449,8 @@
     "state": "LA",
     "universities_count": 111,
     "total_students": 256402,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 11253,
+    "h1b_exempt_campuses": 53,
     "top_institutions": [
       {
         "name": "Academy of Interactive Entertainment",
@@ -4462,19 +4462,19 @@
         "name": "Aveda Arts & Sciences Institute-Baton Rouge",
         "city": "Baton Rouge",
         "students": 197,
-        "jobs_url": null
+        "jobs_url": "https://avedaarts.edu/work-for-us/"
       },
       {
         "name": "Aveda Arts & Sciences Institute-Covington",
         "city": "Covington",
         "students": 2538,
-        "jobs_url": null
+        "jobs_url": "https://avedaarts.edu/work-for-us/"
       },
       {
         "name": "Aveda Arts & Sciences Institute-Lafayette",
         "city": "Lafayette",
         "students": 134,
-        "jobs_url": null
+        "jobs_url": "https://avedaarts.edu/work-for-us/"
       },
       {
         "name": "Avery James College",
@@ -4492,19 +4492,19 @@
         "name": "Baton Rouge Community College",
         "city": "Baton Rouge",
         "students": 10859,
-        "jobs_url": null
+        "jobs_url": "https://mybrcc.edu/about-brcc/human-resources/employment_opportunities.php"
       },
       {
         "name": "Baton Rouge General Medical Center School of Nursing & School of Radiologic Technology",
         "city": "Baton Rouge",
         "students": 130,
-        "jobs_url": null
+        "jobs_url": "https://www.brgeneral.org/about/careers"
       },
       {
         "name": "Belbo Beauty Institute",
         "city": "Shreveport",
         "students": 109,
-        "jobs_url": null
+        "jobs_url": "https://jobs.belbobeautyinstitute.com/"
       },
       {
         "name": "Blalock's Professional Beauty College",
@@ -4648,8 +4648,8 @@
     "state": "MA",
     "universities_count": 145,
     "total_students": 475627,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 44690,
+    "h1b_exempt_campuses": 107,
     "top_institutions": [
       {
         "name": "Alexander Academy",
@@ -4661,13 +4661,13 @@
         "name": "American International College",
         "city": "Springfield",
         "students": 2142,
-        "jobs_url": null
+        "jobs_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=4f7bf2c8-4d1c-459f-99e3-bc1939cfa417&ccId=9201445022114_2&lang=en_US"
       },
       {
         "name": "Amherst College",
         "city": "Amherst",
         "students": 1910,
-        "jobs_url": null
+        "jobs_url": "https://www.amherst.edu/offices/human_resources"
       },
       {
         "name": "Anna Maria College",
@@ -4679,19 +4679,19 @@
         "name": "Assabet Valley Regional Technical School",
         "city": "Marlborough",
         "students": 48,
-        "jobs_url": null
+        "jobs_url": "https://www.assabet.org/Do-More/HR--Business-Offices/Employment-Opportunities/index.html"
       },
       {
         "name": "Assumption University",
         "city": "Worcester",
         "students": 2046,
-        "jobs_url": null
+        "jobs_url": "https://www.assumption.edu/people-and-departments/organization-listing/human-resources/employment-opportunities"
       },
       {
         "name": "Babson College",
         "city": "Wellesley",
         "students": 3943,
-        "jobs_url": null
+        "jobs_url": "https://babson.edu/careers-at-babson/"
       },
       {
         "name": "Bancroft School of Massage Therapy",
@@ -4709,7 +4709,7 @@
         "name": "Bay Path University",
         "city": "Longmeadow",
         "students": 2643,
-        "jobs_url": null
+        "jobs_url": "https://www.baypath.edu/about/careers-at-bay-path-university-and-cambridge-college/"
       }
     ],
     "companies_curated_count": 3964,
@@ -4781,8 +4781,8 @@
     "state": "MD",
     "universities_count": 77,
     "total_students": 350718,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 28400,
+    "h1b_exempt_campuses": 50,
     "top_institutions": [
       {
         "name": "All-State Career-Baltimore",
@@ -4794,13 +4794,13 @@
         "name": "Allegany College of Maryland",
         "city": "Cumberland",
         "students": 2665,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/allegany"
       },
       {
         "name": "Anne Arundel Community College",
         "city": "Arnold",
         "students": 11158,
-        "jobs_url": null
+        "jobs_url": "https://www.aacc.edu/employment/"
       },
       {
         "name": "Aspen Beauty Academy of Laurel",
@@ -4812,7 +4812,7 @@
         "name": "Aveda Institute-Maryland",
         "city": "Bel Air",
         "students": 84,
-        "jobs_url": null
+        "jobs_url": "https://avedainstitutemd.edu/career-opportunities/"
       },
       {
         "name": "Award Beauty School",
@@ -4830,13 +4830,13 @@
         "name": "Baltimore Beauty & Barber School II",
         "city": "Timonium",
         "students": 65,
-        "jobs_url": null
+        "jobs_url": "https://www.baltimorebeautybarberschool2.com/career-opportunities"
       },
       {
         "name": "Baltimore City Community College",
         "city": "Baltimore",
         "students": 3939,
-        "jobs_url": null
+        "jobs_url": "https://www.bccc.edu/faculty-staff/human-resources"
       },
       {
         "name": "Baltimore Studio of Hair Design",
@@ -4914,68 +4914,68 @@
     "state": "ME",
     "universities_count": 34,
     "total_students": 77063,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 3467,
+    "h1b_exempt_campuses": 29,
     "top_institutions": [
       {
         "name": "Bates College",
         "city": "Lewiston",
         "students": 1753,
-        "jobs_url": null
+        "jobs_url": "https://www.bates.edu/employment/"
       },
       {
         "name": "Beal University",
         "city": "Bangor",
         "students": 520,
-        "jobs_url": null
+        "jobs_url": "https://beal.edu/careers/"
       },
       {
         "name": "Bowdoin College",
         "city": "Brunswick",
         "students": 1850,
-        "jobs_url": null
+        "jobs_url": "https://careers.bowdoin.edu/"
       },
       {
         "name": "Capilo School of Hair Design",
         "city": "Augusta",
         "students": 133,
-        "jobs_url": null
+        "jobs_url": "https://www.capilo.com/open-positions"
       },
       {
         "name": "Central Maine Community College",
         "city": "Auburn",
         "students": 4121,
-        "jobs_url": null
+        "jobs_url": "https://www.cmcc.edu/discover-cmcc/overview/jobs-at-cmcc/"
       },
       {
         "name": "Colby College",
         "city": "Waterville",
         "students": 2284,
-        "jobs_url": null
+        "jobs_url": "https://www.colby.edu/people/offices-directory/people-services/employment/"
       },
       {
         "name": "College of the Atlantic",
         "city": "Bar Harbor",
         "students": 367,
-        "jobs_url": null
+        "jobs_url": "https://www.coa.edu/human-resources/careers/"
       },
       {
         "name": "Eastern Maine Community College",
         "city": "Bangor",
         "students": 2531,
-        "jobs_url": null
+        "jobs_url": "https://www.emcc.edu/discover-emcc/emcc/employment/"
       },
       {
         "name": "Empire Beauty School-Maine",
         "city": "Portland",
         "students": 118,
-        "jobs_url": null
+        "jobs_url": "https://www.empire.edu/careers"
       },
       {
         "name": "Husson University",
         "city": "Bangor",
         "students": 3133,
-        "jobs_url": null
+        "jobs_url": "https://www.husson.edu/about/human-resources/"
       }
     ],
     "companies_curated_count": 597,
@@ -5047,8 +5047,8 @@
     "state": "MH",
     "universities_count": 5,
     "total_students": 45516,
-    "stem_graduates_yearly": 12600,
-    "h1b_exempt_campuses": 4,
+    "stem_graduates_yearly": 12610,
+    "h1b_exempt_campuses": 5,
     "top_institutions": [
       {
         "name": "College of the Marshall Islands",
@@ -5150,68 +5150,68 @@
     "state": "MI",
     "universities_count": 157,
     "total_students": 482703,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 32191,
+    "h1b_exempt_campuses": 86,
     "top_institutions": [
       {
         "name": "Abcott Institute",
         "city": "Southfield",
         "students": 166,
-        "jobs_url": null
+        "jobs_url": "https://abcott.edu/careers/"
       },
       {
         "name": "Adrian College",
         "city": "Adrian",
         "students": 1760,
-        "jobs_url": null
+        "jobs_url": "https://www.adrian.edu/about/human-resources"
       },
       {
         "name": "Albion College",
         "city": "Albion",
         "students": 1354,
-        "jobs_url": null
+        "jobs_url": "https://www.albion.edu/offices/human-resources/jobs/"
       },
       {
         "name": "Alma College",
         "city": "Alma",
         "students": 1273,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/alma"
       },
       {
         "name": "Alpena Community College",
         "city": "Alpena",
         "students": 1530,
-        "jobs_url": null
+        "jobs_url": "https://discover.alpenacc.edu/faculty_staff/human_resources/employment_opportunities.php"
       },
       {
         "name": "Andrews University",
         "city": "Berrien Springs",
         "students": 2837,
-        "jobs_url": null
+        "jobs_url": "https://www.andrews.edu/services/hr/job_seekers/"
       },
       {
         "name": "Aquinas College",
         "city": "Grand Rapids",
         "students": 1295,
-        "jobs_url": null
+        "jobs_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=0d6a119c-4b29-473d-aa54-b44806014631&ccId=19000101_000001&lang=en_US"
       },
       {
         "name": "Arizona College of Nursing-Southfield",
         "city": "Southfield",
         "students": 415,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Baker College",
         "city": "Owosso",
         "students": 3898,
-        "jobs_url": null
+        "jobs_url": "https://www.baker.edu/about/get-to-know-us/careers/"
       },
       {
         "name": "Bay de Noc Community College",
         "city": "Escanaba",
         "students": 1996,
-        "jobs_url": null
+        "jobs_url": "https://baycollege.edu/about/community/employment.php"
       }
     ],
     "companies_curated_count": 2983,
@@ -5283,26 +5283,26 @@
     "state": "MN",
     "universities_count": 91,
     "total_students": 389549,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 16191,
+    "h1b_exempt_campuses": 75,
     "top_institutions": [
       {
         "name": "Academy College",
         "city": "Bloomington",
         "students": 118,
-        "jobs_url": null
+        "jobs_url": "https://www.academycollege.edu/about/careers-at-academy-college/"
       },
       {
         "name": "Adler Graduate School",
         "city": "Minnetonka",
         "students": 245,
-        "jobs_url": null
+        "jobs_url": "https://www.alfredadler.edu/about/employment-opportunities/"
       },
       {
         "name": "Alexandria Technical & Community College",
         "city": "Alexandria",
         "students": 3038,
-        "jobs_url": null
+        "jobs_url": "https://www.alextech.edu/about-atcc/human-resources"
       },
       {
         "name": "American Academy of Health and Wellness",
@@ -5314,19 +5314,19 @@
         "name": "Anoka Technical College",
         "city": "Anoka",
         "students": 1822,
-        "jobs_url": null
+        "jobs_url": "https://www.anokatech.edu/about/work-at-anoka-tech/"
       },
       {
         "name": "Anoka-Ramsey Community College",
         "city": "Coon Rapids",
         "students": 7843,
-        "jobs_url": null
+        "jobs_url": "https://anokaramsey.edu/about/work-at-arcc.html"
       },
       {
         "name": "Augsburg University",
         "city": "Minneapolis",
         "students": 3161,
-        "jobs_url": null
+        "jobs_url": "https://www.augsburg.edu/employment/"
       },
       {
         "name": "Avalon School of Cosmetology",
@@ -5338,7 +5338,7 @@
         "name": "Aveda Arts & Sciences Institute Minneapolis",
         "city": "Minneapolis",
         "students": 608,
-        "jobs_url": null
+        "jobs_url": "https://avedaarts.edu/work-for-us/"
       },
       {
         "name": "Bemidji State University",
@@ -5416,14 +5416,14 @@
     "state": "MO",
     "universities_count": 140,
     "total_students": 342253,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 20364,
+    "h1b_exempt_campuses": 83,
     "top_institutions": [
       {
         "name": "A T Still University of Health Sciences",
         "city": "Kirksville",
         "students": 3629,
-        "jobs_url": null
+        "jobs_url": "https://www.atsu.edu/employment"
       },
       {
         "name": "Academy of Beauty Professionals",
@@ -5459,7 +5459,7 @@
         "name": "Applied Technology Services",
         "city": "Sunset Hills",
         "students": 152,
-        "jobs_url": null
+        "jobs_url": "https://jobs.appliedtech-stl.com/"
       },
       {
         "name": "Aquinas Institute of Theology",
@@ -5471,13 +5471,13 @@
         "name": "Aviation Institute of Maintenance-Kansas City",
         "city": "Kansas City",
         "students": 211,
-        "jobs_url": null
+        "jobs_url": "https://aviationmaintenance.edu/about/join-our-team/"
       },
       {
         "name": "Avila University",
         "city": "Kansas City",
         "students": 1733,
-        "jobs_url": null
+        "jobs_url": "https://www.avila.edu/about/administrative-offices/human-resources/careers/"
       }
     ],
     "companies_curated_count": 2325,
@@ -5549,14 +5549,14 @@
     "state": "MP",
     "universities_count": 2,
     "total_students": 4453,
-    "stem_graduates_yearly": 950,
-    "h1b_exempt_campuses": 1,
+    "stem_graduates_yearly": 963,
+    "h1b_exempt_campuses": 2,
     "top_institutions": [
       {
         "name": "Northern Marianas College",
         "city": "Saipan",
         "students": 1253,
-        "jobs_url": null
+        "jobs_url": "https://marianas.edu/employment-opportunities/"
       },
       {
         "name": "Indian Institute of Technology Indore (IIT Indore)",
@@ -5580,8 +5580,8 @@
     "state": "MS",
     "universities_count": 53,
     "total_students": 161781,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 7490,
+    "h1b_exempt_campuses": 34,
     "top_institutions": [
       {
         "name": "Academy of Hair Design-Grenada",
@@ -5605,31 +5605,31 @@
         "name": "Alcorn State University",
         "city": "Alcorn State",
         "students": 2894,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/alcornstateuniversity"
       },
       {
         "name": "Belhaven University",
         "city": "Jackson",
         "students": 3616,
-        "jobs_url": null
+        "jobs_url": "https://www.belhaven.edu/about/contact/employment.html"
       },
       {
         "name": "Blue Cliff College-Gulfport",
         "city": "Gulfport",
         "students": 259,
-        "jobs_url": null
+        "jobs_url": "https://bluecliffcollege.applytojob.com/apply"
       },
       {
         "name": "Blue Mountain Christian University",
         "city": "Blue Mountain",
         "students": 971,
-        "jobs_url": null
+        "jobs_url": "https://www.bmc.edu/jobs-at-bmcu"
       },
       {
         "name": "Board of Trustees-Mississippi State Institutions of Higher Learning",
         "city": "Jackson",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://www.mississippi.edu/contact-us/careers"
       },
       {
         "name": "Chris Beauty College",
@@ -5641,7 +5641,7 @@
         "name": "Coahoma Community College",
         "city": "Clarksdale",
         "students": 1808,
-        "jobs_url": null
+        "jobs_url": "https://www.coahomacc.edu/employee-services/jobs/index.html"
       }
     ],
     "companies_curated_count": 1438,
@@ -5713,14 +5713,14 @@
     "state": "MT",
     "universities_count": 29,
     "total_students": 47867,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 2525,
+    "h1b_exempt_campuses": 23,
     "top_institutions": [
       {
         "name": "Aaniiih Nakoda College",
         "city": "Harlem",
         "students": 133,
-        "jobs_url": null
+        "jobs_url": "https://www.ancollege.edu/careers"
       },
       {
         "name": "Academy of Cosmetology Inc",
@@ -5738,7 +5738,7 @@
         "name": "Blackfeet Community College",
         "city": "Browning",
         "students": 282,
-        "jobs_url": null
+        "jobs_url": "https://bfcc.edu/humanresource"
       },
       {
         "name": "Butte Academy of Beauty Culture",
@@ -5750,13 +5750,13 @@
         "name": "Carroll College",
         "city": "Helena",
         "students": 1103,
-        "jobs_url": null
+        "jobs_url": "https://www.carroll.edu/about/work-carroll"
       },
       {
         "name": "Chief Dull Knife College",
         "city": "Lame Deer",
         "students": 242,
-        "jobs_url": null
+        "jobs_url": "https://www.cdkc.edu/faculty-staff/employment/"
       },
       {
         "name": "Crevier's Academy of Cosmetology Arts",
@@ -5768,13 +5768,13 @@
         "name": "Dawson Community College",
         "city": "Glendive",
         "students": 406,
-        "jobs_url": null
+        "jobs_url": "https://www.dawson.edu/employment-opportunities.html"
       },
       {
         "name": "Flathead Valley Community College",
         "city": "Kalispell",
         "students": 2201,
-        "jobs_url": null
+        "jobs_url": "https://www.fvcc.edu/about/careers-at-fvcc"
       }
     ],
     "companies_curated_count": 453,
@@ -5918,62 +5918,62 @@
     "state": "NC",
     "universities_count": 163,
     "total_students": 566112,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 35335,
+    "h1b_exempt_campuses": 126,
     "top_institutions": [
       {
         "name": "Alamance Community College",
         "city": "Graham",
         "students": 3739,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/alamanceccedu?jobType%5B0%5D=Full-Time%20Exempt&jobType%5B1%5D=Full-Time%20Non-Exempt&sort=PositionTitle%7CAscending"
       },
       {
         "name": "Alexander Paul Institute of Hair Design",
         "city": "Greenville",
         "students": 37,
-        "jobs_url": null
+        "jobs_url": "https://jobs.alexanderpaul.edu/"
       },
       {
         "name": "Appalachian State University",
         "city": "Boone",
         "students": 21253,
-        "jobs_url": null
+        "jobs_url": "https://www.appstate.edu/employment/"
       },
       {
         "name": "Asheville-Buncombe Technical Community College",
         "city": "Asheville",
         "students": 6297,
-        "jobs_url": null
+        "jobs_url": "https://abtech.edu/employment"
       },
       {
         "name": "Aveda Institute-Chapel Hill",
         "city": "Chapel Hill",
         "students": 171,
-        "jobs_url": null
+        "jobs_url": "https://avedafi.edu/careers"
       },
       {
         "name": "Aviation Institute of Maintenance-Charlotte",
         "city": "Charlotte",
         "students": 212,
-        "jobs_url": null
+        "jobs_url": "https://aviationmaintenance.edu/about/join-our-team/"
       },
       {
         "name": "Barton College",
         "city": "Wilson",
         "students": 1259,
-        "jobs_url": null
+        "jobs_url": "https://www.paycomonline.net/v4/ats/web.php/portal/87CB6D0141B0DF4C2F65FFEBD183CE63/career-page"
       },
       {
         "name": "Beaufort County Community College",
         "city": "Washington",
         "students": 1785,
-        "jobs_url": null
+        "jobs_url": "https://jobs.beaufortccc.edu/"
       },
       {
         "name": "Belmont Abbey College",
         "city": "Belmont",
         "students": 1650,
-        "jobs_url": null
+        "jobs_url": "https://belmontabbeycollege.edu/about-us/employment/"
       },
       {
         "name": "Bennett College",
@@ -6051,32 +6051,32 @@
     "state": "ND",
     "universities_count": 25,
     "total_students": 51870,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 2494,
+    "h1b_exempt_campuses": 19,
     "top_institutions": [
       {
         "name": "Bismarck State College",
         "city": "Bismarck",
         "students": 4065,
-        "jobs_url": null
+        "jobs_url": "https://bismarckstate.edu/employment/"
       },
       {
         "name": "Cankdeska Cikana Community College",
         "city": "Fort Totten",
         "students": 325,
-        "jobs_url": null
+        "jobs_url": "https://www.littlehoop.edu/community/employment/"
       },
       {
         "name": "Dakota College at Bottineau",
         "city": "Bottineau",
         "students": 1180,
-        "jobs_url": null
+        "jobs_url": "https://www.dakotacollege.edu/explore-dcb/employment"
       },
       {
         "name": "Dickinson State University",
         "city": "Dickinson",
         "students": 1453,
-        "jobs_url": null
+        "jobs_url": "https://dickinsonstate.edu/about/employment/index.html"
       },
       {
         "name": "Josef's School of Hair, Skin & Body-Fargo",
@@ -6094,7 +6094,7 @@
         "name": "Lake Region State College",
         "city": "Devils Lake",
         "students": 1810,
-        "jobs_url": null
+        "jobs_url": "https://www.lrsc.edu/job-opportunities"
       },
       {
         "name": "Lynnes Welding Training",
@@ -6106,13 +6106,13 @@
         "name": "Mayville State University",
         "city": "Mayville",
         "students": 1025,
-        "jobs_url": null
+        "jobs_url": "https://mayvillestate.edu/about-msu/employment/"
       },
       {
         "name": "Minot State University",
         "city": "Minot",
         "students": 2741,
-        "jobs_url": null
+        "jobs_url": "https://www.minotstateu.edu/hr/jobs/index.shtml"
       }
     ],
     "companies_curated_count": 538,
@@ -6184,20 +6184,20 @@
     "state": "NE",
     "universities_count": 40,
     "total_students": 138323,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 5601,
+    "h1b_exempt_campuses": 32,
     "top_institutions": [
       {
         "name": "Bellevue University",
         "city": "Bellevue",
         "students": 14476,
-        "jobs_url": null
+        "jobs_url": "https://www.bellevue.edu/bellevue-university-careers/"
       },
       {
         "name": "Bryan College of Health Sciences",
         "city": "Lincoln",
         "students": 746,
-        "jobs_url": null
+        "jobs_url": "https://careers.bryanhealth.com/"
       },
       {
         "name": "Capitol Beauty School",
@@ -6209,25 +6209,25 @@
         "name": "Central Community College",
         "city": "Grand Island",
         "students": 6862,
-        "jobs_url": null
+        "jobs_url": "https://cccneb.edu/employment/"
       },
       {
         "name": "Chadron State College",
         "city": "Chadron",
         "students": 2205,
-        "jobs_url": null
+        "jobs_url": "https://www.csc.edu/hr/"
       },
       {
         "name": "CHI Health School of Radiologic Technology",
         "city": "Omaha",
         "students": 25,
-        "jobs_url": null
+        "jobs_url": "https://www.chihealth.com/careers"
       },
       {
         "name": "Clarkson College",
         "city": "Omaha",
         "students": 1078,
-        "jobs_url": null
+        "jobs_url": "https://www.clarksoncollege.edu/about/employment-opportunities"
       },
       {
         "name": "College of Hair Design-Downtown",
@@ -6245,7 +6245,7 @@
         "name": "College of Saint Mary",
         "city": "Omaha",
         "students": 733,
-        "jobs_url": null
+        "jobs_url": "https://www.csm.edu/employment/"
       }
     ],
     "companies_curated_count": 1151,
@@ -6317,20 +6317,20 @@
     "state": "NH",
     "universities_count": 33,
     "total_students": 235693,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 8492,
+    "h1b_exempt_campuses": 26,
     "top_institutions": [
       {
         "name": "Antioch University-New England",
         "city": "Keene",
         "students": 967,
-        "jobs_url": null
+        "jobs_url": "https://www.antioch.edu/employment/"
       },
       {
         "name": "Colby-Sawyer College",
         "city": "New London",
         "students": 950,
-        "jobs_url": null
+        "jobs_url": "https://www.colby-sawyer.edu/offices/human-resources"
       },
       {
         "name": "Dartmouth College",
@@ -6360,13 +6360,13 @@
         "name": "Franklin Pierce University",
         "city": "Rindge",
         "students": 1637,
-        "jobs_url": null
+        "jobs_url": "https://franklinpierce.edu/employment.html"
       },
       {
         "name": "Great Bay Community College",
         "city": "Portsmouth",
         "students": 1440,
-        "jobs_url": null
+        "jobs_url": "https://www.ccsnh.edu/human-resources/employment-opportunities/"
       },
       {
         "name": "Harmony Health Care Institute",
@@ -6450,8 +6450,8 @@
     "state": "NJ",
     "universities_count": 148,
     "total_students": 403929,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 23908,
+    "h1b_exempt_campuses": 80,
     "top_institutions": [
       {
         "name": "Adult and Continuing Education-BCTS",
@@ -6463,7 +6463,7 @@
         "name": "Advantage Career Institute",
         "city": "Eatontown",
         "students": 149,
-        "jobs_url": null
+        "jobs_url": "https://aci.edu/career-services/employment-opportunities/"
       },
       {
         "name": "American Institute of Alternative Medicine",
@@ -6475,31 +6475,31 @@
         "name": "American Institute of Medical Sciences & Education",
         "city": "Piscataway",
         "students": 397,
-        "jobs_url": null
+        "jobs_url": "https://aimseducation.edu/employment"
       },
       {
         "name": "American Institute-Cherry Hill",
         "city": "Cherry Hill",
         "students": 400,
-        "jobs_url": null
+        "jobs_url": "https://job-boards.greenhouse.io/americaninstitute"
       },
       {
         "name": "American Institute-Clifton",
         "city": "CLIFTON",
         "students": 735,
-        "jobs_url": null
+        "jobs_url": "https://job-boards.greenhouse.io/americaninstitute"
       },
       {
         "name": "American Institute-Somerset",
         "city": "Somerset",
         "students": 274,
-        "jobs_url": null
+        "jobs_url": "https://job-boards.greenhouse.io/americaninstitute"
       },
       {
         "name": "American Institute-Toms River",
         "city": "Toms River",
         "students": 463,
-        "jobs_url": null
+        "jobs_url": "https://job-boards.greenhouse.io/americaninstitute"
       },
       {
         "name": "Artistic Academy of Hair Design",
@@ -6511,7 +6511,7 @@
         "name": "ASI Career Institute",
         "city": "Turnersville",
         "students": 33,
-        "jobs_url": null
+        "jobs_url": "https://asi.edu/employment"
       }
     ],
     "companies_curated_count": 2674,
@@ -6583,20 +6583,20 @@
     "state": "NM",
     "universities_count": 43,
     "total_students": 111706,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 4031,
+    "h1b_exempt_campuses": 31,
     "top_institutions": [
       {
         "name": "A Better U Beauty Barber Academy",
         "city": "Albuquerque",
         "students": 52,
-        "jobs_url": null
+        "jobs_url": "https://abuacademy.com/become-an-instructor/"
       },
       {
         "name": "Aveda Institute-New Mexico",
         "city": "Albuquerque",
         "students": 157,
-        "jobs_url": null
+        "jobs_url": "https://recruiting.paylocity.com/recruiting/jobs/All/aa57747f-b05a-414b-a208-90a6a3db7fc9/Mark-Pardo-Institute-of-New-Mexico"
       },
       {
         "name": "Avenue Academy, A Cosmetology Institute",
@@ -6608,13 +6608,13 @@
         "name": "Brookline College-Albuquerque",
         "city": "Albuquerque",
         "students": 492,
-        "jobs_url": null
+        "jobs_url": "https://careers.smartrecruiters.com/UnitekLearning/"
       },
       {
         "name": "Burrell College of Osteopathic Medicine",
         "city": "Las Cruces",
         "students": 687,
-        "jobs_url": null
+        "jobs_url": "https://burrell.edu/administrative-services/human-resources/"
       },
       {
         "name": "Carrington College-Albuquerque",
@@ -6626,25 +6626,25 @@
         "name": "Central New Mexico Community College",
         "city": "Albuquerque",
         "students": 19067,
-        "jobs_url": null
+        "jobs_url": "https://www.cnm.edu/depts/hr/apply-for-jobs-at-cnm"
       },
       {
         "name": "Clovis Community College",
         "city": "Clovis",
         "students": 2328,
-        "jobs_url": null
+        "jobs_url": "https://clovis.edu/hr/index.aspx"
       },
       {
         "name": "Eastern New Mexico University Ruidoso Branch Community College",
         "city": "Ruidoso",
         "students": 745,
-        "jobs_url": null
+        "jobs_url": "https://ruidoso.enmu.edu/employment/"
       },
       {
         "name": "Eastern New Mexico University-Main Campus",
         "city": "Portales",
         "students": 5386,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/enmu"
       }
     ],
     "companies_curated_count": 791,
@@ -6716,8 +6716,8 @@
     "state": "NV",
     "universities_count": 40,
     "total_students": 120635,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 4618,
+    "h1b_exempt_campuses": 11,
     "top_institutions": [
       {
         "name": "Academy of Hair Design-Las Vegas",
@@ -6735,7 +6735,7 @@
         "name": "Arizona College of Nursing-Las Vegas",
         "city": "Las Vegas",
         "students": 1185,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Avalon Institute-Las Vegas",
@@ -6747,7 +6747,7 @@
         "name": "Aviation Institute of Maintenance-Las Vegas",
         "city": "Las Vegas",
         "students": 332,
-        "jobs_url": null
+        "jobs_url": "https://aviationmaintenance.edu/about/join-our-team/"
       },
       {
         "name": "Career College of Northern Nevada",
@@ -6849,8 +6849,8 @@
     "state": "NY",
     "universities_count": 411,
     "total_students": 1152900,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 79818,
+    "h1b_exempt_campuses": 289,
     "top_institutions": [
       {
         "name": "Academy for Jewish Religion",
@@ -6862,25 +6862,25 @@
         "name": "Access Careers",
         "city": "Hempstead",
         "students": 408,
-        "jobs_url": null
+        "jobs_url": "https://accesscareers.net/jobs/"
       },
       {
         "name": "Access Careers-Islandia",
         "city": "Islandia",
         "students": 314,
-        "jobs_url": null
+        "jobs_url": "https://accesscareers.net/jobs/"
       },
       {
         "name": "Ace Institute of Technology",
         "city": "New York",
         "students": 264,
-        "jobs_url": null
+        "jobs_url": "https://acecareer.edu/current-openings/"
       },
       {
         "name": "Adelphi University",
         "city": "Garden City",
         "students": 7406,
-        "jobs_url": null
+        "jobs_url": "https://www.adelphi.edu/hr/careers/"
       },
       {
         "name": "Aesthetic Science Institute",
@@ -6892,25 +6892,25 @@
         "name": "Albany BOCES-Adult Practical Nursing Program",
         "city": "Albany",
         "students": 161,
-        "jobs_url": null
+        "jobs_url": "https://www.capitalregionboces.org/employment/"
       },
       {
         "name": "Albany College of Pharmacy and Health Sciences",
         "city": "Albany",
         "students": 875,
-        "jobs_url": null
+        "jobs_url": "https://www.acphs.edu/employment/"
       },
       {
         "name": "Albany Law School",
         "city": "Albany",
         "students": 628,
-        "jobs_url": null
+        "jobs_url": "https://www.albanylaw.edu/about/employment-albany-law-school"
       },
       {
         "name": "Albany Medical College",
         "city": "Albany",
         "students": 834,
-        "jobs_url": null
+        "jobs_url": "https://www.albanymed.org/careers/"
       }
     ],
     "companies_curated_count": 5228,
@@ -7042,8 +7042,8 @@
     "state": "OH",
     "universities_count": 279,
     "total_students": 619931,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 38090,
+    "h1b_exempt_campuses": 141,
     "top_institutions": [
       {
         "name": "Academia Medical Institute",
@@ -7055,7 +7055,7 @@
         "name": "Adult and Community Education-Hudson",
         "city": "Columbus",
         "students": 37,
-        "jobs_url": null
+        "jobs_url": "https://www.ccsoh.us/our-district/departments/human-resources"
       },
       {
         "name": "Air Force Institute of Technology-Graduate School of Engineering & Management",
@@ -7085,19 +7085,19 @@
         "name": "Antioch College",
         "city": "Yellow Springs",
         "students": 127,
-        "jobs_url": null
+        "jobs_url": "https://antiochcollege.edu/about/employment/"
       },
       {
         "name": "Antioch University",
         "city": "Yellow Springs",
         "students": 434,
-        "jobs_url": null
+        "jobs_url": "https://www.antioch.edu/employment/"
       },
       {
         "name": "Antioch University-System Administration",
         "city": "Yellow Springs",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://www.antioch.edu/employment/"
       },
       {
         "name": "Apex Academy Hair Skin Nails School of Cosmetology",
@@ -7175,8 +7175,8 @@
     "state": "OK",
     "universities_count": 98,
     "total_students": 214574,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 10443,
+    "h1b_exempt_campuses": 54,
     "top_institutions": [
       {
         "name": "Academy of Cosmetology, Barbering, and Esthetics",
@@ -7218,19 +7218,19 @@
         "name": "Cameron University",
         "city": "Lawton",
         "students": 3559,
-        "jobs_url": null
+        "jobs_url": "https://jobs.silkroad.com/Cameron/Careers"
       },
       {
         "name": "Canadian Valley Technology Center",
         "city": "El Reno",
         "students": 2026,
-        "jobs_url": null
+        "jobs_url": "https://www.cvtech.edu/employment-opportunities/"
       },
       {
         "name": "Carl Albert State College",
         "city": "Poteau",
         "students": 1786,
-        "jobs_url": null
+        "jobs_url": "https://carlalbert.edu/about-casc/job-openings/"
       },
       {
         "name": "Central Oklahoma College",
@@ -7308,38 +7308,38 @@
     "state": "OR",
     "universities_count": 72,
     "total_students": 200229,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 10576,
+    "h1b_exempt_campuses": 47,
     "top_institutions": [
       {
         "name": "American College of Healthcare Sciences",
         "city": "Portland",
         "students": 1042,
-        "jobs_url": null
+        "jobs_url": "https://american-college-of-healthcare-sciences.prismhr-hire.com/"
       },
       {
         "name": "Aveda Institute-Portland",
         "city": "Portland",
         "students": 171,
-        "jobs_url": null
+        "jobs_url": "https://avedapdx.com/contact-us/careers"
       },
       {
         "name": "Beau Monde Academy of Barbering and Cosmetology",
         "city": "Portland",
         "students": 120,
-        "jobs_url": null
+        "jobs_url": "http://beaumondecollege.com/careers/"
       },
       {
         "name": "Blue Mountain Community College",
         "city": "Pendleton",
         "students": 1371,
-        "jobs_url": null
+        "jobs_url": "https://bluecc.edu/about/employment/"
       },
       {
         "name": "Bushnell University",
         "city": "Eugene",
         "students": 758,
-        "jobs_url": null
+        "jobs_url": "https://bushnell.edu/careers/"
       },
       {
         "name": "Carrington College-Portland",
@@ -7351,25 +7351,25 @@
         "name": "Central Oregon Community College",
         "city": "Bend",
         "students": 4053,
-        "jobs_url": null
+        "jobs_url": "https://cocc.edu/departments/human-resources/employment/"
       },
       {
         "name": "Chemeketa Community College",
         "city": "Salem",
         "students": 7433,
-        "jobs_url": null
+        "jobs_url": "https://www.chemeketa.edu/about/human-resources/"
       },
       {
         "name": "Christian Culinary Academy",
         "city": "Cannon Beach",
         "students": 21,
-        "jobs_url": null
+        "jobs_url": "https://www.christianchefs.org/school/career.html"
       },
       {
         "name": "Clackamas Community College",
         "city": "Oregon City",
         "students": 5153,
-        "jobs_url": null
+        "jobs_url": "https://clackamas.edu/about-us/ccc-jobs"
       }
     ],
     "companies_curated_count": 1572,
@@ -7555,20 +7555,20 @@
     "state": "PA",
     "universities_count": 315,
     "total_students": 653639,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 48630,
+    "h1b_exempt_campuses": 184,
     "top_institutions": [
       {
         "name": "Academy of Vocal Arts",
         "city": "Philadelphia",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://avaopera.org/about/careers/"
       },
       {
         "name": "Albright College",
         "city": "Reading",
         "students": 1652,
-        "jobs_url": null
+        "jobs_url": "https://www.albright.edu/about/human-resources"
       },
       {
         "name": "All-State Career School",
@@ -7586,7 +7586,7 @@
         "name": "Allegheny College",
         "city": "Meadville",
         "students": 1231,
-        "jobs_url": null
+        "jobs_url": "https://alleghenycollege-ibwwjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1"
       },
       {
         "name": "Altoona Beauty School Inc",
@@ -7598,25 +7598,25 @@
         "name": "Alvernia University",
         "city": "Reading",
         "students": 2485,
-        "jobs_url": null
+        "jobs_url": "https://www.alvernia.edu/faculty-staff/human-resources/employment-opportunities"
       },
       {
         "name": "American Barber and Beauty Academy",
         "city": "Reading",
         "students": 118,
-        "jobs_url": null
+        "jobs_url": "https://jobs.americanbarberbeauty.com/"
       },
       {
         "name": "American College of Financial Services",
         "city": "King of Prussia",
         "students": 4204,
-        "jobs_url": null
+        "jobs_url": "https://www.paycomonline.net/v4/ats/web.php/portal/0EC6D26D6ACC066E0F0E668BFD94D104/career-page"
       },
       {
         "name": "Arcadia University",
         "city": "Glenside",
         "students": 3142,
-        "jobs_url": null
+        "jobs_url": "https://www.arcadia.edu/about-arcadia/offices-facilities-services/human-resources"
       }
     ],
     "companies_curated_count": 3896,
@@ -7718,8 +7718,8 @@
     "state": "PR",
     "universities_count": 129,
     "total_students": 167883,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 7567,
+    "h1b_exempt_campuses": 70,
     "top_institutions": [
       {
         "name": "Academia Serrant Inc",
@@ -7749,7 +7749,7 @@
         "name": "Albizu University-San Juan",
         "city": "San Juan",
         "students": 2534,
-        "jobs_url": null
+        "jobs_url": "https://www.albizu.edu/career/"
       },
       {
         "name": "American Educational College",
@@ -7851,8 +7851,8 @@
     "state": "PW",
     "universities_count": 1,
     "total_students": 387,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 10,
+    "h1b_exempt_campuses": 1,
     "top_institutions": [
       {
         "name": "Palau Community College",
@@ -7947,44 +7947,44 @@
     "state": "RI",
     "universities_count": 21,
     "total_students": 76660,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 5013,
+    "h1b_exempt_campuses": 15,
     "top_institutions": [
       {
         "name": "Brown University",
         "city": "Providence",
         "students": 11516,
-        "jobs_url": null
+        "jobs_url": "https://www.brown.edu/careers"
       },
       {
         "name": "Bryant University",
         "city": "Smithfield",
         "students": 3592,
-        "jobs_url": null
+        "jobs_url": "https://employment.bryant.edu/"
       },
       {
         "name": "College Unbound",
         "city": "Providence",
         "students": 401,
-        "jobs_url": null
+        "jobs_url": "https://collegeunbound.edu/connect/careers/"
       },
       {
         "name": "Community College of Rhode Island",
         "city": "Warwick",
         "students": 12518,
-        "jobs_url": null
+        "jobs_url": "https://jobs.ccri.edu/"
       },
       {
         "name": "Empire Beauty School-Warwick",
         "city": "Providence",
         "students": 132,
-        "jobs_url": null
+        "jobs_url": "https://www.empire.edu/careers"
       },
       {
         "name": "IYRS School of Technology & Trades",
         "city": "Newport",
         "students": 76,
-        "jobs_url": null
+        "jobs_url": "https://www.iyrs.edu/careers"
       },
       {
         "name": "Johnson & Wales University-Online",
@@ -7996,19 +7996,19 @@
         "name": "Johnson & Wales University-Providence",
         "city": "Providence",
         "students": 4372,
-        "jobs_url": null
+        "jobs_url": "https://jobs.jwu.edu/en-us/listing/"
       },
       {
         "name": "Lincoln Technical Institute-Lincoln",
         "city": "Lincoln",
         "students": 703,
-        "jobs_url": null
+        "jobs_url": "https://www.lincolntech.edu/about/careers-at-lincoln-tech"
       },
       {
         "name": "MotoRing Technical Training Institute",
         "city": "East Providence",
         "students": 143,
-        "jobs_url": null
+        "jobs_url": "https://mtti.edu/careers/"
       }
     ],
     "companies_curated_count": 646,
@@ -8110,8 +8110,8 @@
     "state": "SC",
     "universities_count": 91,
     "total_students": 252917,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 11086,
+    "h1b_exempt_campuses": 57,
     "top_institutions": [
       {
         "name": "Academy for Careers and Technology",
@@ -8129,31 +8129,31 @@
         "name": "Aiken Technical College",
         "city": "Graniteville",
         "students": 2218,
-        "jobs_url": null
+        "jobs_url": "https://www.atc.edu/about/work-atc"
       },
       {
         "name": "Allen University",
         "city": "Columbia",
         "students": 677,
-        "jobs_url": null
+        "jobs_url": "https://allenuniversity.edu/human-resources"
       },
       {
         "name": "American College of the Building Arts",
         "city": "Charleston",
         "students": 140,
-        "jobs_url": null
+        "jobs_url": "https://acba.edu/career-opportunities"
       },
       {
         "name": "Anderson University",
         "city": "Anderson",
         "students": 4325,
-        "jobs_url": null
+        "jobs_url": "https://andersonuniversity.wd1.myworkdayjobs.com/AndersonUniversity"
       },
       {
         "name": "Arclabs",
         "city": "Piedmont",
         "students": 643,
-        "jobs_url": null
+        "jobs_url": "https://ats.rippling.com/arclabs-welding-school/jobs"
       },
       {
         "name": "B-Unique Beauty and Barber Academy",
@@ -8243,20 +8243,20 @@
     "state": "SD",
     "universities_count": 27,
     "total_students": 52126,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 2860,
+    "h1b_exempt_campuses": 22,
     "top_institutions": [
       {
         "name": "Augustana University",
         "city": "Sioux Falls",
         "students": 2158,
-        "jobs_url": null
+        "jobs_url": "https://www.augie.edu/resources/human-resources/prospective-employees"
       },
       {
         "name": "Avera McKennan Hospital School of Radiologic Technology",
         "city": "Sioux Falls",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://www.avera.org/careers/"
       },
       {
         "name": "Avera Sacred Heart Hospital",
@@ -8268,7 +8268,7 @@
         "name": "Black Hills State University",
         "city": "Spearfish",
         "students": 3475,
-        "jobs_url": null
+        "jobs_url": "https://yourfuture.sdbor.edu/postings/search?query=&query_v0_posted_at_date=&435=&query_organizational_tier_1_id%5B%5D=1252&225=&commit=Search"
       },
       {
         "name": "California Intercontinental University",
@@ -8280,19 +8280,19 @@
         "name": "Dakota State University",
         "city": "Madison",
         "students": 3508,
-        "jobs_url": null
+        "jobs_url": "https://dsu.edu/careers/"
       },
       {
         "name": "Dakota Wesleyan University",
         "city": "Mitchell",
         "students": 886,
-        "jobs_url": null
+        "jobs_url": "https://www.dwu.edu/employment"
       },
       {
         "name": "Institute of Lutheran Theology",
         "city": "Brookings",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://ilt.edu/work-for-ilt/"
       },
       {
         "name": "Kairos University",
@@ -8304,7 +8304,7 @@
         "name": "Lake Area Technical College",
         "city": "Watertown",
         "students": 2179,
-        "jobs_url": null
+        "jobs_url": "https://www.lakeareatech.edu/about-latc/careers-at-latc/"
       }
     ],
     "companies_curated_count": 566,
@@ -8394,8 +8394,8 @@
     "state": "TN",
     "universities_count": 148,
     "total_students": 411248,
-    "stem_graduates_yearly": 20850,
-    "h1b_exempt_campuses": 4,
+    "stem_graduates_yearly": 34598,
+    "h1b_exempt_campuses": 96,
     "top_institutions": [
       {
         "name": "Academy of Allied Health Careers",
@@ -8413,7 +8413,7 @@
         "name": "American Baptist College",
         "city": "Nashville",
         "students": 48,
-        "jobs_url": null
+        "jobs_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=be310d42-8bd7-429d-b06f-97f3e3a8fb26&ccId=19000101_000001&lang=en_US"
       },
       {
         "name": "Arnolds Beauty School",
@@ -8443,13 +8443,13 @@
         "name": "Belmont University",
         "city": "Nashville",
         "students": 8862,
-        "jobs_url": null
+        "jobs_url": "https://www.belmont.edu/hr/"
       },
       {
         "name": "Bethel University",
         "city": "McKenzie",
         "students": 2974,
-        "jobs_url": null
+        "jobs_url": "https://www.bethelu.edu/employees/careers"
       },
       {
         "name": "Brillare Beauty Institute",
@@ -8594,8 +8594,8 @@
     "state": "TX",
     "universities_count": 399,
     "total_students": 1636184,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 83174,
+    "h1b_exempt_campuses": 181,
     "top_institutions": [
       {
         "name": "ABC Beauty Academy",
@@ -8607,13 +8607,13 @@
         "name": "Abilene Christian University",
         "city": "Abilene",
         "students": 5114,
-        "jobs_url": null
+        "jobs_url": "https://acu.edu/about/careers/"
       },
       {
         "name": "Abilene Christian University-Undergraduate Online",
         "city": "Addison",
         "students": 918,
-        "jobs_url": null
+        "jobs_url": "https://acu.edu/about/careers/"
       },
       {
         "name": "Academy of Hair Design-Jasper",
@@ -8643,7 +8643,7 @@
         "name": "Alamo Community College District Central Office",
         "city": "San Antonio",
         "students": 0,
-        "jobs_url": null
+        "jobs_url": "https://www.alamo.edu/jobs"
       },
       {
         "name": "Allgood Beauty Institute",
@@ -8655,7 +8655,7 @@
         "name": "Alvin Community College",
         "city": "Alvin",
         "students": 5830,
-        "jobs_url": null
+        "jobs_url": "https://alvincollege.edu/jobs/"
       }
     ],
     "companies_curated_count": 6359,
@@ -8956,8 +8956,8 @@
     "state": "UT",
     "universities_count": 60,
     "total_students": 455722,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 22584,
+    "h1b_exempt_campuses": 13,
     "top_institutions": [
       {
         "name": "Acaydia School of Aesthetics",
@@ -8981,7 +8981,7 @@
         "name": "Arizona College of Nursing-Salt Lake City",
         "city": "Murray",
         "students": 323,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Avalon Institute-Layton",
@@ -9011,7 +9011,7 @@
         "name": "Brigham Young University",
         "city": "Provo",
         "students": 35074,
-        "jobs_url": null
+        "jobs_url": "https://hrs.byu.edu/job-seekers"
       },
       {
         "name": "Cameo College of Essential Beauty",
@@ -9155,14 +9155,14 @@
     "state": "VA",
     "universities_count": 143,
     "total_students": 564626,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 29957,
+    "h1b_exempt_campuses": 83,
     "top_institutions": [
       {
         "name": "Advanced Technology Institute",
         "city": "Virginia Beach",
         "students": 377,
-        "jobs_url": null
+        "jobs_url": "https://recruiting.ultipro.com/ECP1000ECPI/JobBoard/056cdf06-f38c-489a-8123-f725a116692f/"
       },
       {
         "name": "Agora University",
@@ -9192,7 +9192,7 @@
         "name": "Appalachian College of Pharmacy",
         "city": "Oakwood",
         "students": 125,
-        "jobs_url": null
+        "jobs_url": "https://www.acp.edu/employment/"
       },
       {
         "name": "Appalachian School of Law",
@@ -9204,7 +9204,7 @@
         "name": "Arizona College of Nursing-Falls Church",
         "city": "Falls Church",
         "students": 284,
-        "jobs_url": null
+        "jobs_url": "https://arizonacollege.edu/about-us/join-our-staff/"
       },
       {
         "name": "Ascent College",
@@ -9288,14 +9288,14 @@
     "state": "VI",
     "universities_count": 1,
     "total_students": 1739,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 66,
+    "h1b_exempt_campuses": 1,
     "top_institutions": [
       {
         "name": "University of the Virgin Islands",
         "city": "Charlotte Amalie",
         "students": 1739,
-        "jobs_url": null
+        "jobs_url": "https://careers.uvi.edu/"
       }
     ],
     "companies_curated_count": 30,
@@ -9325,8 +9325,8 @@
     "state": "VT",
     "universities_count": 17,
     "total_students": 39255,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 3120,
+    "h1b_exempt_campuses": 15,
     "top_institutions": [
       {
         "name": "Advanced Welding Institute",
@@ -9338,19 +9338,19 @@
         "name": "Bennington College",
         "city": "Bennington",
         "students": 867,
-        "jobs_url": null
+        "jobs_url": "https://www.bennington.edu/employment-opportunities"
       },
       {
         "name": "Champlain College",
         "city": "Burlington",
         "students": 3328,
-        "jobs_url": null
+        "jobs_url": "https://champlain-ibumjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/"
       },
       {
         "name": "Community College of Vermont",
         "city": "Montpelier",
         "students": 5377,
-        "jobs_url": null
+        "jobs_url": "https://ccv.edu/about/employment-at-ccv/"
       },
       {
         "name": "Goddard College",
@@ -9362,19 +9362,19 @@
         "name": "Landmark College",
         "city": "Putney",
         "students": 650,
-        "jobs_url": null
+        "jobs_url": "https://www.landmark.edu/about/employment"
       },
       {
         "name": "Middlebury College",
         "city": "Middlebury",
         "students": 2857,
-        "jobs_url": null
+        "jobs_url": "https://www.middlebury.edu/human-resources/work-middlebury"
       },
       {
         "name": "Norwich University",
         "city": "Northfield",
         "students": 3274,
-        "jobs_url": null
+        "jobs_url": "https://www.norwich.edu/offices/human-resources"
       },
       {
         "name": "O'Briens Aveda Institute",
@@ -9386,7 +9386,7 @@
         "name": "Saint Michael's College",
         "city": "Colchester",
         "students": 1370,
-        "jobs_url": null
+        "jobs_url": "https://stmichaels-ibukjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2"
       }
     ],
     "companies_curated_count": 272,
@@ -9476,8 +9476,8 @@
     "state": "WA",
     "universities_count": 96,
     "total_students": 322010,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 22011,
+    "h1b_exempt_campuses": 68,
     "top_institutions": [
       {
         "name": "Academy of Interactive Entertainment",
@@ -9489,25 +9489,25 @@
         "name": "Antioch University-Seattle",
         "city": "Seattle",
         "students": 800,
-        "jobs_url": null
+        "jobs_url": "https://www.antioch.edu/employment/"
       },
       {
         "name": "Aveda Arts & Sciences Institute Seattle",
         "city": "Seattle",
         "students": 157,
-        "jobs_url": null
+        "jobs_url": "https://avedaarts.edu/work-for-us/"
       },
       {
         "name": "Aveda Institute Portland-Vancouver Campus",
         "city": "Vancouver",
         "students": 130,
-        "jobs_url": null
+        "jobs_url": "https://avedapdx.com/contact-us/careers"
       },
       {
         "name": "Bastyr University",
         "city": "Kenmore",
         "students": 760,
-        "jobs_url": null
+        "jobs_url": "https://www.paycomonline.net/v4/ats/web.php/portal/35ECA37F07A12A40C9F79168AFFA3433/career-page"
       },
       {
         "name": "Bates Technical College",
@@ -9519,7 +9519,7 @@
         "name": "Bellevue College",
         "city": "Bellevue",
         "students": 11472,
-        "jobs_url": null
+        "jobs_url": "https://www.bellevuecollege.edu/work-at-bellevue/"
       },
       {
         "name": "Bellingham Technical College",
@@ -9531,7 +9531,7 @@
         "name": "Big Bend Community College",
         "city": "Moses Lake",
         "students": 1786,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/bigbend"
       },
       {
         "name": "BJ's Beauty & Barber College",
@@ -9652,8 +9652,8 @@
     "state": "WI",
     "universities_count": 87,
     "total_students": 322084,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 17958,
+    "h1b_exempt_campuses": 64,
     "top_institutions": [
       {
         "name": "Academy of Beauty Professionals",
@@ -9683,7 +9683,7 @@
         "name": "Alverno College",
         "city": "Milwaukee",
         "students": 1719,
-        "jobs_url": null
+        "jobs_url": "https://www.alverno.edu/employment"
       },
       {
         "name": "Aveda Institute-Madison",
@@ -9695,25 +9695,25 @@
         "name": "Bellin College",
         "city": "Green Bay",
         "students": 836,
-        "jobs_url": null
+        "jobs_url": "https://www.bellincollege.edu/about/employment-at-bellin-college/"
       },
       {
         "name": "Beloit College",
         "city": "Beloit",
         "students": 948,
-        "jobs_url": null
+        "jobs_url": "https://www.beloit.edu/offices/human-resources/"
       },
       {
         "name": "Blackhawk Technical College",
         "city": "Janesville",
         "students": 2894,
-        "jobs_url": null
+        "jobs_url": "https://www.blackhawk.edu/About-Us/Employment"
       },
       {
         "name": "Bryant & Stratton College-Wauwatosa",
         "city": "Wauwatosa",
         "students": 952,
-        "jobs_url": null
+        "jobs_url": "https://www.bryantstratton.edu/careers/"
       }
     ],
     "companies_curated_count": 2126,
@@ -9785,8 +9785,8 @@
     "state": "WV",
     "universities_count": 68,
     "total_students": 137024,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 6890,
+    "h1b_exempt_campuses": 36,
     "top_institutions": [
       {
         "name": "Academy of Careers and Technology",
@@ -9798,7 +9798,7 @@
         "name": "American Public University System",
         "city": "Charles Town",
         "students": 50187,
-        "jobs_url": null
+        "jobs_url": "https://www.apus.edu/aboutus/careers/"
       },
       {
         "name": "Appalachian Bible College",
@@ -9810,7 +9810,7 @@
         "name": "B M Spurr School of Practical Nursing",
         "city": "Glen Dale",
         "students": 16,
-        "jobs_url": null
+        "jobs_url": "https://wvumedicine.org/careers/"
       },
       {
         "name": "Ben Franklin Career Center",
@@ -9828,13 +9828,13 @@
         "name": "Blue Ridge Community and Technical College",
         "city": "Martinsburg",
         "students": 4309,
-        "jobs_url": null
+        "jobs_url": "https://www.blueridgectc.edu/about-blue-ridge/human-resources/"
       },
       {
         "name": "Bluefield State University",
         "city": "Bluefield",
         "students": 1270,
-        "jobs_url": null
+        "jobs_url": "https://bluefieldstate.edu/human-resources/jobs/"
       },
       {
         "name": "Boone Career and Technical Center",
@@ -9846,7 +9846,7 @@
         "name": "BridgeValley Community & Technical College",
         "city": "South  Charleston",
         "students": 1793,
-        "jobs_url": null
+        "jobs_url": "https://www.bridgevalley.edu/offices/hr/jobs.html"
       }
     ],
     "companies_curated_count": 1061,
@@ -9918,20 +9918,20 @@
     "state": "WY",
     "universities_count": 10,
     "total_students": 30230,
-    "stem_graduates_yearly": 0,
-    "h1b_exempt_campuses": 0,
+    "stem_graduates_yearly": 1249,
+    "h1b_exempt_campuses": 8,
     "top_institutions": [
       {
         "name": "Casper College",
         "city": "Casper",
         "students": 3400,
-        "jobs_url": null
+        "jobs_url": "https://caspercollege.edu/hr/job-opportunities/"
       },
       {
         "name": "Central Wyoming College",
         "city": "Riverton",
         "students": 2106,
-        "jobs_url": null
+        "jobs_url": "https://www.schooljobs.com/careers/cwc"
       },
       {
         "name": "Cheeks Beauty Academy",
@@ -9943,7 +9943,7 @@
         "name": "Eastern Wyoming College",
         "city": "Torrington",
         "students": 1418,
-        "jobs_url": null
+        "jobs_url": "https://ewc.wy.edu/our-team/jobs-at-ewc/"
       },
       {
         "name": "Laramie County Community College",
@@ -9955,31 +9955,31 @@
         "name": "Northern Wyoming Community College District",
         "city": "Sheridan",
         "students": 3298,
-        "jobs_url": null
+        "jobs_url": "https://jobs.sheridan.edu/"
       },
       {
         "name": "Northwest College",
         "city": "Powell",
         "students": 1379,
-        "jobs_url": null
+        "jobs_url": "https://nwc.edu/employment/"
       },
       {
         "name": "University of Wyoming",
         "city": "Laramie",
         "students": 10913,
-        "jobs_url": null
+        "jobs_url": "https://www.uwyo.edu/hr/prospective/index.html"
       },
       {
         "name": "Western Wyoming Community College",
         "city": "Rock Springs",
         "students": 2464,
-        "jobs_url": null
+        "jobs_url": "https://wwcwy.peopleadmin.com/"
       },
       {
         "name": "WyoTech",
         "city": "Laramie",
         "students": 1206,
-        "jobs_url": null
+        "jobs_url": "https://www.wyotech.edu/about-wyotech/careers/"
       }
     ],
     "companies_curated_count": 490,
