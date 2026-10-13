@@ -34,13 +34,24 @@ export const ExecutiveDashboard: React.FC<ExecutiveDashboardProps> = ({ stats })
     Greenhouse: 11,
   };
 
-  const indData = stats?.employers.industries || {
-    'Logistics & Transport': 2078739,
-    'Healthcare Providers': 1760961,
-    'IT & Software': 37819,
-    'Mechanical & Manufacturing': 34680,
-    'MedTech & Pharma': 19152,
-  };
+  const indData = React.useMemo(() => {
+    const raw = stats?.employers.industries || {
+      'Logistics & Transport': 2078739,
+      'Healthcare Providers': 1760961,
+      'Information Technology': 37819,
+      'Mechanical & Manufacturing': 34680,
+      'MedTech & Pharma': 19152,
+    };
+    const merged: Record<string, number> = {};
+    for (const [key, val] of Object.entries(raw)) {
+      if (key === 'IT' || key === 'IT & Software' || key === 'Information Technology') {
+        merged['Information Technology'] = (merged['Information Technology'] || 0) + val;
+      } else {
+        merged[key] = (merged[key] || 0) + val;
+      }
+    }
+    return merged;
+  }, [stats]);
 
   const totalCampuses = stats?.universities.total || 6299;
 

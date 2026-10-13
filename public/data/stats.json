@@ -41,11 +41,10 @@
     "industries": {
       "Healthcare Providers": 35449,
       "Mechanical & Manufacturing": 34708,
-      "Information Technology": 15151,
+      "Information Technology": 15799,
       "MedTech & Pharma": 13424,
       "Other Industries": 13120,
       "Not verified": 1930,
-      "IT": 648,
       "Other Engineering": 530,
       "Logistics & Transport": 237,
       "Data Centers & Cloud": 170
@@ -67,8 +66,8 @@
         "count": 1760961
       },
       {
-        "ind": "IT",
-        "slug": "it",
+        "ind": "Information Technology",
+        "slug": "information-technology",
         "count": 37819
       },
       {

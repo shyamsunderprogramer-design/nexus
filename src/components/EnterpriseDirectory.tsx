@@ -186,7 +186,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
             className="bg-white dark:bg-slate-900/80 border border-slate-200 dark:border-white/10 rounded-xl px-3 py-2 text-sm text-slate-800 dark:text-slate-300 focus:outline-none focus:border-brand-500 transition-colors"
           >
             <option value="ALL">All Industries (180,000+ Verified)</option>
-            <option value="Information Technology">💻 Information Technology & Software (60,000+)</option>
+            <option value="Information Technology">💻 Information Technology (IT) & Software</option>
             <option value="Banking & Financial Services">🏦 Banking & Financial Services (13,000+)</option>
             <option value="Healthcare & Pharmaceuticals">🏥 Healthcare & Pharmaceuticals (13,500+)</option>
             <option value="Education & EdTech">🎓 Education & EdTech (13,300+)</option>

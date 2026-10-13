@@ -215,8 +215,11 @@ export const api = {
     if (shardKey) {
       filtered = await fetchShard(shardKey);
       if (params.category && params.category !== 'ALL') {
-        const targetCat = params.category;
-        filtered = filtered.filter(c => (c.category || '') === targetCat);
+        const targetCat = params.category.toUpperCase() === 'IT' ? 'Information Technology' : params.category;
+        filtered = filtered.filter(c => {
+          const cat = c.category || '';
+          return cat === targetCat || (targetCat === 'Information Technology' && (cat === 'IT' || cat.includes('Information Technology')));
+        });
       }
     }
 
@@ -238,8 +241,11 @@ export const api = {
       }
 
       if (params.category && params.category !== 'ALL') {
-        const targetCat = params.category;
-        filtered = filtered.filter(c => (c.category || '') === targetCat);
+        const targetCat = params.category.toUpperCase() === 'IT' ? 'Information Technology' : params.category;
+        filtered = filtered.filter(c => {
+          const cat = c.category || '';
+          return cat === targetCat || (targetCat === 'Information Technology' && (cat === 'IT' || cat.includes('Information Technology')));
+        });
       }
 
       if (params.state && params.state !== 'ALL') {
@@ -248,8 +254,10 @@ export const api = {
       }
     }
     if (params.q) {
-      const q = params.q.toLowerCase();
+      const q = params.q.toLowerCase().trim();
+      const isItSearch = q === 'it' || q === 'it services' || q === 'it software';
       filtered = filtered.filter(c => 
+        (isItSearch && (c.category === 'Information Technology' || c.category === 'IT')) ||
         (c.name || '').toLowerCase().includes(q) ||
         (c.legal_name || '').toLowerCase().includes(q) ||
         (c.ticker || '').toLowerCase().includes(q) ||
