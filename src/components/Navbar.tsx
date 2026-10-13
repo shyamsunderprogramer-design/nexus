@@ -11,6 +11,7 @@ interface NavbarProps {
   accentColor: ThemeColor;
   onChangeAccentColor: (color: ThemeColor) => void;
   onOpenCommandPalette?: () => void;
+  onStartTour?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -30,6 +31,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   accentColor,
   onChangeAccentColor,
   onOpenCommandPalette,
+  onStartTour,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
 
@@ -109,6 +111,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <kbd className="hidden sm:inline-block font-mono text-[10px] font-bold bg-white dark:bg-white/10 px-1.5 py-0.5 rounded shadow-inner border border-slate-200/80 dark:border-white/10 text-slate-500 dark:text-slate-400 group-hover:text-brand-500">
                   ⌘K
                 </kbd>
+              </button>
+            )}
+
+            {/* Auto-Tour Trigger Button */}
+            {onStartTour && (
+              <button
+                onClick={onStartTour}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-brand-500/30 bg-brand-500/10 hover:bg-brand-500/20 text-brand-700 dark:text-brand-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer"
+                title="Start Guided Interactive Auto-Tour"
+                aria-label="Start Auto-Tour"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-brand-500 group-hover:rotate-12 transition-transform" />
+                <span className="hidden sm:inline">Auto-Tour</span>
               </button>
             )}
 

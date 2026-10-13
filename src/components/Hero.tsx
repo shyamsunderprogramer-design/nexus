@@ -17,9 +17,10 @@ interface HeroProps {
   stats: StatsResponse | null;
   onSelectTab?: (tab: ActiveTab) => void;
   onOpenCommandPalette?: () => void;
+  onStartTour?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPalette }) => {
+export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPalette, onStartTour }) => {
   const uniCount = stats?.universities.total || 6299;
   const compCount = stats ? (stats.employers.federal_total / 1000000).toFixed(2) + 'M' : '7.17M';
   const linksCount = stats ? (stats.employers.verified_carriers_applied / 1000000).toFixed(2) + 'M+' : '3.51M+';
@@ -80,27 +81,45 @@ export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPal
             {/* RESPONSIVE BUTTONS COCKPIT */}
             <div className="mt-6 sm:mt-8 space-y-3">
               
-              {/* Primary Search CTA - Full-Width on Mobile, Adaptive on Desktop */}
-              {onOpenCommandPalette && (
-                <button
-                  onClick={onOpenCommandPalette}
-                  className="w-full sm:w-auto px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 text-white shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 active:scale-[0.98] transition-all flex items-center justify-between sm:justify-start space-x-3 group border border-white/20 cursor-pointer"
-                  aria-label="Open Instant Omni-Search"
-                >
-                  <div className="flex items-center space-x-2.5">
-                    <div className="p-1.5 rounded-xl bg-white/20 group-hover:rotate-12 transition-transform duration-200">
-                      <Search className="w-4 h-4 text-white" />
+              {/* Primary Action Row: Omni-Search & Interactive Auto-Tour */}
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+                {onOpenCommandPalette && (
+                  <button
+                    onClick={onOpenCommandPalette}
+                    className="flex-1 sm:flex-initial px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 text-white shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 active:scale-[0.98] transition-all flex items-center justify-between sm:justify-start space-x-3 group border border-white/20 cursor-pointer"
+                    aria-label="Open Instant Omni-Search"
+                  >
+                    <div className="flex items-center space-x-2.5">
+                      <div className="p-1.5 rounded-xl bg-white/20 group-hover:rotate-12 transition-transform duration-200">
+                        <Search className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="tracking-tight">Instant Omni-Search</span>
                     </div>
-                    <span className="tracking-tight">Instant Omni-Search</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <span className="text-[11px] text-white/80 font-normal hidden sm:inline">Search all entities</span>
-                    <kbd className="text-[11px] bg-white/20 dark:bg-black/25 px-2 py-0.5 rounded-lg font-mono font-bold border border-white/25">
-                      ⌘K
-                    </kbd>
-                  </div>
-                </button>
-              )}
+                    <div className="flex items-center space-x-2">
+                      <span className="text-[11px] text-white/80 font-normal hidden sm:inline">Search all entities</span>
+                      <kbd className="text-[11px] bg-white/20 dark:bg-black/25 px-2 py-0.5 rounded-lg font-mono font-bold border border-white/25">
+                        ⌘K
+                      </kbd>
+                    </div>
+                  </button>
+                )}
+
+                {onStartTour && (
+                  <button
+                    onClick={onStartTour}
+                    className="px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold bg-white/90 hover:bg-slate-100 dark:bg-slate-900/90 dark:hover:bg-slate-800 border border-brand-500/30 text-brand-700 dark:text-brand-300 hover:border-brand-500/60 transition-all shadow-md flex items-center justify-center space-x-2.5 group cursor-pointer active:scale-[0.98]"
+                    aria-label="Start Guided Interactive Auto-Tour"
+                  >
+                    <div className="p-1 rounded-lg bg-brand-500/10 text-brand-500 group-hover:scale-110 transition-transform">
+                      <Sparkles className="w-4 h-4" />
+                    </div>
+                    <span>Interactive Auto-Tour</span>
+                    <span className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-brand-500/15 text-brand-600 dark:text-brand-300 font-bold border border-brand-500/30">
+                      LIVE
+                    </span>
+                  </button>
+                )}
+              </div>
 
               {/* Secondary Navigation Buttons - Fully Responsive Grid */}
               {onSelectTab && (

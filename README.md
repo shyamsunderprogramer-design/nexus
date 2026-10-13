@@ -49,8 +49,8 @@
   </a>
   <br/>
   <p align="center">
-    <b>🚀 <a href="https://shyamsunderprogramer-design.github.io/nexus/">Click here to launch the Live Interactive Cockpit</a></b><br/>
-    <i>Sub-millisecond query performance • Zero sign-up • 100% Free &amp; Open Source</i>
+    <b>🚀 <a href="https://shyamsunderprogramer-design.github.io/nexus/">Launch Live Web App with Interactive Auto-Tour</a></b><br/>
+    <i>✨ Built-in 6-Step Guided Auto-Tour • Sub-millisecond query performance • Zero sign-up • 100% Free &amp; Open Source</i>
   </p>
 </div>
 

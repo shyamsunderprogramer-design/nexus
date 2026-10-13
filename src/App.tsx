@@ -9,6 +9,7 @@ import { EnterpriseDirectory } from './components/EnterpriseDirectory';
 import { TalentBridge } from './components/TalentBridge';
 import { DetailDrawer } from './components/DetailDrawer';
 import { CommandPalette } from './components/CommandPalette';
+import { InteractiveTour } from './components/InteractiveTour';
 import { ToastProvider } from './components/Toast';
 
 export const App: React.FC = () => {
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(true);
   const [accentColor, setAccentColor] = useState<ThemeColor>('violet');
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
+  const [isTourActive, setIsTourActive] = useState(false);
 
   const applyThemeColor = (color: ThemeColor) => {
     const root = document.documentElement;
@@ -76,12 +78,14 @@ export const App: React.FC = () => {
           accentColor={accentColor}
           onChangeAccentColor={changeAccentColor}
           onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+          onStartTour={() => setIsTourActive(true)}
         />
 
         <Hero
           stats={stats}
           onSelectTab={setActiveTab}
           onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+          onStartTour={() => setIsTourActive(true)}
         />
 
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
@@ -111,6 +115,14 @@ export const App: React.FC = () => {
           isOpen={isCommandPaletteOpen}
           onClose={() => setIsCommandPaletteOpen(false)}
           onSelectEntity={setSelectedEntity}
+        />
+
+        <InteractiveTour
+          isOpen={isTourActive}
+          onClose={() => setIsTourActive(false)}
+          onTabChange={setActiveTab}
+          onSelectEntity={setSelectedEntity}
+          onToggleCommandPalette={setIsCommandPaletteOpen}
         />
 
         {/* Footer */}
