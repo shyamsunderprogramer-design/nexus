@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow1" cx="20%" cy="15%" r="65%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.32" />
+      <stop offset="60%" stop-color="#090d16" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="80%" cy="85%" r="65%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.28" />
+      <stop offset="60%" stop-color="#070b12" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="playGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#c4b5fd" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Deep Obsidian Canvas -->
+  <rect width="1200" height="675" fill="#070b12" />
+  <rect width="1200" height="675" fill="url(#bgGlow1)" />
+  <rect width="1200" height="675" fill="url(#bgGlow2)" />
+
+  <!-- Subtle Matrix Grid -->
+  <g opacity="0.08" stroke="#94a3b8" stroke-width="1">
+    <line x1="0" y1="75" x2="1200" y2="75" />
+    <line x1="0" y1="150" x2="1200" y2="150" />
+    <line x1="0" y1="225" x2="1200" y2="225" />
+    <line x1="0" y1="300" x2="1200" y2="300" />
+    <line x1="0" y1="375" x2="1200" y2="375" />
+    <line x1="0" y1="450" x2="1200" y2="450" />
+    <line x1="0" y1="525" x2="1200" y2="525" />
+    <line x1="0" y1="600" x2="1200" y2="600" />
+    <line x1="150" y1="0" x2="150" y2="675" />
+    <line x1="300" y1="0" x2="300" y2="675" />
+    <line x1="450" y1="0" x2="450" y2="675" />
+    <line x1="600" y1="0" x2="600" y2="675" />
+    <line x1="750" y1="0" x2="750" y2="675" />
+    <line x1="900" y1="0" x2="900" y2="675" />
+    <line x1="1050" y1="0" x2="1050" y2="675" />
+  </g>
+
+  <!-- Main Cockpit App Window Frame -->
+  <g filter="url(#shadowFilter)" transform="translate(60, 45)">
+    <!-- Window Outline & Glass -->
+    <rect width="1080" height="585" rx="20" fill="#0b1120" stroke="#334155" stroke-width="1.5" stroke-opacity="0.8" />
+    
+    <!-- Top Browser / Cockpit Header Bar -->
+    <rect width="1080" height="54" rx="20" fill="#0f172a" fill-opacity="0.95" />
+    <rect y="40" width="1080" height="14" fill="#0f172a" />
+    <line x1="0" y1="54" x2="1080" y2="54" stroke="#1e293b" stroke-width="1" />
+    
+    <!-- Window Controls -->
+    <circle cx="28" cy="27" r="6" fill="#ef4444" opacity="0.85" />
+    <circle cx="48" cy="27" r="6" fill="#eab308" opacity="0.85" />
+    <circle cx="68" cy="27" r="6" fill="#10b981" opacity="0.85" />
+    
+    <!-- Search / URL Bar -->
+    <rect x="260" y="12" width="560" height="30" rx="8" fill="#1e293b" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+    <text x="300" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#94a3b8" font-weight="500">🔒 https://shyamsunderprogramer-design.github.io/nexus/</text>
+    
+    <!-- Live Status Pill -->
+    <rect x="940" y="14" width="112" height="26" rx="13" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+    <circle cx="956" cy="27" r="4" fill="#10b981" />
+    <text x="968" y="31" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#34d399" font-weight="600">LIVE COCKPIT</text>
+
+    <!-- Cockpit Interior Content -->
+    <!-- Super Header Badge -->
+    <g transform="translate(40, 85)">
+      <rect x="0" y="0" width="280" height="28" rx="14" fill="#4f46e5" fill-opacity="0.2" stroke="#818cf8" stroke-width="1" stroke-opacity="0.5" />
+      <text x="14" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#a5b4fc" font-weight="600" letter-spacing="1">⚡ UNIFIED TALENT INTELLIGENCE</text>
+    </g>
+
+    <!-- App Title & Hero Statement -->
+    <text x="40" y="160" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" fill="url(#textGrad)" letter-spacing="-1">NEXUS ENTERPRISE DIRECTORY</text>
+    <text x="40" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" fill="#94a3b8" font-weight="400">Bridging Higher Education Output &amp; Enterprise Hiring Demand with Zero-Hallucination Direct Career Portals</text>
+
+    <!-- Center Interactive Video Showcase / Play Button -->
+    <g transform="translate(540, 275)">
+      <!-- Pulsing Aura -->
+      <circle cx="0" cy="0" r="76" fill="url(#playGlow)" />
+      <circle cx="0" cy="0" r="54" fill="#0f172a" stroke="#8b5cf6" stroke-width="3" stroke-opacity="0.9" />
+      <circle cx="0" cy="0" r="46" fill="url(#accentGrad)" opacity="0.9" />
+      <!-- Play Triangle -->
+      <polygon points="-8,-16 16,0 -8,16" fill="#ffffff" />
+      <!-- Label -->
+      <rect x="-140" y="65" width="280" height="32" rx="16" fill="#0f172a" fill-opacity="0.9" stroke="#6366f1" stroke-width="1.5" />
+      <text x="0" y="86" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#e2e8f0" font-weight="700" letter-spacing="0.5">▶ WATCH VIDEO &amp; INTERACTIVE DEMO</text>
+    </g>
+
+    <!-- Key Metrics Cards Row -->
+    <g transform="translate(40, 400)">
+      <!-- Metric 1: Employers -->
+      <g transform="translate(0, 0)">
+        <rect width="232" height="96" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
+        <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#38bdf8" font-weight="700" letter-spacing="1">ENTERPRISE REGISTER</text>
+        <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" fill="#ffffff" font-weight="800">7.17M+</text>
+        <text x="20" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Active Employers Indexed</text>
+      </g>
+
+      <!-- Metric 2: Career Portals -->
+      <g transform="translate(256, 0)">
+        <rect width="232" height="96" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
+        <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#34d399" font-weight="700" letter-spacing="1">VERIFIED PORTALS</text>
+        <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" fill="#ffffff" font-weight="800">3.51M+</text>
+        <text x="20" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Direct HR &amp; Job Pages</text>
+      </g>
+
+      <!-- Metric 3: Campuses -->
+      <g transform="translate(512, 0)">
+        <rect width="232" height="96" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
+        <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#a78bfa" font-weight="700" letter-spacing="1">ACADEMIC NETWORK</text>
+        <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" fill="#ffffff" font-weight="800">6,299</text>
+        <text x="20" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">Universities &amp; Colleges</text>
+      </g>
+
+      <!-- Metric 4: Territories -->
+      <g transform="translate(768, 0)">
+        <rect width="232" height="96" rx="14" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" stroke-opacity="0.8" />
+        <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fb923c" font-weight="700" letter-spacing="1">GLOBAL REACH</text>
+        <text x="20" y="66" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" fill="#ffffff" font-weight="800">132</text>
+        <text x="20" y="84" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#94a3b8">States, Prov. &amp; Nations</text>
+      </g>
+    </g>
+
+    <!-- Cockpit Footer Ribbon -->
+    <g transform="translate(40, 520)">
+      <rect width="1000" height="38" rx="10" fill="#070b12" stroke="#1e293b" stroke-width="1" />
+      <text x="24" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">⚡ 12 Industry Sectors</text>
+      <circle cx="160" cy="19" r="3" fill="#334155" />
+      <text x="175" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">62 Regional Data Shards</text>
+      <circle cx="340" cy="19" r="3" fill="#334155" />
+      <text x="355" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">Zero Third-Party Aggregators</text>
+      <circle cx="560" cy="19" r="3" fill="#334155" />
+      <text x="575" y="24" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#64748b">Direct ATS Verification (Workday, PeopleAdmin, NEOGOV)</text>
+      
+      <!-- Right Star Prompt Badge -->
+      <g transform="translate(865, 6)">
+        <rect width="125" height="26" rx="13" fill="#eab308" fill-opacity="0.2" stroke="#eab308" stroke-width="1" />
+        <text x="62" y="17" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#fde047" font-weight="700">⭐ STAR ON GITHUB</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -29,3 +29,4 @@ data/universities
 app/data/nexus.sqlite
 public/data/companies.parquet
 app/data/tech_directory_massive.json
+app/data/shards/
