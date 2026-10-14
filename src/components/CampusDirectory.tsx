@@ -15,7 +15,14 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
   const [search, setSearch] = useState('');
   const [country, setCountry] = useState('ALL');
   const [state, setState] = useState('ALL');
-  const [chips, setChips] = useState({ stem: false, h1b: false, r1: false, workday: false });
+  const [chips, setChips] = useState({
+    stem: false,
+    h1b: false,
+    r1: false,
+    workday: false,
+    phd: false,
+    dba: false,
+  });
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
@@ -34,6 +41,8 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
         h1b: chips.h1b,
         r1: chips.r1,
         ats: chips.workday ? 'workday' : undefined,
+        phd: chips.phd,
+        dba: chips.dba,
         page,
         limit: 24,
       });
@@ -60,7 +69,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
     setSearch('');
     setCountry('ALL');
     setState('ALL');
-    setChips({ stem: false, h1b: false, r1: false, workday: false });
+    setChips({ stem: false, h1b: false, r1: false, workday: false, phd: false, dba: false });
     setPage(1);
     showToast('All campus directory filters cleared', 'info');
   };
@@ -71,7 +80,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
     showToast(`Copied ${name} portal URL · ⭐ Star NEXUS on GitHub!`, 'success');
   };
 
-  const hasActiveFilters = search || country !== 'ALL' || chips.stem || chips.h1b || chips.r1 || chips.workday;
+  const hasActiveFilters = search || country !== 'ALL' || chips.stem || chips.h1b || chips.r1 || chips.workday || chips.phd || chips.dba;
 
   return (
     <div className="space-y-6">
@@ -163,6 +172,28 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
             }`}
           >
             <span>Workday ATS</span>
+          </button>
+
+          <button
+            onClick={() => toggleChip('phd')}
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
+              chips.phd
+                ? 'bg-purple-500/20 text-purple-700 dark:text-purple-300 border-purple-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
+            }`}
+          >
+            <span>🔬 PhD Conferred</span>
+          </button>
+
+          <button
+            onClick={() => toggleChip('dba')}
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
+              chips.dba
+                ? 'bg-amber-500/25 text-amber-700 dark:text-amber-300 border-amber-500/50 ring-1 ring-amber-500/30'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
+            }`}
+          >
+            <span>💼 DBA Conferred</span>
           </button>
 
           {hasActiveFilters && (
@@ -293,6 +324,27 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                       <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-slate-200/60 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-300/80 dark:border-white/10 font-semibold">
                         {u.app_fee_ug === 0 ? '✨ Free App' : `$${u.app_fee_ug} App`}
                       </span>
+                    )}
+
+                    {u.degree_levels && u.degree_levels.length > 0 && (
+                      <div className="flex flex-wrap gap-1 w-full pt-1.5">
+                        {u.degree_levels.map((lvl) => (
+                          <span
+                            key={lvl}
+                            className={`px-1.5 py-0.5 rounded text-[9px] font-mono font-bold border ${
+                              lvl === 'PhD'
+                                ? 'bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/25'
+                                : lvl === 'DBA'
+                                ? 'bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/35 font-extrabold ring-1 ring-amber-500/25'
+                                : lvl === "Master's"
+                                ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/25'
+                                : 'bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/25'
+                            }`}
+                          >
+                            {lvl === 'Professional Doctorate' ? 'Prof Doc' : lvl}
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>

@@ -249,6 +249,56 @@ export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) =
                   </div>
                 )}
 
+                {/* Conferred Degree Programs / Academic Ladders */}
+                {entity.data.degree_levels && entity.data.degree_levels.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="text-xs font-semibold text-slate-700 dark:text-slate-300 uppercase tracking-wider flex items-center space-x-1.5">
+                      <GraduationCap className="w-3.5 h-3.5 text-brand-500" />
+                      <span>Conferred Degree Levels & Programs</span>
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {entity.data.degree_levels.map((lvl) => {
+                        let colorClass = "bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-white/10";
+                        let icon = "🎓";
+                        let desc = "Undergraduate";
+
+                        if (lvl === 'UG') {
+                          colorClass = "bg-blue-500/10 text-blue-700 dark:text-blue-300 border-blue-500/30";
+                          icon = "🎓";
+                          desc = "Bachelor & Associate";
+                        } else if (lvl === "Master's") {
+                          colorClass = "bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30";
+                          icon = "📜";
+                          desc = "MS, MA, MBA, MEng";
+                        } else if (lvl === 'PhD') {
+                          colorClass = "bg-purple-500/10 text-purple-700 dark:text-purple-300 border-purple-500/30";
+                          icon = "🔬";
+                          desc = "Doctor of Philosophy";
+                        } else if (lvl === 'DBA') {
+                          colorClass = "bg-amber-500/15 text-amber-700 dark:text-amber-300 border-amber-500/40 ring-1 ring-amber-500/30";
+                          icon = "💼";
+                          desc = "Doctor of Business Admin (Exec)";
+                        } else if (lvl === 'Professional Doctorate') {
+                          colorClass = "bg-cyan-500/10 text-cyan-700 dark:text-cyan-300 border-cyan-500/30";
+                          icon = "⚖️";
+                          desc = "MD, JD, PharmD, EdD";
+                        }
+
+                        return (
+                          <div
+                            key={lvl}
+                            className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold ${colorClass}`}
+                          >
+                            <span>{icon}</span>
+                            <span className="font-bold">{lvl}</span>
+                            <span className="text-[10px] opacity-75 font-normal">({desc})</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
                 {/* Top Degree Programs Conferred */}
                 {entity.data.programs && entity.data.programs.length > 0 && (
                   <div className="space-y-2">

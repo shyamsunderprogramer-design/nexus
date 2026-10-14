@@ -27,6 +27,7 @@ export interface University {
   apply_url?: string;
   net_price_url?: string;
   programs?: string[];
+  degree_levels?: string[];
   dli?: string;
   pgwp?: boolean;
   nirf_rank?: number;

@@ -113,6 +113,8 @@ export const api = {
     h1b?: boolean;
     r1?: boolean;
     ats?: string;
+    phd?: boolean;
+    dba?: boolean;
     page?: number;
     limit?: number;
   }): Promise<{ total: number; page: number; totalPages: number; data: University[] }> {
@@ -123,6 +125,8 @@ export const api = {
     if (params.stem) query.set('stem', 'true');
     if (params.h1b) query.set('h1b', 'true');
     if (params.r1) query.set('r1', 'true');
+    if (params.phd) query.set('phd', 'true');
+    if (params.dba) query.set('dba', 'true');
     if (params.ats) query.set('ats', params.ats);
     if (params.page) query.set('page', String(params.page));
     if (params.limit) query.set('limit', String(params.limit));
@@ -162,6 +166,12 @@ export const api = {
         (u.carnegie || '').toLowerCase().includes('r1') ||
         Boolean(u.nirf_rank && u.nirf_rank <= 50)
       );
+    }
+    if (params.phd) {
+      filtered = filtered.filter(u => (u.degree_levels || []).includes('PhD'));
+    }
+    if (params.dba) {
+      filtered = filtered.filter(u => (u.degree_levels || []).includes('DBA'));
     }
     if (params.ats) {
       const targetAts = params.ats.toLowerCase();
