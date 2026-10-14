@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
 import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useWatchlist } from '../context/WatchlistContext';
 
 interface NavbarProps {
   activeTab: ActiveTab;
@@ -34,6 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onStartTour,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
+  const { watchlist, setIsWatchlistOpen } = useWatchlist();
 
   const tabs: Array<{ id: ActiveTab; label: string; icon: React.ReactNode }> = [
     { id: 'overview', label: 'Executive Intel', icon: <Sparkles className="w-4 h-4 text-brand-400" /> },
@@ -113,6 +115,22 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </kbd>
               </button>
             )}
+
+            {/* Target Watchlist Trigger Button */}
+            <button
+              onClick={() => setIsWatchlistOpen(true)}
+              className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-amber-500/30 bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer relative"
+              title="View Target Watchlist & Bookmarks"
+              aria-label="Open Target Watchlist"
+            >
+              <Star className={`w-3.5 h-3.5 text-amber-500 ${watchlist.length > 0 ? 'fill-amber-400' : ''}`} />
+              <span className="hidden sm:inline">Watchlist</span>
+              {watchlist.length > 0 && (
+                <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold bg-amber-500 text-white dark:text-slate-950">
+                  {watchlist.length}
+                </span>
+              )}
+            </button>
 
             {/* Auto-Tour Trigger Button */}
             {onStartTour && (

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Company } from '../types';
 import { api } from '../services/api';
-import { Search, ExternalLink, TrendingUp, X, RotateCcw, Copy } from 'lucide-react';
+import { Search, ExternalLink, TrendingUp, X, RotateCcw, Copy, Star } from 'lucide-react';
 import { useToast } from './Toast';
+import { useWatchlist } from '../context/WatchlistContext';
 
 interface EnterpriseDirectoryProps {
   onSelectCompany: (c: Company) => void;
@@ -20,6 +21,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
   const [totalCount, setTotalCount] = useState(0);
 
   const { showToast } = useToast();
+  const { isBookmarked, toggleBookmark } = useWatchlist();
 
   const fetchCompanies = async () => {
     setLoading(true);
@@ -272,9 +274,21 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
                   <span className="text-[10px] font-mono font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                     {c.state || 'US'} · {c.city || 'HQ'}
                   </span>
-                  <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
-                    {c.category}
-                  </span>
+                  <div className="flex items-center space-x-1.5">
+                    <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
+                      {c.category}
+                    </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleBookmark({ type: 'company', data: c });
+                      }}
+                      title={isBookmarked(c.oid) ? 'Remove from Watchlist' : 'Save to Watchlist'}
+                      className="p-1 rounded-md hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+                    >
+                      <Star className={`w-3.5 h-3.5 ${isBookmarked(c.oid) ? 'fill-amber-400 text-amber-400' : 'text-slate-400 hover:text-amber-400'}`} />
+                    </button>
+                  </div>
                 </div>
 
                 <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1 tracking-tight">

@@ -11,6 +11,8 @@ import { DetailDrawer } from './components/DetailDrawer';
 import { CommandPalette } from './components/CommandPalette';
 import { InteractiveTour } from './components/InteractiveTour';
 import { ToastProvider } from './components/Toast';
+import { WatchlistProvider } from './context/WatchlistContext';
+import { WatchlistModal } from './components/WatchlistModal';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -69,81 +71,89 @@ export const App: React.FC = () => {
 
   return (
     <ToastProvider>
-      <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070b12] dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
-        <Navbar
-          activeTab={activeTab}
-          onTabChange={setActiveTab}
-          isDark={isDark}
-          onToggleTheme={toggleTheme}
-          accentColor={accentColor}
-          onChangeAccentColor={changeAccentColor}
-          onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-          onStartTour={() => setIsTourActive(true)}
-        />
+      <WatchlistProvider>
+        <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070b12] dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
+          <Navbar
+            activeTab={activeTab}
+            onTabChange={setActiveTab}
+            isDark={isDark}
+            onToggleTheme={toggleTheme}
+            accentColor={accentColor}
+            onChangeAccentColor={changeAccentColor}
+            onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+            onStartTour={() => setIsTourActive(true)}
+          />
 
-        <Hero
-          stats={stats}
-          onSelectTab={setActiveTab}
-          onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-          onStartTour={() => setIsTourActive(true)}
-        />
+          <Hero
+            stats={stats}
+            onSelectTab={setActiveTab}
+            onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+            onStartTour={() => setIsTourActive(true)}
+          />
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
-          {activeTab === 'overview' && <ExecutiveDashboard stats={stats} />}
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
+            {activeTab === 'overview' && <ExecutiveDashboard stats={stats} />}
 
-          {activeTab === 'universities' && (
-            <CampusDirectory
-              onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
-            />
-          )}
+            {activeTab === 'universities' && (
+              <CampusDirectory
+                onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
+              />
+            )}
 
-          {activeTab === 'companies' && (
-            <EnterpriseDirectory
-              onSelectCompany={(c) => setSelectedEntity({ type: 'company', data: c })}
-            />
-          )}
+            {activeTab === 'companies' && (
+              <EnterpriseDirectory
+                onSelectCompany={(c) => setSelectedEntity({ type: 'company', data: c })}
+              />
+            )}
 
-          {activeTab === 'bridge' && <TalentBridge />}
-        </main>
+            {activeTab === 'bridge' && <TalentBridge />}
+          </main>
 
-        <DetailDrawer
-          entity={selectedEntity}
-          onClose={() => setSelectedEntity(null)}
-        />
+          <DetailDrawer
+            entity={selectedEntity}
+            onClose={() => setSelectedEntity(null)}
+          />
 
-        <CommandPalette
-          isOpen={isCommandPaletteOpen}
-          onClose={() => setIsCommandPaletteOpen(false)}
-          onSelectEntity={setSelectedEntity}
-        />
+          <CommandPalette
+            isOpen={isCommandPaletteOpen}
+            onClose={() => setIsCommandPaletteOpen(false)}
+            onSelectEntity={setSelectedEntity}
+          />
 
-        <InteractiveTour
-          isOpen={isTourActive}
-          onClose={() => setIsTourActive(false)}
-          onTabChange={setActiveTab}
-          onSelectEntity={setSelectedEntity}
-          onToggleCommandPalette={setIsCommandPaletteOpen}
-        />
+          <WatchlistModal
+            onSelectEntity={setSelectedEntity}
+            onExploreCampuses={() => setActiveTab('universities')}
+            onExploreEmployers={() => setActiveTab('companies')}
+          />
 
-        {/* Footer */}
-        <footer className="border-t border-slate-200 dark:border-white/5 py-8 text-center text-xs text-slate-600 dark:text-slate-500 bg-slate-100/80 dark:bg-[#06090e] transition-colors">
-          <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <span className="font-bold text-slate-800 dark:text-slate-300">NEXUS</span> — National Employment & eXploration Unified System
+          <InteractiveTour
+            isOpen={isTourActive}
+            onClose={() => setIsTourActive(false)}
+            onTabChange={setActiveTab}
+            onSelectEntity={setSelectedEntity}
+            onToggleCommandPalette={setIsCommandPaletteOpen}
+          />
+
+          {/* Footer */}
+          <footer className="border-t border-slate-200 dark:border-white/5 py-8 text-center text-xs text-slate-600 dark:text-slate-500 bg-slate-100/80 dark:bg-[#06090e] transition-colors">
+            <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span className="font-bold text-slate-800 dark:text-slate-300">NEXUS</span> — National Employment & eXploration Unified System
+              </div>
+              <div className="flex items-center space-x-2">
+                <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
+                <span className="text-slate-400">·</span>
+                <button
+                  onClick={() => setIsCommandPaletteOpen(true)}
+                  className="hover:text-brand-500 underline transition-colors"
+                >
+                  Press ⌘K for Quick Search
+                </button>
+              </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
-              <span className="text-slate-400">·</span>
-              <button
-                onClick={() => setIsCommandPaletteOpen(true)}
-                className="hover:text-brand-500 underline transition-colors"
-              >
-                Press ⌘K for Quick Search
-              </button>
-            </div>
-          </div>
-        </footer>
-      </div>
+          </footer>
+        </div>
+      </WatchlistProvider>
     </ToastProvider>
   );
 };

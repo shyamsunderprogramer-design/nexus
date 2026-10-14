@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { InspectorEntity } from '../types';
-import { X, ExternalLink, GraduationCap, Building2, MapPin, Users, Briefcase, Shield, Cpu, Copy } from 'lucide-react';
+import { X, ExternalLink, GraduationCap, Building2, MapPin, Users, Briefcase, Shield, Cpu, Copy, Star } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useToast } from './Toast';
+import { useWatchlist } from '../context/WatchlistContext';
 
 interface DetailDrawerProps {
   entity: InspectorEntity | null;
@@ -11,6 +12,7 @@ interface DetailDrawerProps {
 
 export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) => {
   const { showToast } = useToast();
+  const { isBookmarked, toggleBookmark } = useWatchlist();
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -76,6 +78,20 @@ export const DetailDrawer: React.FC<DetailDrawerProps> = ({ entity, onClose }) =
               </div>
 
               <div className="flex items-center space-x-1">
+                <button
+                  onClick={() => toggleBookmark(entity)}
+                  title={isBookmarked(entity.type === 'university' ? entity.data.id : entity.data.oid) ? 'Remove from Watchlist' : 'Save to Watchlist'}
+                  className="p-2 rounded-lg text-slate-400 hover:text-amber-500 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors"
+                  aria-label="Toggle Watchlist bookmark"
+                >
+                  <Star
+                    className={`w-4 h-4 ${
+                      isBookmarked(entity.type === 'university' ? entity.data.id : entity.data.oid)
+                        ? 'fill-amber-400 text-amber-400'
+                        : 'text-slate-400 hover:text-amber-400'
+                    }`}
+                  />
+                </button>
                 <button
                   onClick={handleCopyLink}
                   title="Copy link to clipboard"

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { University } from '../types';
 import { api } from '../services/api';
-import { Search, ExternalLink, Users, Shield, Cpu, X, RotateCcw, Copy } from 'lucide-react';
+import { Search, ExternalLink, Users, Shield, Cpu, X, RotateCcw, Copy, Star } from 'lucide-react';
 import { useToast } from './Toast';
+import { useWatchlist } from '../context/WatchlistContext';
 
 interface CampusDirectoryProps {
   onSelectUniversity: (u: University) => void;
@@ -20,6 +21,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
   const [totalCount, setTotalCount] = useState(0);
 
   const { showToast } = useToast();
+  const { isBookmarked, toggleBookmark } = useWatchlist();
 
   const fetchUniversities = async () => {
     setLoading(true);
@@ -231,9 +233,21 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                     <span className="text-[10px] font-mono font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase">
                       {u.state} · {u.city || u.country}
                     </span>
-                    <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
-                      {u.country}
-                    </span>
+                    <div className="flex items-center space-x-1.5">
+                      <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
+                        {u.country}
+                      </span>
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleBookmark({ type: 'university', data: u });
+                        }}
+                        title={isBookmarked(u.id) ? 'Remove from Watchlist' : 'Save to Watchlist'}
+                        className="p-1 rounded-md hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
+                      >
+                        <Star className={`w-3.5 h-3.5 ${isBookmarked(u.id) ? 'fill-amber-400 text-amber-400' : 'text-slate-400 hover:text-amber-400'}`} />
+                      </button>
+                    </div>
                   </div>
 
                   <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-300 transition-colors line-clamp-1 tracking-tight">
