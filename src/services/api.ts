@@ -113,6 +113,9 @@ export const api = {
     h1b?: boolean;
     r1?: boolean;
     ats?: string;
+    ug?: boolean;
+    masters?: boolean;
+    phdDba?: boolean;
     phd?: boolean;
     dba?: boolean;
     page?: number;
@@ -125,6 +128,9 @@ export const api = {
     if (params.stem) query.set('stem', 'true');
     if (params.h1b) query.set('h1b', 'true');
     if (params.r1) query.set('r1', 'true');
+    if (params.ug) query.set('ug', 'true');
+    if (params.masters) query.set('masters', 'true');
+    if (params.phdDba) query.set('phdDba', 'true');
     if (params.phd) query.set('phd', 'true');
     if (params.dba) query.set('dba', 'true');
     if (params.ats) query.set('ats', params.ats);
@@ -166,6 +172,18 @@ export const api = {
         (u.carnegie || '').toLowerCase().includes('r1') ||
         Boolean(u.nirf_rank && u.nirf_rank <= 50)
       );
+    }
+    if (params.ug) {
+      filtered = filtered.filter(u => (u.degree_levels || []).includes('UG'));
+    }
+    if (params.masters) {
+      filtered = filtered.filter(u => (u.degree_levels || []).includes("Master's"));
+    }
+    if (params.phdDba) {
+      filtered = filtered.filter(u => {
+        const lvls = u.degree_levels || [];
+        return lvls.includes('PhD') || lvls.includes('DBA');
+      });
     }
     if (params.phd) {
       filtered = filtered.filter(u => (u.degree_levels || []).includes('PhD'));

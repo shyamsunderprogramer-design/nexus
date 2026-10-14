@@ -16,12 +16,13 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
   const [country, setCountry] = useState('ALL');
   const [state, setState] = useState('ALL');
   const [chips, setChips] = useState({
+    ug: false,
+    masters: false,
+    phdDba: false,
     stem: false,
     h1b: false,
     r1: false,
     workday: false,
-    phd: false,
-    dba: false,
   });
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
@@ -37,12 +38,13 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
         q: search,
         country,
         state,
+        ug: chips.ug,
+        masters: chips.masters,
+        phdDba: chips.phdDba,
         stem: chips.stem,
         h1b: chips.h1b,
         r1: chips.r1,
         ats: chips.workday ? 'workday' : undefined,
-        phd: chips.phd,
-        dba: chips.dba,
         page,
         limit: 24,
       });
@@ -69,7 +71,15 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
     setSearch('');
     setCountry('ALL');
     setState('ALL');
-    setChips({ stem: false, h1b: false, r1: false, workday: false, phd: false, dba: false });
+    setChips({
+      ug: false,
+      masters: false,
+      phdDba: false,
+      stem: false,
+      h1b: false,
+      r1: false,
+      workday: false,
+    });
     setPage(1);
     showToast('All campus directory filters cleared', 'info');
   };
@@ -80,7 +90,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
     showToast(`Copied ${name} portal URL · ⭐ Star NEXUS on GitHub!`, 'success');
   };
 
-  const hasActiveFilters = search || country !== 'ALL' || chips.stem || chips.h1b || chips.r1 || chips.workday || chips.phd || chips.dba;
+  const hasActiveFilters = search || country !== 'ALL' || chips.ug || chips.masters || chips.phdDba || chips.stem || chips.h1b || chips.r1 || chips.workday;
 
   return (
     <div className="space-y-6">
@@ -174,26 +184,38 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
             <span>Workday ATS</span>
           </button>
 
+          {/* Academic Degree Level Filters */}
           <button
-            onClick={() => toggleChip('phd')}
+            onClick={() => toggleChip('ug')}
             className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
-              chips.phd
+              chips.ug
+                ? 'bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
+            }`}
+          >
+            <span>🎓 UG</span>
+          </button>
+
+          <button
+            onClick={() => toggleChip('masters')}
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
+              chips.masters
+                ? 'bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 border-emerald-500/40'
+                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
+            }`}
+          >
+            <span>📜 Master's</span>
+          </button>
+
+          <button
+            onClick={() => toggleChip('phdDba')}
+            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
+              chips.phdDba
                 ? 'bg-purple-500/20 text-purple-700 dark:text-purple-300 border-purple-500/40'
                 : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
             }`}
           >
-            <span>🔬 PhD Conferred</span>
-          </button>
-
-          <button
-            onClick={() => toggleChip('dba')}
-            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors flex items-center space-x-1.5 ${
-              chips.dba
-                ? 'bg-amber-500/25 text-amber-700 dark:text-amber-300 border-amber-500/50 ring-1 ring-amber-500/30'
-                : 'border-slate-300 dark:border-white/10 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5'
-            }`}
-          >
-            <span>💼 DBA Conferred</span>
+            <span>🔬 PhD / DBA</span>
           </button>
 
           {hasActiveFilters && (
