@@ -32,6 +32,7 @@ interface TourStep {
   tab: ActiveTab;
   paletteOpen?: boolean;
   showSampleEntity?: boolean;
+  isStarStep?: boolean;
   icon: React.ReactNode;
 }
 
@@ -64,7 +65,7 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 1,
     title: 'Executive Market Intelligence',
-    badge: 'Step 1 of 6 · Macro Telemetry',
+    badge: 'Step 1 of 7 · Macro Telemetry',
     description: 'Real-time telemetry monitoring 7.17M+ registered employers, 3.51M+ verified live career portals, and 6,299 postsecondary institutions across 132 global territories.',
     tab: 'overview',
     icon: <Sparkles className="w-5 h-5 text-brand-400" />
@@ -72,7 +73,7 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 2,
     title: 'Instant Global Omni-Search',
-    badge: 'Step 2 of 6 · Sub-10ms Index',
+    badge: 'Step 2 of 7 · Sub-10ms Index',
     description: 'Press ⌘K or click search from anywhere to query 6,299 universities, 7.17M employers, and ATS hiring systems with sub-millisecond keyboard navigation.',
     tab: 'overview',
     paletteOpen: true,
@@ -81,7 +82,7 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 3,
     title: 'Campus & Talent Directory',
-    badge: 'Step 3 of 6 · Higher-Ed Network',
+    badge: 'Step 3 of 7 · Higher-Ed Network',
     description: 'Explore 6,299 institutions across US, Canada, and India. Filter by Carnegie R1 / NIRF, STEM Heavy (>20%), H-1B Cap Exempt status, and verified Handshake portals.',
     tab: 'universities',
     icon: <GraduationCap className="w-5 h-5 text-purple-400" />
@@ -89,7 +90,7 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 4,
     title: 'Enterprise Employer Index',
-    badge: 'Step 4 of 6 · 3.51M+ Portals',
+    badge: 'Step 4 of 7 · 3.51M+ Portals',
     description: 'Bypass aggregator spam. Direct verified HR portals stream on-demand across 62 regional shards covering all 12 major economic sectors.',
     tab: 'companies',
     icon: <Building2 className="w-5 h-5 text-cyan-400" />
@@ -97,7 +98,7 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 5,
     title: 'Regional Talent-to-Market Bridge',
-    badge: 'Step 5 of 6 · Corridor Matching',
+    badge: 'Step 5 of 7 · Corridor Matching',
     description: 'Inspect the dual-matrix talent corridor matching regional annual STEM graduation output directly against local enterprise hiring demand.',
     tab: 'bridge',
     icon: <Zap className="w-5 h-5 text-emerald-400" />
@@ -105,11 +106,20 @@ const TOUR_STEPS: TourStep[] = [
   {
     id: 6,
     title: 'Deep Entity Inspector Drawer',
-    badge: 'Step 6 of 6 · Full Telemetry',
+    badge: 'Step 6 of 7 · Full Telemetry',
     description: 'Click any campus or corporation card to inspect verified job URLs, ATS screening systems (Workday, PeopleAdmin), student headcounts, and federal regulatory filings.',
     tab: 'universities',
     showSampleEntity: true,
     icon: <SlidersHorizontal className="w-5 h-5 text-amber-400" />
+  },
+  {
+    id: 7,
+    title: 'Support Free Open-Source Intelligence',
+    badge: 'Step 7 of 7 · Star on GitHub',
+    description: 'NEXUS is 100% free with zero recruiter paywalls. If this platform saves you time, please give it a star ⭐ on GitHub — your star helps us keep the 7.17M+ employer index updated!',
+    tab: 'overview',
+    isStarStep: true,
+    icon: <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
   }
 ];
 
@@ -295,6 +305,25 @@ export const InteractiveTour: React.FC<InteractiveTourProps> = ({
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
             {step.description}
           </p>
+
+          {/* GitHub Star Direct 1-Click Action */}
+          {step.isStarStep && (
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="pt-1"
+            >
+              <a
+                href="https://github.com/shyamsunderprogramer-design/nexus"
+                target="_blank"
+                rel="noreferrer"
+                className="w-full py-3 px-4 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-amber-400 via-amber-300 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 shadow-xl shadow-amber-500/30 flex items-center justify-center space-x-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer border border-amber-200"
+              >
+                <Star className="w-4 h-4 fill-slate-950 text-slate-950" />
+                <span>⭐ Star NEXUS on GitHub (Opens in New Tab)</span>
+              </a>
+            </motion.div>
+          )}
 
           {/* Bottom Control Bar */}
           <div className="flex items-center justify-between pt-2 border-t border-white/10">

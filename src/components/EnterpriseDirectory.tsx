@@ -58,7 +58,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
   const handleCopy = (e: React.MouseEvent, text: string, name: string) => {
     e.stopPropagation();
     navigator.clipboard.writeText(text);
-    showToast(`Copied ${name} careers URL`, 'success');
+    showToast(`Copied ${name} careers URL · ⭐ Star NEXUS on GitHub!`, 'success');
   };
 
   const hasActiveFilters = search || category !== 'ALL' || country !== 'ALL' || state !== 'ALL';

@@ -66,7 +66,7 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
   const handleCopy = (e: React.MouseEvent, text: string, name: string) => {
     e.stopPropagation();
     navigator.clipboard.writeText(text);
-    showToast(`Copied ${name} portal URL`, 'success');
+    showToast(`Copied ${name} portal URL · ⭐ Star NEXUS on GitHub!`, 'success');
   };
 
   const hasActiveFilters = search || country !== 'ALL' || chips.stem || chips.h1b || chips.r1 || chips.workday;
