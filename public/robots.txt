@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shyamsunderprogramer-design.github.io/nexus/sitemap.xml
