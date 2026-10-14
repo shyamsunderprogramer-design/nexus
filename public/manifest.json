@@ -1,0 +1,38 @@
+{
+  "name": "NEXUS | Talent Intelligence Platform",
+  "short_name": "NEXUS",
+  "description": "Unified Campus & Enterprise Talent Intelligence Platform. Unifying 6,299 higher-ed institutions with 7.17M+ employers and 3.51M+ verified direct hiring portals.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#070b12",
+  "theme_color": "#8b5cf6",
+  "categories": ["education", "business", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

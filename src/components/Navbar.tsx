@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
+import { usePWAInstall } from '../hooks/usePWAInstall';
 
 interface NavbarProps {
   activeTab: ActiveTab;
@@ -36,6 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
   const { watchlist, setIsWatchlistOpen } = useWatchlist();
+  const { canInstall, triggerInstall } = usePWAInstall();
 
   const tabs: Array<{ id: ActiveTab; label: string; icon: React.ReactNode }> = [
     { id: 'overview', label: 'Executive Intel', icon: <Sparkles className="w-4 h-4 text-brand-400" /> },
@@ -142,6 +144,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <Sparkles className="w-3.5 h-3.5 text-brand-500 group-hover:rotate-12 transition-transform" />
                 <span className="hidden sm:inline">Auto-Tour</span>
+              </button>
+            )}
+
+            {/* PWA Install Trigger Button */}
+            {canInstall && (
+              <button
+                onClick={triggerInstall}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-cyan-500/30 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer animate-pulse"
+                title="Install NEXUS as Native App on Desktop or Mobile"
+                aria-label="Install App"
+              >
+                <Smartphone className="w-3.5 h-3.5 text-cyan-500" />
+                <span className="hidden sm:inline">Install App</span>
               </button>
             )}
 
