@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
 import { usePWAInstall } from '../hooks/usePWAInstall';
@@ -14,6 +14,7 @@ interface NavbarProps {
   onChangeAccentColor: (color: ThemeColor) => void;
   onOpenCommandPalette?: () => void;
   onStartTour?: () => void;
+  onOpenAtsMatcher?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -34,6 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onChangeAccentColor,
   onOpenCommandPalette,
   onStartTour,
+  onOpenAtsMatcher,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
   const { watchlist, setIsWatchlistOpen } = useWatchlist();
@@ -144,6 +146,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <Sparkles className="w-3.5 h-3.5 text-brand-500 group-hover:rotate-12 transition-transform" />
                 <span className="hidden sm:inline">Auto-Tour</span>
+              </button>
+            )}
+
+            {/* ATS Resume Scanner Trigger Button */}
+            {onOpenAtsMatcher && (
+              <button
+                onClick={onOpenAtsMatcher}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-purple-500/30 bg-purple-500/10 hover:bg-purple-500/20 text-purple-700 dark:text-purple-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer"
+                title="Open ATS Resume Keyword Scanner"
+                aria-label="Open ATS Scanner"
+              >
+                <FileText className="w-3.5 h-3.5 text-purple-500" />
+                <span className="hidden lg:inline">ATS Scanner</span>
               </button>
             )}
 

@@ -13,6 +13,7 @@ import { InteractiveTour } from './components/InteractiveTour';
 import { ToastProvider } from './components/Toast';
 import { WatchlistProvider } from './context/WatchlistContext';
 import { WatchlistModal } from './components/WatchlistModal';
+import { AtsMatcherModal } from './components/AtsMatcherModal';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -22,6 +23,7 @@ export const App: React.FC = () => {
   const [accentColor, setAccentColor] = useState<ThemeColor>('violet');
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [isTourActive, setIsTourActive] = useState(false);
+  const [isAtsModalOpen, setIsAtsModalOpen] = useState(false);
 
   const applyThemeColor = (color: ThemeColor) => {
     const root = document.documentElement;
@@ -82,6 +84,7 @@ export const App: React.FC = () => {
             onChangeAccentColor={changeAccentColor}
             onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
             onStartTour={() => setIsTourActive(true)}
+            onOpenAtsMatcher={() => setIsAtsModalOpen(true)}
           />
 
           <Hero
@@ -124,6 +127,11 @@ export const App: React.FC = () => {
             onSelectEntity={setSelectedEntity}
             onExploreCampuses={() => setActiveTab('universities')}
             onExploreEmployers={() => setActiveTab('companies')}
+          />
+
+          <AtsMatcherModal
+            isOpen={isAtsModalOpen}
+            onClose={() => setIsAtsModalOpen(false)}
           />
 
           <InteractiveTour
