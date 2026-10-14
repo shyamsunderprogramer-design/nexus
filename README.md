@@ -25,19 +25,17 @@
   🌐 <b><a href="https://shyamsunderprogramer-design.github.io/nexus/">🚀 LAUNCH LIVE WEB APP: shyamsunderprogramer-design.github.io/nexus</a></b> 🌐
 </p>
 
-[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [🖥️ Platform Tour](#-live-interactive-platform-showcase) • [⭐ Support & Star](#-support-open-source-talent-intelligence--star-this-repo) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
+[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [🖥️ Platform Tour](#-live-interactive-platform-showcase) • [⭐️ Show Your Support](#️-show-your-support) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
 
 </div>
 
 ---
 
-> ### ⭐ Support Open-Source Talent Intelligence — Star this Repo!
+> [!TIP]
+> ### ⭐️ If you find NEXUS valuable, please star this repository!
+> **Look up at the top-right corner of this page ↗️ and click `★ Star`** (or **[click here to star directly](https://github.com/shyamsunderprogramer-design/nexus/stargazers)**)!
 >
-> If **NEXUS** helps you discover verified career portals, research higher-ed pipelines, or bypass recruiter paywalls and aggregator spam:
->
-> **👉 [Click here to star this repository on GitHub](https://github.com/shyamsunderprogramer-design/nexus/stargazers)** 🌟
->
-> *Every star increases project visibility, helps students and job-seekers find legitimate career portals, and accelerates continuous updates to our 7.17M+ employer index.*
+> *Every star increases project visibility, helps students & job-seekers discover 3.51M+ verified direct career portals without aggregator spam, and keeps this 7.17M+ employer index 100% free.*
 
 ---
 
@@ -311,15 +309,21 @@ nexus/
 
 ---
 
-## ⭐ Why Star This Repository?
+## ⭐️ Show Your Support
 
-Building and maintaining an index of **7.17M+ employers** and **3.51M+ verified direct career portals** with zero commercial funding requires community engagement:
+Building and maintaining an index of **7.17M+ employers** and **3.51M+ verified direct career portals** with zero commercial funding requires community engagement.
 
-- 🌟 **Empowers Job-Seekers**: By starring this repository, you help students and candidates bypass predatory recruiters, ghost listings, and paywalled boards.
-- 🚀 **Encourages Pipeline Updates**: High community engagement drives regular automated updates for federal registers, new campus career center links, and fresh ATS detections.
-- 🤝 **Supports Open-Source Talent Research**: Provides economists, academic counselors, and university administrators with free, unencumbered higher-education benchmarking data.
+Give a **⭐️ Star** if this project helped you!
 
-If you appreciate this work, **[please take a moment to give it a star ⭐ on GitHub!](https://github.com/shyamsunderprogramer-design/nexus)**
+- ⭐️ **Star this repository** at the top right of this page to support open-source talent intelligence
+- 📢 **Share with students, counselors, & job seekers** to help them bypass aggregator spam and phantom postings
+- 🤝 **Submit verified career links** or institutional data improvements via Pull Request
+
+<p align="center">
+  <a href="https://github.com/shyamsunderprogramer-design/nexus/stargazers">
+    <img src="https://img.shields.io/badge/%E2%AD%90%20Star%20on%20GitHub-Click%20Here%20to%20Star-eab308?style=for-the-badge&logo=github" alt="Star on GitHub" />
+  </a>
+</p>
 
 ---
 
