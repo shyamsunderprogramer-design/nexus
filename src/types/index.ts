@@ -102,7 +102,7 @@ export interface StatsResponse {
   state_counts: number;
 }
 
-export type ActiveTab = 'overview' | 'universities' | 'companies' | 'bridge';
+export type ActiveTab = 'overview' | 'universities' | 'phd' | 'companies' | 'bridge';
 
 export type ThemeColor = 'violet' | 'cyan' | 'emerald' | 'amber' | 'rose' | 'blue';
 

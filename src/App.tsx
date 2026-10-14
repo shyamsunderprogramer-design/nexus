@@ -14,6 +14,7 @@ import { ToastProvider } from './components/Toast';
 import { WatchlistProvider } from './context/WatchlistContext';
 import { WatchlistModal } from './components/WatchlistModal';
 import { AtsMatcherModal } from './components/AtsMatcherModal';
+import { PhdAdmissionsHub } from './components/PhdAdmissionsHub';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -99,6 +100,12 @@ export const App: React.FC = () => {
 
             {activeTab === 'universities' && (
               <CampusDirectory
+                onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
+              />
+            )}
+
+            {activeTab === 'phd' && (
+              <PhdAdmissionsHub
                 onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
               />
             )}

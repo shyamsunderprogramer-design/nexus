@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
 import { usePWAInstall } from '../hooks/usePWAInstall';
@@ -44,6 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   const tabs: Array<{ id: ActiveTab; label: string; icon: React.ReactNode }> = [
     { id: 'overview', label: 'Executive Intel', icon: <Sparkles className="w-4 h-4 text-brand-400" /> },
     { id: 'universities', label: 'Campus Network', icon: <GraduationCap className="w-4 h-4 text-purple-400" /> },
+    { id: 'phd', label: 'PhD Admissions', icon: <Microscope className="w-4 h-4 text-amber-400" /> },
     { id: 'companies', label: 'Enterprise Index', icon: <Building2 className="w-4 h-4 text-cyan-400" /> },
     { id: 'bridge', label: 'Talent Bridge', icon: <Zap className="w-4 h-4 text-emerald-400" /> },
   ];
