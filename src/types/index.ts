@@ -18,6 +18,15 @@ export interface University {
   stem_degrees: number;
   stem_share: number;
   h1b_exempt: boolean;
+  app_fee_ug?: number;
+  app_fee_grad?: number;
+  tuition_in?: number;
+  tuition_out?: number;
+  tuition_grad_in?: number;
+  tuition_grad_out?: number;
+  apply_url?: string;
+  net_price_url?: string;
+  programs?: string[];
   dli?: string;
   pgwp?: boolean;
   nirf_rank?: number;

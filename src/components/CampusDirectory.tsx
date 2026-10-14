@@ -284,6 +284,16 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                         {u.jobs_ats} ATS
                       </span>
                     )}
+                    {u.tuition_in !== undefined && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-semibold">
+                        💰 ${(u.tuition_in / 1000).toFixed(1)}k Tuition
+                      </span>
+                    )}
+                    {u.app_fee_ug !== undefined && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-slate-200/60 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-300/80 dark:border-white/10 font-semibold">
+                        {u.app_fee_ug === 0 ? '✨ Free App' : `$${u.app_fee_ug} App`}
+                      </span>
+                    )}
                   </div>
                 </div>
 
