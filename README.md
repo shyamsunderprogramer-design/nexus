@@ -43,7 +43,7 @@
 
 <div align="center">
   <a href="https://shyamsunderprogramer-design.github.io/nexus/">
-    <img src="public/preview-banner.svg" alt="NEXUS Live Interactive Platform Showcase" width="100%" />
+    <img src="public/preview-banner-4k.png" alt="NEXUS Live Interactive Platform Showcase (4K UHD)" width="100%" />
   </a>
   <br/>
   <p align="center">
