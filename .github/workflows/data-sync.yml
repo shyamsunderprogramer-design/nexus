@@ -1,0 +1,46 @@
+name: Autonomous Data Sync & Intel Verification
+
+on:
+  schedule:
+    # Run every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    name: Execute Autonomous Data Sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Execute Autonomous Data Sync Agent
+        run: |
+          python3 scripts/autonomous_data_sync_agent.py
+
+      - name: Check for dataset changes
+        id: git_status
+        run: |
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit & push updated telemetry
+        if: steps.git_status.outputs.has_changes == 'true'
+        run: |
+          git config user.name "Shyam Sunder"
+          git config user.email "shyamsunder@users.noreply.github.com"
+          git add public/data/
+          git commit -m "chore(sync): automated federal data audit & cache verification [skip ci]"
+          git push origin main

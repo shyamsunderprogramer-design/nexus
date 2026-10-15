@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope, RefreshCw } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
 import { usePWAInstall } from '../hooks/usePWAInstall';
@@ -15,6 +15,7 @@ interface NavbarProps {
   onOpenCommandPalette?: () => void;
   onStartTour?: () => void;
   onOpenAtsMatcher?: () => void;
+  onOpenSyncAgent?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -36,6 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenCommandPalette,
   onStartTour,
   onOpenAtsMatcher,
+  onOpenSyncAgent,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
   const { watchlist, setIsWatchlistOpen } = useWatchlist();
@@ -176,7 +178,21 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             )}
 
-            <div className="hidden xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
+            {/* Autonomous Live Data Sync Agent Button */}
+            {onOpenSyncAgent && (
+              <button
+                onClick={onOpenSyncAgent}
+                className="flex items-center space-x-1.5 px-3 py-1.5 rounded-xl border border-emerald-500/40 bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-800 dark:text-emerald-300 transition-all text-xs font-bold group shadow-sm hover:shadow-emerald-500/15 cursor-pointer"
+                title="⚡ Open Autonomous Live Data Sync Agent"
+                aria-label="Sync Live Data"
+              >
+                <RefreshCw className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 group-hover:rotate-180 transition-transform duration-500" />
+                <span className="hidden sm:inline">Sync Live Intel</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse ml-0.5" />
+              </button>
+            )}
+
+            <div className="hidden 2xl:flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-semibold">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>3.51M+ Portals</span>
             </div>

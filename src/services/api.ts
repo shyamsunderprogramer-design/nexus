@@ -196,12 +196,30 @@ export const api = {
       filtered = filtered.filter(u => (u.jobs_ats || '').toLowerCase().includes(targetAts));
     }
     if (params.q) {
-      const q = params.q.toLowerCase();
+      const q = params.q.toLowerCase().trim();
       filtered = filtered.filter(u => 
         (u.name || '').toLowerCase().includes(q) ||
+        (u.alias || '').toLowerCase().includes(q) ||
         (u.city || '').toLowerCase().includes(q) ||
-        (u.state || '').toLowerCase().includes(q)
+        (u.state || '').toLowerCase().includes(q) ||
+        (u.system || '').toLowerCase().includes(q) ||
+        (u.chief_executive || '').toLowerCase().includes(q)
       );
+
+      // Scored relevance sorting
+      filtered.sort((a, b) => {
+        const score = (u: University): number => {
+          const name = (u.name || '').toLowerCase();
+          const alias = (u.alias || '').toLowerCase();
+          const aliasTokens = alias.replace(/\|/g, ',').split(',').map(t => t.trim());
+          if (aliasTokens.includes(q)) return 100;
+          if (name.startsWith(q)) return 90;
+          if (aliasTokens.some(t => t.includes(q))) return 80;
+          if (name.includes(q)) return 70;
+          return 10;
+        };
+        return score(b) - score(a);
+      });
     }
 
     const page = params.page || 1;
@@ -211,6 +229,34 @@ export const api = {
     const data = filtered.slice((page - 1) * limit, page * limit);
 
     return { total, page, totalPages, data };
+  },
+
+  clearCache(): void {
+    cachedStats = null;
+    cachedUniversities = null;
+    cachedCompanies = null;
+    cachedBridge = null;
+    shardCache.clear();
+  },
+
+  async syncLiveData(): Promise<{ success: boolean; count: number; timestamp: string }> {
+    cachedStats = null;
+    cachedUniversities = null;
+    cachedCompanies = null;
+    cachedBridge = null;
+    shardCache.clear();
+    const base = getBaseUrl();
+    const ts = Date.now();
+    const res = await fetch(`${base}data/universities.json?t=${ts}`, { cache: 'reload' });
+    if (res.ok) {
+      cachedUniversities = await res.json();
+      return {
+        success: true,
+        count: cachedUniversities?.length || 0,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    throw new Error('Failed to synchronize live dataset');
   },
 
   async getCompanies(params: {

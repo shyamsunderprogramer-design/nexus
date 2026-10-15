@@ -337,6 +337,21 @@ export const CampusDirectory: React.FC<CampusDirectoryProps> = ({ onSelectUniver
                         {u.jobs_ats} ATS
                       </span>
                     )}
+                    {u.adm_rate !== undefined && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/25 font-semibold">
+                        🎯 {u.adm_rate}% Admit
+                      </span>
+                    )}
+                    {u.hbcu && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/30 font-semibold">
+                        🏛️ HBCU
+                      </span>
+                    )}
+                    {u.landgrant && (
+                      <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-semibold">
+                        🌾 Land-Grant
+                      </span>
+                    )}
                     {u.tuition_in !== undefined && (
                       <span className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/25 font-semibold">
                         💰 ${(u.tuition_in / 1000).toFixed(1)}k Tuition

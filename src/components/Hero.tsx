@@ -10,7 +10,8 @@ import {
   Zap, 
   Sparkles,
   Layers,
-  Globe2
+  Globe2,
+  RefreshCw
 } from 'lucide-react';
 
 interface HeroProps {
@@ -18,9 +19,10 @@ interface HeroProps {
   onSelectTab?: (tab: ActiveTab) => void;
   onOpenCommandPalette?: () => void;
   onStartTour?: () => void;
+  onOpenSyncAgent?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPalette, onStartTour }) => {
+export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPalette, onStartTour, onOpenSyncAgent }) => {
   const uniCount = stats?.universities.total || 6299;
   const compCount = stats ? (stats.employers.federal_total / 1000000).toFixed(2) + 'M' : '7.17M';
   const linksCount = stats ? (stats.employers.verified_carriers_applied / 1000000).toFixed(2) + 'M+' : '3.51M+';
@@ -117,6 +119,20 @@ export const Hero: React.FC<HeroProps> = ({ stats, onSelectTab, onOpenCommandPal
                     <span className="px-1.5 py-0.5 rounded text-[10px] font-mono bg-brand-500/15 text-brand-600 dark:text-brand-300 font-bold border border-brand-500/30">
                       LIVE
                     </span>
+                  </button>
+                )}
+
+                {onOpenSyncAgent && (
+                  <button
+                    onClick={onOpenSyncAgent}
+                    className="px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-800 dark:text-emerald-300 border border-emerald-500/35 hover:border-emerald-500/60 transition-all shadow-md flex items-center justify-center space-x-2.5 group cursor-pointer active:scale-[0.98]"
+                    aria-label="Open Autonomous Live Data Sync Agent"
+                  >
+                    <div className="p-1 rounded-lg bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 group-hover:rotate-180 transition-transform duration-500">
+                      <RefreshCw className="w-4 h-4" />
+                    </div>
+                    <span>Sync Live Intel</span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse ml-0.5" />
                   </button>
                 )}
               </div>

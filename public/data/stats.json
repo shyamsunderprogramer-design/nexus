@@ -103,5 +103,7 @@
       }
     ]
   },
-  "state_counts": 132
+  "state_counts": 132,
+  "last_sync_utc": "2026-10-15T00:51:34.747371+00:00",
+  "sync_status": "VERIFIED_ACTIVE"
 }

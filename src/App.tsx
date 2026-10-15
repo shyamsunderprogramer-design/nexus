@@ -15,6 +15,7 @@ import { WatchlistProvider } from './context/WatchlistContext';
 import { WatchlistModal } from './components/WatchlistModal';
 import { AtsMatcherModal } from './components/AtsMatcherModal';
 import { PhdAdmissionsHub } from './components/PhdAdmissionsHub';
+import { SyncAgentModal } from './components/SyncAgentModal';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -25,6 +26,7 @@ export const App: React.FC = () => {
   const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
   const [isTourActive, setIsTourActive] = useState(false);
   const [isAtsModalOpen, setIsAtsModalOpen] = useState(false);
+  const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
 
   const applyThemeColor = (color: ThemeColor) => {
     const root = document.documentElement;
@@ -86,6 +88,7 @@ export const App: React.FC = () => {
             onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
             onStartTour={() => setIsTourActive(true)}
             onOpenAtsMatcher={() => setIsAtsModalOpen(true)}
+            onOpenSyncAgent={() => setIsSyncModalOpen(true)}
           />
 
           <Hero
@@ -93,6 +96,7 @@ export const App: React.FC = () => {
             onSelectTab={setActiveTab}
             onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
             onStartTour={() => setIsTourActive(true)}
+            onOpenSyncAgent={() => setIsSyncModalOpen(true)}
           />
 
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
@@ -139,6 +143,14 @@ export const App: React.FC = () => {
           <AtsMatcherModal
             isOpen={isAtsModalOpen}
             onClose={() => setIsAtsModalOpen(false)}
+          />
+
+          <SyncAgentModal
+            isOpen={isSyncModalOpen}
+            onClose={() => setIsSyncModalOpen(false)}
+            onSyncComplete={(count) => {
+              api.getStats().then((data) => setStats(data));
+            }}
           />
 
           <InteractiveTour
