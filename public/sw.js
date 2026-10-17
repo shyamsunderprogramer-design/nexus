@@ -1,4 +1,4 @@
-const CACHE_NAME = 'nexus-cache-v1';
+const CACHE_NAME = 'nexus-cache-v2';
 const PRECACHE_ASSETS = [
   './',
   './index.html',
@@ -7,7 +7,7 @@ const PRECACHE_ASSETS = [
   './icons/icon-512.png'
 ];
 
-// Install: Cache core app shell
+// Install: Cache core app shell and immediately activate
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -18,7 +18,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Activate: Clean up old cache versions
+// Activate: Delete all previous cache versions immediately
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -33,19 +33,33 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch: Stale-while-revalidate for assets, network-first for data
+// Fetch: Network-First for HTML navigation requests (so updates appear instantly),
+// Cache-First with background revalidation for static assets.
 self.addEventListener('fetch', (event) => {
-  // Only handle GET requests
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
-
-  // Skip chrome-extension requests
   if (url.protocol.startsWith('chrome-extension')) return;
 
+  // For HTML navigation requests, ALWAYS fetch fresh from network
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
+          }
+          return networkResponse;
+        })
+        .catch(() => caches.match('./index.html'))
+    );
+    return;
+  }
+
+  // For assets and data: Stale-while-revalidate
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      // If found in cache, return cached response while fetching fresh in background
       const fetchPromise = fetch(event.request)
         .then((networkResponse) => {
           if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
@@ -56,10 +70,7 @@ self.addEventListener('fetch', (event) => {
           }
           return networkResponse;
         })
-        .catch(() => {
-          // If network fails and cachedResponse exists, cachedResponse will be returned
-          return cachedResponse;
-        });
+        .catch(() => cachedResponse);
 
       return cachedResponse || fetchPromise;
     })
