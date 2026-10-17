@@ -37,7 +37,7 @@ jobs:
       - name: Build Web Application
         env:
           GITHUB_ACTIONS: 'true'
-          BASE_PATH: '/nexus/'
+          BASE_PATH: '/'
         run: npm run build
 
       - name: Setup Pages

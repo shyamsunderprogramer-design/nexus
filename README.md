@@ -5,7 +5,7 @@
 #### *Unified Campus to Corporate Talent Intelligence Platform*
 
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-emerald?style=for-the-badge&logo=shield)](https://github.com/shyamsunderprogramer-design/nexus)
-[![Live Demo](https://img.shields.io/badge/Live%20Cockpit-Open%20Anywhere-7c3aed?style=for-the-badge&logo=google-chrome)](https://shyamsunderprogramer-design.github.io/nexus/)
+[![Live Demo](https://img.shields.io/badge/Live%20Cockpit-Open%20Anywhere-7c3aed?style=for-the-badge&logo=google-chrome)](https://nexus-global.is-a.dev/)
 [![GitHub stars](https://img.shields.io/github/stars/shyamsunderprogramer-design/nexus?style=for-the-badge&logo=github&color=eab308&label=%E2%AD%90%20Star%20Repo)](https://github.com/shyamsunderprogramer-design/nexus/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/shyamsunderprogramer-design/nexus?style=for-the-badge&logo=github&color=3b82f6)](https://github.com/shyamsunderprogramer-design/nexus/network/members)
 [![Employers](https://img.shields.io/badge/Employers%20Indexed-7.17M%2B-06b6d4?style=for-the-badge&logo=instructure)](https://github.com/shyamsunderprogramer-design/nexus)
@@ -22,10 +22,10 @@
 </p>
 
 <p align="center">
-  🌐 <b><a href="https://shyamsunderprogramer-design.github.io/nexus/">🚀 LAUNCH LIVE WEB APP: shyamsunderprogramer-design.github.io/nexus</a></b> 🌐
+  🌐 <b><a href="https://nexus-global.is-a.dev/">🚀 LAUNCH LIVE WEB APP: nexus-global.is-a.dev</a></b> 🌐
 </p>
 
-[Live Web App](https://shyamsunderprogramer-design.github.io/nexus/) • [🖥️ Platform Tour](#-live-interactive-platform-showcase) • [⭐️ Show Your Support](#️-show-your-support) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
+[Live Web App](https://nexus-global.is-a.dev/) • [🖥️ Platform Tour](#-live-interactive-platform-showcase) • [⭐️ Show Your Support](#️-show-your-support) • [Features](#-pin-to-pin-feature-walkthrough) • [Architecture](#-modern-uxui--technical-architecture)
 
 </div>
 
@@ -42,12 +42,12 @@
 ## 🖥️ Live Interactive Platform Showcase
 
 <div align="center">
-  <a href="https://shyamsunderprogramer-design.github.io/nexus/">
+  <a href="https://nexus-global.is-a.dev/">
     <img src="public/preview-banner-4k.png" alt="NEXUS Live Interactive Platform Showcase (4K UHD)" width="100%" />
   </a>
   <br/>
   <p align="center">
-    <b>🚀 <a href="https://shyamsunderprogramer-design.github.io/nexus/">Launch Live Web App with Interactive Auto-Tour</a></b><br/>
+    <b>🚀 <a href="https://nexus-global.is-a.dev/">Launch Live Web App with Interactive Auto-Tour</a></b><br/>
     <i>✨ Built-in 6-Step Guided Auto-Tour • Sub-millisecond query performance • Zero sign-up • 100% Free &amp; Open Source</i>
   </p>
 </div>
