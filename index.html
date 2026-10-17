@@ -2,6 +2,18 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // Parallel Domain Synchronizer: Instantly route legacy github.io visitors to the live synchronized platform
+      if (window.location.hostname === 'shyamsunderprogramer-design.github.io') {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(regs) {
+            for (var i = 0; i < regs.length; i++) { regs[i].unregister(); }
+          });
+        }
+        var cleanPath = window.location.pathname.replace(/^\/nexus/, '') || '/';
+        window.location.replace('https://nexus-global.is-a.dev' + cleanPath + window.location.search + window.location.hash);
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/></svg>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXUS | National Employment & eXploration Unified System</title>

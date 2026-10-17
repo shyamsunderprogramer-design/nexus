@@ -1,3 +1,14 @@
+// Unregister immediately if executing on the legacy origin to prevent stale cache lock
+if (self.location.hostname === 'shyamsunderprogramer-design.github.io') {
+  self.registration.unregister().then(() => {
+    return self.clients.matchAll();
+  }).then((clients) => {
+    clients.forEach((client) => {
+      client.navigate('https://nexus-global.is-a.dev/');
+    });
+  });
+}
+
 const CACHE_NAME = 'nexus-cache-v2';
 const PRECACHE_ASSETS = [
   './',
