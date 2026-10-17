@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NEXUS | National Employment & eXploration Unified System</title>
     <meta name="description" content="Unified Campus & Enterprise Talent Intelligence Platform. Unifying 6,299 higher-ed institutions with 7.17M+ enterprise employers and 3.51M+ verified direct hiring portals across 132 territories." />
-    <meta name="keywords" content="campus to corporate, talent intelligence, higher education directory, job search, direct employer portals, verified career links, workday ats, higher-ed institutions, cap exempt h1b, stem graduation pipeline" />
+    <meta name="keywords" content="campus to corporate, talent intelligence, higher education directory, job search, direct employer portals, verified career links, workday ats, higher-ed institutions, cap exempt h1b, stem graduation pipeline, nces ipeds" />
     <meta name="author" content="Shyam Sunder" />
+    
+    <!-- Search Engine Indexing & Bot Directives -->
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://nexus-global.is-a.dev/" />
 
     <!-- PWA & Mobile Web App Meta -->
@@ -19,37 +23,63 @@
     <meta name="apple-mobile-web-app-title" content="NEXUS" />
     <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
 
-    <!-- Schema.org JSON-LD for Google Rich Results -->
+    <!-- Google Structured Data (Schema.org) for Search Snippets & Knowledge Graph -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "NEXUS",
-      "alternateName": "National Employment & eXploration Unified System",
-      "url": "https://nexus-global.is-a.dev/",
-      "description": "Unified Campus & Enterprise Talent Intelligence Platform. Unifying 6,299 higher-ed institutions with 7.17M+ enterprise employers and 3.51M+ verified direct hiring portals across 132 territories.",
-      "applicationCategory": "BusinessApplication, EducationalApplication",
-      "operatingSystem": "All",
-      "author": {
-        "@type": "Person",
-        "name": "Shyam Sunder"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://nexus-global.is-a.dev/#website",
+          "url": "https://nexus-global.is-a.dev/",
+          "name": "NEXUS",
+          "alternateName": "National Employment & eXploration Unified System",
+          "description": "Unified Campus & Enterprise Talent Intelligence Platform unifying 6,299 higher-ed institutions with 7.17M+ enterprise employers and 3.51M+ verified direct hiring portals across 132 territories.",
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebApplication",
+          "@id": "https://nexus-global.is-a.dev/#webapp",
+          "name": "NEXUS Talent Intelligence Platform",
+          "url": "https://nexus-global.is-a.dev/",
+          "applicationCategory": "BusinessApplication, EducationalApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "author": {
+            "@type": "Person",
+            "name": "Shyam Sunder"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Dataset",
+          "@id": "https://nexus-global.is-a.dev/#dataset",
+          "name": "National Campus to Corporate Verified Employment & Institutional Index",
+          "description": "Comprehensive federal NCES IPEDS and global dataset indexing 6,299 colleges, 7.17M employers, and 3.51M verified direct HR portals.",
+          "license": "https://opensource.org/licenses/MIT",
+          "creator": {
+            "@type": "Person",
+            "name": "Shyam Sunder"
+          }
+        }
+      ]
     }
     </script>
 
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="NEXUS Platform" />
     <meta property="og:url" content="https://nexus-global.is-a.dev/" />
     <meta property="og:title" content="NEXUS | Unified Campus to Corporate Talent Intelligence" />
     <meta property="og:description" content="Unifying 6,299 higher-ed institutions with 7.17M+ employers and 3.51M+ verified direct hiring portals across 132 territories with zero aggregator spam." />
     <meta property="og:image" content="https://nexus-global.is-a.dev/social-preview.png" />
+    <meta property="og:image:alt" content="NEXUS Intelligence Platform Interface" />
 
-    <!-- Twitter -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://nexus-global.is-a.dev/" />
     <meta name="twitter:title" content="NEXUS | Unified Campus to Corporate Talent Intelligence" />
