@@ -63,6 +63,8 @@
 | **🌉 Regional Talent-to-Market Bridge** | Dual-column matrix matching regional graduation pipelines with corporate hiring | State-by-state student output vs employer demand |
 | **🎯 Dual-Input ATS Resume Scanner** | Jobscan-style resume vs job description matcher with keyword gap analysis, ATS scoring, and 1-click copy | Instant in-browser matching against any target job |
 | **🔬 PhD & Doctoral Admissions Hub** | Dedicated doctoral directory with tuition waivers, stipends, application fees, and 1-click PI cold email generator | 1,086 research universities & specialized departments |
+| **⚖️ Head-to-Head Compare Engine** | Side-by-side comparative matrix for up to 3 campuses or employers with comparative meters, advantage detection, and CSV export | Multi-entity side-by-side intelligence dock |
+| **🛂 Visa & OPT Roadmap Navigator** | Comprehensive regulatory roadmap for F-1 OPT, 24-month STEM extensions, Canada PGWP, and direct shortcut to 3,564 H-1B Cap-Exempt institutions | Interactive immigration & employment roadmap |
 | **📌 Target Watchlist & CSV Export** | Cross-session bookmarking drawer for institutions and employers with 1-click CSV download | Custom user shortlists with persistent local storage |
 | **🔍 Slide-Out Inspector Drawer** | Glassmorphic deep-dive drawer with regulatory citations & ATS telemetry | Full institutional profiles, SEC tickers & addresses |
 
@@ -171,7 +173,9 @@ NEXUS delivers a rich, responsive Single Page Application (SPA) structured into 
 - **1-Click PI Cold Email Generator**: Interactive modal creating personalized outreach emails to prospective Principal Investigators (PIs) and lab directors with custom research alignment, paper citations, and CV links.
 - **PhD Admissions Playbook**: Step-by-step strategic guides on contacting faculty, securing funding packages, and evaluating research labs.
 
-### Cockpit Utilities: 🎯 ATS Scanner, Watchlist & Sync Agent
+### Cockpit Utilities: 🎯 ATS Scanner, ⚖️ Compare Engine, 🛂 Visa Roadmap & Watchlist
+- **⚖️ Head-to-Head Compare Engine**: Select up to 3 campuses or enterprise employers side-by-side. Inspect comparative meters (Enrollment, STEM Degree Share %, Tuition In-State vs Out-of-State, Application Fees, Admission Rates, and ATS Systems), automated advantage leader badges, 1-click text summary copy, and CSV export.
+- **🛂 International Student Visa & OPT Roadmap**: Complete regulatory timeline planner for international candidates covering F-1 Initial OPT (12 mo), 24-Month STEM Extension rules, Canada PGWP duration rules, an interactive readiness checklist, and a 1-click filter shortcut directly targeting the 3,564 H-1B Cap-Exempt institutions across the platform.
 - **🎯 Dual-Input ATS Resume Scanner**: Jobscan-style keyword and skills matcher. Paste your candidate resume alongside any job description to instantly calculate your ATS match score, extract missing technical skills, identify recruiter keywords, and copy optimized bullet points with 1 click.
 - **📌 Target Watchlist & CSV Export**: Slide-over bookmarking drawer allowing users to save high-priority institutions and corporate employers across sessions, add notes, and export their target list to `.csv` with verified links.
 - **🔄 Live Federal IPEDS Sync Agent**: 1-click audit and synchronization agent to inspect cached federal data health and refresh institutional records.
@@ -320,8 +324,16 @@ nexus/
 │   │   ├── InteractiveTour.tsx  # 6-step guided interactive cockpit onboarding tour
 │   │   ├── DetailDrawer.tsx     # Glassmorphic detail inspector drawer
 │   │   ├── Toast.tsx            # Dynamic feedback notifications
+│   │   ├── compare/             # Head-to-head compare floating dock & comparison matrix
+│   │   │   ├── CompareFloatingTray.tsx
+│   │   │   └── ComparisonModal.tsx
+│   │   ├── visa/                # International student F-1 OPT & H-1B roadmap modal
+│   │   │   └── VisaRoadmapModal.tsx
 │   │   ├── drawer/              # Modular deep-dive drawer tabs & regulatory citations
 │   │   └── phd/                 # PhD directory, application playbook & cold email generator
+│   ├── context/                 # Application state providers
+│   │   ├── WatchlistContext.tsx # Persistent target bookmarks & CSV export
+│   │   └── CompareContext.tsx   # Head-to-head entity compare state
 │   ├── services/
 │   │   └── api.ts               # Dual-mode API & on-demand shard loader
 │   ├── types/

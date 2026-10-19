@@ -16,6 +16,10 @@ import { WatchlistModal } from './components/WatchlistModal';
 import { AtsMatcherModal } from './components/AtsMatcherModal';
 import { PhdAdmissionsHub } from './components/PhdAdmissionsHub';
 import { SyncAgentModal } from './components/SyncAgentModal';
+import { CompareProvider } from './context/CompareContext';
+import { CompareFloatingTray } from './components/compare/CompareFloatingTray';
+import { ComparisonModal } from './components/compare/ComparisonModal';
+import { VisaRoadmapModal } from './components/visa/VisaRoadmapModal';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -27,6 +31,8 @@ export const App: React.FC = () => {
   const [isTourActive, setIsTourActive] = useState(false);
   const [isAtsModalOpen, setIsAtsModalOpen] = useState(false);
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
+  const [isVisaModalOpen, setIsVisaModalOpen] = useState(false);
+  const [h1bFilterActive, setH1bFilterActive] = useState(false);
 
   const applyThemeColor = (color: ThemeColor) => {
     const root = document.documentElement;
@@ -77,109 +83,125 @@ export const App: React.FC = () => {
   return (
     <ToastProvider>
       <WatchlistProvider>
-        <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070b12] dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
-          <Navbar
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-            isDark={isDark}
-            onToggleTheme={toggleTheme}
-            accentColor={accentColor}
-            onChangeAccentColor={changeAccentColor}
-            onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-            onStartTour={() => setIsTourActive(true)}
-            onOpenAtsMatcher={() => setIsAtsModalOpen(true)}
-            onOpenSyncAgent={() => setIsSyncModalOpen(true)}
-          />
+        <CompareProvider>
+          <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#070b12] dark:text-slate-100 flex flex-col font-sans transition-colors duration-200">
+            <Navbar
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+              isDark={isDark}
+              onToggleTheme={toggleTheme}
+              accentColor={accentColor}
+              onChangeAccentColor={changeAccentColor}
+              onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+              onStartTour={() => setIsTourActive(true)}
+              onOpenAtsMatcher={() => setIsAtsModalOpen(true)}
+              onOpenSyncAgent={() => setIsSyncModalOpen(true)}
+              onOpenVisaRoadmap={() => setIsVisaModalOpen(true)}
+            />
 
-          <Hero
-            stats={stats}
-            onSelectTab={setActiveTab}
-            onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
-            onStartTour={() => setIsTourActive(true)}
-            onOpenSyncAgent={() => setIsSyncModalOpen(true)}
-          />
+            <Hero
+              stats={stats}
+              onSelectTab={setActiveTab}
+              onOpenCommandPalette={() => setIsCommandPaletteOpen(true)}
+              onStartTour={() => setIsTourActive(true)}
+              onOpenSyncAgent={() => setIsSyncModalOpen(true)}
+            />
 
-          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
-            {activeTab === 'overview' && <ExecutiveDashboard stats={stats} />}
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 flex-1 w-full">
+              {activeTab === 'overview' && <ExecutiveDashboard stats={stats} />}
 
-            {activeTab === 'universities' && (
-              <CampusDirectory
-                onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
-              />
-            )}
+              {activeTab === 'universities' && (
+                <CampusDirectory
+                  onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
+                  initialH1bFilter={h1bFilterActive}
+                />
+              )}
 
-            {activeTab === 'phd' && (
-              <PhdAdmissionsHub
-                onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
-              />
-            )}
+              {activeTab === 'phd' && (
+                <PhdAdmissionsHub
+                  onSelectUniversity={(u) => setSelectedEntity({ type: 'university', data: u })}
+                />
+              )}
 
-            {activeTab === 'companies' && (
-              <EnterpriseDirectory
-                onSelectCompany={(c) => setSelectedEntity({ type: 'company', data: c })}
-              />
-            )}
+              {activeTab === 'companies' && (
+                <EnterpriseDirectory
+                  onSelectCompany={(c) => setSelectedEntity({ type: 'company', data: c })}
+                />
+              )}
 
-            {activeTab === 'bridge' && <TalentBridge />}
-          </main>
+              {activeTab === 'bridge' && <TalentBridge />}
+            </main>
 
-          <DetailDrawer
-            entity={selectedEntity}
-            onClose={() => setSelectedEntity(null)}
-          />
+            <DetailDrawer
+              entity={selectedEntity}
+              onClose={() => setSelectedEntity(null)}
+            />
 
-          <CommandPalette
-            isOpen={isCommandPaletteOpen}
-            onClose={() => setIsCommandPaletteOpen(false)}
-            onSelectEntity={setSelectedEntity}
-          />
+            <CommandPalette
+              isOpen={isCommandPaletteOpen}
+              onClose={() => setIsCommandPaletteOpen(false)}
+              onSelectEntity={setSelectedEntity}
+            />
 
-          <WatchlistModal
-            onSelectEntity={setSelectedEntity}
-            onExploreCampuses={() => setActiveTab('universities')}
-            onExploreEmployers={() => setActiveTab('companies')}
-          />
+            <WatchlistModal
+              onSelectEntity={setSelectedEntity}
+              onExploreCampuses={() => setActiveTab('universities')}
+              onExploreEmployers={() => setActiveTab('companies')}
+            />
 
-          <AtsMatcherModal
-            isOpen={isAtsModalOpen}
-            onClose={() => setIsAtsModalOpen(false)}
-          />
+            <AtsMatcherModal
+              isOpen={isAtsModalOpen}
+              onClose={() => setIsAtsModalOpen(false)}
+            />
 
-          <SyncAgentModal
-            isOpen={isSyncModalOpen}
-            onClose={() => setIsSyncModalOpen(false)}
-            onSyncComplete={(count) => {
-              api.getStats().then((data) => setStats(data));
-            }}
-          />
+            <SyncAgentModal
+              isOpen={isSyncModalOpen}
+              onClose={() => setIsSyncModalOpen(false)}
+              onSyncComplete={(count) => {
+                api.getStats().then((data) => setStats(data));
+              }}
+            />
 
-          <InteractiveTour
-            isOpen={isTourActive}
-            onClose={() => setIsTourActive(false)}
-            onTabChange={setActiveTab}
-            onSelectEntity={setSelectedEntity}
-            onToggleCommandPalette={setIsCommandPaletteOpen}
-          />
+            <VisaRoadmapModal
+              isOpen={isVisaModalOpen}
+              onClose={() => setIsVisaModalOpen(false)}
+              onExploreCapExempt={() => {
+                setH1bFilterActive(true);
+                setActiveTab('universities');
+              }}
+            />
 
-          {/* Footer */}
-          <footer className="border-t border-slate-200 dark:border-white/5 py-8 text-center text-xs text-slate-600 dark:text-slate-500 bg-slate-100/80 dark:bg-[#06090e] transition-colors">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <span className="font-bold text-slate-800 dark:text-slate-300">NEXUS</span> — National Employment & eXploration Unified System
+            <ComparisonModal />
+            <CompareFloatingTray />
+
+            <InteractiveTour
+              isOpen={isTourActive}
+              onClose={() => setIsTourActive(false)}
+              onTabChange={setActiveTab}
+              onSelectEntity={setSelectedEntity}
+              onToggleCommandPalette={setIsCommandPaletteOpen}
+            />
+
+            {/* Footer */}
+            <footer className="border-t border-slate-200 dark:border-white/5 py-8 text-center text-xs text-slate-600 dark:text-slate-500 bg-slate-100/80 dark:bg-[#06090e] transition-colors">
+              <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <span className="font-bold text-slate-800 dark:text-slate-300">NEXUS</span> — National Employment & eXploration Unified System
+                </div>
+                <div className="flex items-center space-x-2">
+                  <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
+                  <span className="text-slate-400">·</span>
+                  <button
+                    onClick={() => setIsCommandPaletteOpen(true)}
+                    className="hover:text-brand-500 underline transition-colors"
+                  >
+                    Press ⌘K for Quick Search
+                  </button>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
-                <span className="text-slate-400">·</span>
-                <button
-                  onClick={() => setIsCommandPaletteOpen(true)}
-                  className="hover:text-brand-500 underline transition-colors"
-                >
-                  Press ⌘K for Quick Search
-                </button>
-              </div>
-            </div>
-          </footer>
-        </div>
+            </footer>
+          </div>
+        </CompareProvider>
       </WatchlistProvider>
     </ToastProvider>
   );

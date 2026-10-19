@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Company } from '../types';
 import { api } from '../services/api';
-import { Search, ExternalLink, TrendingUp, X, RotateCcw, Copy, Star } from 'lucide-react';
+import { Search, ExternalLink, TrendingUp, X, RotateCcw, Copy, Star, Scale } from 'lucide-react';
 import { useToast } from './Toast';
 import { useWatchlist } from '../context/WatchlistContext';
+import { useCompare } from '../context/CompareContext';
 
 interface EnterpriseDirectoryProps {
   onSelectCompany: (c: Company) => void;
@@ -22,6 +23,7 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
 
   const { showToast } = useToast();
   const { isBookmarked, toggleBookmark } = useWatchlist();
+  const { isInCompare, toggleCompare } = useCompare();
 
   const fetchCompanies = async () => {
     setLoading(true);
@@ -278,6 +280,20 @@ export const EnterpriseDirectory: React.FC<EnterpriseDirectoryProps> = ({ onSele
                     <span className="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-white/[0.06] border border-slate-200/80 dark:border-white/10 text-[10px] font-mono font-bold text-slate-600 dark:text-slate-300">
                       {c.category}
                     </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleCompare({ type: 'company', data: c });
+                      }}
+                      title={isInCompare(c.oid) ? 'Remove from Head-to-Head Compare' : 'Add to Head-to-Head Compare'}
+                      className={`p-1 rounded-md transition-colors ${
+                        isInCompare(c.oid)
+                          ? 'bg-brand-500/20 text-brand-600 dark:text-brand-300 ring-1 ring-brand-500/40'
+                          : 'hover:bg-slate-100 dark:hover:bg-white/10 text-slate-400 hover:text-brand-500'
+                      }`}
+                    >
+                      <Scale className="w-3.5 h-3.5" />
+                    </button>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();

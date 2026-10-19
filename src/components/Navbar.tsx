@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope, RefreshCw } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope, RefreshCw, Scale, Compass } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
+import { useCompare } from '../context/CompareContext';
 import { usePWAInstall } from '../hooks/usePWAInstall';
 
 interface NavbarProps {
@@ -16,6 +17,7 @@ interface NavbarProps {
   onStartTour?: () => void;
   onOpenAtsMatcher?: () => void;
   onOpenSyncAgent?: () => void;
+  onOpenVisaRoadmap?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -38,9 +40,11 @@ export const Navbar: React.FC<NavbarProps> = ({
   onStartTour,
   onOpenAtsMatcher,
   onOpenSyncAgent,
+  onOpenVisaRoadmap,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
   const { watchlist, setIsWatchlistOpen } = useWatchlist();
+  const { compareList, setIsCompareOpen } = useCompare();
   const { canInstall, triggerInstall } = usePWAInstall();
 
   const tabs: Array<{ id: ActiveTab; label: string; icon: React.ReactNode }> = [
@@ -210,6 +214,22 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Right Action Tools: Watchlist, Auto-Tour, ATS Scanner, Install App, Star */}
           <div className="flex items-center space-x-2 flex-shrink-0">
+            {/* Head-to-Head Compare */}
+            <button
+              onClick={() => setIsCompareOpen(true)}
+              className="flex items-center space-x-1.5 px-3 py-1 rounded-xl border border-brand-500/30 bg-brand-500/10 hover:bg-brand-500/20 text-brand-700 dark:text-brand-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer whitespace-nowrap"
+              title="Open Head-to-Head Comparison Matrix"
+              aria-label="Open Comparison Matrix"
+            >
+              <Scale className="w-3.5 h-3.5 text-brand-500 group-hover:rotate-6 transition-transform" />
+              <span>Compare</span>
+              {compareList.length > 0 && (
+                <span className="px-1.5 py-0.2 rounded-full text-[10px] font-mono font-bold bg-brand-500 text-white dark:text-slate-950">
+                  {compareList.length}
+                </span>
+              )}
+            </button>
+
             {/* Target Watchlist */}
             <button
               onClick={() => setIsWatchlistOpen(true)}
@@ -225,6 +245,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               )}
             </button>
+
+            {/* Visa & Career Roadmap */}
+            {onOpenVisaRoadmap && (
+              <button
+                onClick={onOpenVisaRoadmap}
+                className="flex items-center space-x-1.5 px-3 py-1 rounded-xl border border-blue-500/30 bg-blue-500/10 hover:bg-blue-500/20 text-blue-700 dark:text-blue-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer whitespace-nowrap"
+                title="Open International Student Visa, OPT & H-1B Cap-Exempt Roadmap"
+                aria-label="Open Visa Roadmap"
+              >
+                <Compass className="w-3.5 h-3.5 text-blue-500 group-hover:rotate-45 transition-transform duration-300" />
+                <span>Visa Roadmap</span>
+              </button>
+            )}
 
             {/* Auto-Tour */}
             {onStartTour && (
