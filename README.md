@@ -114,23 +114,41 @@ NEXUS was architected to deliver actionable value to five core audiences:
 
 NEXUS delivers a rich, responsive Single Page Application (SPA) structured into dedicated intelligence views, specialized applicant tools, and an interactive slide-out inspector:
 
-```text
-┌────────────────────────────────────────────────────────────────────────────────────────┐
-│                                NEXUS PLATFORM WORKSPACE                                │
-├─────────────────┬──────────────────┬──────────────────┬─────────────────┬──────────────┤
-│   📊 View 1     │    🎓 View 2     │    🏢 View 3     │   ⚡ View 4     │  🔬 View 5   │
-│  Executive KPI  │  Campus & Talent │  Enterprise Index│  Talent-Market  │  PhD & PI    │
-│   & Analytics   │  Directory (Deg) │ (3.51M Portals)  │     Bridge      │  Admissions  │
-├─────────────────┴──────────────────┴──────────────────┴─────────────────┴──────────────┤
-│                                 🛠️ COCKPIT UTILITIES                                    │
-│    🎯 Dual-Input ATS Scanner  •  📌 Target Watchlist & CSV  •  🔄 Live IPEDS Sync      │
-└───────────────────────────────────────────┬────────────────────────────────────────────┘
-                                            │
-                                            ▼
-                         ┌──────────────────────────────────────┐
-                         │    🔍 Slide-Out Detail Inspector     │
-                         │   Full Profile, Badges & Deep-Links  │
-                         └──────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph Cockpit["⚡ NEXUS Cockpit Navigation & Secondary Action Dock"]
+        Omni["⚡ Omni-Search (⌘K)"]
+        Nav["🧭 Primary Navigation (5 Core Intel Views)"]
+        Tools["🛠️ Secondary Cockpit Utilities Dock"]
+    end
+
+    subgraph Views["🎯 Core Intelligence Workspace"]
+        V1["📊 View 1: Executive KPI & Macro Market Analytics"]
+        V2["🎓 View 2: Campus & Talent Directory (UG, MS, PhD, DBA)"]
+        V3["🏢 View 3: Enterprise Employer Index (3.51M+ Portals)"]
+        V4["⚡ View 4: Regional Talent-to-Market Dual Bridge"]
+        V5["🔬 View 5: PhD Admissions Hub & PI Cold Outreach"]
+    end
+
+    subgraph Utilities["🚀 Tactical Decision Engines & Utilities"]
+        U1["🎯 Dual-Input ATS Resume Scanner"]
+        U2["⚖️ Head-to-Head Compare Matrix"]
+        U3["🛂 International Visa & OPT Roadmap"]
+        U4["📌 Target Watchlist & CSV Export"]
+        U5["🔄 Live Federal IPEDS Sync Agent"]
+    end
+
+    subgraph Inspector["🔍 Slide-Out Detail Inspector"]
+        D1["Full Institutional & Enterprise Glassmorphic Profile"]
+        D2["Direct HR Job Portals, Career Centers & Website Links"]
+        D3["Financial Telemetry, SEC Tickers & Regulatory Citations"]
+    end
+
+    Omni --> Views
+    Nav --> Views
+    Tools --> Utilities
+    Views --> Inspector
+    Utilities --> Inspector
 ```
 
 ### View 1: 📊 Executive Market Intelligence
@@ -191,20 +209,42 @@ NEXUS delivers a rich, responsive Single Page Application (SPA) structured into 
 
 The platform was built with strict adherence to modern frontend engineering standards:
 
-```text
-┌─────────────────────────────────────────────────────────────┐
-│                 NEXUS FULL-STACK ARCHITECTURE               │
-├─────────────────────────────────────────────────────────────┤
-│  Frontend Engine   React 19 + TypeScript + Vite             │
-│  UI & Styling      Tailwind CSS 3.x (Glassmorphic obsidian) │
-│  Motion & Physics  Framer Motion 12.x (Spring transitions)  │
-│  Iconography       Lucide React 1.x (Crisp SVG vector pack) │
-│  Data Sharding     62 Regional Shards (JSON chunks)         │
-│  Backend API       Node.js / Express REST API (TypeScript)  │
-│  Endpoints         /api/stats, /api/universities,           │
-│                    /api/companies, /api/bridge, /api/search │
-│  Data Delivery     Dual-Mode (Express REST API + Static)    │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph DataSources["🏛️ Federal Data Registries & Primary Sources"]
+        DS1["NCES IPEDS (6,035 US Postsecondary Campuses)"]
+        DS2["Universities Canada & CICan (209 Canadian DLIs)"]
+        DS3["NIRF & AISHE (55 Top Indian Institutes)"]
+        DS4["Federal Employer Registers (IRS 990, SEC EDGAR, CMS, FMCSA)"]
+    end
+
+    subgraph Pipeline["⚙️ ETL & Sharding Pipeline (scripts/build_nexus_data.py)"]
+        P1["Data Normalization, Cleaning & Link Health Audit"]
+        P2["62 Regional Data Shards (US 50 States + 10 Global Territories)"]
+        P3["JSON-LD Structured Graphs & Sitemap Generation"]
+    end
+
+    subgraph Delivery["🚀 Dual-Mode Delivery Infrastructure"]
+        subgraph StaticRuntime["Standalone / Edge Production (nexus-global.is-a.dev)"]
+            GH["GitHub Pages & Fastly CDN Edge"]
+            SW["Service Worker v2 (Network-First PWA Offline Cache)"]
+        end
+        subgraph ServerRuntime["Full-Stack Local / Container Runtime"]
+            EXP["Express REST API (server/index.ts)"]
+            DB["Better-SQLite3 In-Memory Index"]
+        end
+    end
+
+    subgraph ClientApp["💻 Modern Client-Side Architecture (React 19 + Vite)"]
+        UI["React 19 + TypeScript + Tailwind CSS 3.x (Glassmorphic Obsidian)"]
+        FM["Framer Motion 12.x (Spring Physics Transitions & Slide Drawers)"]
+        CTX["Context State Management (Watchlist, Head-to-Head Compare, Toasts)"]
+        TOOLS["Applicant Tactical Engines (ATS Scanner, Visa Roadmap, Tour, ⌘K)"]
+    end
+
+    DataSources --> Pipeline
+    Pipeline --> Delivery
+    Delivery --> ClientApp
 ```
 
 - **Obsidian Dark Palette**: `#070b12` background accented with animated radial mesh gradients (`rgba(124, 58, 237, 0.12)`).
