@@ -58,9 +58,12 @@
 |:---|:---|:---|
 | **⚡ Cockpit Omni-Search (`⌘K`)** | Sub-millisecond indexed lookup across institutions, employers, and cities | 6,299 campuses & 7.17M enterprise records |
 | **📊 Executive Macro Analytics** | Live ATS distribution (Workday, PeopleAdmin, NEOGOV) & 12 industry breakdowns | Real-time interactive charts & verified ratios |
-| **🎓 Campus & Talent Directory** | Multi-criteria filtering by Carnegie R1/NIRF, STEM share (>20%), H-1B Cap Exempt | 3,987 direct job portals & 2,958 career centers |
+| **🎓 Campus & Talent Directory** | Multi-criteria filtering by Carnegie R1/NIRF, STEM share (>20%), H-1B Cap Exempt, and Degree Level (UG, Master's, PhD, DBA) | 3,987 direct job portals & 2,958 career centers |
 | **🏢 Enterprise Employer Index** | On-demand regional shard streaming across all 12 industries | 3.51M+ verified portals with active corporate URLs |
 | **🌉 Regional Talent-to-Market Bridge** | Dual-column matrix matching regional graduation pipelines with corporate hiring | State-by-state student output vs employer demand |
+| **🎯 Dual-Input ATS Resume Scanner** | Jobscan-style resume vs job description matcher with keyword gap analysis, ATS scoring, and 1-click copy | Instant in-browser matching against any target job |
+| **🔬 PhD & Doctoral Admissions Hub** | Dedicated doctoral directory with tuition waivers, stipends, application fees, and 1-click PI cold email generator | 1,086 research universities & specialized departments |
+| **📌 Target Watchlist & CSV Export** | Cross-session bookmarking drawer for institutions and employers with 1-click CSV download | Custom user shortlists with persistent local storage |
 | **🔍 Slide-Out Inspector Drawer** | Glassmorphic deep-dive drawer with regulatory citations & ATS telemetry | Full institutional profiles, SEC tickers & addresses |
 
 ---
@@ -107,22 +110,25 @@ NEXUS was architected to deliver actionable value to five core audiences:
 
 ## 🎯 Pin-to-Pin Feature Walkthrough
 
-NEXUS delivers a rich, responsive Single Page Application (SPA) structured into four dedicated intelligence views plus an interactive slide-out inspector:
+NEXUS delivers a rich, responsive Single Page Application (SPA) structured into dedicated intelligence views, specialized applicant tools, and an interactive slide-out inspector:
 
 ```text
-┌────────────────────────────────────────────────────────────────────────┐
-│                        NEXUS PLATFORM WORKSPACE                        │
-├─────────────────┬──────────────────┬──────────────────┬────────────────┤
-│   📊 View 1     │    🎓 View 2     │    🏢 View 3     │   ⚡ View 4    │
-│  Executive KPI  │  Campus & Talent │  Enterprise Index│  Talent-Market │
-│   & Analytics   │     Directory    │ (3.51M Portals)  │     Bridge     │
-└─────────────────┴──────────────────┴──────────────────┴────────────────┘
-                                  │
-                                  ▼
-               ┌──────────────────────────────────────┐
-               │    🔍 Slide-Out Detail Inspector     │
-               │   Full Profile, Badges & Deep-Links  │
-               └──────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                NEXUS PLATFORM WORKSPACE                                │
+├─────────────────┬──────────────────┬──────────────────┬─────────────────┬──────────────┤
+│   📊 View 1     │    🎓 View 2     │    🏢 View 3     │   ⚡ View 4     │  🔬 View 5   │
+│  Executive KPI  │  Campus & Talent │  Enterprise Index│  Talent-Market  │  PhD & PI    │
+│   & Analytics   │  Directory (Deg) │ (3.51M Portals)  │     Bridge      │  Admissions  │
+├─────────────────┴──────────────────┴──────────────────┴─────────────────┴──────────────┤
+│                                 🛠️ COCKPIT UTILITIES                                    │
+│    🎯 Dual-Input ATS Scanner  •  📌 Target Watchlist & CSV  •  🔄 Live IPEDS Sync      │
+└───────────────────────────────────────────┬────────────────────────────────────────────┘
+                                            │
+                                            ▼
+                         ┌──────────────────────────────────────┐
+                         │    🔍 Slide-Out Detail Inspector     │
+                         │   Full Profile, Badges & Deep-Links  │
+                         └──────────────────────────────────────┘
 ```
 
 ### View 1: 📊 Executive Market Intelligence
@@ -136,12 +142,16 @@ NEXUS delivers a rich, responsive Single Page Application (SPA) structured into 
 
 ### View 2: 🎓 Campus & Talent Directory
 - **Instant Search Bar**: Sub-10ms real-time search across school names, cities, states, and Carnegie classifications.
+- **Multi-Level Degree Filters**:
+  - `🎓 Undergraduate (UG)`: Associate's and Bachelor's degree-granting campuses.
+  - `📜 Master's (MS/MA/MBA)`: Graduate-level and professional master's degree programs.
+  - `🔬 Doctoral (PhD/DBA)`: Research doctorates, PhDs, and executive Doctor of Business Administration programs.
 - **Smart Filter Chips**:
   - `🧪 STEM Heavy (>20%)`: Isolates institutions with dominant STEM degree conferral rates.
   - `🛂 H-1B Cap Exempt`: Filters for public and private nonprofit universities qualifying for cap-exempt work authorization.
   - `🏆 Carnegie R1`: Highlights Doctoral Universities with Very High Research Activity.
   - `💼 Workday ATS`: Pinpoints campuses running Workday HR systems.
-- **Campus Cards**: Rich glassmorphic cards showing country/state badges, student population, employee headcount, STEM share, and quick action buttons for **Jobs** and **Career Center**.
+- **Campus Cards**: Rich glassmorphic cards showing country/state badges, student population, employee headcount, STEM share, degree levels, official tuition/fees, and quick action buttons for **Jobs** and **Career Center**.
 
 ### View 3: 🏢 Enterprise Employer Index
 - **3.51M+ Verified Career Portals**: Explore verified employers across all 12 sectors with direct links to official careers portals.
@@ -154,6 +164,18 @@ NEXUS delivers a rich, responsive Single Page Application (SPA) structured into 
 - **Side-by-Side Dual Matrix**:
   - *Left Column (Campus Pipeline)*: Total regional student population, annual STEM graduates produced, cap-exempt institutions, and top universities with their student headcounts.
   - *Right Column (Enterprise Hiring Demand)*: Prominent employers operating and hiring locally in that state, industry categories, and direct links to their regional careers hubs.
+
+### View 5: 🔬 PhD & Doctoral Admissions Hub
+- **1,086 Doctoral Research Campuses**: Dedicated directory profiling universities conferring PhD and DBA degrees.
+- **Financial Telemetry**: Real-time breakdown of typical PhD funding (100% tuition waivers, annual stipends from $28k–$48k, and official application fees).
+- **1-Click PI Cold Email Generator**: Interactive modal creating personalized outreach emails to prospective Principal Investigators (PIs) and lab directors with custom research alignment, paper citations, and CV links.
+- **PhD Admissions Playbook**: Step-by-step strategic guides on contacting faculty, securing funding packages, and evaluating research labs.
+
+### Cockpit Utilities: 🎯 ATS Scanner, Watchlist & Sync Agent
+- **🎯 Dual-Input ATS Resume Scanner**: Jobscan-style keyword and skills matcher. Paste your candidate resume alongside any job description to instantly calculate your ATS match score, extract missing technical skills, identify recruiter keywords, and copy optimized bullet points with 1 click.
+- **📌 Target Watchlist & CSV Export**: Slide-over bookmarking drawer allowing users to save high-priority institutions and corporate employers across sessions, add notes, and export their target list to `.csv` with verified links.
+- **🔄 Live Federal IPEDS Sync Agent**: 1-click audit and synchronization agent to inspect cached federal data health and refresh institutional records.
+- **📱 PWA v2 Offline Experience**: Progressive Web App with network-first caching, instant installation on iOS/Android/macOS/Windows, and offline access.
 
 ### 🔍 Slide-Out Inspector Drawer
 - Built using modern CSS discrete transitions and Spring physics.
@@ -264,7 +286,14 @@ This pipeline:
 ```text
 nexus/
 ├── public/
+│   ├── preview-banner-4k.png    # 4K UHD platform showcase banner
 │   ├── preview-banner.svg       # Rich SVG video walkthrough & demo banner
+│   ├── social-preview.png       # Retina OpenGraph & Twitter preview card
+│   ├── robots.txt               # Googlebot & crawler indexing rules
+│   ├── sitemap.xml              # XML Sitemap for search engines
+│   ├── manifest.json            # PWA Web App manifest
+│   ├── sw.js                    # PWA v2 Service Worker with network-first caching
+│   ├── CNAME                    # Custom domain (nexus-global.is-a.dev)
 │   └── data/                    # Client-side data payloads & regional shards
 │       ├── shards/              # 62 Regional Shards (US 50 states + 10 countries)
 │       │   ├── manifest.json    # Shard index & routing manifest
@@ -277,19 +306,28 @@ nexus/
 │       └── companies_featured.json # Featured enterprise employers index
 ├── src/                         # Full-Stack React 19 Frontend
 │   ├── components/              # Modular UI Components
-│   │   ├── Navbar.tsx           # Brand navigation & theme switch
-│   │   ├── Hero.tsx             # Animated cockpit hero with responsive buttons
+│   │   ├── Navbar.tsx           # Brand navigation, theme switch & secondary cockpit dock
+│   │   ├── Hero.tsx             # Animated cockpit hero with responsive action buttons
 │   │   ├── ExecutiveDashboard.tsx # Macro market analytics & ATS charts
-│   │   ├── CampusDirectory.tsx  # Filterable 6,299 university network
-│   │   ├── EnterpriseDirectory.tsx # Filterable 3.51M verified portal index
-│   │   ├── TalentBridge.tsx     # State-by-state talent & hiring nexus
-│   │   └── DetailDrawer.tsx     # Framer Motion slide-out inspector
+│   │   ├── CampusDirectory.tsx  # Filterable 6,299 university network (UG, Master's, PhD, DBA)
+│   │   ├── EnterpriseDirectory.tsx # Filterable 3.51M verified portal index & sharding
+│   │   ├── TalentBridge.tsx     # State-by-state talent & hiring dual matrix
+│   │   ├── AtsMatcherModal.tsx  # Jobscan-style ATS resume scanner & keyword matcher
+│   │   ├── PhdAdmissionsHub.tsx # Doctoral admissions hub & financial telemetry
+│   │   ├── WatchlistModal.tsx   # Target bookmarks slide-over drawer with CSV export
+│   │   ├── SyncAgentModal.tsx   # Live Federal IPEDS cache & sync agent
+│   │   ├── CommandPalette.tsx   # Sub-millisecond indexed omni-search modal (⌘K)
+│   │   ├── InteractiveTour.tsx  # 6-step guided interactive cockpit onboarding tour
+│   │   ├── DetailDrawer.tsx     # Glassmorphic detail inspector drawer
+│   │   ├── Toast.tsx            # Dynamic feedback notifications
+│   │   ├── drawer/              # Modular deep-dive drawer tabs & regulatory citations
+│   │   └── phd/                 # PhD directory, application playbook & cold email generator
 │   ├── services/
 │   │   └── api.ts               # Dual-mode API & on-demand shard loader
 │   ├── types/
 │   │   └── index.ts             # Strict TypeScript models & contracts
-│   ├── App.tsx                  # Root application component
-│   ├── main.tsx                 # React DOM mount point
+│   ├── App.tsx                  # Root application component & routing
+│   ├── main.tsx                 # React DOM mount point & PWA registration
 │   └── index.css                # Tailwind directives & glassmorphic tokens
 ├── server/                      # Full-Stack Express REST API
 │   └── index.ts                 # /api/stats, /api/universities, /api/companies, /api/bridge
