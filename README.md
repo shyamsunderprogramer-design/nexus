@@ -66,6 +66,7 @@
 | **⚖️ Head-to-Head Compare Engine** | Side-by-side comparative matrix for up to 3 campuses or employers with comparative meters, advantage detection, and CSV export | Multi-entity side-by-side intelligence dock |
 | **🛂 Visa & OPT Roadmap Navigator** | Comprehensive regulatory roadmap for F-1 OPT, 24-month STEM extensions, Canada PGWP, and direct shortcut to 3,564 H-1B Cap-Exempt institutions | Interactive immigration & employment roadmap |
 | **📌 Target Watchlist & CSV Export** | Cross-session bookmarking drawer for institutions and employers with 1-click CSV download | Custom user shortlists with persistent local storage |
+| **💬 Feedback & Requests Dispatcher** | Structured dispatcher for feature proposals, institutional data corrections, and bug reports via GitHub Issues, Email, or Markdown | Dual-channel feedback & request intake |
 | **🔍 Slide-Out Inspector Drawer** | Glassmorphic deep-dive drawer with regulatory citations & ATS telemetry | Full institutional profiles, SEC tickers & addresses |
 
 ---
@@ -191,10 +192,11 @@ flowchart TD
 - **1-Click PI Cold Email Generator**: Interactive modal creating personalized outreach emails to prospective Principal Investigators (PIs) and lab directors with custom research alignment, paper citations, and CV links.
 - **PhD Admissions Playbook**: Step-by-step strategic guides on contacting faculty, securing funding packages, and evaluating research labs.
 
-### Cockpit Utilities: 🎯 ATS Scanner, ⚖️ Compare Engine, 🛂 Visa Roadmap & Watchlist
+### Cockpit Utilities: 🎯 ATS Scanner, ⚖️ Compare Engine, 🛂 Visa Roadmap, 💬 Feedback & Watchlist
 - **⚖️ Head-to-Head Compare Engine**: Select up to 3 campuses or enterprise employers side-by-side. Inspect comparative meters (Enrollment, STEM Degree Share %, Tuition In-State vs Out-of-State, Application Fees, Admission Rates, and ATS Systems), automated advantage leader badges, 1-click text summary copy, and CSV export.
 - **🛂 International Student Visa & OPT Roadmap**: Complete regulatory timeline planner for international candidates covering F-1 Initial OPT (12 mo), 24-Month STEM Extension rules, Canada PGWP duration rules, an interactive readiness checklist, and a 1-click filter shortcut directly targeting the 3,564 H-1B Cap-Exempt institutions across the platform.
 - **🎯 Dual-Input ATS Resume Scanner**: Jobscan-style keyword and skills matcher. Paste your candidate resume alongside any job description to instantly calculate your ATS match score, extract missing technical skills, identify recruiter keywords, and copy optimized bullet points with 1 click.
+- **💬 Feedback & Ideas Dispatcher**: Multi-channel community intake allowing users to propose feature ideas, submit institutional data corrections, or file bug reports with automated GitHub Issue pre-fill, email dispatch, and browser-persisted submission history.
 - **📌 Target Watchlist & CSV Export**: Slide-over bookmarking drawer allowing users to save high-priority institutions and corporate employers across sessions, add notes, and export their target list to `.csv` with verified links.
 - **🔄 Live Federal IPEDS Sync Agent**: 1-click audit and synchronization agent to inspect cached federal data health and refresh institutional records.
 - **📱 PWA v2 Offline Experience**: Progressive Web App with network-first caching, instant installation on iOS/Android/macOS/Windows, and offline access.
@@ -363,6 +365,7 @@ nexus/
 │   │   ├── CommandPalette.tsx   # Sub-millisecond indexed omni-search modal (⌘K)
 │   │   ├── InteractiveTour.tsx  # 6-step guided interactive cockpit onboarding tour
 │   │   ├── DetailDrawer.tsx     # Glassmorphic detail inspector drawer
+│   │   ├── FeedbackModal.tsx    # Multi-channel feedback dispatcher & submission history
 │   │   ├── Toast.tsx            # Dynamic feedback notifications
 │   │   ├── compare/             # Head-to-head compare floating dock & comparison matrix
 │   │   │   ├── CompareFloatingTray.tsx

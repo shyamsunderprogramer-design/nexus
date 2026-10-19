@@ -20,6 +20,8 @@ import { CompareProvider } from './context/CompareContext';
 import { CompareFloatingTray } from './components/compare/CompareFloatingTray';
 import { ComparisonModal } from './components/compare/ComparisonModal';
 import { VisaRoadmapModal } from './components/visa/VisaRoadmapModal';
+import { FeedbackModal } from './components/FeedbackModal';
+import { MessageSquare } from 'lucide-react';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>('overview');
@@ -32,6 +34,7 @@ export const App: React.FC = () => {
   const [isAtsModalOpen, setIsAtsModalOpen] = useState(false);
   const [isSyncModalOpen, setIsSyncModalOpen] = useState(false);
   const [isVisaModalOpen, setIsVisaModalOpen] = useState(false);
+  const [isFeedbackModalOpen, setIsFeedbackModalOpen] = useState(false);
   const [h1bFilterActive, setH1bFilterActive] = useState(false);
 
   const applyThemeColor = (color: ThemeColor) => {
@@ -97,6 +100,7 @@ export const App: React.FC = () => {
               onOpenAtsMatcher={() => setIsAtsModalOpen(true)}
               onOpenSyncAgent={() => setIsSyncModalOpen(true)}
               onOpenVisaRoadmap={() => setIsVisaModalOpen(true)}
+              onOpenFeedback={() => setIsFeedbackModalOpen(true)}
             />
 
             <Hero
@@ -174,6 +178,22 @@ export const App: React.FC = () => {
             <ComparisonModal />
             <CompareFloatingTray />
 
+            <FeedbackModal
+              isOpen={isFeedbackModalOpen}
+              onClose={() => setIsFeedbackModalOpen(false)}
+            />
+
+            {/* Discreet Floating Feedback Launcher */}
+            <button
+              onClick={() => setIsFeedbackModalOpen(true)}
+              className="fixed bottom-6 right-6 z-30 flex items-center space-x-1.5 px-3 py-2 rounded-2xl bg-slate-900/90 dark:bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 dark:border-white/10 text-white text-xs font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all cursor-pointer backdrop-blur-xl group"
+              title="Share feedback, suggest new features, or report data corrections"
+              aria-label="Submit Feedback"
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-rose-400 group-hover:scale-110 transition-transform" />
+              <span className="hidden sm:inline">Feedback</span>
+            </button>
+
             <InteractiveTour
               isOpen={isTourActive}
               onClose={() => setIsTourActive(false)}
@@ -192,8 +212,15 @@ export const App: React.FC = () => {
                   <span>Developed by <span className="text-slate-900 dark:text-slate-200 font-semibold">Shyam Sunder</span> · Open Source (MIT)</span>
                   <span className="text-slate-400">·</span>
                   <button
+                    onClick={() => setIsFeedbackModalOpen(true)}
+                    className="hover:text-rose-500 underline transition-colors cursor-pointer"
+                  >
+                    Feedback &amp; Ideas
+                  </button>
+                  <span className="text-slate-400">·</span>
+                  <button
                     onClick={() => setIsCommandPaletteOpen(true)}
-                    className="hover:text-brand-500 underline transition-colors"
+                    className="hover:text-brand-500 underline transition-colors cursor-pointer"
                   >
                     Press ⌘K for Quick Search
                   </button>

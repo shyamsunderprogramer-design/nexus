@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ActiveTab, ThemeColor } from '../types';
-import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope, RefreshCw, Scale, Compass } from 'lucide-react';
+import { Sparkles, GraduationCap, Building2, Zap, Sun, Moon, Palette, Search, Star, Smartphone, FileText, Microscope, RefreshCw, Scale, Compass, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useWatchlist } from '../context/WatchlistContext';
 import { useCompare } from '../context/CompareContext';
@@ -18,6 +18,7 @@ interface NavbarProps {
   onOpenAtsMatcher?: () => void;
   onOpenSyncAgent?: () => void;
   onOpenVisaRoadmap?: () => void;
+  onOpenFeedback?: () => void;
 }
 
 const PALETTES: Array<{ id: ThemeColor; name: string; hex: string; ring: string }> = [
@@ -41,6 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onOpenAtsMatcher,
   onOpenSyncAgent,
   onOpenVisaRoadmap,
+  onOpenFeedback,
 }) => {
   const [showPaletteMenu, setShowPaletteMenu] = useState(false);
   const { watchlist, setIsWatchlistOpen } = useWatchlist();
@@ -282,6 +284,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               >
                 <FileText className="w-3.5 h-3.5 text-purple-500" />
                 <span>ATS Scanner</span>
+              </button>
+            )}
+
+            {/* Feedback & Feature Requests */}
+            {onOpenFeedback && (
+              <button
+                onClick={onOpenFeedback}
+                className="flex items-center space-x-1.5 px-3 py-1 rounded-xl border border-rose-500/30 bg-rose-500/10 hover:bg-rose-500/20 text-rose-700 dark:text-rose-300 transition-all text-xs font-semibold group shadow-sm cursor-pointer whitespace-nowrap"
+                title="Submit Feature Requests, Corrections & Ideas"
+                aria-label="Open Feedback"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-rose-500 group-hover:scale-110 transition-transform" />
+                <span>Feedback</span>
               </button>
             )}
 
